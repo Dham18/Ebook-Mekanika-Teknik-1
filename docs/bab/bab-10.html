@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rangka Batang: Titik Buhul dan Ritter – Mekanika Teknik 1</title>
+<meta name="description" content="E-book interaktif Mekanika Teknik 1 (SIP3115) – Rangka Batang: Titik Buhul dan Ritter">
+<meta name="theme-color" content="#0B3C5D">
+<link rel="manifest" href="../manifest.json">
+<link rel="icon" href="../assets/img/ikon-192.png">
+<link rel="stylesheet" href="../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../assets/css/kover.css">
+<link rel="stylesheet" href="../assets/css/ebook.css">
+<link rel="stylesheet" href="../assets/vendor/katex/katex.min.css">
+<script>try{document.documentElement.dataset.tema=localStorage.getItem("mt1-tema")||(matchMedia("(prefers-color-scheme: dark)").matches?"gelap":"terang");document.documentElement.style.setProperty("--font-scale",localStorage.getItem("mt1-huruf")||1)}catch(e){}</script>
+</head>
+<body data-halaman="bab-10" data-root="../">
+<a class="lewati" href="#isi">Lewati ke isi</a>
+<div class="bilah-atas" role="banner">
+  <button class="tbl-ikon tbl-dis" type="button" aria-label="Daftar isi" data-buka-dis><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-peta-konsep"/></svg></button>
+  <a class="tbl-ikon" href="../index.html" aria-label="Beranda"><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-beranda"/></svg></a>
+  <span class="judul-kecil">Rangka Batang: Titik Buhul dan Ritter</span>
+  <button class="tbl-ikon" type="button" aria-label="Cari" data-cari><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-cari"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Penanda halaman" aria-pressed="false" data-penanda><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-penanda"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Catatan pribadi" data-catatan><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-catatan"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Baca suara" aria-pressed="false" data-suara><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-video"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="A− perkecil huruf" data-huruf="-">A−</button>
+  <button class="tbl-ikon" type="button" aria-label="A+ perbesar huruf" data-huruf="+">A+</button>
+  <button class="tbl-ikon" type="button" aria-label="Mode gelap/terang" data-tema-tombol><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-mode-gelap"/></svg></button>
+  <div class="progres-baca" aria-hidden="true"></div>
+</div>
+<div class="tirai" data-tutup-dis></div>
+<div class="tata">
+  <nav class="dis" aria-label="Daftar isi halaman"></nav>
+  <main class="isi" id="isi" tabindex="-1">
+    <header class="banner-bab"><svg class="seni" viewBox="0 0 1600 500" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><g stroke="#00E5FF" stroke-opacity=".07"><path d="M0 100H1600M0 200H1600M0 300H1600M0 400H1600M200 0V500M400 0V500M600 0V500M800 0V500M1000 0V500M1200 0V500M1400 0V500"/></g><g stroke="#00E5FF" stroke-width="5" fill="none" stroke-linecap="round" opacity=".85"><path d="M980 380H1540M1060 250H1460M980 380L1060 250M1540 380L1460 250M1060 250V380M1160 250V380M1260 250V380M1360 250V380M1460 250V380"/><path d="M1060 380L1160 250M1160 380L1260 250M1360 250L1460 380M1260 250L1360 380" stroke="#1DE9B6"/></g><rect x="0" y="470" width="1600" height="6" fill="#F26622"/></svg><div class="banner-bab__isi"><div class="banner-bab__no">BAB 10 • MINGGU 11</div><h1 class="banner-bab__judul">Rangka Batang: Titik Buhul dan Ritter</h1><p class="banner-bab__kutip">“Alam takambang jadi guru.” – pepatah
+Minangkabau. Rangka batang meniru alam: segitiga adalah bentuk paling
+kokoh, seperti susunan cabang pohon dan sarang lebah.</p></div></header>
+    <p>Minggu 11 • Sub-CPMK 4.1 • CPMK-4 • CPL 2 / IK 2.2 • Estimasi
+belajar: 120 menit mandiri + 220 menit kelas/studio + latihan tambahan
+60 menit</p><h2 id="capaian-pembelajaran">2. Capaian Pembelajaran</h2><p><strong>Sub-CPMK 4.1:</strong> Mahasiswa mampu menghitung gaya batang
+rangka batang.</p><div class="gulir"><table>
+<colgroup>
+<col style="width: 8%"/>
+<col style="width: 66%"/>
+<col style="width: 25%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Kode</strong></th>
+<th><strong>Indikator</strong></th>
+<th><strong>Level Bloom</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>4.1.a</td>
+<td>Menyebutkan asumsi rangka batang ideal dan tipe rangka (Pratt, Howe,
+Warren)</td>
+<td>C1–C2</td>
+</tr>
+<tr class="even">
+<td>4.1.b</td>
+<td>Memeriksa kestabilan dan sifat statis tertentu dengan m + r =
+2j</td>
+<td>C3 – memeriksa</td>
+</tr>
+<tr class="odd">
+<td>4.1.c</td>
+<td>Mengidentifikasi batang nol</td>
+<td>C4 – mengidentifikasi</td>
+</tr>
+<tr class="even">
+<td>4.1.d</td>
+<td>Menghitung gaya batang dengan metode titik buhul</td>
+<td>C3 – menghitung</td>
+</tr>
+<tr class="odd">
+<td>4.1.e</td>
+<td>Menghitung gaya batang tertentu dengan metode potongan (Ritter) dan
+memilih metode yang efisien</td>
+<td>C3–C4</td>
+</tr>
+</tbody>
+</table></div><p>Kriteria (RPS): gaya batang (tarik/tekan) benar dengan metode titik
+buhul dan Ritter.</p><h2 id="peta-konsep-bab">3. Peta Konsep Bab</h2><ul>
+<li><p><strong>Kesetimbangan titik (Bab 3)</strong> → (10.4) metode
+titik buhul: ΣFx = 0, ΣFy = 0 tiap titik</p></li>
+<li><p><strong>Kesetimbangan benda tegar (Bab 3)</strong> → (10.5)
+metode Ritter: potong ≤ 3 batang, ΣM = 0</p></li>
+<li><p><strong>Rangka ideal</strong> (10.1) → hanya gaya aksial
+tarik/tekan</p></li>
+<li><p><strong>Kestabilan</strong> (10.2) m + r = 2j; <strong>batang
+nol</strong> (10.3)</p></li>
+<li><p><strong>Gaya batang</strong> → batang kritis → Bab 11 (proyek
+jembatan rangka)</p></li>
+</ul><h2 id="apersepsi">4. Apersepsi</h2><p><strong>Demonstrasi model rangka:</strong> dosen menekan model
+persegi dari stik yang disambung pin – model langsung “miring” menjadi
+jajar genjang. Setelah ditambah satu batang diagonal, model menjadi
+kaku. Mengapa?</p><p><strong>Kasus nyata:</strong> rangka atap baja ringan gudang,
+jembatan rangka baja di jalan provinsi, dan menara BTS. Batang mana yang
+tertarik dan mana yang tertekan?</p><p><strong>Gambar 10.1. Rangka batang di sekitar kita</strong>
+(ilustrasi baru, sumber: dokumen penulis)</p><p><em>Teks alternatif:</em> Tiga panel: kuda-kuda baja ringan rumah,
+jembatan rangka baja di atas sungai, menara telekomunikasi; bentuk
+segitiga disorot.</p><p>Prompt gambar: Educational collage illustration of truss structures
+in Indonesia: cold-formed steel roof truss of a house, steel truss
+bridge over a river, telecommunication tower, triangular units
+highlighted with glowing cyan lines, navy background, flat vector, no
+text</p><h2 id="uraian-materi">5. Uraian Materi</h2><h3 id="rangka-batang-ideal-dan-tipenya">10.1 Rangka Batang Ideal dan
+Tipenya</h3><p><strong>Rangka batang</strong> (<em>truss</em>) adalah susunan batang
+lurus yang membentuk segitiga-segitiga. Untuk analisis, dipakai asumsi
+<strong>rangka ideal</strong>:</p><ul>
+<li><p>Batang disambung di ujung dengan <strong>sendi</strong> (titik
+buhul) tanpa gesekan.</p></li>
+<li><p>Beban dan reaksi hanya bekerja <strong>di titik
+buhul</strong>.</p></li>
+<li><p>Berat batang diabaikan atau dibagi ke titik buhul.</p></li>
+<li><p>Akibatnya setiap batang hanya memikul <strong>gaya
+aksial</strong>: tarik (+) atau tekan (–).</p></li>
+</ul><div class="gulir"><table>
+<colgroup>
+<col style="width: 13%"/>
+<col style="width: 50%"/>
+<col style="width: 36%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Tipe</strong></th>
+<th><strong>Ciri</strong></th>
+<th><strong>Penggunaan umum</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pratt</td>
+<td>Diagonal miring ke arah tengah bentang (turun ke tengah); pada beban
+gravitasi diagonal tertarik, vertikal tertekan/kecil</td>
+<td>Jembatan baja bentang pendek–menengah</td>
+</tr>
+<tr class="even">
+<td>Howe</td>
+<td>Kebalikan Pratt: diagonal tertekan, vertikal tertarik</td>
+<td>Jembatan/atap kayu (kayu kuat tekan)</td>
+</tr>
+<tr class="odd">
+<td>Warren</td>
+<td>Segitiga sama kaki tanpa (atau dengan sedikit) batang vertikal;
+diagonal bergantian tarik–tekan</td>
+<td>Jembatan, rangka atap bentang panjang</td>
+</tr>
+</tbody>
+</table></div><h3 id="kestabilan-dan-statis-tertentu">10.2 Kestabilan dan Statis
+Tertentu</h3><div aria-label="m + r = 2j → statis tertentu (bila stabil)" class="rumus" role="math">\[m + r = 2j\]</div><p><strong>Keterangan:</strong> m = jumlah batang; r = jumlah reaksi
+tumpuan; j = jumlah titik buhul. Setiap titik buhul memberi 2 persamaan
+(ΣFx, ΣFy). <strong>Batasan:</strong> m + r &lt; 2j → labil; m + r &gt;
+2j → statis tak tentu; m + r = 2j belum menjamin stabil – susunan harus
+tersusun dari segitiga.</p><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 10.1 – Klasifikasi rangka</p><p><strong>Soal.</strong> (a) Rangka Pratt 4 panel (Gambar 10.2): j = 8,
+m = 13, sendi–rol. (b) Persegi 4 batang dengan sendi–rol. (c) Pratt 4
+panel ditambah satu diagonal silang.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – (a) m + r = 13 + 3 = 16 = 2 × 8 → statis tertentu ✓.</p><p>Langkah 2 – (b) j = 4, m = 4, r = 3 → 7 &lt; 8 → labil.</p><p>Langkah 3 – (c) m = 14 → 17 &gt; 16 → statis tak tentu derajat 1.</p><p class="jawab"><strong>Jawab:</strong> (a) statis tertentu; (b) labil; (c) statis
+tak tentu.</p></details></aside><h3 id="batang-nol">10.3 Batang Nol</h3><p>Batang nol adalah batang dengan gaya nol untuk pembebanan tertentu.
+Mengenalinya lebih dulu menghemat hitungan. Dua aturan:</p><ul>
+<li><p><strong>Aturan 1:</strong> pada titik buhul dengan <strong>dua
+batang tidak segaris</strong> dan tanpa beban/reaksi, kedua batang itu
+nol.</p></li>
+<li><p><strong>Aturan 2:</strong> pada titik buhul dengan <strong>tiga
+batang</strong>, dua di antaranya segaris dan tanpa beban/reaksi, batang
+ketiga nol.</p></li>
+</ul><p>Batang nol tetap dibutuhkan: menjaga kestabilan, memperpendek panjang
+tekuk batang tekan, dan memikul beban lain (misalnya angin).</p><aside class="kotak kotak--info"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-info"></use></svg>Info Penting</p><p>Konvensi tanda gaya batang: <strong>tarik positif (+), tekan negatif
+(–)</strong>. Saat menggambar DBB titik buhul, anggap semua batang
+<strong>tarik</strong> (panah menjauhi titik). Hasil negatif berarti
+tekan.</p></aside><h3 id="metode-titik-buhul">10.4 Metode Titik Buhul</h3><ol type="1">
+<li><p>Hitung reaksi tumpuan seluruh rangka.</p></li>
+<li><p>Pilih titik buhul dengan paling banyak 2 gaya batang yang belum
+diketahui (biasanya di tumpuan).</p></li>
+<li><p>Gambar DBB titik; anggap batang tarik; tulis ΣFx = 0 dan ΣFy =
+0.</p></li>
+<li><p>Lanjut ke titik berikutnya; gaya yang sudah diketahui dipakai
+sebagai gaya luar.</p></li>
+<li><p>Titik terakhir menjadi pemeriksaan.</p></li>
+</ol><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 10.2 – Rangka segitiga</p><p><strong>Soal.</strong> Sendi A (0; 0), rol B (4; 0), puncak C (2; 2)
+m. Beban 10 kN ke bawah di C. Hitung gaya batang.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – Reaksi: simetris RA = RB = 5 kN; HA = 0.</p><p>Langkah 2 – Titik A: batang AC miring 45°. ΣFy: F_AC sin 45° + 5 = 0
+→ F_AC = –7,07 kN (tekan).</p><p>Langkah 3 – ΣFx: F_AB + F_AC cos 45° = 0 → F_AB = +5,00 kN
+(tarik).</p><p>Langkah 4 – Simetris: F_BC = –7,07 kN. Periksa titik C: 2 × 7,07 ×
+sin 45° = 10 ✓</p><p class="jawab"><strong>Jawab:</strong> F_AC = F_BC = –7,07 kN (tekan); F_AB = +5,00
+kN (tarik) (Gambar 10.2a).</p></details></aside><p><img alt="Gambar 10.2a. Gaya batang rangka segitiga Contoh 10.2." loading="lazy" src="../assets/img/bab/bab-10-b99febd8d228cd04890945121833a97dc9d86f68.png"/></p><p><em>Gambar 10.2a. Gaya batang rangka segitiga Contoh 10.2.</em></p><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 10.3 – Rangka Pratt 4 panel (titik
+buhul)</p><p><strong>Soal.</strong> Rangka Pratt: titik bawah L0–L4 berjarak 3 m;
+titik atas U1–U3 setinggi 3 m; sendi di L0, rol di L4. Beban 10 kN di
+L1, L2, L3. Hitung gaya batang di titik L0, L1, dan U1.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – Reaksi: R_L0 = R_L4 = 30 ÷ 2 = 15 kN.</p><p>Langkah 2 – Titik L0: L0U1 miring 45°. ΣFy: F_L0U1 × 0,707 + 15 = 0 →
+F_L0U1 = –21,21 kN (tekan); ΣFx: F_L0L1 = 21,21 × 0,707 = +15,00 kN
+(tarik).</p><p>Langkah 3 – Titik L1: ΣFy: F_U1L1 – 10 = 0 → F_U1L1 = +10,00 kN
+(tarik); ΣFx: F_L1L2 = F_L0L1 = +15,00 kN.</p><p>Langkah 4 – Titik U1: ΣFy: 21,21 × 0,707 – 10 – F_U1L2 × 0,707 = 0 →
+F_U1L2 = +7,07 kN (tarik); ΣFx: 15 + F_U1U2 + 7,07 × 0,707 = 0 → F_U1U2
+= –20,00 kN (tekan).</p><p>Langkah 5 – Titik U2: dua batang atas segaris + vertikal U2L2 tanpa
+beban → F_U2L2 = 0 (Aturan 2).</p><p class="jawab"><strong>Jawab:</strong> Lihat Gambar 10.2b untuk semua gaya batang
+(simetris).</p></details></aside><p><img alt="Gambar 10.2b. Gaya batang rangka Pratt Contoh 10.3 (kN)." loading="lazy" src="../assets/img/bab/bab-10-1f92fb9c3f053cac8c1698b58b97b87c2d758618.png"/></p><p><em>Gambar 10.2b. Gaya batang rangka Pratt Contoh 10.3 (kN).</em></p><h3 id="metode-potongan-ritter">10.5 Metode Potongan (Ritter)</h3><p>Jika hanya perlu gaya <strong>beberapa batang di tengah</strong>,
+metode titik buhul terlalu panjang. <strong>Metode Ritter</strong>
+memotong rangka melalui <strong>paling banyak tiga batang</strong> yang
+belum diketahui, lalu memakai kesetimbangan salah satu bagian. Triknya:
+ambil momen terhadap <strong>titik potong dua batang lain</strong>,
+sehingga satu persamaan langsung memberi satu gaya.</p><ol type="1">
+<li><p>Hitung reaksi.</p></li>
+<li><p>Buat potongan melalui ≤ 3 batang (tidak bertemu di satu titik
+semua).</p></li>
+<li><p>Ambil bagian kiri atau kanan (pilih yang gayanya lebih
+sedikit).</p></li>
+<li><p>ΣM terhadap titik pertemuan dua batang → gaya batang ketiga.
+Ulangi untuk batang lain; gunakan ΣFy untuk diagonal.</p></li>
+</ol><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 10.4 – Ritter pada panel 2 rangka
+Pratt</p><p><strong>Soal.</strong> Rangka Contoh 10.3. Hitung F_U1U2, F_U1L2, dan
+F_L1L2 dengan satu potongan di panel 2.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – Bagian kiri memuat R = 15 kN di L0 (0; 0) dan beban 10 kN
+di L1 (3; 0).</p><p>Langkah 2 – ΣM terhadap U1 (3; 3) – titik temu U1U2 dan U1L2: 15 × 3
+– F_L1L2 × 3 = 0 → F_L1L2 = +15,00 kN (tarik).</p><p>Langkah 3 – ΣM terhadap L2 (6; 0) – titik temu U1L2 dan L1L2: 15 × 6
+– 10 × 3 + F_U1U2 × 3 = 0 → F_U1U2 = –20,00 kN (tekan).</p><p>Langkah 4 – ΣFy: 15 – 10 – F_U1L2 × 0,707 = 0 → F_U1L2 = +7,07 kN
+(tarik).</p><p class="jawab"><strong>Jawab:</strong> Sama dengan metode titik buhul ✓ – dengan
+tiga persamaan saja.</p></details></aside><h3 id="memilih-metode-yang-efisien">10.6 Memilih Metode yang
+Efisien</h3><div class="gulir"><table>
+<colgroup>
+<col style="width: 50%"/>
+<col style="width: 50%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Situasi</strong></th>
+<th><strong>Metode yang dianjurkan</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Semua gaya batang diperlukan (mis. tabel gaya untuk proyek)</td>
+<td>Titik buhul (atau Alat Hitung/Ftool), dibantu identifikasi batang
+nol</td>
+</tr>
+<tr class="even">
+<td>Hanya 1–3 batang di tengah bentang</td>
+<td>Ritter</td>
+</tr>
+<tr class="odd">
+<td>Memeriksa hasil perangkat lunak</td>
+<td>Ritter pada beberapa batang kritis</td>
+</tr>
+</tbody>
+</table></div><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 10.5 – Batang nol pada beban
+tunggal</p><p><strong>Soal.</strong> Rangka Pratt Contoh 10.3 hanya dibebani 20 kN
+di L2. Tentukan batang nol tanpa hitungan, lalu periksa.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – Titik L1: batang L0L1 dan L1L2 segaris, vertikal U1L1
+tanpa beban di L1 → F_U1L1 = 0 (Aturan 2). Sama untuk U3L3.</p><p>Langkah 2 – Titik U2: batang atas segaris, U2L2 → 0.</p><p>Langkah 3 – Hasil program: tiga batang vertikal = 0; batang atas
+–20,00; batang bawah +10,00; diagonal +14,14; batang ujung –14,14
+kN.</p><p class="jawab"><strong>Jawab:</strong> Batang nol: U1L1, U2L2, U3L3 (Gambar
+10.3).</p></details></aside><p><img alt="Gambar 10.3. Batang nol (abu-abu putus) pada beban tunggal Contoh
+10.5." loading="lazy" src="../assets/img/bab/bab-10-64591f4111bf5a52cfd45b0a2d6302c5f81737d1.png"/></p><p><em>Gambar 10.3. Batang nol (abu-abu putus) pada beban tunggal Contoh
+10.5.</em></p><aside class="kotak kotak--tips"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-tips"></use></svg>Tips Lapangan</p><p>Batang tekan yang panjang dan langsing mudah <strong>menekuk</strong>
+(<em>buckling</em>) sebelum bahannya hancur. Karena itu batang tekan
+biasanya lebih pendek atau diberi pengaku. Rincian kekuatan tekuk
+dipelajari di Mekanika Teknik II dan Struktur Baja.</p></aside><aside class="kotak kotak--k3"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-peringatan"></use></svg>Peringatan K3</p><p>Jangan menginjak atau menggantungkan beban pada rangka atap baja
+ringan di tengah batang. Beban di luar titik buhul menimbulkan lentur
+yang tidak direncanakan dan dapat membuat batang tipis patah.</p></aside><h2 id="contoh-soal-pembahasan">6. Contoh Soal &amp; Pembahasan</h2><p>Lima contoh: klasifikasi (10.1), titik buhul segitiga dan Pratt
+(10.2–10.3), Ritter (10.4), batang nol (10.5). Semua gaya dicocokkan
+dengan program sistem persamaan.</p><h2 id="tanya-ai-tutor">7. Tanya AI Tutor</h2><div class="kartu-ai-grid"><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Jelaskan lebih sederhana</h4><p>Jelaskan mengapa segitiga kaku tetapi persegi tidak, dengan contoh rak buku. Tanyakan saya batang mana yang perlu ditambah.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Jelaskan mengapa segitiga kaku tetapi persegi tidak, dengan contoh rak buku. Tanyakan saya batang mana yang perlu ditambah." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Jelaskan mengapa segitiga kaku tetapi persegi tidak, dengan contoh rak buku. Tanyakan saya batang mana yang perlu ditambah." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Jelaskan mengapa segitiga kaku tetapi persegi tidak, dengan contoh rak buku. Tanyakan saya batang mana yang perlu ditambah." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Periksa DBB titik buhul</h4><p>Ini DBB titik L0 saya: [jelaskan]. Apakah anggapan tarik dan sudutnya benar? Bimbing saya.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Ini DBB titik L0 saya: [jelaskan]. Apakah anggapan tarik dan sudutnya benar? Bimbing saya." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Ini DBB titik L0 saya: [jelaskan]. Apakah anggapan tarik dan sudutnya benar? Bimbing saya." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Ini DBB titik L0 saya: [jelaskan]. Apakah anggapan tarik dan sudutnya benar? Bimbing saya." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Pilih potongan Ritter</h4><p>Saya ingin mencari gaya batang atas di tengah rangka. Tanyakan saya di mana sebaiknya memotong dan terhadap titik mana mengambil momen.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Saya ingin mencari gaya batang atas di tengah rangka. Tanyakan saya di mana sebaiknya memotong dan terhadap titik mana mengambil momen." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Saya ingin mencari gaya batang atas di tengah rangka. Tanyakan saya di mana sebaiknya memotong dan terhadap titik mana mengambil momen." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Saya ingin mencari gaya batang atas di tengah rangka. Tanyakan saya di mana sebaiknya memotong dan terhadap titik mana mengambil momen." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Buat soal latihan</h4><p>Buat 3 soal rangka Warren/Howe sederhana untuk dihitung dengan titik buhul dan Ritter. Sembunyikan jawaban.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Buat 3 soal rangka Warren/Howe sederhana untuk dihitung dengan titik buhul dan Ritter. Sembunyikan jawaban." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Buat 3 soal rangka Warren/Howe sederhana untuk dihitung dengan titik buhul dan Ritter. Sembunyikan jawaban." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Buat 3 soal rangka Warren/Howe sederhana untuk dihitung dengan titik buhul dan Ritter. Sembunyikan jawaban." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Ringkas bab ini</h4><p>Ringkas Bab 10: asumsi, m + r = 2j, aturan batang nol, langkah titik buhul dan Ritter.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Ringkas Bab 10: asumsi, m + r = 2j, aturan batang nol, langkah titik buhul dan Ritter." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Ringkas Bab 10: asumsi, m + r = 2j, aturan batang nol, langkah titik buhul dan Ritter." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Ringkas Bab 10: asumsi, m + r = 2j, aturan batang nol, langkah titik buhul dan Ritter." type="button">Tanya langsung</button></div></div></div><h2 id="zona-ar-rangka-atap-dan-jembatan">8. Zona AR – Rangka Atap dan
+Jembatan</h2><div class="gulir"><table>
+<colgroup>
+<col style="width: 19%"/>
+<col style="width: 80%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Aspek</strong></th>
+<th><strong>Spesifikasi</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nama objek</td>
+<td>ar-bab10-rangka.glb (+ .usdz): jembatan Pratt 4 panel dan kuda-kuda
+Howe</td>
+</tr>
+<tr class="even">
+<td>Tujuan belajar</td>
+<td>Melihat batang tarik/tekan dengan warna dan batang nol (indikator
+4.1.c–d)</td>
+</tr>
+<tr class="odd">
+<td>Pembuatan model</td>
+<td>Blender: batang silinder, titik buhul bola; warna diubah lewat skrip
+sesuai gaya; GLB ≤ 6 MB</td>
+</tr>
+<tr class="even">
+<td>Hotspot &amp; label</td>
+<td>Tiap batang: nama + gaya (kN, T/C); titik buhul L0–L4, U1–U3;
+reaksi</td>
+</tr>
+<tr class="odd">
+<td>Animasi</td>
+<td>Pilih beban (tiga beban / satu beban di tengah): warna batang
+berubah; batang nol berkedip</td>
+</tr>
+<tr class="even">
+<td>Kode QR</td>
+<td>Menuju ar/bab-10.html</td>
+</tr>
+<tr class="odd">
+<td>Cadangan</td>
+<td>Gambar 10.2b dan 10.3</td>
+</tr>
+<tr class="even">
+<td>Pertanyaan pengamatan</td>
+<td>(a) Batang mana yang tertekan paling besar? (b) Mengapa vertikal
+tengah nol? (c) Bagaimana warna diagonal jika tipe diganti Howe?</td>
+</tr>
+</tbody>
+</table></div><div class="ar-kotak">
+<model-viewer alt="Model 3D Rangka Batang: Titik Buhul dan Ritter" ar="" ar-modes="webxr scene-viewer quick-look" auto-rotate="" camera-controls="" exposure="1.1" loading="lazy" shadow-intensity="0.8" src="../assets/model-3d/ar-bab10-rangka.glb" touch-action="pan-y">
+<button class="hotspot" data-normal="0 1 0" data-position="4.5 3 0" slot="hotspot-0">1<span>Batang atas: tekan</span></button><button class="hotspot" data-normal="0 1 0" data-position="4.5 1.5 0" slot="hotspot-1">2<span>Diagonal: tarik</span></button><button class="hotspot" data-normal="0 1 0" data-position="6 1.5 0" slot="hotspot-2">3<span>Vertikal tengah: batang nol</span></button>
+<button class="tombol tombol--utama" slot="ar-button" style="position:absolute;bottom:12px;right:12px"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-zona-ar"></use></svg> Lihat di ruanganmu (AR)</button>
+<div slot="poster" style="display:grid;place-items:center;height:100%;color:#CBD5E1">Memuat model 3D…</div>
+</model-viewer>
+<div class="ar-bawah"><div aria-label="Kode QR menuju halaman AR bab-10" class="qr" data-qr="../ar/bab-10.html" role="img"></div>
+<div><b>Petunjuk:</b> pindai kode QR atau ketuk tombol AR → izinkan kamera → arahkan ke lantai datar → ketuk untuk menempatkan model. Ketuk angka untuk membaca label.<ol style="margin:6px 0 0;padding-left:18px"><li>Batang atas: tekan</li><li>Diagonal: tarik</li><li>Vertikal tengah: batang nol</li></ol>
+<p style="margin:6px 0 0"><a href="../ar/bab-10.html">Buka halaman AR penuh</a> • Perangkat tanpa AR tetap dapat memutar model 360° dengan jari/tetikus.</p></div></div></div><h2 id="alat-hitung-rangka-batang-titik-buhul-ritter">9. Alat Hitung –
+Rangka Batang (Titik Buhul &amp; Ritter)</h2><div class="gulir"><table>
+<colgroup>
+<col style="width: 19%"/>
+<col style="width: 80%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Aspek</strong></th>
+<th><strong>Spesifikasi</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tujuan</td>
+<td>Gaya semua batang (sistem persamaan titik buhul) dan gaya batang
+terpilih (Ritter langkah demi langkah)</td>
+</tr>
+<tr class="even">
+<td>Rumus</td>
+<td>\(\sum F_x=0,\ \sum F_y=0\ \text{(tiap titik)};\ m+r=2j;\
+\text{Ritter: } \Sigma M_{titik\ potong}=0\)</td>
+</tr>
+<tr class="odd">
+<td>Input</td>
+<td>Templat (Pratt, Howe, Warren; jumlah panel, panjang panel, tinggi)
+atau koordinat titik + daftar batang; tumpuan; beban di titik buhul</td>
+</tr>
+<tr class="even">
+<td>Output</td>
+<td>Tabel gaya batang (kN, T/C), reaksi, status m + r = 2j, batang nol;
+gambar berwarna; langkah Ritter untuk batang yang diklik</td>
+</tr>
+<tr class="odd">
+<td>Validasi</td>
+<td>Matriks singular → “Rangka labil – periksa susunan segitiga”; beban
+di luar titik ditolak</td>
+</tr>
+<tr class="even">
+<td>Fitur</td>
+<td>Ekspor tabel gaya (CSV) untuk Bab 11; reset; salin; PDF/PNG</td>
+</tr>
+</tbody>
+</table></div><div class="gulir"><table>
+<colgroup>
+<col style="width: 11%"/>
+<col style="width: 34%"/>
+<col style="width: 38%"/>
+<col style="width: 15%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Kasus uji</strong></th>
+<th><strong>Input</strong></th>
+<th><strong>Hasil yang diharapkan</strong></th>
+<th><strong>Rujukan</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Segitiga A(0;0) B(4;0) C(2;2), 10 kN di C</td>
+<td>AC = BC = –7,07; AB = +5,00 kN</td>
+<td>Contoh 10.2</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Pratt 4 × 3 m, tinggi 3 m; 10 kN di L1–L3</td>
+<td>Atas –20,00; bawah +15,00; ujung –21,21; diagonal +7,07; U1L1
++10,00; U2L2 0</td>
+<td>Contoh 10.3</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Ritter panel 2 kasus 2</td>
+<td>L1L2 = +15,00; U1U2 = –20,00; U1L2 = +7,07</td>
+<td>Contoh 10.4</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Pratt, 20 kN di L2</td>
+<td>Vertikal 0; diagonal +14,14; atas –20,00</td>
+<td>Contoh 10.5</td>
+</tr>
+</tbody>
+</table></div><div class="kalk" data-bab="bab-10" data-kalk="rangka"></div><h2 id="studi-kasus-mini-kuda-kuda-gudang-yang-batangnya-dipotong">10.
+Studi Kasus Mini – Kuda-Kuda Gudang yang Batangnya Dipotong</h2><p>Saat memasang pipa, tukang memotong satu batang vertikal kuda-kuda
+Pratt gudang karena “toh gayanya nol”. Beberapa bulan kemudian atap
+melendut saat angin kencang.</p><ol type="1">
+<li><p>Benarkah batang itu nol untuk beban gravitasi simetris? Tunjukkan
+dengan aturan batang nol.</p></li>
+<li><p>Mengapa batang nol tetap diperlukan (sebutkan dua
+alasan)?</p></li>
+<li><p>Apa rekomendasimu kepada pemilik gudang?</p></li>
+</ol><p><em>Kunci dosen:</em> U2L2 nol untuk beban gravitasi pada titik bawah
+(Aturan 2), tetapi tidak nol untuk beban angin/tak simetris; batang itu
+juga memperpendek panjang tekuk batang atas. Rekomendasi: pasang kembali
+batang dengan sambungan sesuai detail, alihkan jalur pipa.</p><h2 id="info-penting-tips-lapangan-peringatan-k3">11. Info Penting /
+Tips Lapangan / Peringatan K3</h2><p>Info Penting di 10.3; Tips Lapangan dan Peringatan K3 di
+10.5–10.6.</p><h2 id="rangkuman">12. Rangkuman</h2><ul>
+<li><p>Rangka ideal: sendi di titik buhul, beban di titik → batang hanya
+tarik/tekan.</p></li>
+<li><p>m + r = 2j statis tertentu (bila tersusun segitiga).</p></li>
+<li><p>Aturan batang nol mempercepat hitungan.</p></li>
+<li><p>Titik buhul: 2 persamaan per titik, mulai dari titik dengan ≤ 2
+gaya tak diketahui.</p></li>
+<li><p>Ritter: potong ≤ 3 batang; momen terhadap titik temu dua
+batang.</p></li>
+</ul><h2 id="latihan-kuis-interaktif-12-soal">13. Latihan &amp; Kuis
+Interaktif (12 soal)</h2><div class="kuis" data-kuis="bab-10-1"><div class="kuis__skor"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-kuis"></use></svg> <span>Skor: <b data-skor="">0</b> / <b data-maks="">0</b></span><button class="tombol tombol--kecil" data-ulang="">Ulangi</button></div><div class="soal" data-kunci="(c)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 1</span><span>C1 • pilihan ganda</span></div><p class="soal__teks">Pada rangka ideal, batang hanya memikul …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) momen</button><button data-opsi="(b)" type="button">(b) gaya lintang</button><button data-opsi="(c)" type="button">(c) gaya aksial</button><button data-opsi="(d)" type="button">(d) torsi</button></div><div class="umpan" hidden=""><b>Kunci:</b> (c)<br/><b>Pembahasan:</b> Asumsi sendi &amp; beban di titik.</div></div><div class="soal" data-kunci="1-C, 2-A, 3-B" data-tipe="jodoh"><div class="soal__kepala"><span class="soal__label">No. 2</span><span>C1 • menjodohkan</span></div><p class="soal__teks">Jodohkan (1) Pratt (2) Howe (3) Warren dengan (A) diagonal tertekan (B) segitiga sama kaki tanpa vertikal (C) diagonal tertarik</p><div class="baris-tombol"><input aria-label="Jawaban soal 2" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 1-C, 2-A, 3-B<br/><b>Pembahasan:</b> Tabel 10.1.</div></div><div class="soal" data-kunci="Salah" data-tipe="bs"><div class="soal__kepala"><span class="soal__label">No. 3</span><span>C2 • benar-salah</span></div><p class="soal__teks">Batang nol boleh dihilangkan dari rangka.</p><div class="soal__pilihan"><button data-opsi="Benar" type="button">Benar</button><button data-opsi="Salah" type="button">Salah</button></div><div class="umpan" hidden=""><b>Kunci:</b> Salah<br/><b>Pembahasan:</b> Diperlukan untuk stabilitas dan beban lain.</div></div><div class="soal" data-kunci="9" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 4</span><span>C3 • isian angka</span></div><p class="soal__teks">Rangka dengan j = 6, sendi–rol. Agar statis tertentu, m = …</p><div class="baris-tombol"><input aria-label="Jawaban soal 4" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 9<br/><b>Pembahasan:</b> 2 × 6 – 3.</div></div><div class="soal" data-kunci="8" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 5</span><span>C3 • isian angka</span></div><p class="soal__teks">Rangka segitiga Contoh 10.2 dengan beban 16 kN. F_AB = … kN</p><div class="baris-tombol"><input aria-label="Jawaban soal 5" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 8<br/><b>Pembahasan:</b> Linear: 5 × 1,6.</div></div><div class="soal" data-kunci="–11,31" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 6</span><span>C3 • isian angka</span></div><p class="soal__teks">Soal no. 5: F_AC = … kN</p><div class="baris-tombol"><input aria-label="Jawaban soal 6" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> –11,31<br/><b>Pembahasan:</b> –7,07 × 1,6.</div></div><div class="soal" data-kunci="–40" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 7</span><span>C3 • isian angka</span></div><p class="soal__teks">Pratt Contoh 10.3 dengan beban 20 kN di L1, L2, L3. F_U1U2 = … kN</p><div class="baris-tombol"><input aria-label="Jawaban soal 7" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> –40<br/><b>Pembahasan:</b> Linear (dua kali).</div></div><div class="soal" data-kunci="12" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 8</span><span>C3 • isian angka</span></div><p class="soal__teks">Ritter: R = 12 kN di L0, beban 8 kN di L1 (3 m), tinggi 3 m. ΣM di U1 (3; 3) → F_L1L2 = … kN</p><div class="baris-tombol"><input aria-label="Jawaban soal 8" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 12<br/><b>Pembahasan:</b> 12 × 3 ÷ 3.</div></div><div class="soal" data-kunci="(b)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 9</span><span>C4 • pilihan ganda</span></div><p class="soal__teks">Pada titik dengan dua batang tidak segaris tanpa beban …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) keduanya tarik</button><button data-opsi="(b)" type="button">(b) keduanya nol</button><button data-opsi="(c)" type="button">(c) satu tekan satu tarik</button><button data-opsi="(d)" type="button">(d) tidak dapat ditentukan</button></div><div class="umpan" hidden=""><b>Kunci:</b> (b)<br/><b>Pembahasan:</b> Aturan 1.</div></div><div class="soal" data-kunci="(b)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 10</span><span>C4 • pilihan ganda</span></div><p class="soal__teks">Untuk mencari hanya gaya batang atas di tengah bentang, metode paling efisien …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) titik buhul dari ujung</button><button data-opsi="(b)" type="button">(b) Ritter</button><button data-opsi="(c)" type="button">(c) grafis</button><button data-opsi="(d)" type="button">(d) coba-coba</button></div><div class="umpan" hidden=""><b>Kunci:</b> (b)<br/><b>Pembahasan:</b> Satu potongan, satu persamaan momen.</div></div><div class="soal" data-kunci="(b)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 11</span><span>C5 • pilihan ganda (menilai)</span></div><p class="soal__teks">Hasil Bayu: F_U1U2 = +20 kN. Penilaian …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) benar</button><button data-opsi="(b)" type="button">(b) besar benar, tanda salah – batang atas tertekan (–20)</button><button data-opsi="(c)" type="button">(c) salah besar</button><button data-opsi="(d)" type="button">(d) benar bila beban ke atas</button></div><div class="umpan" hidden=""><b>Kunci:</b> (b)<br/><b>Pembahasan:</b> Batang atas rangka sederhana tertekan akibat beban gravitasi.</div></div><div class="soal" data-kunci="Rangka Howe; cocok untuk kayu (kuat tekan sejajar serat)" data-tipe="uraian"><div class="soal__kepala"><span class="soal__label">No. 12</span><span>C6 • uraian (merancang)</span></div><p class="soal__teks">Rancang rangka 4 panel (bentang 12 m, tinggi 3 m) yang diagonalnya tertekan, lalu jelaskan kapan pilihan ini cocok.</p><textarea aria-label="Jawaban uraian 12" rows="3" style="width:100%"></textarea><div class="baris-tombol"><button class="tombol tombol--kecil" data-lihat="" type="button">Lihat kunci &amp; rubrik</button></div><div class="umpan" hidden=""><b>Kunci:</b> Rangka Howe; cocok untuk kayu (kuat tekan sejajar serat)<br/><b>Pembahasan:</b> Rubrik: gambar &amp; klasifikasi 40, alasan bahan 40, komunikasi 20.</div></div></div><h2 id="refleksi-diri">14. Refleksi Diri</h2><ul>
+<li><p>Saya dapat memeriksa m + r = 2j. 1 2 3 4 5</p></li>
+<li><p>Saya dapat mengenali batang nol. 1 2 3 4 5</p></li>
+<li><p>Saya dapat memakai metode titik buhul. 1 2 3 4 5</p></li>
+<li><p>Saya dapat memakai metode Ritter. 1 2 3 4 5</p></li>
+</ul><p><strong>Apa yang sudah/belum saya pahami?</strong> • <strong>Tindak
+lanjut:</strong> latihan tambahan 60 menit (RPS) – kerjakan ulang Contoh
+10.3–10.4, cocokkan dengan Alat Hitung Rangka.</p><h2 id="glosarium-dan-referensi-bab">15. Glosarium dan Referensi
+Bab</h2><div class="gulir"><table class="glosarium">
+<colgroup>
+<col style="width: 24%"/>
+<col style="width: 75%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Istilah</strong></th>
+<th><strong>Arti</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Batang nol</td>
+<td>Batang yang gayanya nol pada pembebanan tertentu.</td>
+</tr>
+<tr class="even">
+<td>Metode Ritter</td>
+<td>Metode potongan: memotong ≤ 3 batang dan memakai ΣM.</td>
+</tr>
+<tr class="odd">
+<td>Rangka batang</td>
+<td>Susunan batang lurus berbentuk segitiga yang disambung di titik
+buhul.</td>
+</tr>
+<tr class="even">
+<td>Tekuk (buckling)</td>
+<td>Batang tekan langsing melengkung tiba-tiba sebelum bahannya
+hancur.</td>
+</tr>
+<tr class="odd">
+<td>Titik buhul</td>
+<td>Titik sambungan batang-batang rangka.</td>
+</tr>
+</tbody>
+</table></div><ul>
+<li><p>Hibbeler, R. C. (2024a). <em>Engineering mechanics: Statics</em>
+(15th ed., SI units). Pearson. (Bab 6: structural analysis)</p></li>
+<li><p>Hibbeler, R. C. (2024b). <em>Structural analysis</em> (11th ed.).
+Pearson. (Bab 3: trusses)</p></li>
+<li><p>Leet, K. M., Uang, C.-M., Lanning, J. T., &amp; Gilbert, A. M.
+(2018). <em>Fundamentals of structural analysis</em> (5th ed.).
+McGraw-Hill. (Bab 4)</p></li>
+</ul>
+    <div class="selesai-bab"><button class="tombol tombol--utama" type="button" data-tandai-selesai><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-kuis"/></svg> Tandai bab ini selesai</button></div>
+    <nav class="nav-bab" aria-label="Navigasi bab"><a class="tombol" href="bab-09.html"><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-bab-sebelumnya"/></svg> Portal Tiga Sendi</a><a class="tombol tombol--utama" href="bab-11.html">Proyek Tim: Model Jembatan Rangka <svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-bab-berikutnya"/></svg></a></nav>
+  </main>
+</div>
+<button class="fab" type="button" aria-label="Buka AI Tutor" data-buka-ai><svg class="ikon ikon--besar" aria-hidden="true"><use href="../assets/icons/icons.svg#i-ai-tutor"/></svg></button>
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/app.js" defer></script>
+<script src="../assets/js/ai-tutor.js" defer></script>
+<script src="../assets/js/kuis.js" defer></script>
+<script src="../assets/js/kalkulator.js" defer></script>
+<script defer src="../assets/vendor/katex/katex.min.js"></script>
+<script defer src="../assets/vendor/katex/auto-render.min.js" onload="renderMathInElement(document.getElementById('isi'),{delimiters:[{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}],throwOnError:false})"></script>
+<script type="module" src="../assets/vendor/model-viewer/model-viewer.min.js"></script>
+</body>
+</html>

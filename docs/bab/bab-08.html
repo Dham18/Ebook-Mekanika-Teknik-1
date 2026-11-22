@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portal Statis Tertentu – Mekanika Teknik 1</title>
+<meta name="description" content="E-book interaktif Mekanika Teknik 1 (SIP3115) – Portal Statis Tertentu">
+<meta name="theme-color" content="#0B3C5D">
+<link rel="manifest" href="../manifest.json">
+<link rel="icon" href="../assets/img/ikon-192.png">
+<link rel="stylesheet" href="../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../assets/css/kover.css">
+<link rel="stylesheet" href="../assets/css/ebook.css">
+<link rel="stylesheet" href="../assets/vendor/katex/katex.min.css">
+<script>try{document.documentElement.dataset.tema=localStorage.getItem("mt1-tema")||(matchMedia("(prefers-color-scheme: dark)").matches?"gelap":"terang");document.documentElement.style.setProperty("--font-scale",localStorage.getItem("mt1-huruf")||1)}catch(e){}</script>
+</head>
+<body data-halaman="bab-08" data-root="../">
+<a class="lewati" href="#isi">Lewati ke isi</a>
+<div class="bilah-atas" role="banner">
+  <button class="tbl-ikon tbl-dis" type="button" aria-label="Daftar isi" data-buka-dis><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-peta-konsep"/></svg></button>
+  <a class="tbl-ikon" href="../index.html" aria-label="Beranda"><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-beranda"/></svg></a>
+  <span class="judul-kecil">Portal Statis Tertentu</span>
+  <button class="tbl-ikon" type="button" aria-label="Cari" data-cari><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-cari"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Penanda halaman" aria-pressed="false" data-penanda><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-penanda"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Catatan pribadi" data-catatan><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-catatan"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Baca suara" aria-pressed="false" data-suara><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-video"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="A− perkecil huruf" data-huruf="-">A−</button>
+  <button class="tbl-ikon" type="button" aria-label="A+ perbesar huruf" data-huruf="+">A+</button>
+  <button class="tbl-ikon" type="button" aria-label="Mode gelap/terang" data-tema-tombol><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-mode-gelap"/></svg></button>
+  <div class="progres-baca" aria-hidden="true"></div>
+</div>
+<div class="tirai" data-tutup-dis></div>
+<div class="tata">
+  <nav class="dis" aria-label="Daftar isi halaman"></nav>
+  <main class="isi" id="isi" tabindex="-1">
+    <header class="banner-bab"><svg class="seni" viewBox="0 0 1600 500" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><g stroke="#00E5FF" stroke-opacity=".07"><path d="M0 100H1600M0 200H1600M0 300H1600M0 400H1600M200 0V500M400 0V500M600 0V500M800 0V500M1000 0V500M1200 0V500M1400 0V500"/></g><g stroke="#00E5FF" stroke-width="5" fill="none" stroke-linecap="round" opacity=".85"><path d="M980 380H1540M1060 250H1460M980 380L1060 250M1540 380L1460 250M1060 250V380M1160 250V380M1260 250V380M1360 250V380M1460 250V380"/><path d="M1060 380L1160 250M1160 380L1260 250M1360 250L1460 380M1260 250L1360 380" stroke="#1DE9B6"/></g><rect x="0" y="470" width="1600" height="6" fill="#F26622"/></svg><div class="banner-bab__isi"><div class="banner-bab__no">BAB 8 • MINGGU 9</div><h1 class="banner-bab__judul">Portal Statis Tertentu</h1><p class="banner-bab__kutip">“Nan tinggi tampak jauah, nan dakek jolong
+basuo.” – pepatah Minangkabau (yang tinggi tampak dari jauh, yang dekat
+langsung dijumpai): portal adalah bagian bangunan yang paling mudah kita
+temui di sekitar kita.</p></div></header>
+    <p>Minggu 9 • Sub-CPMK 3.2 • CPMK-3 • CPL 2 / IK 2.2 • Estimasi belajar:
+120 menit mandiri + 220 menit kelas/studio</p><h2 id="capaian-pembelajaran">2. Capaian Pembelajaran</h2><p><strong>Sub-CPMK 3.2:</strong> Mahasiswa mampu menganalisis portal
+statis tertentu.</p><div class="gulir"><table>
+<colgroup>
+<col style="width: 8%"/>
+<col style="width: 66%"/>
+<col style="width: 25%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Kode</strong></th>
+<th><strong>Indikator</strong></th>
+<th><strong>Level Bloom</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>3.2.a</td>
+<td>Menjelaskan perilaku titik kumpul kaku pada portal</td>
+<td>C2 – menjelaskan</td>
+</tr>
+<tr class="even">
+<td>3.2.b</td>
+<td>Menghitung reaksi portal L (jepit) dan portal sendi–rol</td>
+<td>C3 – menghitung</td>
+</tr>
+<tr class="odd">
+<td>3.2.c</td>
+<td>Menghitung N, V, M tiap batang portal</td>
+<td>C3–C4</td>
+</tr>
+<tr class="even">
+<td>3.2.d</td>
+<td>Menggambar NFD, SFD, BMD portal di sisi yang benar</td>
+<td>C4 – menganalisis</td>
+</tr>
+<tr class="odd">
+<td>3.2.e</td>
+<td>Memeriksa kesetimbangan titik sudut</td>
+<td>C4 – memeriksa</td>
+</tr>
+</tbody>
+</table></div><p>Kriteria (RPS): reaksi, NFD, SFD, BMD portal L dan portal sendi–rol
+benar.</p><h2 id="peta-konsep-bab">3. Peta Konsep Bab</h2><ul>
+<li><p><strong>Balok (Bab 4–7)</strong> → (8.1) portal: balok + kolom
+yang disambung kaku</p></li>
+<li><p><strong>Titik kumpul kaku</strong> → momen diteruskan melewati
+sudut</p></li>
+<li><p><strong>Reaksi</strong> → (8.2) portal L (jepit) dan portal
+sendi–rol</p></li>
+<li><p><strong>Gaya dalam</strong> → (8.3) N, V, M per batang; BMD di
+sisi tarik</p></li>
+<li><p><strong>Pemeriksaan</strong> → (8.4) kesetimbangan titik sudut →
+Bab 9 (portal tiga sendi)</p></li>
+</ul><h2 id="apersepsi">4. Apersepsi</h2><p><strong>Diskusi gambar nyata:</strong> carport rumah dengan dua kolom
+baja dan balok di atasnya; gudang kecil dengan kolom dan balok beton.
+Saat angin kencang, mengapa kolom carport bisa miring di bagian bawah,
+padahal yang terkena angin adalah atapnya?</p><p><strong>Pertanyaan pemantik:</strong> Apa bedanya kolom yang hanya
+“ditaruh” di bawah balok dengan kolom yang dicor menyatu dengan
+balok?</p><p><strong>Gambar 8.1. Portal carport dan gudang kecil</strong>
+(ilustrasi baru, sumber: dokumen penulis)</p><p><em>Teks alternatif:</em> Dua foto/ilustrasi: carport baja dengan
+kolom dan balok tersambung kaku di sudut; gudang beton satu lantai
+dengan portal balok–kolom; sudut kaku ditandai.</p><p>Prompt gambar: Educational illustration of two simple building frames
+in Indonesia: a steel carport portal frame and a small one-storey
+concrete warehouse frame, rigid corner joints highlighted with glowing
+cyan, wind arrow on the roof, technical style, navy background, no
+text</p><h2 id="uraian-materi">5. Uraian Materi</h2><h3 id="portal-dan-titik-kumpul-kaku">8.1 Portal dan Titik Kumpul
+Kaku</h3><p><strong>Portal</strong> (<em>frame</em>) adalah struktur yang terdiri
+atas balok dan kolom yang disambung <strong>kaku</strong>. Pada
+sambungan kaku, sudut antara balok dan kolom tidak berubah ketika
+struktur melentur, sehingga <strong>momen diteruskan</strong> dari balok
+ke kolom. Inilah perbedaan utama dengan balok di atas tumpuan.</p><p>Analogi: rangka kursi kayu yang dipaku dan dilem kuat di sudutnya.
+Jika sandaran didorong, kaki kursi ikut melentur karena sudutnya
+kaku.</p><ul>
+<li><p>Pada titik sudut tanpa momen luar, <strong>momen di ujung kolom =
+momen di ujung balok</strong> (besar sama, sisi tarik “berbelok”
+mengikuti sudut).</p></li>
+<li><p>Gaya lintang di kolom menjadi gaya normal di balok, dan
+sebaliknya.</p></li>
+<li><p>Statis tertentu bila jumlah reaksi = 3 (portal tanpa sendi
+dalam): portal L dengan jepit, atau portal dengan sendi dan
+rol.</p></li>
+</ul><aside class="kotak kotak--info"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-info"></use></svg>Info Penting</p><p><strong>Konvensi gambar BMD portal:</strong> momen digambar di
+<strong>sisi tarik</strong> batang. Untuk membantu, bayangkan garis
+putus di sisi dalam portal; momen yang menarik sisi dalam disebut
+positif. Konvensi ini sama dengan balok (momen positif di
+bawah).</p></aside><h3 id="reaksi-portal-l-dan-portal-sendirol">8.2 Reaksi Portal L dan
+Portal Sendi–Rol</h3><p>Prosedur sama dengan balok: DBB seluruh portal → ΣFx = 0, ΣFy = 0, ΣM
+= 0. Perhatikan beban horizontal (angin, gempa) yang menghasilkan momen
+terhadap tumpuan karena bekerja di ketinggian tertentu.</p><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 8.1 – Portal L dengan jepit (papan
+petunjuk)</p><p><strong>Soal.</strong> Kolom AB tinggi 3 m dijepit di A (dasar).
+Balok BC horizontal 2 m tersambung kaku di B. Beban P = 6 kN ke bawah di
+C. Hitung reaksi dan gaya dalam.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – Reaksi: HA = 0; RA = 6 kN (↑); MA = 6 × 2 = 12 kN·m.</p><p>Langkah 2 – Balok BC: N = 0; V = 6 kN; M dari 0 di C menjadi 12 kN·m
+di B, tarik di sisi atas.</p><p>Langkah 3 – Kolom AB: N = –6 kN (tekan); V = 0; M = 12 kN·m konstan
+sepanjang kolom, tarik di sisi luar (kiri).</p><p>Langkah 4 – Titik B: momen balok 12 = momen kolom 12 ✓</p><p class="jawab"><strong>Jawab:</strong> RA = 6 kN; MA = 12 kN·m; BMD lihat Gambar
+8.2.</p></details></aside><p><img alt="Gambar 8.2. BMD portal L Contoh 8.1 (digambar di sisi
+tarik)." loading="lazy" src="../assets/img/bab/bab-08-f64c502004cd10c10bd2821b876865ad26da888d.png"/></p><p><em>Gambar 8.2. BMD portal L Contoh 8.1 (digambar di sisi
+tarik).</em></p><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 8.2 – Portal sendi–rol dengan beban
+merata</p><p><strong>Soal.</strong> Sendi A (0; 0), rol D (6; 0), kolom tinggi 4
+m, balok BC 6 m dengan q = 3 kN/m. Hitung reaksi dan gaya dalam.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – ΣFx: HA = 0. Simetris: RA = RD = 3 × 6 ÷ 2 = 9 kN.</p><p>Langkah 2 – Kolom AB dan CD: N = –9 kN (tekan); V = 0; M = 0 (tidak
+ada gaya horizontal).</p><p>Langkah 3 – Balok BC berperilaku seperti balok sederhana: Mmaks = 3 ×
+36 ÷ 8 = 13,50 kN·m di tengah.</p><p class="jawab"><strong>Jawab:</strong> Tanpa beban horizontal, portal sendi–rol
+berperilaku seperti balok sederhana di atas dua kolom.</p></details></aside><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 8.3 – Portal sendi–rol dengan beban merata
+dan angin</p><p><strong>Soal.</strong> Portal Contoh 8.2 ditambah gaya angin 4 kN ke
+kanan di B (ketinggian 4 m).</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – ΣFx: HA + 4 = 0 → HA = –4 kN (←).</p><p>Langkah 2 – ΣMA: RD × 6 – 3 × 6 × 3 – 4 × 4 = 0 → RD = (54 + 16) ÷ 6
+= 11,67 kN.</p><p>Langkah 3 – ΣFy: RA = 18 – 11,67 = 6,33 kN.</p><p>Langkah 4 – Kolom AB: N = –6,33 kN; V = 4 kN; M naik linear 0 → 16,00
+kN·m di B (tarik sisi dalam).</p><p>Langkah 5 – Balok BC: N = 0; V = 6,33 – 3x; M(x) = 16 + 6,33x – 1,5x²
+→ Mmaks = 22,69 kN·m di x = 2,11 m; M di C = 0.</p><p>Langkah 6 – Kolom CD: N = –11,67 kN; V = 0; M = 0 (rol tidak memberi
+gaya horizontal).</p><p class="jawab"><strong>Jawab:</strong> HA = 4 kN (←); RA = 6,33 kN; RD = 11,67 kN;
+M_B = 16,00; Mmaks balok = 22,69 kN·m (Gambar 8.3).</p></details></aside><p><img alt="Gambar 8.3. BMD portal sendi–rol Contoh 8.3. Angin memindahkan
+sebagian beban ke kolom kanan dan menimbulkan momen di kolom
+kiri." loading="lazy" src="../assets/img/bab/bab-08-f692d1bfd065e17fd25574ec89ab6d1865945f26.png"/></p><p><em>Gambar 8.3. BMD portal sendi–rol Contoh 8.3. Angin memindahkan
+sebagian beban ke kolom kanan dan menimbulkan momen di kolom
+kiri.</em></p><h3 id="nfd-sfd-dan-bmd-portal">8.3 NFD, SFD, dan BMD Portal</h3><ol type="1">
+<li><p>Hitung reaksi dan periksa.</p></li>
+<li><p>Pilih lintasan dari satu tumpuan (misalnya A → B → C → D). Untuk
+tiap batang, tentukan sisi dalam (garis putus).</p></li>
+<li><p>Potong tiap batang; pakai DBB bagian dari awal lintasan sampai
+potongan → N, V, M.</p></li>
+<li><p>Gambar NFD dan SFD (nilai dan tanda), BMD di sisi tarik.</p></li>
+<li><p>Periksa titik sudut (8.4) dan nilai di ujung lintasan (harus
+sesuai reaksi tumpuan akhir).</p></li>
+</ol><div class="gulir"><table>
+<colgroup>
+<col style="width: 21%"/>
+<col style="width: 21%"/>
+<col style="width: 29%"/>
+<col style="width: 26%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Batang</strong></th>
+<th><strong>N (kN)</strong></th>
+<th><strong>V (kN)</strong></th>
+<th><strong>M (kN·m)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AB (kolom kiri)</td>
+<td>–6,33 (tekan)</td>
+<td>4,00 (konstan)</td>
+<td>0 → 16,00 (tarik dalam)</td>
+</tr>
+<tr class="even">
+<td>BC (balok)</td>
+<td>0</td>
+<td>+6,33 → –11,67 (nol di x = 2,11 m)</td>
+<td>16,00 → 22,69 (maks) → 0</td>
+</tr>
+<tr class="odd">
+<td>CD (kolom kanan)</td>
+<td>–11,67 (tekan)</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table></div><p><em>Tabel 8.1. Ringkasan gaya dalam Contoh 8.3.</em></p><h3 id="kesetimbangan-titik-sudut">8.4 Kesetimbangan Titik Sudut</h3><p>Potong titik sudut dari semua batang yang bertemu; gambar N, V, M
+ujung batang sebagai gaya luar pada “titik kecil” itu. Titik harus
+setimbang: ΣFx = 0, ΣFy = 0, ΣM = 0.</p><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 8.4 – Memeriksa titik B pada Contoh
+8.3</p><p><strong>Soal.</strong> Periksa kesetimbangan titik B.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – Dari kolom AB (ujung atas): gaya vertikal 6,33 kN; gaya
+horizontal 4 kN; momen 16,00 kN·m.</p><p>Langkah 2 – Dari balok BC (ujung kiri): gaya vertikal 6,33 kN; gaya
+horizontal 0; momen 16,00 kN·m.</p><p>Langkah 3 – Beban luar di B: angin 4 kN.</p><p>Langkah 4 – ΣFx: 4 (angin) – 4 (geser kolom) = 0 ✓; ΣFy: 6,33 – 6,33
+= 0 ✓; ΣM: 16,00 – 16,00 = 0 ✓</p><p class="jawab"><strong>Jawab:</strong> Titik B setimbang – hitungan
+konsisten.</p></details></aside><aside class="kotak kotak--tips"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-tips"></use></svg>Tips Lapangan</p><p>Momen terbesar portal sering berada di sudut. Karena itu sambungan
+balok–kolom (pada beton: daerah tulangan sengkang rapat; pada baja:
+pelat sambung dan baut) harus dikerjakan paling teliti.</p></aside><aside class="kotak kotak--k3"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-peringatan"></use></svg>Peringatan K3</p><p>Saat mendirikan portal baja carport atau gudang, pasang pengaku
+sementara (<em>bracing</em>/tali tambat) sebelum baut sudut dikencangkan
+penuh. Portal yang belum kaku sangat mudah roboh oleh angin.</p></aside><h2 id="contoh-soal-pembahasan">6. Contoh Soal &amp; Pembahasan</h2><p>Empat contoh: 8.1 portal L, 8.2–8.3 portal sendi–rol, 8.4 pemeriksaan
+titik sudut; tiga BMD digambar dari hasil hitungan.</p><h2 id="tanya-ai-tutor">7. Tanya AI Tutor</h2><div class="kartu-ai-grid"><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Jelaskan lebih sederhana</h4><p>Jelaskan apa itu sambungan kaku pada portal dengan analogi kursi kayu. Tanyakan saya di mana momen terbesar portal carport saat angin.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Jelaskan apa itu sambungan kaku pada portal dengan analogi kursi kayu. Tanyakan saya di mana momen terbesar portal carport saat angin." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Jelaskan apa itu sambungan kaku pada portal dengan analogi kursi kayu. Tanyakan saya di mana momen terbesar portal carport saat angin." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Jelaskan apa itu sambungan kaku pada portal dengan analogi kursi kayu. Tanyakan saya di mana momen terbesar portal carport saat angin." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Periksa sisi BMD saya</h4><p>Saya menggambar BMD kolom di sisi luar. Bimbing saya memeriksa apakah itu sisi tarik.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Saya menggambar BMD kolom di sisi luar. Bimbing saya memeriksa apakah itu sisi tarik." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Saya menggambar BMD kolom di sisi luar. Bimbing saya memeriksa apakah itu sisi tarik." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Saya menggambar BMD kolom di sisi luar. Bimbing saya memeriksa apakah itu sisi tarik." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Beri contoh lain</h4><p>Beri 3 portal statis tertentu di sekitar kampus dan minta saya menentukan jenis tumpuannya.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Beri 3 portal statis tertentu di sekitar kampus dan minta saya menentukan jenis tumpuannya." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Beri 3 portal statis tertentu di sekitar kampus dan minta saya menentukan jenis tumpuannya." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Beri 3 portal statis tertentu di sekitar kampus dan minta saya menentukan jenis tumpuannya." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Buat soal latihan</h4><p>Buat 2 soal portal sendi–rol dengan beban merata dan beban horizontal. Sembunyikan jawaban.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Buat 2 soal portal sendi–rol dengan beban merata dan beban horizontal. Sembunyikan jawaban." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Buat 2 soal portal sendi–rol dengan beban merata dan beban horizontal. Sembunyikan jawaban." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Buat 2 soal portal sendi–rol dengan beban merata dan beban horizontal. Sembunyikan jawaban." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Ringkas bab ini</h4><p>Ringkas Bab 8 dalam 5 langkah menggambar NFD, SFD, BMD portal.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Ringkas Bab 8 dalam 5 langkah menggambar NFD, SFD, BMD portal." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Ringkas Bab 8 dalam 5 langkah menggambar NFD, SFD, BMD portal." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Ringkas Bab 8 dalam 5 langkah menggambar NFD, SFD, BMD portal." type="button">Tanya langsung</button></div></div></div><h2 id="zona-ar-portal-carport">8. Zona AR – Portal Carport</h2><div class="gulir"><table>
+<colgroup>
+<col style="width: 19%"/>
+<col style="width: 80%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Aspek</strong></th>
+<th><strong>Spesifikasi</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nama objek</td>
+<td>ar-bab08-carport.glb (+ .usdz)</td>
+</tr>
+<tr class="even">
+<td>Tujuan belajar</td>
+<td>Melihat perbedaan sambungan kaku dan sendi serta deformasi portal
+akibat angin (indikator 3.2.a, 3.2.d)</td>
+</tr>
+<tr class="odd">
+<td>Pembuatan model</td>
+<td>SketchUp/Revit: carport baja 6 × 4 m dengan kolom pipa/WF, atap;
+Blender: animasi deformasi (dibesarkan); GLB ≤ 8 MB</td>
+</tr>
+<tr class="even">
+<td>Hotspot &amp; label</td>
+<td>(1) Sambungan sudut kaku; (2) Tumpuan sendi/rol; (3) Beban atap; (4)
+Angin; (5) Sisi tarik (merah)</td>
+</tr>
+<tr class="odd">
+<td>Animasi</td>
+<td>Penggeser “angin 0–4 kN”: portal bergoyang, BMD 3D muncul di sisi
+tarik</td>
+</tr>
+<tr class="even">
+<td>Kode QR</td>
+<td>Menuju ar/bab-08.html</td>
+</tr>
+<tr class="odd">
+<td>Cadangan</td>
+<td>Gambar 8.3 dan video 360°</td>
+</tr>
+<tr class="even">
+<td>Pertanyaan pengamatan</td>
+<td>(a) Kolom mana yang melentur saat angin? (b) Mengapa kolom di atas
+rol tidak melentur? (c) Apa yang terjadi bila sambungan sudut diganti
+sendi?</td>
+</tr>
+</tbody>
+</table></div><div class="ar-kotak">
+<model-viewer alt="Model 3D Portal Statis Tertentu" ar="" ar-modes="webxr scene-viewer quick-look" auto-rotate="" camera-controls="" exposure="1.1" loading="lazy" shadow-intensity="0.8" src="../assets/model-3d/ar-bab08-carport.glb" touch-action="pan-y">
+<button class="hotspot" data-normal="0 1 0" data-position="0 2.6 0" slot="hotspot-0">1<span>Sambungan sudut kaku</span></button><button class="hotspot" data-normal="0 1 0" data-position="0 0 0" slot="hotspot-1">2<span>Tumpuan sendi</span></button><button class="hotspot" data-normal="0 1 0" data-position="5 0 0" slot="hotspot-2">3<span>Tumpuan rol</span></button>
+<button class="tombol tombol--utama" slot="ar-button" style="position:absolute;bottom:12px;right:12px"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-zona-ar"></use></svg> Lihat di ruanganmu (AR)</button>
+<div slot="poster" style="display:grid;place-items:center;height:100%;color:#CBD5E1">Memuat model 3D…</div>
+</model-viewer>
+<div class="ar-bawah"><div aria-label="Kode QR menuju halaman AR bab-08" class="qr" data-qr="../ar/bab-08.html" role="img"></div>
+<div><b>Petunjuk:</b> pindai kode QR atau ketuk tombol AR → izinkan kamera → arahkan ke lantai datar → ketuk untuk menempatkan model. Ketuk angka untuk membaca label.<ol style="margin:6px 0 0;padding-left:18px"><li>Sambungan sudut kaku</li><li>Tumpuan sendi</li><li>Tumpuan rol</li></ol>
+<p style="margin:6px 0 0"><a href="../ar/bab-08.html">Buka halaman AR penuh</a> • Perangkat tanpa AR tetap dapat memutar model 360° dengan jari/tetikus.</p></div></div></div><h2 id="alat-hitung-portal-statis-tertentu">9. Alat Hitung – Portal
+Statis Tertentu</h2><div class="gulir"><table>
+<colgroup>
+<col style="width: 19%"/>
+<col style="width: 80%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Aspek</strong></th>
+<th><strong>Spesifikasi</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tujuan</td>
+<td>Reaksi dan NFD, SFD, BMD portal L (jepit) dan portal persegi
+sendi–rol</td>
+</tr>
+<tr class="even">
+<td>Rumus</td>
+<td>\(\Sigma F_x=0;\ \Sigma F_y=0;\ \Sigma M=0;\
+M(s)=-\sum_{\text{lintasan}} \vec r\times\vec F\)</td>
+</tr>
+<tr class="odd">
+<td>Input</td>
+<td>Jenis portal; tinggi kolom h (m; 1–10); bentang L (m; 1–20); beban
+merata balok, beban titik (vertikal/horizontal) di sembarang titik</td>
+</tr>
+<tr class="even">
+<td>Output</td>
+<td>Reaksi; tabel N, V, M tiap batang; nilai di sudut; Mmaks dan lokasi;
+diagram pada gambar portal (sisi tarik)</td>
+</tr>
+<tr class="odd">
+<td>Validasi</td>
+<td>Rol harus di kaki portal; peringatan bila portal labil (mis. dua
+rol)</td>
+</tr>
+<tr class="even">
+<td>Fitur</td>
+<td>Tombol “Periksa titik sudut”; reset; salin; ekspor CSV/PDF/PNG</td>
+</tr>
+</tbody>
+</table></div><div class="gulir"><table>
+<colgroup>
+<col style="width: 11%"/>
+<col style="width: 34%"/>
+<col style="width: 38%"/>
+<col style="width: 15%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Kasus uji</strong></th>
+<th><strong>Input</strong></th>
+<th><strong>Hasil yang diharapkan</strong></th>
+<th><strong>Rujukan</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Portal L: h = 3, L = 2, P = 6 di C</td>
+<td>RA = 6; MA = 12 kN·m</td>
+<td>Contoh 8.1</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Sendi–rol: h = 4, L = 6, q = 3</td>
+<td>RA = RD = 9; Mmaks = 13,50</td>
+<td>Contoh 8.2</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Sendi–rol: h = 4, L = 6, q = 3, H = 4 di B</td>
+<td>HA = –4; RA = 6,33; RD = 11,67; M_B = 16,00; Mmaks = 22,69</td>
+<td>Contoh 8.3</td>
+</tr>
+</tbody>
+</table></div><div class="kalk" data-bab="bab-08" data-kalk="portal"></div><h2 id="studi-kasus-mini-carport-miring-setelah-angin-kencang">10. Studi
+Kasus Mini – Carport Miring setelah Angin Kencang</h2><p>Sebuah carport baja (h = 2,6 m, L = 5 m) di perumahan dekat pantai
+Padang miring setelah angin kencang. Kaki kiri dibaut ke fondasi
+(dianggap sendi), kaki kanan hanya diletakkan di atas pelat (dianggap
+rol). Beban atap q = 0,8 kN/m; angin 2,5 kN di puncak kolom kiri.</p><ol type="1">
+<li><p>Hitung reaksi dan momen di sudut kiri.</p></li>
+<li><p>Jelaskan mengapa kolom kiri menderita lebih berat daripada kolom
+kanan.</p></li>
+<li><p>Usulkan perbaikan murah dan aman.</p></li>
+</ol><p><em>Kunci dosen:</em> HA = 2,5 kN (←); RD = (0,8 × 5 × 2,5 + 2,5 ×
+2,6) ÷ 5 = (10 + 6,5) ÷ 5 = 3,30 kN; RA = 4 – 3,30 = 0,70 kN; M sudut
+kiri = 2,5 × 2,6 = 6,50 kN·m. Kolom kiri memikul seluruh geser angin
+karena rol tidak menahan gaya horizontal. Perbaikan: angkur kaki kanan
+(jadikan sendi) dan tambah pengaku diagonal.</p><h2 id="info-penting-tips-lapangan-peringatan-k3">11. Info Penting /
+Tips Lapangan / Peringatan K3</h2><p>Info Penting di 8.1; Tips Lapangan dan Peringatan K3 di 8.4.</p><h2 id="rangkuman">12. Rangkuman</h2><ul>
+<li><p>Portal = balok + kolom bersambungan kaku; momen diteruskan
+melewati sudut.</p></li>
+<li><p>Portal statis tertentu: 3 reaksi (portal L jepit atau
+sendi–rol).</p></li>
+<li><p>Beban horizontal di ketinggian h menimbulkan momen h × H terhadap
+kaki portal.</p></li>
+<li><p>BMD portal digambar di sisi tarik; momen di sudut sama untuk
+balok dan kolom (tanpa momen luar).</p></li>
+<li><p>Periksa kesetimbangan titik sudut untuk menguji
+konsistensi.</p></li>
+</ul><h2 id="latihan-kuis-interaktif-11-soal">13. Latihan &amp; Kuis
+Interaktif (11 soal)</h2><div class="kuis" data-kuis="bab-08-1"><div class="kuis__skor"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-kuis"></use></svg> <span>Skor: <b data-skor="">0</b> / <b data-maks="">0</b></span><button class="tombol tombol--kecil" data-ulang="">Ulangi</button></div><div class="soal" data-kunci="(c)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 1</span><span>C1 • pilihan ganda</span></div><p class="soal__teks">Sambungan portal yang meneruskan momen disebut …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) sendi</button><button data-opsi="(b)" type="button">(b) rol</button><button data-opsi="(c)" type="button">(c) kaku</button><button data-opsi="(d)" type="button">(d) bebas</button></div><div class="umpan" hidden=""><b>Kunci:</b> (c)<br/><b>Pembahasan:</b> Lihat 8.1.</div></div><div class="soal" data-kunci="Benar" data-tipe="bs"><div class="soal__kepala"><span class="soal__label">No. 2</span><span>C2 • benar-salah</span></div><p class="soal__teks">Pada sudut portal tanpa momen luar, momen ujung balok sama dengan momen ujung kolom.</p><div class="soal__pilihan"><button data-opsi="Benar" type="button">Benar</button><button data-opsi="Salah" type="button">Salah</button></div><div class="umpan" hidden=""><b>Kunci:</b> Benar<br/><b>Pembahasan:</b> Kesetimbangan titik sudut.</div></div><div class="soal" data-kunci="(b)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 3</span><span>C2 • pilihan ganda</span></div><p class="soal__teks">BMD portal digambar pada …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) sisi tekan</button><button data-opsi="(b)" type="button">(b) sisi tarik</button><button data-opsi="(c)" type="button">(c) selalu di luar</button><button data-opsi="(d)" type="button">(d) selalu di dalam</button></div><div class="umpan" hidden=""><b>Kunci:</b> (b)<br/><b>Pembahasan:</b> Lihat Info Penting 8.1.</div></div><div class="soal" data-kunci="12" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 4</span><span>C3 • isian angka</span></div><p class="soal__teks">Portal L: kolom 4 m dijepit, balok 1,5 m, P = 8 kN di ujung balok. MA = … kN·m</p><div class="baris-tombol"><input aria-label="Jawaban soal 4" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 12<br/><b>Pembahasan:</b> 8 × 1,5.</div></div><div class="soal" data-kunci="–8" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 5</span><span>C3 • isian angka</span></div><p class="soal__teks">Soal no. 4: gaya normal kolom = … kN</p><div class="baris-tombol"><input aria-label="Jawaban soal 5" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> –8<br/><b>Pembahasan:</b> Tekan.</div></div><div class="soal" data-kunci="1,8" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 6</span><span>C3 • isian angka</span></div><p class="soal__teks">Portal sendi–rol, h = 3 m, L = 5 m, hanya angin 3 kN di puncak kolom kiri. RD = … kN</p><div class="baris-tombol"><input aria-label="Jawaban soal 6" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 1,8<br/><b>Pembahasan:</b> ΣMA: RD × 5 = 3 × 3.</div></div><div class="soal" data-kunci="9" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 7</span><span>C3 • isian angka</span></div><p class="soal__teks">Soal no. 6: momen di sudut kiri = … kN·m</p><div class="baris-tombol"><input aria-label="Jawaban soal 7" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 9<br/><b>Pembahasan:</b> HA × h = 3 × 3.</div></div><div class="soal" data-kunci="20" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 8</span><span>C3 • isian angka</span></div><p class="soal__teks">Portal sendi–rol, L = 8 m, q = 2,5 kN/m pada balok saja. Mmaks balok = … kN·m</p><div class="baris-tombol"><input aria-label="Jawaban soal 8" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 20<br/><b>Pembahasan:</b> 2,5 × 64 ÷ 8.</div></div><div class="soal" data-kunci="(b)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 9</span><span>C4 • pilihan ganda</span></div><p class="soal__teks">Pada portal sendi–rol dengan beban angin, kolom di atas rol …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) momennya terbesar</button><button data-opsi="(b)" type="button">(b) tidak memikul momen</button><button data-opsi="(c)" type="button">(c) memikul geser angin</button><button data-opsi="(d)" type="button">(d) tertarik</button></div><div class="umpan" hidden=""><b>Kunci:</b> (b)<br/><b>Pembahasan:</b> Rol tidak memberi gaya horizontal.</div></div><div class="soal" data-kunci="(b)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 10</span><span>C5 • pilihan ganda (menilai)</span></div><p class="soal__teks">Rina menggambar momen kolom Contoh 8.3 sama besar di seluruh tinggi kolom (16 kN·m). Penilaian …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) benar</button><button data-opsi="(b)" type="button">(b) salah: momen kolom naik linear dari 0 di sendi A ke 16 di B</button><button data-opsi="(c)" type="button">(c) benar bila kolom pendek</button><button data-opsi="(d)" type="button">(d) salah karena harus 0</button></div><div class="umpan" hidden=""><b>Kunci:</b> (b)<br/><b>Pembahasan:</b> Sendi A memberi M = 0.</div></div><div class="soal" data-kunci="Kedua kaki sendi → masing-masing 1,25 kN → M sudut ≈ 3,25 kN·m" data-tipe="uraian"><div class="soal__kepala"><span class="soal__label">No. 11</span><span>C6 • uraian (merancang)</span></div><p class="soal__teks">Rancang perubahan tumpuan carport pada Studi Kasus agar momen di sudut kiri berkurang. Hitung momen sudut setelah perubahan bila kedua kaki menjadi sendi dengan geser angin dibagi rata (anggapan sederhana).</p><textarea aria-label="Jawaban uraian 11" rows="3" style="width:100%"></textarea><div class="baris-tombol"><button class="tombol tombol--kecil" data-lihat="" type="button">Lihat kunci &amp; rubrik</button></div><div class="umpan" hidden=""><b>Kunci:</b> Kedua kaki sendi → masing-masing 1,25 kN → M sudut ≈ 3,25 kN·m<br/><b>Pembahasan:</b> Catatan: portal dua sendi statis tak tentu; pembagian rata adalah pendekatan. Rubrik: ide 40, hitungan 40, catatan asumsi 20.</div></div></div><h2 id="refleksi-diri">14. Refleksi Diri</h2><ul>
+<li><p>Saya dapat menjelaskan sambungan kaku dan pengaruhnya. 1 2 3 4
+5</p></li>
+<li><p>Saya dapat menghitung reaksi portal. 1 2 3 4 5</p></li>
+<li><p>Saya dapat menggambar BMD portal di sisi tarik. 1 2 3 4
+5</p></li>
+<li><p>Saya dapat memeriksa titik sudut. 1 2 3 4 5</p></li>
+</ul><p><strong>Apa yang sudah/belum saya pahami?</strong> • <strong>Tindak
+lanjut:</strong> skor ≤ 3 → gambar ulang Gambar 8.3 dengan Alat Hitung
+Portal dan diskusikan sisi tarik dengan tutor sebaya.</p><h2 id="glosarium-dan-referensi-bab">15. Glosarium dan Referensi
+Bab</h2><div class="gulir"><table class="glosarium">
+<colgroup>
+<col style="width: 24%"/>
+<col style="width: 75%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Istilah</strong></th>
+<th><strong>Arti</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Portal</td>
+<td>Struktur balok–kolom dengan sambungan kaku.</td>
+</tr>
+<tr class="even">
+<td>Sambungan kaku</td>
+<td>Sambungan yang mempertahankan sudut antarbatang dan meneruskan
+momen.</td>
+</tr>
+<tr class="odd">
+<td>Sisi tarik</td>
+<td>Sisi batang yang memanjang akibat momen; tempat BMD digambar.</td>
+</tr>
+<tr class="even">
+<td>Bracing</td>
+<td>Pengaku diagonal untuk menahan goyangan.</td>
+</tr>
+</tbody>
+</table></div><ul>
+<li><p>Hibbeler, R. C. (2024b). <em>Structural analysis</em> (11th ed.).
+Pearson. (Bab 4: frames)</p></li>
+<li><p>Leet, K. M., Uang, C.-M., Lanning, J. T., &amp; Gilbert, A. M.
+(2018). <em>Fundamentals of structural analysis</em> (5th ed.).
+McGraw-Hill. (Bab 5)</p></li>
+</ul>
+    <div class="selesai-bab"><button class="tombol tombol--utama" type="button" data-tandai-selesai><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-kuis"/></svg> Tandai bab ini selesai</button></div>
+    <nav class="nav-bab" aria-label="Navigasi bab"><a class="tombol" href="uts.html"><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-bab-sebelumnya"/></svg> Evaluasi Tengah Semester</a><a class="tombol tombol--utama" href="bab-09.html">Portal Tiga Sendi <svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-bab-berikutnya"/></svg></a></nav>
+  </main>
+</div>
+<button class="fab" type="button" aria-label="Buka AI Tutor" data-buka-ai><svg class="ikon ikon--besar" aria-hidden="true"><use href="../assets/icons/icons.svg#i-ai-tutor"/></svg></button>
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/app.js" defer></script>
+<script src="../assets/js/ai-tutor.js" defer></script>
+<script src="../assets/js/kuis.js" defer></script>
+<script src="../assets/js/kalkulator.js" defer></script>
+<script defer src="../assets/vendor/katex/katex.min.js"></script>
+<script defer src="../assets/vendor/katex/auto-render.min.js" onload="renderMathInElement(document.getElementById('isi'),{delimiters:[{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}],throwOnError:false})"></script>
+<script type="module" src="../assets/vendor/model-viewer/model-viewer.min.js"></script>
+</body>
+</html>

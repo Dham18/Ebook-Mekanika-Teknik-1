@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gaya Dalam Balok: NFD, SFD, BMD – Mekanika Teknik 1</title>
+<meta name="description" content="E-book interaktif Mekanika Teknik 1 (SIP3115) – Gaya Dalam Balok: NFD, SFD, BMD">
+<meta name="theme-color" content="#0B3C5D">
+<link rel="manifest" href="../manifest.json">
+<link rel="icon" href="../assets/img/ikon-192.png">
+<link rel="stylesheet" href="../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../assets/css/kover.css">
+<link rel="stylesheet" href="../assets/css/ebook.css">
+<link rel="stylesheet" href="../assets/vendor/katex/katex.min.css">
+<script>try{document.documentElement.dataset.tema=localStorage.getItem("mt1-tema")||(matchMedia("(prefers-color-scheme: dark)").matches?"gelap":"terang");document.documentElement.style.setProperty("--font-scale",localStorage.getItem("mt1-huruf")||1)}catch(e){}</script>
+</head>
+<body data-halaman="bab-05" data-root="../">
+<a class="lewati" href="#isi">Lewati ke isi</a>
+<div class="bilah-atas" role="banner">
+  <button class="tbl-ikon tbl-dis" type="button" aria-label="Daftar isi" data-buka-dis><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-peta-konsep"/></svg></button>
+  <a class="tbl-ikon" href="../index.html" aria-label="Beranda"><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-beranda"/></svg></a>
+  <span class="judul-kecil">Gaya Dalam Balok: NFD, SFD, BMD</span>
+  <button class="tbl-ikon" type="button" aria-label="Cari" data-cari><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-cari"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Penanda halaman" aria-pressed="false" data-penanda><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-penanda"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Catatan pribadi" data-catatan><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-catatan"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Baca suara" aria-pressed="false" data-suara><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-video"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="A− perkecil huruf" data-huruf="-">A−</button>
+  <button class="tbl-ikon" type="button" aria-label="A+ perbesar huruf" data-huruf="+">A+</button>
+  <button class="tbl-ikon" type="button" aria-label="Mode gelap/terang" data-tema-tombol><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-mode-gelap"/></svg></button>
+  <div class="progres-baca" aria-hidden="true"></div>
+</div>
+<div class="tirai" data-tutup-dis></div>
+<div class="tata">
+  <nav class="dis" aria-label="Daftar isi halaman"></nav>
+  <main class="isi" id="isi" tabindex="-1">
+    <header class="banner-bab"><svg class="seni" viewBox="0 0 1600 500" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><g stroke="#00E5FF" stroke-opacity=".07"><path d="M0 100H1600M0 200H1600M0 300H1600M0 400H1600M200 0V500M400 0V500M600 0V500M800 0V500M1000 0V500M1200 0V500M1400 0V500"/></g><g stroke="#00E5FF" stroke-width="5" fill="none" stroke-linecap="round" opacity=".85"><path d="M980 380H1540M1060 250H1460M980 380L1060 250M1540 380L1460 250M1060 250V380M1160 250V380M1260 250V380M1360 250V380M1460 250V380"/><path d="M1060 380L1160 250M1160 380L1260 250M1360 250L1460 380M1260 250L1360 380" stroke="#1DE9B6"/></g><rect x="0" y="470" width="1600" height="6" fill="#F26622"/></svg><div class="banner-bab__isi"><div class="banner-bab__no">BAB 5 • MINGGU 5</div><h1 class="banner-bab__judul">Gaya Dalam Balok: NFD, SFD, BMD</h1><p class="banner-bab__kutip">“Satitiak jadikan lauik, sakapa jadikan
+gunuang.” – pepatah Minangkabau (setitik jadikan laut, sekepal jadikan
+gunung): dari dua angka reaksi, kita bangun gambaran gaya di seluruh
+balok.</p></div></header>
+    <p>Minggu 5 • Sub-CPMK 2.2 • CPMK-2 • CPL 2 / IK 2.2 • Estimasi belajar:
+120 menit mandiri + 220 menit kelas/studio (studio: membuat lembar
+hitung SFD/BMD)</p><h2 id="capaian-pembelajaran">2. Capaian Pembelajaran</h2><p><strong>Sub-CPMK 2.2:</strong> Mahasiswa mampu menggambar diagram
+gaya lintang (SFD) dan momen lentur (BMD) balok sederhana.</p><div class="gulir"><table>
+<colgroup>
+<col style="width: 8%"/>
+<col style="width: 66%"/>
+<col style="width: 25%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Kode</strong></th>
+<th><strong>Indikator</strong></th>
+<th><strong>Level Bloom</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2.2.a</td>
+<td>Menjelaskan arti gaya normal (N), gaya lintang (V), dan momen lentur
+(M) beserta konvensi tandanya</td>
+<td>C2 – menjelaskan</td>
+</tr>
+<tr class="even">
+<td>2.2.b</td>
+<td>Menghitung N, V, M di potongan sembarang dengan metode potongan</td>
+<td>C3 – menghitung</td>
+</tr>
+<tr class="odd">
+<td>2.2.c</td>
+<td>Menerapkan hubungan q–V–M untuk menggambar diagram dengan cepat</td>
+<td>C3 – menerapkan</td>
+</tr>
+<tr class="even">
+<td>2.2.d</td>
+<td>Menentukan nilai dan lokasi momen maksimum</td>
+<td>C3–C4</td>
+</tr>
+<tr class="odd">
+<td>2.2.e</td>
+<td>Menggambar diagram gaya dalam balok kantilever</td>
+<td>C3 – menggambar</td>
+</tr>
+</tbody>
+</table></div><p>Kriteria (RPS): diagram sesuai hubungan q–V–M; nilai ekstrem
+tepat.</p><h2 id="peta-konsep-bab">3. Peta Konsep Bab</h2><ul>
+<li><p><strong>Reaksi (Bab 4)</strong> → (5.1) gaya dalam N, V, M dan
+konvensi tanda</p></li>
+<li><p><strong>Gaya dalam</strong> → (5.2) metode potongan: DBB sebagian
+balok</p></li>
+<li><p><strong>Metode potongan</strong> → (5.3) hubungan q–V–M:
+kemiringan dan loncatan</p></li>
+<li><p><strong>q–V–M</strong> → (5.4) NFD, SFD, BMD balok sederhana →
+(5.5) kantilever</p></li>
+<li><p><strong>BMD</strong> → letak tulangan (Struktur Beton I) dan Bab
+6 (overhang)</p></li>
+</ul><h2 id="apersepsi">4. Apersepsi</h2><p><strong>Pertanyaan pemantik:</strong> Ambil penggaris plastik,
+letakkan di atas dua buku, lalu tekan di tengah. Di mana penggaris
+paling melengkung? Sisi mana yang memanjang (tertarik) dan sisi mana
+yang memendek (tertekan)?</p><p><strong>Kasus nyata:</strong> Pada balok beton yang dibongkar setelah
+gempa, retak tegak paling banyak di tengah bentang sisi bawah, sedangkan
+di dekat tumpuan muncul retak miring. Bab ini menjelaskan mengapa pola
+retak berbeda: tengah bentang dikuasai <strong>momen</strong>, dekat
+tumpuan dikuasai <strong>gaya lintang</strong>.</p><figure class="gbr"><div class="kotak" style="text-align:left"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-catatan"></use></svg> <b>Gambar 5.1. Pola retak balok beton</b>
+<p style="margin:6px 0">Balok beton sederhana dengan retak lentur
+tegak di tengah bawah dan retak geser miring di dekat tumpuan, di
+atasnya diagram V dan M samar.</p>
+<details class="prompt-gbr"><summary>Prompt gambar (untuk dibuat di Gemini/ChatGPT)</summary>Educational illustration of a reinforced concrete
+simple beam showing vertical flexural cracks at midspan bottom and
+diagonal shear cracks near the supports, faint shear and moment diagrams
+glowing above, technical style, navy background, no text</details></div></figure><h2 id="uraian-materi">5. Uraian Materi</h2><h3 id="gaya-dalam-dan-konvensi-tanda">5.1 Gaya Dalam dan Konvensi
+Tanda</h3><p>Jika balok “dipotong” secara khayal, di bidang potongan bekerja tiga
+gaya dalam yang menjaga kedua bagian tetap setimbang:</p><div class="gulir"><table>
+<colgroup>
+<col style="width: 18%"/>
+<col style="width: 16%"/>
+<col style="width: 33%"/>
+<col style="width: 31%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Gaya dalam</strong></th>
+<th><strong>Lambang &amp; satuan</strong></th>
+<th><strong>Arti fisik</strong></th>
+<th><strong>Tanda positif (buku ini)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Gaya normal</td>
+<td>N (kN)</td>
+<td>Menarik atau menekan sepanjang sumbu balok</td>
+<td>**Tarik** positif, tekan negatif</td>
+</tr>
+<tr class="even">
+<td>Gaya lintang (geser)</td>
+<td>V (kN)</td>
+<td>Menggeser satu bagian terhadap bagian lain</td>
+<td>Jumlah gaya vertikal **di kiri potongan ke atas** positif</td>
+</tr>
+<tr class="odd">
+<td>Momen lentur</td>
+<td>M (kN·m)</td>
+<td>Melenturkan balok</td>
+<td>Membuat balok **melengkung cekung ke atas** (tarik di bawah)
+positif</td>
+</tr>
+</tbody>
+</table></div><p>Diagramnya disebut <strong>NFD</strong> (<em>normal force
+diagram</em>), <strong>SFD</strong> (<em>shear force diagram</em>), dan
+<strong>BMD</strong> (<em>bending moment diagram</em>). Dalam buku ini
+momen positif digambar di sisi bawah sumbu – sisi yang tertarik – agar
+mudah dikaitkan dengan letak tulangan beton.</p><aside class="kotak kotak--info"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-info"></use></svg>Info Penting</p><p>Konvensi tanda boleh berbeda antarbuku. Yang wajib adalah
+<strong>konsisten</strong> dalam satu hitungan dan menuliskan konvensi
+yang dipakai di awal lembar kerja.</p></aside><h3 id="metode-potongan">5.2 Metode Potongan</h3><ol type="1">
+<li><p>Hitung semua reaksi (Bab 4) dan periksa ΣFy = 0.</p></li>
+<li><p>Potong balok di jarak x dari ujung kiri; ambil bagian kiri
+sebagai DBB.</p></li>
+<li><p>Pasang N, V, M di bidang potongan dengan arah positif.</p></li>
+<li><p>Tulis ΣFx = 0 → N; ΣFy = 0 → V; ΣM terhadap potongan = 0 →
+M.</p></li>
+<li><p>Ulangi untuk setiap segmen di antara titik perubahan
+beban.</p></li>
+</ol><div aria-label="V(x) = ΣF↑ (kiri) – ΣF↓ (kiri) M(x) = Σ[F · jarak ke potongan] (kiri,
+↻ positif)" class="rumus" role="math">\[V(x)=\sum_{\text{kiri}}F_{\uparrow}-\sum_{\text{kiri}}F_{\downarrow},\qquad
+M(x)=\sum_{\text{kiri}}F_i\,(x-x_i)\]</div><p><strong>Keterangan:</strong> x = letak potongan dari ujung kiri (m);
+xᵢ = letak gaya ke-i (m); Fᵢ bertanda + ke atas.
+<strong>Batasan:</strong> hanya gaya di kiri potongan yang dihitung.</p><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 5.1 – Potongan pada balok Contoh
+3.3</p><p><strong>Soal.</strong> Balok sederhana 6 m, beban 12 kN di x = 2 m;
+RA = 8 kN, RB = 4 kN. Hitung V dan M di x = 1 m dan x = 4 m.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – x = 1 m (kiri beban): V = 8 kN; M = 8 × 1 = 8 kN·m.</p><p>Langkah 2 – x = 4 m (kanan beban): V = 8 – 12 = –4 kN; M = 8 × 4 – 12
+× (4 – 2) = 32 – 24 = 8 kN·m.</p><p>Langkah 3 – Momen terbesar di bawah beban (x = 2 m): M = 8 × 2 = 16
+kN·m.</p><p class="jawab"><strong>Jawab:</strong> V(1) = +8 kN, M(1) = 8 kN·m; V(4) = –4 kN,
+M(4) = 8 kN·m; Mmaks = 16 kN·m di x = 2 m. Pemeriksaan dari kanan: M(2)
+= RB × 4 = 16 ✓</p></details></aside><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 5.2 – Gaya normal pada balok dengan beban
+miring (Contoh 3.4)</p><p><strong>Soal.</strong> Balok 5 m sendi–rol, gaya 10 kN miring 45° di
+x = 3 m; HA = 7,07 kN (←), RA = 2,83 kN, RB = 4,24 kN. Gambarkan NFD dan
+hitung Mmaks.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – Segmen 0–3 m: ΣFx bagian kiri: N – 7,07 = 0 → N = +7,07
+kN (tarik).</p><p>Langkah 2 – Segmen 3–5 m: N = –7,07 + 7,07 = 0.</p><p>Langkah 3 – Mmaks di bawah beban: M = 2,83 × 3 = 8,49 kN·m (periksa
+dari kanan: 4,24 × 2 = 8,49 ✓).</p><p class="jawab"><strong>Jawab:</strong> NFD: tarik 7,07 kN pada 0–3 m, nol pada 3–5
+m; Mmaks = 8,49 kN·m.</p></details></aside><h3 id="hubungan-beban-gaya-lintang-dan-momen-qvm">5.3 Hubungan Beban,
+Gaya Lintang, dan Momen (q–V–M)</h3><p>Menghitung potongan di banyak titik melelahkan. Hubungan berikut
+membuat diagram dapat digambar cepat:</p><div aria-label="dV/dx = –q dM/dx = V" class="rumus" role="math">\[\frac{dV}{dx}=-q(x),\qquad \frac{dM}{dx}=V(x)\]</div><p><strong>Keterangan:</strong> q = beban merata ke bawah (kN/m); V
+(kN); M (kN·m). <strong>Akibatnya:</strong> (1) kemiringan SFD = –q; (2)
+kemiringan BMD = V; (3) M maksimum terjadi di titik V = 0 atau di titik
+V berganti tanda; (4) beban titik membuat SFD meloncat sebesar beban
+itu; (5) momen kopel luar membuat BMD meloncat. Rujukan: Hibbeler
+(2024b) Bab 4.</p><div class="gulir"><table>
+<colgroup>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Beban pada segmen</strong></th>
+<th><strong>Bentuk SFD</strong></th>
+<th><strong>Bentuk BMD</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tidak ada beban (q = 0)</td>
+<td>Datar (konstan)</td>
+<td>Garis lurus miring</td>
+</tr>
+<tr class="even">
+<td>Beban merata (q konstan)</td>
+<td>Garis lurus miring</td>
+<td>Parabola (derajat 2)</td>
+</tr>
+<tr class="odd">
+<td>Beban segitiga</td>
+<td>Parabola</td>
+<td>Kurva derajat 3</td>
+</tr>
+<tr class="even">
+<td>Beban titik P</td>
+<td>Loncatan sebesar P</td>
+<td>Patahan (sudut)</td>
+</tr>
+</tbody>
+</table></div><aside class="kotak kotak--tips"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-tips"></use></svg>Tips Lapangan</p><p>Luas SFD di antara dua titik = perubahan momen di antara titik itu.
+Gunakan sebagai pemeriksaan cepat: dari A ke titik V = 0, luas segitiga
+SFD harus sama dengan Mmaks.</p></aside><h3 id="nfd-sfd-dan-bmd-balok-sederhana">5.4 NFD, SFD, dan BMD Balok
+Sederhana</h3><div aria-label="Beban titik P di tengah: Mmaks = P·L/4 Beban titik di a dari A: Mmaks
+= P·a·b/L Beban merata penuh: Mmaks = q·L²/8" class="rumus" role="math">\[M_{maks}=\frac{PL}{4};\quad M_{maks}=\frac{Pab}{L};\quad
+M_{maks}=\frac{qL^2}{8}\]</div><p><strong>Keterangan:</strong> a, b = jarak beban ke tumpuan A dan B
+(m), a + b = L. <strong>Batasan:</strong> hanya untuk balok sendi–rol
+dengan satu jenis beban; untuk kombinasi beban gunakan metode potongan
+atau hubungan q–V–M.</p><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 5.3 – Beban merata penuh</p><p><strong>Soal.</strong> Balok sederhana 5 m dengan q = 4 kN/m.
+Tuliskan V(x), M(x), dan Mmaks.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – RA = RB = 4 × 5 ÷ 2 = 10 kN.</p><p>Langkah 2 – V(x) = 10 – 4x → V = 0 di x = 2,5 m.</p><p>Langkah 3 – M(x) = 10x – 2x² → M(2,5) = 25 – 12,5 = 12,5 kN·m.</p><p>Langkah 4 – Periksa: qL²/8 = 4 × 25 ÷ 8 = 12,5 ✓; luas SFD 0–2,5 m =
+½ × 10 × 2,5 = 12,5 ✓</p><p class="jawab"><strong>Jawab:</strong> Mmaks = 12,50 kN·m di tengah bentang; SFD
+garis lurus +10 → –10 kN; BMD parabola.</p></details></aside><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 5.4 – Beban merata + beban titik (Contoh
+4.3)</p><p><strong>Soal.</strong> Balok sederhana 5 m, q = 4 kN/m penuh dan P =
+8 kN di x = 3 m; RA = 13,20 kN, RB = 14,80 kN. Gambarkan SFD dan
+BMD.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – Segmen 0–3 m: V = 13,20 – 4x; di x = 3⁻: V = 1,20 kN
+(masih positif).</p><p>Langkah 2 – Di x = 3: SFD meloncat turun 8 kN → V = –6,80 kN.</p><p>Langkah 3 – Segmen 3–5 m: V = 5,20 – 4x; di x = 5: V = –14,80 = –RB
+✓.</p><p>Langkah 4 – V berganti tanda di x = 3 m → Mmaks di x = 3: M = 13,20 ×
+3 – 4 × 3² ÷ 2 = 39,60 – 18,00 = 21,60 kN·m.</p><p>Langkah 5 – Periksa dari kanan: 14,80 × 2 – 4 × 2² ÷ 2 = 29,60 – 8,00
+= 21,60 ✓</p><p class="jawab"><strong>Jawab:</strong> Mmaks = 21,60 kN·m di bawah beban titik
+(lihat Gambar 5.2).</p></details></aside><p><img alt="Gambar 5.2. DBB, SFD, dan BMD Contoh 5.4 (dihitung dan digambar
+dari alat hitung; momen positif di bawah sumbu)." loading="lazy" src="../assets/img/bab/bab-05-1cb91a054d6f322b51f3118f25a533503408587f.png"/></p><p><em>Gambar 5.2. DBB, SFD, dan BMD Contoh 5.4 (dihitung dan digambar
+dari alat hitung; momen positif di bawah sumbu).</em></p><h3 id="diagram-gaya-dalam-balok-kantilever">5.5 Diagram Gaya Dalam
+Balok Kantilever</h3><p>Pada kantilever yang dijepit di kiri, semua momen bernilai
+<strong>negatif</strong> (balok melengkung cembung ke atas, tarik di
+atas) dan terbesar di jepit.</p><div aria-label="Beban titik P di ujung: M(x) = –P·(L – x) Beban merata q: M(x) =
+–q·(L – x)²/2" class="rumus" role="math">\[M(x)=-P(L-x),\qquad M(x)=-\frac{q(L-x)^2}{2}\]</div><p><strong>Keterangan:</strong> x diukur dari jepit (m). V = P (konstan)
+untuk beban titik; V = q(L – x) untuk beban merata.</p><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 5.5 – Kantilever papan reklame (Contoh
+4.5)</p><p><strong>Soal.</strong> Kantilever 2 m, P = 5 kN di ujung. Gambarkan
+SFD dan BMD.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – V(x) = +5 kN konstan sepanjang balok.</p><p>Langkah 2 – M(x) = –5(2 – x): M(0) = –10 kN·m; M(2) = 0.</p><p class="jawab"><strong>Jawab:</strong> SFD persegi panjang +5 kN; BMD garis lurus
+dari –10 kN·m di jepit ke 0 di ujung.</p></details></aside><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 5.6 – Kanopi (Contoh 4.6)</p><p><strong>Soal.</strong> Kanopi 1,5 m, q = 4,34 kN/m, list plank 1,0 kN
+di ujung. Hitung V dan M di jepit dan di tengah kanopi (x = 0,75 m).</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – Di jepit: V = 4,34 × 1,5 + 1,0 = 7,51 kN; M = –(4,34 ×
+1,5² ÷ 2 + 1,0 × 1,5) = –6,38 kN·m.</p><p>Langkah 2 – Di x = 0,75 m: sisa panjang 0,75 m → V = 4,34 × 0,75 +
+1,0 = 4,26 kN; M = –(4,34 × 0,75² ÷ 2 + 1,0 × 0,75) = –(1,22 + 0,75) =
+–1,97 kN·m.</p><p class="jawab"><strong>Jawab:</strong> Momen di tengah kanopi hanya ±31% momen jepit
+– itulah mengapa tulangan atas paling penting di dekat tumpuan.</p></details></aside><aside class="kotak kotak--k3"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-peringatan"></use></svg>Peringatan K3</p><p>Saat membongkar bekisting balok, mulailah dari tengah bentang ke arah
+tumpuan secara bertahap, dan untuk kantilever mulailah dari
+<strong>ujung bebas</strong> ke arah tumpuan. Urutan yang salah dapat
+menimbulkan momen yang tidak direncanakan.</p></aside><h2 id="contoh-soal-pembahasan">6. Contoh Soal &amp; Pembahasan</h2><p>Enam contoh: 5.1–5.2 (metode potongan dan NFD), 5.3–5.4 (balok
+sederhana), 5.5–5.6 (kantilever). Semua diperiksa dari dua arah atau
+dengan luas SFD.</p><h2 id="tanya-ai-tutor">7. Tanya AI Tutor</h2><div class="kartu-ai-grid"><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Jelaskan lebih sederhana</h4><p>Jelaskan beda gaya lintang dan momen lentur dengan analogi memotong roti dan membengkokkan penggaris. Tanyakan saya di mana momen terbesar balok sederhana.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Jelaskan beda gaya lintang dan momen lentur dengan analogi memotong roti dan membengkokkan penggaris. Tanyakan saya di mana momen terbesar balok sederhana." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Jelaskan beda gaya lintang dan momen lentur dengan analogi memotong roti dan membengkokkan penggaris. Tanyakan saya di mana momen terbesar balok sederhana." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Jelaskan beda gaya lintang dan momen lentur dengan analogi memotong roti dan membengkokkan penggaris. Tanyakan saya di mana momen terbesar balok sederhana." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Periksa diagram saya</h4><p>Saya menggambar SFD: [jelaskan nilai di tiap titik]. Apakah bentuknya sesuai hubungan q–V–M? Bimbing saya dengan pertanyaan.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Saya menggambar SFD: [jelaskan nilai di tiap titik]. Apakah bentuknya sesuai hubungan q–V–M? Bimbing saya dengan pertanyaan." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Saya menggambar SFD: [jelaskan nilai di tiap titik]. Apakah bentuknya sesuai hubungan q–V–M? Bimbing saya dengan pertanyaan." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Saya menggambar SFD: [jelaskan nilai di tiap titik]. Apakah bentuknya sesuai hubungan q–V–M? Bimbing saya dengan pertanyaan." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Beri contoh lain</h4><p>Beri contoh balok di rumah atau sekolah yang momennya negatif, dan minta saya menjelaskan letak tulangannya.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Beri contoh balok di rumah atau sekolah yang momennya negatif, dan minta saya menjelaskan letak tulangannya." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Beri contoh balok di rumah atau sekolah yang momennya negatif, dan minta saya menjelaskan letak tulangannya." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Beri contoh balok di rumah atau sekolah yang momennya negatif, dan minta saya menjelaskan letak tulangannya." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Buat soal latihan</h4><p>Buat 3 soal SFD/BMD balok sederhana dengan beban merata parsial. Sembunyikan jawaban.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Buat 3 soal SFD/BMD balok sederhana dengan beban merata parsial. Sembunyikan jawaban." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Buat 3 soal SFD/BMD balok sederhana dengan beban merata parsial. Sembunyikan jawaban." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Buat 3 soal SFD/BMD balok sederhana dengan beban merata parsial. Sembunyikan jawaban." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Ringkas bab ini</h4><p>Ringkas Bab 5 menjadi tabel aturan menggambar SFD dan BMD.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Ringkas Bab 5 menjadi tabel aturan menggambar SFD dan BMD." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Ringkas Bab 5 menjadi tabel aturan menggambar SFD dan BMD." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Ringkas Bab 5 menjadi tabel aturan menggambar SFD dan BMD." type="button">Tanya langsung</button></div></div></div><h2 id="zona-ar">8. Zona AR</h2><p>Bab ini memakai <strong>grafik interaktif 2D</strong> (bukan AR)
+sesuai rancangan Tahap 1: penggeser posisi beban titik dan besar beban
+merata langsung mengubah SFD dan BMD. Cadangan cetak: Gambar 5.2.
+Opsional: model AR balok beton dengan pola retak lentur dan geser
+(ar-bab05-retak.glb ≤ 5 MB) untuk mengaitkan diagram dengan retak
+nyata.</p><div class="ar-kotak">
+<model-viewer alt="Model 3D Gaya Dalam Balok: NFD, SFD, BMD" ar="" ar-modes="webxr scene-viewer quick-look" auto-rotate="" camera-controls="" exposure="1.1" loading="lazy" shadow-intensity="0.8" src="../assets/model-3d/ar-bab05-retak.glb" touch-action="pan-y">
+<button class="hotspot" data-normal="0 1 0" data-position="2.5 0.05 0.16" slot="hotspot-0">1<span>Retak lentur (tengah bawah)</span></button><button class="hotspot" data-normal="0 1 0" data-position="0.6 0.25 0.16" slot="hotspot-1">2<span>Retak geser (dekat tumpuan)</span></button>
+<button class="tombol tombol--utama" slot="ar-button" style="position:absolute;bottom:12px;right:12px"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-zona-ar"></use></svg> Lihat di ruanganmu (AR)</button>
+<div slot="poster" style="display:grid;place-items:center;height:100%;color:#CBD5E1">Memuat model 3D…</div>
+</model-viewer>
+<div class="ar-bawah"><div aria-label="Kode QR menuju halaman AR bab-05" class="qr" data-qr="../ar/bab-05.html" role="img"></div>
+<div><b>Petunjuk:</b> pindai kode QR atau ketuk tombol AR → izinkan kamera → arahkan ke lantai datar → ketuk untuk menempatkan model. Ketuk angka untuk membaca label.<ol style="margin:6px 0 0;padding-left:18px"><li>Retak lentur (tengah bawah)</li><li>Retak geser (dekat tumpuan)</li></ol>
+<p style="margin:6px 0 0"><a href="../ar/bab-05.html">Buka halaman AR penuh</a> • Perangkat tanpa AR tetap dapat memutar model 360° dengan jari/tetikus.</p></div></div></div><h2 id="alat-hitung-generator-sfd-bmd">9. Alat Hitung – Generator SFD
+&amp; BMD</h2><div class="gulir"><table>
+<colgroup>
+<col style="width: 19%"/>
+<col style="width: 80%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Aspek</strong></th>
+<th><strong>Spesifikasi</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tujuan</td>
+<td>Menggambar NFD, SFD, BMD balok sederhana dan kantilever untuk
+kombinasi beban titik, merata parsial, segitiga, trapesium, dan momen
+kopel</td>
+</tr>
+<tr class="even">
+<td>Rumus</td>
+<td>\(\frac{dV}{dx}=-q;\ \frac{dM}{dx}=V;\ V,M\text{ dari metode potongan
+per segmen}\)</td>
+</tr>
+<tr class="odd">
+<td>Input</td>
+<td>Jenis balok; L (m; 0,5–30); daftar beban (jenis, besar, posisi,
+panjang); konvensi tampilan momen (positif di bawah/di atas)</td>
+</tr>
+<tr class="even">
+<td>Output</td>
+<td>Reaksi; tabel V dan M di titik penting; Mmaks/Mmin dan lokasinya;
+titik V = 0; grafik SFD &amp; BMD (Chart.js)</td>
+</tr>
+<tr class="odd">
+<td>Validasi</td>
+<td>Beban di luar bentang ditolak; jumlah beban maks. 10; pesan
+ramah</td>
+</tr>
+<tr class="even">
+<td>Langkah</td>
+<td>Persamaan V(x) dan M(x) per segmen ditampilkan dengan angka</td>
+</tr>
+<tr class="odd">
+<td>Fitur</td>
+<td>Penggeser beban (interaktif), reset, salin, ekspor CSV/PDF/PNG
+grafik</td>
+</tr>
+</tbody>
+</table></div><div class="gulir"><table>
+<colgroup>
+<col style="width: 11%"/>
+<col style="width: 33%"/>
+<col style="width: 34%"/>
+<col style="width: 20%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Kasus uji</strong></th>
+<th><strong>Input</strong></th>
+<th><strong>Hasil yang diharapkan</strong></th>
+<th><strong>Rujukan</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>L = 6; P = 12 @2</td>
+<td>Mmaks = 16,00 kN·m @2 m</td>
+<td>Contoh 5.1</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>L = 5; q = 4 penuh</td>
+<td>Mmaks = 12,50 kN·m @2,5 m</td>
+<td>Contoh 5.3</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>L = 5; q = 4 penuh + P = 8 @3</td>
+<td>Mmaks = 21,60 kN·m @3 m; V = +1,20/–6,80 kN di x = 3</td>
+<td>Contoh 5.4</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Kantilever L = 1,5; q = 4,34; P = 1,0 @1,5</td>
+<td>M(0) = –6,38; M(0,75) = –1,97 kN·m</td>
+<td>Contoh 5.6</td>
+</tr>
+</tbody>
+</table></div><div class="kalk" data-bab="bab-05" data-kalk="balok"></div><h2 id="studi-kasus-mini-lembar-hitung-studio">10. Studi Kasus Mini –
+Lembar Hitung Studio</h2><p>Di studio, setiap kelompok membuat lembar hitung (spreadsheet)
+SFD/BMD untuk balok lantai kelas: bentang 4 m, beban merata 9 kN/m, dan
+beban titik lemari arsip 6 kN yang dapat dipindah. Lembar hitung harus
+menampilkan V dan M tiap 0,25 m.</p><ol type="1">
+<li><p>Di posisi mana lemari menghasilkan momen terbesar? Berapa
+nilainya?</p></li>
+<li><p>Cocokkan hasil lembar hitung dengan Alat Hitung (selisih ≤
+1%).</p></li>
+<li><p>Tulis satu saran penempatan lemari arsip kepada pengelola
+gedung.</p></li>
+</ol><p><em>Kunci dosen:</em> di tengah bentang: M = 9 × 16 ÷ 8 + 6 × 4 ÷ 4 =
+18 + 6 = 24 kN·m. Saran: letakkan lemari berat dekat tumpuan
+(dinding/balok induk).</p><h2 id="info-penting-tips-lapangan-peringatan-k3">11. Info Penting /
+Tips Lapangan / Peringatan K3</h2><p>Info Penting di 5.1; Tips Lapangan di 5.3; Peringatan K3 di 5.5.</p><h2 id="rangkuman">12. Rangkuman</h2><ul>
+<li><p>Gaya dalam: N (tarik +), V (gaya kiri ke atas +), M (tarik bawah
++).</p></li>
+<li><p>Metode potongan: DBB bagian kiri → ΣFx, ΣFy, ΣM.</p></li>
+<li><p>dV/dx = –q dan dM/dx = V: SFD miring karena beban merata,
+meloncat karena beban titik; Mmaks di V = 0 atau saat V berganti
+tanda.</p></li>
+<li><p>Rumus cepat: PL/4, Pab/L, qL²/8 (balok sederhana); –PL, –qL²/2 di
+jepit (kantilever).</p></li>
+<li><p>BMD menunjukkan sisi tarik → letak tulangan utama.</p></li>
+</ul><h2 id="latihan-kuis-interaktif-12-soal">13. Latihan &amp; Kuis
+Interaktif (12 soal)</h2><div class="kuis" data-kuis="bab-05-1"><div class="kuis__skor"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-kuis"></use></svg> <span>Skor: <b data-skor="">0</b> / <b data-maks="">0</b></span><button class="tombol tombol--kecil" data-ulang="">Ulangi</button></div><div class="soal" data-kunci="(b)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 1</span><span>C1 • pilihan ganda</span></div><p class="soal__teks">Singkatan BMD berarti …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) beam moment design</button><button data-opsi="(b)" type="button">(b) bending moment diagram</button><button data-opsi="(c)" type="button">(c) base member diagram</button><button data-opsi="(d)" type="button">(d) beam mass distribution</button></div><div class="umpan" hidden=""><b>Kunci:</b> (b)<br/><b>Pembahasan:</b> Diagram momen lentur.</div></div><div class="soal" data-kunci="1-C, 2-A, 3-B" data-tipe="jodoh"><div class="soal__kepala"><span class="soal__label">No. 2</span><span>C1 • menjodohkan</span></div><p class="soal__teks">Jodohkan beban segmen (1) q = 0 (2) q konstan (3) beban titik dengan bentuk SFD (A) miring lurus (B) loncatan (C) datar</p><div class="baris-tombol"><input aria-label="Jawaban soal 2" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 1-C, 2-A, 3-B<br/><b>Pembahasan:</b> Tabel subbab 5.3.</div></div><div class="soal" data-kunci="Benar" data-tipe="bs"><div class="soal__kepala"><span class="soal__label">No. 3</span><span>C2 • benar-salah</span></div><p class="soal__teks">Momen maksimum terjadi di titik gaya lintang sama dengan nol atau berganti tanda.</p><div class="soal__pilihan"><button data-opsi="Benar" type="button">Benar</button><button data-opsi="Salah" type="button">Salah</button></div><div class="umpan" hidden=""><b>Kunci:</b> Benar<br/><b>Pembahasan:</b> dM/dx = V.</div></div><div class="soal" data-kunci="32" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 4</span><span>C3 • isian angka</span></div><p class="soal__teks">Balok sederhana 8 m, P = 16 kN di tengah. Mmaks = … kN·m</p><div class="baris-tombol"><input aria-label="Jawaban soal 4" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 32<br/><b>Pembahasan:</b> PL/4.</div></div><div class="soal" data-kunci="22,5" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 5</span><span>C3 • isian angka</span></div><p class="soal__teks">Balok sederhana 6 m, q = 5 kN/m penuh. Mmaks = … kN·m</p><div class="baris-tombol"><input aria-label="Jawaban soal 5" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 22,5<br/><b>Pembahasan:</b> 5 × 36 ÷ 8.</div></div><div class="soal" data-kunci="12" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 6</span><span>C3 • isian angka</span></div><p class="soal__teks">Balok sederhana 5 m, P = 10 kN di 2 m dari A. Mmaks = … kN·m</p><div class="baris-tombol"><input aria-label="Jawaban soal 6" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 12<br/><b>Pembahasan:</b> 10 × 2 × 3 ÷ 5.</div></div><div class="soal" data-kunci="–9" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 7</span><span>C3 • isian angka</span></div><p class="soal__teks">Kantilever 3 m, q = 2 kN/m. M di jepit = … kN·m</p><div class="baris-tombol"><input aria-label="Jawaban soal 7" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> –9<br/><b>Pembahasan:</b> –2 × 9 ÷ 2.</div></div><div class="soal" data-kunci="6" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 8</span><span>C3 • isian angka</span></div><p class="soal__teks">Balok sederhana 5 m, q = 4 kN/m. V di x = 1 m = … kN</p><div class="baris-tombol"><input aria-label="Jawaban soal 8" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 6<br/><b>Pembahasan:</b> 10 – 4 × 1.</div></div><div class="soal" data-kunci="(b)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 9</span><span>C4 • pilihan ganda</span></div><p class="soal__teks">SFD sebuah balok berbentuk garis lurus miring tanpa loncatan di tengah. Bebannya …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) beban titik</button><button data-opsi="(b)" type="button">(b) beban merata</button><button data-opsi="(c)" type="button">(c) momen kopel</button><button data-opsi="(d)" type="button">(d) tanpa beban</button></div><div class="umpan" hidden=""><b>Kunci:</b> (b)<br/><b>Pembahasan:</b> Kemiringan SFD = –q.</div></div><div class="soal" data-kunci="15" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 10</span><span>C4 • isian angka</span></div><p class="soal__teks">Luas SFD dari A sampai titik V = 0 adalah 15 kN·m dan MA = 0. Mmaks = … kN·m</p><div class="baris-tombol"><input aria-label="Jawaban soal 10" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 15<br/><b>Pembahasan:</b> Perubahan momen = luas SFD.</div></div><div class="soal" data-kunci="(b)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 11</span><span>C5 • pilihan ganda (menilai)</span></div><p class="soal__teks">Dina menggambar BMD kanopi kantilever dengan momen positif terbesar di ujung bebas. Penilaian …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) benar</button><button data-opsi="(b)" type="button">(b) salah: momen kantilever negatif dan terbesar di jepit</button><button data-opsi="(c)" type="button">(c) benar bila bebannya merata</button><button data-opsi="(d)" type="button">(d) salah hanya tandanya</button></div><div class="umpan" hidden=""><b>Kunci:</b> (b)<br/><b>Pembahasan:</b> Lihat 5.5.</div></div><div class="soal" data-kunci="Contoh: lemari di x = 0,5 dan 3,5 m → Mmaks = 21 kN·m" data-tipe="uraian"><div class="soal__kepala"><span class="soal__label">No. 12</span><span>C6 • uraian (merancang)</span></div><p class="soal__teks">Rancang letak dua lemari (masing-masing 6 kN) pada balok sederhana 4 m (q = 9 kN/m) agar Mmaks ≤ 26 kN·m. Buktikan dengan hitungan.</p><textarea aria-label="Jawaban uraian 12" rows="3" style="width:100%"></textarea><div class="baris-tombol"><button class="tombol tombol--kecil" data-lihat="" type="button">Lihat kunci &amp; rubrik</button></div><div class="umpan" hidden=""><b>Kunci:</b> Contoh: lemari di x = 0,5 dan 3,5 m → Mmaks = 21 kN·m<br/><b>Pembahasan:</b> Kedua lemari menambah 6 × 0,5 = 3 kN·m di tengah: 18 + 3 = 21 ≤ 26. Rubrik: ide 30, hitungan 50, alasan 20.</div></div></div><h2 id="refleksi-diri">14. Refleksi Diri</h2><ul>
+<li><p>Saya dapat menjelaskan N, V, M dan tandanya. 1 2 3 4 5</p></li>
+<li><p>Saya dapat memakai metode potongan. 1 2 3 4 5</p></li>
+<li><p>Saya dapat menggambar SFD/BMD dengan hubungan q–V–M. 1 2 3 4
+5</p></li>
+<li><p>Saya dapat menentukan Mmaks dan lokasinya. 1 2 3 4 5</p></li>
+</ul><p><strong>Apa yang sudah/belum saya pahami?</strong> • <strong>Tindak
+lanjut:</strong> skor ≤ 3 → gambar ulang Contoh 5.4 tanpa melihat, lalu
+cocokkan dengan Generator SFD &amp; BMD.</p><h2 id="glosarium-dan-referensi-bab">15. Glosarium dan Referensi
+Bab</h2><div class="gulir"><table class="glosarium">
+<colgroup>
+<col style="width: 24%"/>
+<col style="width: 75%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Istilah</strong></th>
+<th><strong>Arti</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>BMD</td>
+<td>Diagram momen lentur sepanjang balok.</td>
+</tr>
+<tr class="even">
+<td>Gaya lintang (V)</td>
+<td>Gaya dalam yang menggeser penampang.</td>
+</tr>
+<tr class="odd">
+<td>Gaya normal (N)</td>
+<td>Gaya dalam searah sumbu batang (tarik/tekan).</td>
+</tr>
+<tr class="even">
+<td>Metode potongan</td>
+<td>Cara menghitung gaya dalam dengan DBB sebagian struktur.</td>
+</tr>
+<tr class="odd">
+<td>Momen lentur (M)</td>
+<td>Gaya dalam yang melenturkan balok.</td>
+</tr>
+<tr class="even">
+<td>SFD / NFD</td>
+<td>Diagram gaya lintang / gaya normal.</td>
+</tr>
+</tbody>
+</table></div><ul>
+<li><p>Hibbeler, R. C. (2024b). <em>Structural analysis</em> (11th ed.).
+Pearson. (Bab 4)</p></li>
+<li><p>Hibbeler, R. C. (2024a). <em>Engineering mechanics: Statics</em>
+(15th ed., SI units). Pearson. (Bab 7)</p></li>
+<li><p>Leet, K. M., Uang, C.-M., Lanning, J. T., &amp; Gilbert, A. M.
+(2018). <em>Fundamentals of structural analysis</em> (5th ed.).
+McGraw-Hill. (Bab 5)</p></li>
+</ul>
+    <div class="selesai-bab"><button class="tombol tombol--utama" type="button" data-tandai-selesai><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-kuis"/></svg> Tandai bab ini selesai</button></div>
+    <nav class="nav-bab" aria-label="Navigasi bab"><a class="tombol" href="bab-04.html"><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-bab-sebelumnya"/></svg> Reaksi Tumpuan dan Balok Kantilever</a><a class="tombol tombol--utama" href="bab-06.html">Balok Overhang, Beban Segitiga &amp; Trapesium <svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-bab-berikutnya"/></svg></a></nav>
+  </main>
+</div>
+<button class="fab" type="button" aria-label="Buka AI Tutor" data-buka-ai><svg class="ikon ikon--besar" aria-hidden="true"><use href="../assets/icons/icons.svg#i-ai-tutor"/></svg></button>
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/app.js" defer></script>
+<script src="../assets/js/ai-tutor.js" defer></script>
+<script src="../assets/js/kuis.js" defer></script>
+<script src="../assets/js/kalkulator.js" defer></script>
+<script defer src="../assets/vendor/katex/katex.min.js"></script>
+<script defer src="../assets/vendor/katex/auto-render.min.js" onload="renderMathInElement(document.getElementById('isi'),{delimiters:[{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}],throwOnError:false})"></script>
+<script type="module" src="../assets/vendor/model-viewer/model-viewer.min.js"></script>
+</body>
+</html>

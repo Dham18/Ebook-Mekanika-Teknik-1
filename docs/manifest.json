@@ -1,0 +1,16 @@
+{
+  "name": "Mekanika Teknik 1 – E-Book Interaktif",
+  "short_name": "MT1 PNP",
+  "description": "E-book interaktif Mekanika Teknik 1 (SIP3115) D3 Teknik Sipil Politeknik Negeri Padang – AI Tutor, AR, alat hitung, kuis. Penulis: Dham.",
+  "lang": "id",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0B1222",
+  "theme_color": "#0B3C5D",
+  "icons": [
+    { "src": "assets/img/ikon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "assets/img/ikon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kesetimbangan, Tumpuan, dan DBB – Mekanika Teknik 1</title>
+<meta name="description" content="E-book interaktif Mekanika Teknik 1 (SIP3115) – Kesetimbangan, Tumpuan, dan DBB">
+<meta name="theme-color" content="#0B3C5D">
+<link rel="manifest" href="../manifest.json">
+<link rel="icon" href="../assets/img/ikon-192.png">
+<link rel="stylesheet" href="../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../assets/css/kover.css">
+<link rel="stylesheet" href="../assets/css/ebook.css">
+<link rel="stylesheet" href="../assets/vendor/katex/katex.min.css">
+<script>try{document.documentElement.dataset.tema=localStorage.getItem("mt1-tema")||(matchMedia("(prefers-color-scheme: dark)").matches?"gelap":"terang");document.documentElement.style.setProperty("--font-scale",localStorage.getItem("mt1-huruf")||1)}catch(e){}</script>
+</head>
+<body data-halaman="bab-03" data-root="../">
+<a class="lewati" href="#isi">Lewati ke isi</a>
+<div class="bilah-atas" role="banner">
+  <button class="tbl-ikon tbl-dis" type="button" aria-label="Daftar isi" data-buka-dis><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-peta-konsep"/></svg></button>
+  <a class="tbl-ikon" href="../index.html" aria-label="Beranda"><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-beranda"/></svg></a>
+  <span class="judul-kecil">Kesetimbangan, Tumpuan, dan DBB</span>
+  <button class="tbl-ikon" type="button" aria-label="Cari" data-cari><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-cari"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Penanda halaman" aria-pressed="false" data-penanda><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-penanda"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Catatan pribadi" data-catatan><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-catatan"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Baca suara" aria-pressed="false" data-suara><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-video"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="A− perkecil huruf" data-huruf="-">A−</button>
+  <button class="tbl-ikon" type="button" aria-label="A+ perbesar huruf" data-huruf="+">A+</button>
+  <button class="tbl-ikon" type="button" aria-label="Mode gelap/terang" data-tema-tombol><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-mode-gelap"/></svg></button>
+  <div class="progres-baca" aria-hidden="true"></div>
+</div>
+<div class="tirai" data-tutup-dis></div>
+<div class="tata">
+  <nav class="dis" aria-label="Daftar isi halaman"></nav>
+  <main class="isi" id="isi" tabindex="-1">
+    <header class="banner-bab"><svg class="seni" viewBox="0 0 1600 500" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><g stroke="#00E5FF" stroke-opacity=".07"><path d="M0 100H1600M0 200H1600M0 300H1600M0 400H1600M200 0V500M400 0V500M600 0V500M800 0V500M1000 0V500M1200 0V500M1400 0V500"/></g><g stroke="#00E5FF" stroke-width="5" fill="none" stroke-linecap="round" opacity=".85"><path d="M980 380H1540M1060 250H1460M980 380L1060 250M1540 380L1460 250M1060 250V380M1160 250V380M1260 250V380M1360 250V380M1460 250V380"/><path d="M1060 380L1160 250M1160 380L1260 250M1360 250L1460 380M1260 250L1360 380" stroke="#1DE9B6"/></g><rect x="0" y="470" width="1600" height="6" fill="#F26622"/></svg><div class="banner-bab__isi"><div class="banner-bab__no">BAB 3 • MINGGU 3</div><h1 class="banner-bab__judul">Kesetimbangan, Tumpuan, dan DBB</h1><p class="banner-bab__kutip">“Barek samo dipikua, ringan samo
+dijinjiang.” – pepatah Minangkabau (berat sama dipikul, ringan sama
+dijinjing): beban dipikul bersama oleh tumpuan-tumpuannya.</p></div></header>
+    <p>Minggu 3 • Sub-CPMK 1.3 • CPMK-1 • CPL 2 / IK 2.1 • Estimasi belajar:
+120 menit mandiri + 220 menit kelas/studio</p><h2 id="capaian-pembelajaran">2. Capaian Pembelajaran</h2><p><strong>Sub-CPMK 1.3:</strong> Mahasiswa mampu menyusun diagram benda
+bebas (DBB) dan menerapkan syarat kesetimbangan.</p><div class="gulir"><table>
+<colgroup>
+<col style="width: 8%"/>
+<col style="width: 66%"/>
+<col style="width: 25%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Kode</strong></th>
+<th><strong>Indikator</strong></th>
+<th><strong>Level Bloom</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1.3.a</td>
+<td>Menyebutkan syarat kesetimbangan benda dua dimensi</td>
+<td>C1 – menyebutkan</td>
+</tr>
+<tr class="even">
+<td>1.3.b</td>
+<td>Mengidentifikasi jenis tumpuan (rol, sendi, jepit) dan reaksinya
+pada bangunan nyata</td>
+<td>C2 – mengidentifikasi</td>
+</tr>
+<tr class="odd">
+<td>1.3.c</td>
+<td>Menyusun DBB lengkap: beban, reaksi, dimensi, sumbu</td>
+<td>C3 – menyusun</td>
+</tr>
+<tr class="even">
+<td>1.3.d</td>
+<td>Menerapkan ΣFx = 0, ΣFy = 0, ΣM = 0 untuk menghitung gaya yang belum
+diketahui</td>
+<td>C3 – menerapkan</td>
+</tr>
+<tr class="odd">
+<td>1.3.e</td>
+<td>Membedakan struktur stabil/labil dan statis tertentu/tak tentu</td>
+<td>C4 – membedakan</td>
+</tr>
+</tbody>
+</table></div><p>Kriteria (RPS): DBB lengkap (tumpuan, beban, dimensi) dan persamaan
+kesetimbangan tepat.</p><h2 id="peta-konsep-bab">3. Peta Konsep Bab</h2><ul>
+<li><p><strong>Resultan (Bab 1–2)</strong> → (3.1) syarat kesetimbangan:
+ΣFx = 0, ΣFy = 0, ΣM = 0</p></li>
+<li><p><strong>Kesetimbangan</strong> → kesetimbangan titik (partikel)
+dan benda tegar</p></li>
+<li><p><strong>Benda tegar</strong> → (3.2) tumpuan: rol (1 reaksi),
+sendi (2), jepit (3)</p></li>
+<li><p><strong>Tumpuan + beban</strong> → (3.3) diagram benda bebas
+(DBB)</p></li>
+<li><p><strong>DBB</strong> → (3.4) kestabilan dan statis tertentu → Bab
+4 (reaksi tumpuan)</p></li>
+</ul><h2 id="apersepsi">4. Apersepsi</h2><p><strong>Galeri foto tumpuan di kampus</strong> (diambil mahasiswa
+pada minggu 3): bantalan karet di ujung jembatan penyeberangan, kaki
+kolom baja kanopi parkir dengan pelat dasar dan baut, kolom beton yang
+menyatu dengan fondasi, serta kanopi beton yang “menempel” pada balok
+gedung.</p><p><strong>Pertanyaan pemantik:</strong> Mengapa ujung jembatan sering
+dibuat bisa bergeser sedikit? Apa jadinya jika kedua ujung jembatan
+dikunci mati lalu jembatan memuai saat siang hari?</p><p><strong>Gambar 3.1. Tiga jenis tumpuan di bangunan nyata</strong>
+(ilustrasi baru, sumber: dokumen penulis)</p><p><em>Teks alternatif:</em> Tiga panel: bantalan karet jembatan (rol),
+kaki kolom baja dengan pelat dasar dan dua baut (sendi), dan kolom beton
+menyatu fondasi (jepit), masing-masing dengan simbol tumpuan dan panah
+reaksi.</p><p>Prompt gambar: Three-panel technical illustration of structural
+supports: elastomeric bridge bearing as roller, steel column base plate
+with anchor bolts as pin, monolithic concrete column into footing as
+fixed support, each with its engineering symbol and glowing orange
+reaction arrows, navy background, flat vector, no text</p><h2 id="uraian-materi">5. Uraian Materi</h2><h3 id="syarat-kesetimbangan">3.1 Syarat Kesetimbangan</h3><p>Benda dalam keadaan <strong>setimbang</strong> bila diam (atau
+bergerak lurus beraturan). Pada bangunan, kita ingin semua elemen diam.
+Artinya, resultan semua gaya dan momen yang bekerja harus nol.</p><div aria-label="ΣFx = 0 ΣFy = 0 ΣM = 0" class="rumus" role="math">\[\Sigma F_x=0,\qquad \Sigma F_y=0,\qquad \Sigma M_{\text{titik
+sembarang}}=0\]</div><p><strong>Keterangan:</strong> ΣFx, ΣFy = jumlah komponen gaya (kN); ΣM
+= jumlah momen terhadap titik mana saja (kN·m).
+<strong>Batasan:</strong> berlaku untuk struktur bidang (2D); memberi
+tepat 3 persamaan bebas, sehingga paling banyak 3 besaran yang belum
+diketahui dapat dihitung. Rujukan: Hibbeler (2024a) Bab 3 dan 5.</p><p>Untuk <strong>titik (partikel)</strong> – misalnya cincin kabel atau
+titik buhul – semua gaya bertemu di satu titik, sehingga cukup dua
+persamaan ΣFx = 0 dan ΣFy = 0. Untuk <strong>benda tegar</strong> –
+misalnya balok – ketiga persamaan diperlukan.</p><p>Analogi: timbangan jungkat-jungkit di taman. Agar diam, berat kedua
+anak harus “seimbang” terhadap poros (ΣM = 0), dan poros harus menahan
+total berat keduanya (ΣFy = 0).</p><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 3.1 – Lampu gantung dua kabel</p><p><strong>Soal.</strong> Lampu seberat 1,2 kN digantung di titik C oleh
+kabel CA (30° terhadap horizontal, ke kiri-atas) dan kabel CB (45°
+terhadap horizontal, ke kanan-atas). Hitung gaya tarik tiap kabel.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – DBB titik C: berat 1,2 kN ke bawah; T₁ (kabel CA) ke
+kiri-atas; T₂ (kabel CB) ke kanan-atas.</p><p>Langkah 2 – ΣFx = 0: –T₁ cos 30° + T₂ cos 45° = 0 → T₂ = 1,2247
+T₁.</p><p>Langkah 3 – ΣFy = 0: T₁ sin 30° + T₂ sin 45° – 1,2 = 0 → 0,5 T₁ +
+0,866 T₁ = 1,2.</p><p>Langkah 4 – T₁ = 1,2 ÷ 1,366 = 0,878 kN; T₂ = 1,2247 × 0,878 = 1,076
+kN.</p><p class="jawab"><strong>Jawab:</strong> T₁ = 0,88 kN; T₂ = 1,08 kN. Pemeriksaan:
+kabel yang lebih curam (45°) memikul gaya lebih besar ✓</p></details></aside><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 3.2 – Jungkat-jungkit</p><p><strong>Soal.</strong> Papan jungkat-jungkit berporos di tengah. Anak
+A (300 N) duduk 1,5 m dari poros. Di mana anak B (450 N) harus duduk
+agar papan setimbang? Berapa gaya pada poros?</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – ΣM terhadap poros = 0: 300 × 1,5 – 450 × x = 0 → x = 1,0
+m.</p><p>Langkah 2 – ΣFy = 0: R – 300 – 450 = 0 → R = 750 N.</p><p class="jawab"><strong>Jawab:</strong> Anak B duduk 1,0 m dari poros di sisi lain;
+poros menahan 750 N.</p></details></aside><h3 id="jenis-tumpuan-dan-reaksinya">3.2 Jenis Tumpuan dan
+Reaksinya</h3><p><strong>Tumpuan</strong> adalah tempat elemen struktur bersandar.
+Tumpuan memberi <strong>reaksi</strong>: gaya (dan/atau momen) yang
+mencegah gerakan tertentu. Aturan sederhananya: <em>jika tumpuan
+mencegah suatu gerakan, di situ timbul reaksi</em>.</p><div class="gulir"><table>
+<colgroup>
+<col style="width: 10%"/>
+<col style="width: 21%"/>
+<col style="width: 21%"/>
+<col style="width: 7%"/>
+<col style="width: 38%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Tumpuan</strong></th>
+<th><strong>Gerakan yang dicegah</strong></th>
+<th><strong>Reaksi</strong></th>
+<th><strong>Jumlah</strong></th>
+<th><strong>Contoh nyata</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Rol</td>
+<td>Gerak tegak lurus bidang tumpuan</td>
+<td>1 gaya tegak lurus bidang (umumnya RV)</td>
+<td>1</td>
+<td>Bantalan karet/elastomer di satu ujung jembatan; balok kayu yang
+hanya diletakkan di atas dinding</td>
+</tr>
+<tr class="even">
+<td>Sendi</td>
+<td>Gerak horizontal dan vertikal; rotasi bebas</td>
+<td>H dan V</td>
+<td>2</td>
+<td>Kaki kolom baja dengan pelat dasar dan sedikit baut; sambungan baut
+tunggal kuda-kuda baja</td>
+</tr>
+<tr class="odd">
+<td>Jepit</td>
+<td>Gerak horizontal, vertikal, dan rotasi</td>
+<td>H, V, dan momen M</td>
+<td>3</td>
+<td>Kanopi beton yang menyatu dengan balok gedung; kolom beton monolit
+dengan fondasi</td>
+</tr>
+</tbody>
+</table></div><p>Catatan: di lapangan, sambungan nyata berada di antara sendi dan
+jepit. Pemilihan model tumpuan adalah <strong>asumsi perencana</strong>
+yang harus ditulis jelas.</p><aside class="kotak kotak--info"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-info"></use></svg>Info Penting</p><p>Arah reaksi boleh dimisalkan saat menggambar DBB. Jika hasil hitung
+bertanda negatif, artinya arah sebenarnya berlawanan dengan permisalan –
+tidak perlu menggambar ulang, cukup tulis kesimpulannya.</p></aside><h3 id="menyusun-diagram-benda-bebas-dbb">3.3 Menyusun Diagram Benda
+Bebas (DBB)</h3><p><strong>Diagram benda bebas</strong> (<em>free body diagram</em>)
+adalah gambar benda yang “dibebaskan” dari tumpuannya; semua tumpuan
+diganti oleh gaya reaksi. DBB adalah langkah terpenting di seluruh mata
+kuliah ini.</p><ol type="1">
+<li><p><strong>Isolasi benda.</strong> Gambar garis sumbu balok/portal
+saja, tanpa tumpuan.</p></li>
+<li><p><strong>Gambar semua beban</strong> yang diketahui: besar, arah,
+dan letak.</p></li>
+<li><p><strong>Ganti tumpuan dengan reaksi</strong> sesuai tabel 3.2;
+misalkan arahnya.</p></li>
+<li><p><strong>Tulis dimensi</strong> (jarak antarbeban dan tumpuan) dan
+sumbu x–y.</p></li>
+<li><p><strong>Tulis persamaan kesetimbangan.</strong> Pilih titik momen
+di tumpuan yang punya reaksi terbanyak agar persamaan lebih
+sederhana.</p></li>
+</ol><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 3.3 – Balok sendi–rol dengan beban
+titik</p><p><strong>Soal.</strong> Balok AB panjang 6 m, sendi di A dan rol di B.
+Beban 12 kN ke bawah di 2 m dari A. Susun DBB dan hitung reaksinya.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – DBB: HA (→), RA (↑) di A; RB (↑) di B; 12 kN (↓) di x = 2
+m; dimensi 2 m + 4 m.</p><p>Langkah 2 – ΣFx = 0 → HA = 0 (tidak ada beban horizontal).</p><p>Langkah 3 – ΣMA = 0: RB × 6 – 12 × 2 = 0 → RB = 4,00 kN (↑).</p><p>Langkah 4 – ΣFy = 0: RA + 4 – 12 = 0 → RA = 8,00 kN (↑).</p><p class="jawab"><strong>Jawab:</strong> RA = 8,00 kN; RB = 4,00 kN; HA = 0.
+Pemeriksaan ΣMB: –RA × 6 + 12 × 4 = –48 + 48 = 0 ✓. Tumpuan yang lebih
+dekat ke beban memikul lebih banyak ✓</p></details></aside><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 3.4 – Balok dengan beban miring</p><p><strong>Soal.</strong> Balok AB panjang 5 m, sendi di A dan rol di B.
+Gaya 10 kN bekerja di 3 m dari A, miring 45° ke kanan-bawah. Hitung
+reaksinya.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – Uraikan: Px = 10 cos 45° = 7,07 kN (→); Py = 10 sin 45° =
+7,07 kN (↓).</p><p>Langkah 2 – ΣFx = 0: HA + 7,07 = 0 → HA = –7,07 kN, artinya HA
+bekerja ke kiri (←).</p><p>Langkah 3 – ΣMA = 0: RB × 5 – 7,07 × 3 = 0 → RB = 4,24 kN (↑).</p><p>Langkah 4 – ΣFy = 0: RA = 7,07 – 4,24 = 2,83 kN (↑).</p><p class="jawab"><strong>Jawab:</strong> HA = 7,07 kN (←); RA = 2,83 kN (↑); RB = 4,24
+kN (↑). Hanya sendi yang dapat menahan gaya horizontal – itulah sebabnya
+rol saja tidak cukup.</p></details></aside><figure class="gbr"><div class="kotak" style="text-align:left"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-catatan"></use></svg> <b>Gambar 3.2. Langkah menyusun DBB</b>
+<p style="margin:6px 0">Empat panel berurutan: balok dengan tumpuan
+nyata; balok tanpa tumpuan; balok dengan panah beban; balok lengkap
+dengan reaksi HA, RA, RB dan ukuran.</p>
+<details class="prompt-gbr"><summary>Prompt gambar (untuk dibuat di Gemini/ChatGPT)</summary>Four-step educational diagram showing how to draw a
+free body diagram of a simply supported beam: real beam, isolated beam,
+applied loads, reactions and dimensions added, cyan lines and orange
+arrows on navy background, flat vector, no text</details></div></figure><h3 id="kestabilan-dan-struktur-statis-tertentu">3.4 Kestabilan dan
+Struktur Statis Tertentu</h3><p>Dengan 3 persamaan kesetimbangan, kita dapat menghitung paling banyak
+3 reaksi. Bandingkan jumlah reaksi (r) dengan 3:</p><div class="gulir"><table>
+<colgroup>
+<col style="width: 26%"/>
+<col style="width: 38%"/>
+<col style="width: 35%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Kondisi</strong></th>
+<th><strong>Sifat</strong></th>
+<th><strong>Contoh</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>r &lt; 3</td>
+<td>**Labil** – struktur dapat bergerak</td>
+<td>Balok di atas dua rol (tidak ada yang menahan geser horizontal)</td>
+</tr>
+<tr class="even">
+<td>r = 3 dan reaksi tidak sejajar semua / tidak bertemu di satu
+titik</td>
+<td>**Stabil, statis tertentu** – reaksi dapat dihitung dengan
+statika</td>
+<td>Balok sendi–rol; balok kantilever (jepit)</td>
+</tr>
+<tr class="odd">
+<td>r = 3 tetapi reaksi sejajar semua atau bertemu di satu titik</td>
+<td>**Labil secara geometri**</td>
+<td>Tiga rol vertikal; sendi dengan rol yang arah reaksinya melalui
+sendi</td>
+</tr>
+<tr class="even">
+<td>r &gt; 3 (dan stabil)</td>
+<td>**Statis tak tentu** – perlu syarat tambahan (dipelajari di Mekanika
+Teknik III)</td>
+<td>Balok jepit–sendi; balok di atas tiga tumpuan</td>
+</tr>
+</tbody>
+</table></div><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 3.5 – Mengklasifikasi struktur</p><p><strong>Soal.</strong> Tentukan sifat struktur: (a) balok jepit–rol;
+(b) balok rol–rol; (c) kantilever jepit.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – (a) r = 3 + 1 = 4 &gt; 3 → statis tak tentu derajat
+1.</p><p>Langkah 2 – (b) r = 1 + 1 = 2 &lt; 3 → labil.</p><p>Langkah 3 – (c) r = 3, reaksi H, V, M tidak sejajar → stabil, statis
+tertentu.</p><p class="jawab"><strong>Jawab:</strong> (a) statis tak tentu; (b) labil; (c) statis
+tertentu.</p></details></aside><aside class="kotak kotak--tips"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-tips"></use></svg>Tips Lapangan</p><p>Saat memeriksa gambar kerja, tandai tumpuan yang dianggap sendi atau
+jepit, lalu cocokkan dengan detail sambungan di lapangan. Kolom baja
+dengan dua baut kecil di tengah pelat dasar lebih tepat dianggap sendi,
+bukan jepit.</p></aside><aside class="kotak kotak--k3"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-peringatan"></use></svg>Peringatan K3</p><p>Perancah dan penopang sementara (<em>shoring</em>) adalah tumpuan
+sementara. Jangan membongkar penopang sebelum beton mencapai kekuatan
+yang disyaratkan: tumpuan yang hilang mengubah struktur stabil menjadi
+labil.</p></aside><h2 id="contoh-soal-pembahasan">6. Contoh Soal &amp; Pembahasan</h2><p>Lima contoh tersebar di subbab 3.1 (2), 3.3 (2), dan 3.4 (1). Contoh
+3.3 dan 3.4 memeriksa hasil dengan persamaan momen kedua.</p><h2 id="tanya-ai-tutor">7. Tanya AI Tutor</h2><div class="kartu-ai-grid"><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Jelaskan lebih sederhana</h4><p>Jelaskan beda tumpuan rol, sendi, dan jepit memakai contoh benda di rumah. Lalu tanyakan kepada saya satu contoh di kampus untuk tiap jenis.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Jelaskan beda tumpuan rol, sendi, dan jepit memakai contoh benda di rumah. Lalu tanyakan kepada saya satu contoh di kampus untuk tiap jenis." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Jelaskan beda tumpuan rol, sendi, dan jepit memakai contoh benda di rumah. Lalu tanyakan kepada saya satu contoh di kampus untuk tiap jenis." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Jelaskan beda tumpuan rol, sendi, dan jepit memakai contoh benda di rumah. Lalu tanyakan kepada saya satu contoh di kampus untuk tiap jenis." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Periksa DBB saya</h4><p>Ini DBB balok saya (saya jelaskan dengan kata-kata): [tulis beban, tumpuan, reaksi, ukuran]. Apa yang masih kurang? Tanyakan dulu, jangan langsung memperbaiki.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Ini DBB balok saya (saya jelaskan dengan kata-kata): [tulis beban, tumpuan, reaksi, ukuran]. Apa yang masih kurang? Tanyakan dulu, jangan langsung memperbaiki." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Ini DBB balok saya (saya jelaskan dengan kata-kata): [tulis beban, tumpuan, reaksi, ukuran]. Apa yang masih kurang? Tanyakan dulu, jangan langsung memperbaiki." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Ini DBB balok saya (saya jelaskan dengan kata-kata): [tulis beban, tumpuan, reaksi, ukuran]. Apa yang masih kurang? Tanyakan dulu, jangan langsung memperbaiki." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Beri contoh lain</h4><p>Beri 3 struktur sederhana di proyek gedung dan minta saya menentukan apakah labil, statis tertentu, atau statis tak tentu.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Beri 3 struktur sederhana di proyek gedung dan minta saya menentukan apakah labil, statis tertentu, atau statis tak tentu." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Beri 3 struktur sederhana di proyek gedung dan minta saya menentukan apakah labil, statis tertentu, atau statis tak tentu." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Beri 3 struktur sederhana di proyek gedung dan minta saya menentukan apakah labil, statis tertentu, atau statis tak tentu." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Buat soal latihan</h4><p>Buat 3 soal reaksi balok sendi–rol dengan beban titik dan beban miring. Sembunyikan jawaban.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Buat 3 soal reaksi balok sendi–rol dengan beban titik dan beban miring. Sembunyikan jawaban." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Buat 3 soal reaksi balok sendi–rol dengan beban titik dan beban miring. Sembunyikan jawaban." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Buat 3 soal reaksi balok sendi–rol dengan beban titik dan beban miring. Sembunyikan jawaban." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Ringkas bab ini</h4><p>Ringkas Bab 3 menjadi langkah-langkah menyusun DBB dan syarat kesetimbangan.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Ringkas Bab 3 menjadi langkah-langkah menyusun DBB dan syarat kesetimbangan." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Ringkas Bab 3 menjadi langkah-langkah menyusun DBB dan syarat kesetimbangan." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Ringkas Bab 3 menjadi langkah-langkah menyusun DBB dan syarat kesetimbangan." type="button">Tanya langsung</button></div></div></div><h2 id="zona-ar-tiga-jenis-tumpuan">8. Zona AR – Tiga Jenis Tumpuan</h2><div class="gulir"><table>
+<colgroup>
+<col style="width: 19%"/>
+<col style="width: 80%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Aspek</strong></th>
+<th><strong>Spesifikasi</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nama objek</td>
+<td>ar-bab03-tumpuan.glb (+ .usdz): rol (bantalan karet), sendi (pelat
+dasar + baut), jepit (kolom–fondasi monolit)</td>
+</tr>
+<tr class="even">
+<td>Tujuan belajar</td>
+<td>Menghubungkan simbol tumpuan dengan wujud nyata dan reaksinya
+(indikator 1.3.b)</td>
+</tr>
+<tr class="odd">
+<td>Pembuatan model</td>
+<td>SketchUp/Revit → Blender; tiga model berdampingan di alas 1 m × 3 m;
+GLB ≤ 6 MB</td>
+</tr>
+<tr class="even">
+<td>Hotspot &amp; label</td>
+<td>Tiap tumpuan: nama, gerakan yang dicegah, panah reaksi (H, V, M),
+simbol 2D</td>
+</tr>
+<tr class="odd">
+<td>Animasi</td>
+<td>Tombol “Uji gerak”: model menunjukkan gerakan yang masih bebas (rol
+bergeser, sendi berputar, jepit diam)</td>
+</tr>
+<tr class="even">
+<td>Kode QR</td>
+<td>Menuju ar/bab-03.html</td>
+</tr>
+<tr class="odd">
+<td>Cadangan</td>
+<td>Gambar putar 360° per tumpuan</td>
+</tr>
+<tr class="even">
+<td>Pertanyaan pengamatan</td>
+<td>(a) Gerakan apa yang masih bebas pada sendi? (b) Mengapa bantalan
+jembatan dibuat dari karet berlapis? (c) Tumpuan mana yang menahan
+momen?</td>
+</tr>
+</tbody>
+</table></div><div class="ar-kotak">
+<model-viewer alt="Model 3D Kesetimbangan, Tumpuan, dan DBB" ar="" ar-modes="webxr scene-viewer quick-look" auto-rotate="" camera-controls="" exposure="1.1" loading="lazy" shadow-intensity="0.8" src="../assets/model-3d/ar-bab03-tumpuan.glb" touch-action="pan-y">
+<button class="hotspot" data-normal="0 1 0" data-position="-1.2 0.3 0" slot="hotspot-0">1<span>Rol: 1 reaksi (V)</span></button><button class="hotspot" data-normal="0 1 0" data-position="0 0.45 0" slot="hotspot-1">2<span>Sendi: 2 reaksi (H, V)</span></button><button class="hotspot" data-normal="0 1 0" data-position="1.2 0.8 0" slot="hotspot-2">3<span>Jepit: 3 reaksi (H, V, M)</span></button>
+<button class="tombol tombol--utama" slot="ar-button" style="position:absolute;bottom:12px;right:12px"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-zona-ar"></use></svg> Lihat di ruanganmu (AR)</button>
+<div slot="poster" style="display:grid;place-items:center;height:100%;color:#CBD5E1">Memuat model 3D…</div>
+</model-viewer>
+<div class="ar-bawah"><div aria-label="Kode QR menuju halaman AR bab-03" class="qr" data-qr="../ar/bab-03.html" role="img"></div>
+<div><b>Petunjuk:</b> pindai kode QR atau ketuk tombol AR → izinkan kamera → arahkan ke lantai datar → ketuk untuk menempatkan model. Ketuk angka untuk membaca label.<ol style="margin:6px 0 0;padding-left:18px"><li>Rol: 1 reaksi (V)</li><li>Sendi: 2 reaksi (H, V)</li><li>Jepit: 3 reaksi (H, V, M)</li></ol>
+<p style="margin:6px 0 0"><a href="../ar/bab-03.html">Buka halaman AR penuh</a> • Perangkat tanpa AR tetap dapat memutar model 360° dengan jari/tetikus.</p></div></div></div><h2 id="alat-hitung-pemeriksa-kesetimbangan">9. Alat Hitung – Pemeriksa
+Kesetimbangan</h2><div class="gulir"><table>
+<colgroup>
+<col style="width: 19%"/>
+<col style="width: 80%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Aspek</strong></th>
+<th><strong>Spesifikasi</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tujuan</td>
+<td>Mahasiswa memasukkan semua gaya pada DBB (termasuk reaksi hasil
+hitungannya); alat memeriksa ΣFx, ΣFy, ΣM</td>
+</tr>
+<tr class="even">
+<td>Rumus</td>
+<td>\(\Sigma F_x,\ \Sigma F_y,\ \Sigma M_O=\sum (x_iF_{yi}-y_iF_{xi})+\sum
+M_j\)</td>
+</tr>
+<tr class="odd">
+<td>Input</td>
+<td>Daftar gaya: Fx, Fy (kN; –10.000 s.d. 10.000), titik tangkap x, y
+(m); daftar momen/kopel Mj (kN·m); titik acuan O</td>
+</tr>
+<tr class="even">
+<td>Output</td>
+<td><p>ΣFx, ΣFy, ΣM dengan status ✓ (</p>
+<p>nilai</p>
+<p>≤ 0,01) atau ✗ beserta saran: “ΣFy belum nol – periksa arah atau
+besar reaksi vertikal.”</p></td>
+</tr>
+<tr class="odd">
+<td>Grafik</td>
+<td>Sketsa DBB otomatis (panah sesuai arah)</td>
+</tr>
+<tr class="even">
+<td>Fitur</td>
+<td>Reset, salin, ekspor CSV/PDF</td>
+</tr>
+</tbody>
+</table></div><div class="gulir"><table>
+<colgroup>
+<col style="width: 11%"/>
+<col style="width: 41%"/>
+<col style="width: 28%"/>
+<col style="width: 18%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Kasus uji</strong></th>
+<th><strong>Input</strong></th>
+<th><strong>Hasil yang diharapkan</strong></th>
+<th><strong>Rujukan</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Contoh 3.3: –12 kN di x = 2; RA = 8 di x = 0; RB = 4 di x = 6</td>
+<td>ΣFx = ΣFy = ΣM = 0 ✓</td>
+<td>Contoh 3.3</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Contoh 3.4: Px = 7,07, Py = –7,07 di x = 3; HA = –7,07; RA = 2,83;
+RB = 4,24 di x = 5</td>
+<td>Semua ≈ 0 ✓ (selisih pembulatan ≤ 0,01)</td>
+<td>Contoh 3.4</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Contoh 3.3 dengan RB salah (5 kN)</td>
+<td>ΣFy = +1 ✗; ΣMA = +6 ✗</td>
+<td>Uji pesan galat</td>
+</tr>
+</tbody>
+</table></div><div class="kalk" data-bab="bab-03" data-kalk="setimbang"></div><h2 id="studi-kasus-mini-kanopi-parkir-motor">10. Studi Kasus Mini –
+Kanopi Parkir Motor</h2><p>Kanopi parkir motor di kampus memakai balok baja yang ujung kirinya
+dibaut ke kolom dan ujung kanannya hanya diletakkan di atas konsol kolom
+lain. Saat angin kencang, ujung kanan terlihat bergeser.</p><ol type="1">
+<li><p>Model tumpuan apa yang sesuai untuk ujung kiri dan kanan?
+Gambarkan DBB-nya.</p></li>
+<li><p>Apakah struktur stabil terhadap gaya angin horizontal? Jelaskan
+dengan jumlah dan arah reaksi.</p></li>
+<li><p>Usulkan perbaikan sederhana di lapangan.</p></li>
+</ol><p><em>Kunci dosen:</em> kiri sendi, kanan rol → statis tertentu dan
+stabil selama sendi kiri kuat menahan H; bergeser di kanan wajar, tetapi
+perlu penahan agar balok tidak tergelincir dari konsol (mis. baut
+berlubang lonjong).</p><h2 id="info-penting-tips-lapangan-peringatan-k3">11. Info Penting /
+Tips Lapangan / Peringatan K3</h2><p>Info Penting di subbab 3.2; Tips Lapangan dan Peringatan K3 di subbab
+3.4.</p><h2 id="rangkuman">12. Rangkuman</h2><ul>
+<li><p>Benda setimbang bila ΣFx = 0, ΣFy = 0, ΣM = 0 (titik/partikel
+cukup dua persamaan pertama).</p></li>
+<li><p>Rol: 1 reaksi; sendi: 2 reaksi (H, V); jepit: 3 reaksi (H, V,
+M).</p></li>
+<li><p>DBB: isolasi benda → beban → reaksi → dimensi →
+persamaan.</p></li>
+<li><p>Pilih titik momen di tumpuan dengan reaksi terbanyak; periksa
+hasil dengan persamaan momen kedua.</p></li>
+<li><p>r &lt; 3 labil; r = 3 (tidak sejajar/konkuren) statis tertentu; r
+&gt; 3 statis tak tentu.</p></li>
+</ul><h2 id="latihan-kuis-interaktif-11-soal">13. Latihan &amp; Kuis
+Interaktif (11 soal)</h2><div class="kuis" data-kuis="bab-03-1"><div class="kuis__skor"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-kuis"></use></svg> <span>Skor: <b data-skor="">0</b> / <b data-maks="">0</b></span><button class="tombol tombol--kecil" data-ulang="">Ulangi</button></div><div class="soal" data-kunci="(c)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 1</span><span>C1 • pilihan ganda</span></div><p class="soal__teks">Jumlah persamaan kesetimbangan bebas untuk benda tegar 2D adalah …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) 1</button><button data-opsi="(b)" type="button">(b) 2</button><button data-opsi="(c)" type="button">(c) 3</button><button data-opsi="(d)" type="button">(d) 6</button></div><div class="umpan" hidden=""><b>Kunci:</b> (c)<br/><b>Pembahasan:</b> ΣFx, ΣFy, ΣM.</div></div><div class="soal" data-kunci="1-B, 2-C, 3-A" data-tipe="jodoh"><div class="soal__kepala"><span class="soal__label">No. 2</span><span>C1 • menjodohkan</span></div><p class="soal__teks">Jodohkan (1) rol (2) sendi (3) jepit dengan (A) H, V, M (B) V saja (C) H dan V</p><div class="baris-tombol"><input aria-label="Jawaban soal 2" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 1-B, 2-C, 3-A<br/><b>Pembahasan:</b> Tabel subbab 3.2.</div></div><div class="soal" data-kunci="Salah" data-tipe="bs"><div class="soal__kepala"><span class="soal__label">No. 3</span><span>C2 • benar-salah</span></div><p class="soal__teks">Tumpuan sendi dapat menahan momen.</p><div class="soal__pilihan"><button data-opsi="Benar" type="button">Benar</button><button data-opsi="Salah" type="button">Salah</button></div><div class="umpan" hidden=""><b>Kunci:</b> Salah<br/><b>Pembahasan:</b> Sendi bebas berputar.</div></div><div class="soal" data-kunci="(c)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 4</span><span>C2 • pilihan ganda</span></div><p class="soal__teks">Kanopi beton yang menyatu dengan balok gedung paling tepat dimodelkan sebagai …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) rol</button><button data-opsi="(b)" type="button">(b) sendi</button><button data-opsi="(c)" type="button">(c) jepit</button><button data-opsi="(d)" type="button">(d) bebas</button></div><div class="umpan" hidden=""><b>Kunci:</b> (c)<br/><b>Pembahasan:</b> Kanopi menahan rotasi dan beban vertikal.</div></div><div class="soal" data-kunci="4,5" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 5</span><span>C3 • isian angka</span></div><p class="soal__teks">Balok 4 m sendi–rol, beban 12 kN di 1,5 m dari A. RB = … kN</p><div class="baris-tombol"><input aria-label="Jawaban soal 5" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 4,5<br/><b>Pembahasan:</b> ΣMA: RB × 4 = 12 × 1,5.</div></div><div class="soal" data-kunci="7,5" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 6</span><span>C3 • isian angka</span></div><p class="soal__teks">Soal no. 5: RA = … kN</p><div class="baris-tombol"><input aria-label="Jawaban soal 6" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 7,5<br/><b>Pembahasan:</b> 12 – 4,5.</div></div><div class="soal" data-kunci="9" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 7</span><span>C3 • isian angka</span></div><p class="soal__teks">Balok 6 m sendi–rol dengan beban merata 3 kN/m penuh. RA = RB = … kN</p><div class="baris-tombol"><input aria-label="Jawaban soal 7" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 9<br/><b>Pembahasan:</b> Simetris: 3 × 6 ÷ 2.</div></div><div class="soal" data-kunci="2" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 8</span><span>C3 • isian angka</span></div><p class="soal__teks">Lampu 2 kN digantung dua kabel simetris, masing-masing 30° terhadap horizontal. Gaya tiap kabel = … kN</p><div class="baris-tombol"><input aria-label="Jawaban soal 8" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 2<br/><b>Pembahasan:</b> 2T sin 30° = 2 → T = 2 kN.</div></div><div class="soal" data-kunci="(c)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 9</span><span>C4 • pilihan ganda</span></div><p class="soal__teks">Balok di atas sendi di A dan rol di B dan rol di C. Struktur ini …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) labil</button><button data-opsi="(b)" type="button">(b) statis tertentu</button><button data-opsi="(c)" type="button">(c) statis tak tentu derajat 1</button><button data-opsi="(d)" type="button">(d) statis tak tentu derajat 2</button></div><div class="umpan" hidden=""><b>Kunci:</b> (c)<br/><b>Pembahasan:</b> r = 2 + 1 + 1 = 4.</div></div><div class="soal" data-kunci="(b)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 10</span><span>C5 • pilihan ganda (menilai)</span></div><p class="soal__teks">Citra mendapat RB = –3 kN. Ia menyimpulkan perhitungannya pasti salah. Penilaian …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) benar</button><button data-opsi="(b)" type="button">(b) belum tentu: tanda negatif berarti arah RB berlawanan dengan permisalan</button><button data-opsi="(c)" type="button">(c) benar karena reaksi selalu positif</button><button data-opsi="(d)" type="button">(d) salah karena RB = 0</button></div><div class="umpan" hidden=""><b>Kunci:</b> (b)<br/><b>Pembahasan:</b> Periksa dengan ΣFy dan ΣM kedua.</div></div><div class="soal" data-kunci="Sendi di satu ujung, rol di ujung lain" data-tipe="uraian"><div class="soal__kepala"><span class="soal__label">No. 11</span><span>C6 • uraian (merancang)</span></div><p class="soal__teks">Rancang tumpuan untuk balok jembatan penyeberangan 12 m agar statis tertentu dan dapat memuai. Gambarkan DBB-nya.</p><textarea aria-label="Jawaban uraian 11" rows="3" style="width:100%"></textarea><div class="baris-tombol"><button class="tombol tombol--kecil" data-lihat="" type="button">Lihat kunci &amp; rubrik</button></div><div class="umpan" hidden=""><b>Kunci:</b> Sendi di satu ujung, rol di ujung lain<br/><b>Pembahasan:</b> Rol mengizinkan pemuaian; sendi menahan gaya horizontal. Rubrik: model tumpuan 40, DBB 40, alasan 20.</div></div></div><h2 id="refleksi-diri">14. Refleksi Diri</h2><ul>
+<li><p>Saya dapat menyebutkan reaksi tiap jenis tumpuan. 1 2 3 4
+5</p></li>
+<li><p>Saya dapat menyusun DBB lengkap. 1 2 3 4 5</p></li>
+<li><p>Saya dapat menghitung reaksi balok sendi–rol dan memeriksanya. 1
+2 3 4 5</p></li>
+<li><p>Saya dapat membedakan labil, statis tertentu, dan tak tentu. 1 2
+3 4 5</p></li>
+</ul><p><strong>Apa yang sudah/belum saya pahami?</strong> • <strong>Tindak
+lanjut:</strong> skor ≤ 3 → ulangi langkah DBB 3.3 dengan Pemeriksa
+Kesetimbangan.</p><h2 id="glosarium-dan-referensi-bab">15. Glosarium dan Referensi
+Bab</h2><div class="gulir"><table class="glosarium">
+<colgroup>
+<col style="width: 28%"/>
+<col style="width: 71%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Istilah</strong></th>
+<th><strong>Arti</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Diagram benda bebas (DBB)</td>
+<td>Gambar benda yang tumpuannya diganti gaya reaksi.</td>
+</tr>
+<tr class="even">
+<td>Kesetimbangan</td>
+<td>Keadaan diam: resultan gaya dan momen sama dengan nol.</td>
+</tr>
+<tr class="odd">
+<td>Labil</td>
+<td>Struktur yang dapat bergerak karena tumpuan kurang atau susunannya
+tidak tepat.</td>
+</tr>
+<tr class="even">
+<td>Reaksi tumpuan</td>
+<td>Gaya/momen dari tumpuan yang menahan struktur.</td>
+</tr>
+<tr class="odd">
+<td>Statis tertentu</td>
+<td>Struktur stabil yang reaksinya dapat dihitung hanya dengan persamaan
+kesetimbangan.</td>
+</tr>
+<tr class="even">
+<td>Tumpuan jepit, sendi, rol</td>
+<td>Tumpuan dengan 3, 2, dan 1 reaksi.</td>
+</tr>
+</tbody>
+</table></div><ul>
+<li><p>Hibbeler, R. C. (2024a). <em>Engineering mechanics: Statics</em>
+(15th ed., SI units). Pearson. (Bab 3 dan 5)</p></li>
+<li><p>Hibbeler, R. C. (2024b). <em>Structural analysis</em> (11th ed.).
+Pearson. (Bab 2: idealisasi tumpuan; stabilitas)</p></li>
+<li><p>Leet, K. M., Uang, C.-M., Lanning, J. T., &amp; Gilbert, A. M.
+(2018). <em>Fundamentals of structural analysis</em> (5th ed.).
+McGraw-Hill.</p></li>
+</ul>
+    <div class="selesai-bab"><button class="tombol tombol--utama" type="button" data-tandai-selesai><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-kuis"/></svg> Tandai bab ini selesai</button></div>
+    <nav class="nav-bab" aria-label="Navigasi bab"><a class="tombol" href="bab-02.html"><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-bab-sebelumnya"/></svg> Resultan, Momen, dan Kopel</a><a class="tombol tombol--utama" href="bab-04.html">Reaksi Tumpuan dan Balok Kantilever <svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-bab-berikutnya"/></svg></a></nav>
+  </main>
+</div>
+<button class="fab" type="button" aria-label="Buka AI Tutor" data-buka-ai><svg class="ikon ikon--besar" aria-hidden="true"><use href="../assets/icons/icons.svg#i-ai-tutor"/></svg></button>
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/app.js" defer></script>
+<script src="../assets/js/ai-tutor.js" defer></script>
+<script src="../assets/js/kuis.js" defer></script>
+<script src="../assets/js/kalkulator.js" defer></script>
+<script defer src="../assets/vendor/katex/katex.min.js"></script>
+<script defer src="../assets/vendor/katex/auto-render.min.js" onload="renderMathInElement(document.getElementById('isi'),{delimiters:[{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}],throwOnError:false})"></script>
+<script type="module" src="../assets/vendor/model-viewer/model-viewer.min.js"></script>
+</body>
+</html>

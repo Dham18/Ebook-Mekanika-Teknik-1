@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portal Tiga Sendi – Mekanika Teknik 1</title>
+<meta name="description" content="E-book interaktif Mekanika Teknik 1 (SIP3115) – Portal Tiga Sendi">
+<meta name="theme-color" content="#0B3C5D">
+<link rel="manifest" href="../manifest.json">
+<link rel="icon" href="../assets/img/ikon-192.png">
+<link rel="stylesheet" href="../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../assets/css/kover.css">
+<link rel="stylesheet" href="../assets/css/ebook.css">
+<link rel="stylesheet" href="../assets/vendor/katex/katex.min.css">
+<script>try{document.documentElement.dataset.tema=localStorage.getItem("mt1-tema")||(matchMedia("(prefers-color-scheme: dark)").matches?"gelap":"terang");document.documentElement.style.setProperty("--font-scale",localStorage.getItem("mt1-huruf")||1)}catch(e){}</script>
+</head>
+<body data-halaman="bab-09" data-root="../">
+<a class="lewati" href="#isi">Lewati ke isi</a>
+<div class="bilah-atas" role="banner">
+  <button class="tbl-ikon tbl-dis" type="button" aria-label="Daftar isi" data-buka-dis><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-peta-konsep"/></svg></button>
+  <a class="tbl-ikon" href="../index.html" aria-label="Beranda"><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-beranda"/></svg></a>
+  <span class="judul-kecil">Portal Tiga Sendi</span>
+  <button class="tbl-ikon" type="button" aria-label="Cari" data-cari><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-cari"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Penanda halaman" aria-pressed="false" data-penanda><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-penanda"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Catatan pribadi" data-catatan><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-catatan"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Baca suara" aria-pressed="false" data-suara><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-video"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="A− perkecil huruf" data-huruf="-">A−</button>
+  <button class="tbl-ikon" type="button" aria-label="A+ perbesar huruf" data-huruf="+">A+</button>
+  <button class="tbl-ikon" type="button" aria-label="Mode gelap/terang" data-tema-tombol><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-mode-gelap"/></svg></button>
+  <div class="progres-baca" aria-hidden="true"></div>
+</div>
+<div class="tirai" data-tutup-dis></div>
+<div class="tata">
+  <nav class="dis" aria-label="Daftar isi halaman"></nav>
+  <main class="isi" id="isi" tabindex="-1">
+    <header class="banner-bab"><svg class="seni" viewBox="0 0 1600 500" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><g stroke="#00E5FF" stroke-opacity=".07"><path d="M0 100H1600M0 200H1600M0 300H1600M0 400H1600M200 0V500M400 0V500M600 0V500M800 0V500M1000 0V500M1200 0V500M1400 0V500"/></g><g stroke="#00E5FF" stroke-width="5" fill="none" stroke-linecap="round" opacity=".85"><path d="M980 380H1540M1060 250H1460M980 380L1060 250M1540 380L1460 250M1060 250V380M1160 250V380M1260 250V380M1360 250V380M1460 250V380"/><path d="M1060 380L1160 250M1160 380L1260 250M1360 250L1460 380M1260 250L1360 380" stroke="#1DE9B6"/></g><rect x="0" y="470" width="1600" height="6" fill="#F26622"/></svg><div class="banner-bab__isi"><div class="banner-bab__no">BAB 9 • MINGGU 10</div><h1 class="banner-bab__judul">Portal Tiga Sendi</h1><p class="banner-bab__kutip">“Bulek aia dek pambuluah, bulek kato dek
+mufakat.” – pepatah Minangkabau (bulat air karena pembuluh, bulat kata
+karena mufakat): Case Method minggu ini menuntut tim bermufakat
+berdasarkan hitungan.</p></div></header>
+    <p>Minggu 10 • Sub-CPMK 3.3 • CPMK-3 • CPL 2 / IK 2.2 • Case Method 3
+(bobot 8%) + Tugas &amp; Kuis 2% • Estimasi belajar: 120 menit mandiri +
+220 menit kelas/studio</p><h2 id="capaian-pembelajaran-1">2. Capaian Pembelajaran</h2><p><strong>Sub-CPMK 3.3:</strong> Mahasiswa mampu menganalisis portal
+tiga sendi gudang.</p><div class="gulir"><table>
+<colgroup>
+<col style="width: 8%"/>
+<col style="width: 66%"/>
+<col style="width: 25%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Kode</strong></th>
+<th><strong>Indikator</strong></th>
+<th><strong>Level Bloom</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>3.3.a</td>
+<td>Menjelaskan mengapa portal tiga sendi statis tertentu walau memiliki
+4 reaksi</td>
+<td>C2 – menjelaskan</td>
+</tr>
+<tr class="even">
+<td>3.3.b</td>
+<td>Menghitung reaksi vertikal dan horizontal (dorongan) portal tiga
+sendi</td>
+<td>C3 – menghitung</td>
+</tr>
+<tr class="odd">
+<td>3.3.c</td>
+<td>Menghitung dan menggambar momen pada kolom dan balok/kaki
+kuda-kuda</td>
+<td>C3–C4</td>
+</tr>
+<tr class="even">
+<td>3.3.d</td>
+<td>Menjelaskan dampak perubahan penutup atap terhadap reaksi dan
+momen</td>
+<td>C4 – menganalisis</td>
+</tr>
+<tr class="odd">
+<td>3.3.e</td>
+<td>Memutuskan rekomendasi teknis berbasis hitungan (Case Method 3)</td>
+<td>C5 – mengevaluasi</td>
+</tr>
+</tbody>
+</table></div><p>Kriteria (RPS): reaksi horizontal &amp; momen pada portal tiga sendi
+tepat; dampak perubahan penutup atap dijelaskan.</p><h2 id="peta-konsep-bab-1">3. Peta Konsep Bab</h2><ul>
+<li><p><strong>Portal (Bab 8)</strong> + <strong>sendi dalam (Bab
+7)</strong> → (9.1) portal tiga sendi: 4 reaksi, 4 persamaan</p></li>
+<li><p><strong>Persamaan tambahan</strong> → ΣM_S = 0 untuk satu bagian
+→ (9.2) dorongan horizontal H</p></li>
+<li><p><strong>H</strong> → momen kolom h·H dan momen balok/kaki
+kuda-kuda → (9.3) diagram</p></li>
+<li><p><strong>Beban atap berubah</strong> → H, V, M berubah → (9.4)
+Case Method 3 → Bab 10 (rangka batang)</p></li>
+</ul><h2 id="apersepsi-1">4. Apersepsi</h2><p><strong>Kasus nyata:</strong> Gudang penyimpanan gabah di Kabupaten
+Agam memakai portal baja tiga sendi beratap pelana. Koperasi petani
+ingin mengganti seng yang bocor dengan genteng beton agar gudang lebih
+sejuk. Tukang berkata: “Rangka bajanya kuat, ganti saja.”</p><p><strong>Pertanyaan pemantik:</strong> Mengapa kaki portal seperti ini
+cenderung “membuka” ke luar? Apa yang menahan agar kaki tidak
+bergeser?</p><p><strong>Gambar 9.1. Gudang hasil panen dengan portal tiga
+sendi</strong> (ilustrasi baru, sumber: dokumen penulis)</p><p><em>Teks alternatif:</em> Gudang baja beratap pelana dengan dua kaki
+portal bersendi di fondasi dan sendi di puncak; panah dorongan
+horizontal di kaki.</p><p>Prompt gambar: Educational illustration of a West Sumatran rural rice
+storage warehouse with a steel three-hinged gable portal frame, pinned
+column bases and a ridge hinge highlighted with glowing orange circles,
+horizontal thrust arrows at the feet, technical style, navy background,
+no text</p><h2 id="uraian-materi-1">5. Uraian Materi</h2><h3 id="konsep-portal-tiga-sendi">9.1 Konsep Portal Tiga Sendi</h3><p><strong>Portal tiga sendi</strong> memiliki dua tumpuan sendi di kaki
+(masing-masing H dan V → 4 reaksi) dan satu <strong>sendi dalam</strong>
+S, biasanya di puncak atau tengah balok. Menurut Bab 7: r = 4 = 3 + h (h
+= 1) → <strong>statis tertentu</strong>.</p><p>Empat persamaan yang dipakai: ΣFx = 0, ΣFy = 0, ΣM_A = 0 (seluruh
+portal), dan <strong>ΣM_S = 0 untuk bagian kiri atau kanan saja</strong>
+(karena momen di sendi S nol).</p><p>Analogi: dua orang saling bersandar pada puncak kepala. Kaki mereka
+harus menahan dorongan ke luar agar tidak tergelincir – itulah
+<strong>dorongan horizontal (H)</strong> portal tiga sendi.</p><h3 id="reaksi-vertikal-dan-horizontal">9.2 Reaksi Vertikal dan
+Horizontal</h3><ol type="1">
+<li><p>ΣM_A = 0 (seluruh portal) → V_E (kaki kanan); ΣFy = 0 →
+V_A.</p></li>
+<li><p>Potong di sendi S; ambil bagian kiri (atau kanan). ΣM_S = 0 → H_A
+(atau H_E).</p></li>
+<li><p>ΣFx = 0 (seluruh portal) → H lainnya.</p></li>
+<li><p>Periksa: M di S = 0; ΣM terhadap titik lain = 0.</p></li>
+</ol><div aria-label="Simetris, beban merata q per meter horizontal: V = qL/2; H =
+qL²/(8f)" class="rumus" role="math">\[V=\frac{qL}{2},\qquad H=\frac{qL^2}{8f}\]</div><p><strong>Keterangan:</strong> L = bentang antar-kaki (m); f = tinggi
+sendi S di atas garis tumpuan (m); q = beban merata terhadap proyeksi
+horizontal (kN/m). <strong>Batasan:</strong> kedua tumpuan sejajar (sama
+tinggi), sendi S di tengah bentang, beban merata penuh dan simetris.
+<strong>Makna:</strong> makin landai (f kecil), makin besar dorongan
+H.</p><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 9.1 – Portal tiga sendi balok datar, beban
+merata</p><p><strong>Soal.</strong> Sendi A (0; 0), sendi E (10; 0), kolom 4 m,
+balok datar dengan sendi S di tengah (5; 4). q = 2 kN/m pada balok.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – Simetris: V_A = V_E = 2 × 10 ÷ 2 = 10 kN.</p><p>Langkah 2 – ΣM_S bagian kiri: V_A × 5 – H_A × 4 – 2 × 5 × 2,5 = 0 →
+50 – 4H_A – 25 = 0 → H_A = 6,25 kN (→, ke dalam).</p><p>Langkah 3 – Rumus: H = 2 × 100 ÷ (8 × 4) = 6,25 ✓; H_E = 6,25 kN
+(←).</p><p>Langkah 4 – Momen sudut B: 6,25 × 4 = 25,00 kN·m (tarik di sisi
+luar).</p><p>Langkah 5 – Balok: M(x) = 10x – 25 – x²; M(5) = 0 ✓ (sendi).</p><p class="jawab"><strong>Jawab:</strong> V = 10 kN; H = 6,25 kN; M sudut = 25,00 kN·m
+(Gambar 9.2). Bandingkan portal sendi–rol dengan beban sama: kolom tanpa
+momen, tetapi balok Mmaks = 25 kN·m di tengah – portal tiga sendi
+memindahkan momen ke sudut.</p></details></aside><p><img alt="Gambar 9.2. BMD portal tiga sendi Contoh 9.1 (momen nol di
+S)." loading="lazy" src="../assets/img/bab/bab-09-1eae73388832fe1dc03092f346b8e9198c51e3e6.png"/></p><p><em>Gambar 9.2. BMD portal tiga sendi Contoh 9.1 (momen nol di
+S).</em></p><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 9.2 – Portal tiga sendi dengan beban
+angin</p><p><strong>Soal.</strong> Portal Contoh 9.1 tanpa beban atap, hanya
+angin 5 kN ke kanan di B (ketinggian 4 m).</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – ΣM_A: V_E × 10 – 5 × 4 = 0 → V_E = 2 kN (↑); ΣFy: V_A =
+–2 kN (↓, kaki kiri tertarik).</p><p>Langkah 2 – ΣM_S bagian kanan: V_E × 5 + H_E × 4 = 0 (H_E positif ke
+kanan) → H_E = –2,5 kN (←).</p><p>Langkah 3 – ΣFx: H_A + 5 + H_E = 0 → H_A = –2,5 kN (←).</p><p>Langkah 4 – Momen sudut B = 10,00 kN·m (tarik sisi dalam); sudut C =
+10,00 kN·m (tarik sisi luar).</p><p class="jawab"><strong>Jawab:</strong> V_A = 2 kN (↓); V_E = 2 kN (↑); H_A = H_E =
+2,5 kN (←); momen sudut 10,00 kN·m (Gambar 9.3). Kaki kiri terangkat →
+angkur fondasi wajib diperiksa.</p></details></aside><p><img alt="Gambar 9.3. BMD portal tiga sendi akibat angin Contoh
+9.2." loading="lazy" src="../assets/img/bab/bab-09-1d40e4910eba397bb22e1dccf52cc73a9de1ffd1.png"/></p><p><em>Gambar 9.3. BMD portal tiga sendi akibat angin Contoh
+9.2.</em></p><h3 id="portal-tiga-sendi-beratap-pelana">9.3 Portal Tiga Sendi Beratap
+Pelana</h3><p>Pada gudang beratap pelana, kaki kuda-kuda miring dari puncak kolom
+ke sendi puncak. Prinsip hitungannya sama; tinggi f diukur dari garis
+tumpuan ke sendi puncak.</p><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 9.3 – Portal pelana gudang (penutup
+lama)</p><p><strong>Soal.</strong> Bentang L = 12 m; tinggi kolom 4 m; sendi
+puncak S setinggi 6 m (f = 6 m); beban atap q = 2,8 kN/m (proyeksi
+horizontal).</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – V = 2,8 × 12 ÷ 2 = 16,80 kN.</p><p>Langkah 2 – H = 2,8 × 144 ÷ (8 × 6) = 8,40 kN (ke dalam di kedua
+kaki).</p><p>Langkah 3 – Momen di puncak kolom (sudut): 8,40 × 4 = 33,60 kN·m
+(tarik sisi luar).</p><p>Langkah 4 – Kaki kuda-kuda: M(x) = –33,6 + 14x – 1,4x² (x dari sudut,
+proyeksi horizontal); M(6) = 0 ✓; maksimum positif kecil 1,40 kN·m di x
+= 5 m.</p><p class="jawab"><strong>Jawab:</strong> V = 16,80; H = 8,40 kN; M sudut = 33,60 kN·m
+(Gambar 9.4).</p></details></aside><p><img alt="Gambar 9.4. BMD portal pelana gudang dengan penutup
+lama." loading="lazy" src="../assets/img/bab/bab-09-176859b90e7b56d5cda17cfcb5a03d4e03f53b84.png"/></p><p><em>Gambar 9.4. BMD portal pelana gudang dengan penutup
+lama.</em></p><aside class="kotak kotak--info"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-info"></use></svg>Info Penting</p><p>Momen terbesar portal tiga sendi berada di <strong>sudut</strong>
+(puncak kolom), sebanding dengan H × tinggi kolom. Semua perubahan yang
+menaikkan H – atap lebih berat, atap lebih landai, bentang lebih lebar –
+langsung menaikkan momen sudut dan gaya dorong ke fondasi.</p></aside><aside class="kotak kotak--tips"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-tips"></use></svg>Tips Lapangan</p><p>Untuk mengurangi dorongan ke fondasi, beberapa gudang memakai
+<strong>batang tarik</strong> (<em>tie rod</em>) yang menghubungkan
+kedua kaki. Penambahan batang tarik mengubah sistem struktur – harus
+direncanakan, bukan ditambahkan sembarangan.</p></aside><aside class="kotak kotak--k3"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-peringatan"></use></svg>Peringatan K3</p><p>Mengganti penutup atap berarti bekerja di ketinggian dan menambah
+beban selama pekerjaan (tumpukan genteng). Pakai sabuk pengaman, jangan
+menumpuk material di satu titik kuda-kuda, dan naikkan genteng sedikit
+demi sedikit.</p></aside><h3 id="case-method-3-gudang-hasil-panen-penutup-atap-diganti-genteng-beton">9.4
+Case Method 3 – Gudang Hasil Panen, Penutup Atap Diganti Genteng
+Beton</h3><p><strong>Peran:</strong> kelompok sebagai tim teknis dinas pertanian
+yang diminta koperasi menilai rencana penggantian atap.
+<strong>Waktu:</strong> 70 menit (studio lembar kerja) + presentasi 5
+menit. <strong>Bobot:</strong> Case Method 8% + Tugas &amp; Kuis 2%
+(CPMK-3).</p><p><strong>Data kasus (untuk pembelajaran):</strong> portal baja tiga
+sendi seperti Contoh 9.3; jarak antarportal 4 m. Beban per m² proyeksi
+horizontal: penutup lama (seng + gording) 0,20 kN/m²; genteng beton +
+reng/usuk tambahan 0,60 kN/m² [PERLU VERIFIKASI data produk]; beban
+hidup atap 0,50 kN/m² (data kasus). Kapasitas momen izin profil portal
+<strong>45 kN·m</strong> dan kapasitas angkur fondasi terhadap gaya
+horizontal <strong>12 kN</strong> per kaki (data kasus).</p><p><strong>Tugas kelompok:</strong></p><ol type="1">
+<li><p>Hitung q per portal untuk penutup lama dan genteng beton (q =
+beban per m² × jarak portal).</p></li>
+<li><p>Hitung V, H, dan momen sudut untuk kedua kondisi; gambar
+BMD.</p></li>
+<li><p>Bandingkan dengan kapasitas momen (45 kN·m) dan angkur (12
+kN).</p></li>
+<li><p>Usulkan minimal dua alternatif (mis. kembali ke penutup ringan,
+menambah portal sehingga jarak 3 m, perkuatan sudut) dan hitung salah
+satunya.</p></li>
+<li><p>Putuskan rekomendasi akhir dan presentasikan kepada “pengurus
+koperasi”.</p></li>
+</ol><div class="gulir"><table>
+<colgroup>
+<col style="width: 29%"/>
+<col style="width: 11%"/>
+<col style="width: 11%"/>
+<col style="width: 11%"/>
+<col style="width: 14%"/>
+<col style="width: 20%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Kondisi</strong></th>
+<th><strong>q (kN/m)</strong></th>
+<th><strong>V (kN)</strong></th>
+<th><strong>H (kN)</strong></th>
+<th><strong>M sudut (kN·m)</strong></th>
+<th><strong>Terhadap izin 45 kN·m / 12 kN</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Penutup lama (0,70 kN/m² × 4 m)</td>
+<td>2,80</td>
+<td>16,80</td>
+<td>8,40</td>
+<td>33,60</td>
+<td>75% / 70% – aman</td>
+</tr>
+<tr class="even">
+<td>Genteng beton (1,10 kN/m² × 4 m)</td>
+<td>4,40</td>
+<td>26,40</td>
+<td>13,20</td>
+<td>52,80</td>
+<td>**117% / 110% – tidak aman**</td>
+</tr>
+<tr class="odd">
+<td>Genteng beton, jarak portal 3 m</td>
+<td>3,30</td>
+<td>19,80</td>
+<td>9,90</td>
+<td>39,60</td>
+<td>88% / 83% – aman</td>
+</tr>
+</tbody>
+</table></div><p><em>Tabel kunci dosen (dihitung ulang secara numerik; kosong pada
+versi mahasiswa).</em></p><p><img alt="Gambar 9.5. BMD portal pelana setelah diganti genteng beton:
+momen sudut naik 57% menjadi 52,8 kN·m." loading="lazy" src="../assets/img/bab/bab-09-f3a40510a70d7899194774c2a7a1fc4245dd7949.png"/></p><p><em>Gambar 9.5. BMD portal pelana setelah diganti genteng beton:
+momen sudut naik 57% menjadi 52,8 kN·m.</em></p><p><em>Kunci keputusan:</em> penggantian langsung <strong>tidak
+disetujui</strong> (momen 117% dan dorongan angkur 110% kapasitas).
+Alternatif yang memenuhi: penutup ringan berinsulasi (mis. genteng metal
+berpasir + peredam panas) atau genteng beton dengan portal tambahan
+(jarak 3 m) setelah fondasi baru diperiksa. Perkuatan sudut
+(<em>haunch</em>) perlu perhitungan di Struktur Baja.</p><h2 id="contoh-soal-pembahasan-1">6. Contoh Soal &amp; Pembahasan</h2><p>Tiga contoh (9.1 balok datar beban merata, 9.2 angin, 9.3 pelana) dan
+tabel Case Method 3, dengan empat BMD dari hasil hitungan.</p><h2 id="tanya-ai-tutor-1">7. Tanya AI Tutor</h2><div class="kartu-ai-grid"><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Jelaskan lebih sederhana</h4><p>Jelaskan dorongan horizontal portal tiga sendi dengan analogi dua orang saling bersandar. Tanyakan saya apa yang terjadi bila atap makin landai.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Jelaskan dorongan horizontal portal tiga sendi dengan analogi dua orang saling bersandar. Tanyakan saya apa yang terjadi bila atap makin landai." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Jelaskan dorongan horizontal portal tiga sendi dengan analogi dua orang saling bersandar. Tanyakan saya apa yang terjadi bila atap makin landai." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Jelaskan dorongan horizontal portal tiga sendi dengan analogi dua orang saling bersandar. Tanyakan saya apa yang terjadi bila atap makin landai." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Pendamping Case Method 3</h4><p>Kami tim teknis gudang koperasi. Jangan beri keputusan. Ajukan 4 pertanyaan agar kami mempertimbangkan momen, angkur, biaya, dan kenyamanan termal.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Kami tim teknis gudang koperasi. Jangan beri keputusan. Ajukan 4 pertanyaan agar kami mempertimbangkan momen, angkur, biaya, dan kenyamanan termal." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Kami tim teknis gudang koperasi. Jangan beri keputusan. Ajukan 4 pertanyaan agar kami mempertimbangkan momen, angkur, biaya, dan kenyamanan termal." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Kami tim teknis gudang koperasi. Jangan beri keputusan. Ajukan 4 pertanyaan agar kami mempertimbangkan momen, angkur, biaya, dan kenyamanan termal." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Periksa jawabanku</h4><p>Ini persamaan ΣM_S saya: [tempel]. Apakah saya mengambil bagian yang benar dan tandanya tepat?</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Ini persamaan ΣM_S saya: [tempel]. Apakah saya mengambil bagian yang benar dan tandanya tepat?" type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Ini persamaan ΣM_S saya: [tempel]. Apakah saya mengambil bagian yang benar dan tandanya tepat?" type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Ini persamaan ΣM_S saya: [tempel]. Apakah saya mengambil bagian yang benar dan tandanya tepat?" type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Buat soal latihan</h4><p>Buat 2 soal portal tiga sendi (datar dan pelana) dengan beban merata. Sembunyikan jawaban.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Buat 2 soal portal tiga sendi (datar dan pelana) dengan beban merata. Sembunyikan jawaban." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Buat 2 soal portal tiga sendi (datar dan pelana) dengan beban merata. Sembunyikan jawaban." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Buat 2 soal portal tiga sendi (datar dan pelana) dengan beban merata. Sembunyikan jawaban." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Ringkas bab ini</h4><p>Ringkas Bab 9 dalam 4 langkah menghitung portal tiga sendi.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Ringkas Bab 9 dalam 4 langkah menghitung portal tiga sendi." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Ringkas Bab 9 dalam 4 langkah menghitung portal tiga sendi." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Ringkas Bab 9 dalam 4 langkah menghitung portal tiga sendi." type="button">Tanya langsung</button></div></div></div><h2 id="zona-ar-gudang-portal-tiga-sendi">8. Zona AR – Gudang Portal
+Tiga Sendi</h2><div class="gulir"><table>
+<colgroup>
+<col style="width: 19%"/>
+<col style="width: 80%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Aspek</strong></th>
+<th><strong>Spesifikasi</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nama objek</td>
+<td>ar-bab09-gudang.glb (+ .usdz)</td>
+</tr>
+<tr class="even">
+<td>Tujuan belajar</td>
+<td>Melihat sendi kaki dan puncak, arah dorongan H, dan pengaruh berat
+penutup atap (indikator 3.3.a, 3.3.d)</td>
+</tr>
+<tr class="odd">
+<td>Pembuatan model</td>
+<td>Revit/SketchUp: gudang 12 × 16 m, 5 portal WF, gording, dua pilihan
+penutup; Blender: animasi; GLB ≤ 10 MB</td>
+</tr>
+<tr class="even">
+<td>Hotspot &amp; label</td>
+<td>(1) Sendi kaki A dan E; (2) Sendi puncak S; (3) Panah V dan H; (4)
+Sudut dengan momen terbesar; (5) Angkur fondasi</td>
+</tr>
+<tr class="odd">
+<td>Animasi</td>
+<td>Tombol “Seng ↔︎ Genteng beton”: panah H dan label momen sudut
+membesar; tombol “Jarak portal 4 m ↔︎ 3 m”</td>
+</tr>
+<tr class="even">
+<td>Kode QR</td>
+<td>Menuju ar/bab-09.html</td>
+</tr>
+<tr class="odd">
+<td>Cadangan</td>
+<td>Gambar 9.4–9.5 dan video 360°</td>
+</tr>
+<tr class="even">
+<td>Pertanyaan pengamatan</td>
+<td>(a) Di mana momen terbesar? (b) Mengapa kaki cenderung membuka ke
+luar? (c) Bagaimana jarak antarportal memengaruhi beban tiap
+portal?</td>
+</tr>
+</tbody>
+</table></div><div class="ar-kotak">
+<model-viewer alt="Model 3D Portal Tiga Sendi" ar="" ar-modes="webxr scene-viewer quick-look" auto-rotate="" camera-controls="" exposure="1.1" loading="lazy" shadow-intensity="0.8" src="../assets/model-3d/ar-bab09-gudang.glb" touch-action="pan-y">
+<button class="hotspot" data-normal="0 1 0" data-position="6 6 0" slot="hotspot-0">1<span>Sendi puncak S</span></button><button class="hotspot" data-normal="0 1 0" data-position="0 4 0" slot="hotspot-1">2<span>Sudut: momen terbesar</span></button><button class="hotspot" data-normal="0 1 0" data-position="0 0 0" slot="hotspot-2">3<span>Dorongan H di kaki</span></button>
+<button class="tombol tombol--utama" slot="ar-button" style="position:absolute;bottom:12px;right:12px"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-zona-ar"></use></svg> Lihat di ruanganmu (AR)</button>
+<div slot="poster" style="display:grid;place-items:center;height:100%;color:#CBD5E1">Memuat model 3D…</div>
+</model-viewer>
+<div class="ar-bawah"><div aria-label="Kode QR menuju halaman AR bab-09" class="qr" data-qr="../ar/bab-09.html" role="img"></div>
+<div><b>Petunjuk:</b> pindai kode QR atau ketuk tombol AR → izinkan kamera → arahkan ke lantai datar → ketuk untuk menempatkan model. Ketuk angka untuk membaca label.<ol style="margin:6px 0 0;padding-left:18px"><li>Sendi puncak S</li><li>Sudut: momen terbesar</li><li>Dorongan H di kaki</li></ol>
+<p style="margin:6px 0 0"><a href="../ar/bab-09.html">Buka halaman AR penuh</a> • Perangkat tanpa AR tetap dapat memutar model 360° dengan jari/tetikus.</p></div></div></div><h2 id="alat-hitung-portal-tiga-sendi">9. Alat Hitung – Portal Tiga
+Sendi</h2><div class="gulir"><table>
+<colgroup>
+<col style="width: 19%"/>
+<col style="width: 80%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Aspek</strong></th>
+<th><strong>Spesifikasi</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tujuan</td>
+<td>Reaksi V, H dan BMD portal tiga sendi balok datar atau pelana, beban
+merata atap dan beban horizontal</td>
+</tr>
+<tr class="even">
+<td>Rumus</td>
+<td>\(\Sigma M_A=0;\ \Sigma F_y=0;\ \Sigma M_S^{kiri}=0;\ \Sigma F_x=0;\
+H=\tfrac{qL^2}{8f}\ (\text{simetris})\)</td>
+</tr>
+<tr class="odd">
+<td>Input</td>
+<td>L (m; 4–40), tinggi kolom h (m), tinggi sendi puncak f (m; &gt; h
+untuk pelana, = h untuk datar), q (kN/m) atau beban per m² × jarak
+portal, angin di puncak kolom (kN)</td>
+</tr>
+<tr class="even">
+<td>Output</td>
+<td>V_A, V_E, H_A, H_E; momen sudut; BMD pada gambar portal; rasio
+terhadap kapasitas momen dan angkur (opsional)</td>
+</tr>
+<tr class="odd">
+<td>Mode Case Method</td>
+<td>“Bandingkan penutup atap”: hingga 3 skenario berdampingan</td>
+</tr>
+<tr class="even">
+<td>Validasi &amp; fitur</td>
+<td>f &gt; 0; peringatan bila V negatif (kaki terangkat); reset; salin;
+ekspor CSV/PDF/PNG</td>
+</tr>
+</tbody>
+</table></div><div class="gulir"><table>
+<colgroup>
+<col style="width: 11%"/>
+<col style="width: 36%"/>
+<col style="width: 36%"/>
+<col style="width: 15%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Kasus uji</strong></th>
+<th><strong>Input</strong></th>
+<th><strong>Hasil yang diharapkan</strong></th>
+<th><strong>Rujukan</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Datar: L = 10, h = f = 4, q = 2</td>
+<td>V = 10; H = 6,25; M sudut = 25,00</td>
+<td>Contoh 9.1</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Datar: L = 10, h = 4, angin 5 di B</td>
+<td>V_A = –2; V_E = 2; H_A = H_E = –2,5; M sudut = 10,00</td>
+<td>Contoh 9.2</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Pelana: L = 12, h = 4, f = 6, q = 2,8</td>
+<td>V = 16,80; H = 8,40; M sudut = 33,60</td>
+<td>Contoh 9.3</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Pelana: q = 4,4</td>
+<td>H = 13,20; M sudut = 52,80</td>
+<td>Case Method 3</td>
+</tr>
+</tbody>
+</table></div><div class="kalk" data-bab="bab-09" data-kalk="portal3"></div><h2 id="studi-kasus-proyek">10. Studi Kasus / Proyek</h2><p>Case Method 3 disajikan lengkap di subbab 9.4.</p><h2 id="info-penting-tips-lapangan-peringatan-k3-1">11. Info Penting /
+Tips Lapangan / Peringatan K3</h2><p>Ketiga kotak ada di subbab 9.3.</p><h2 id="rangkuman-1">12. Rangkuman</h2><ul>
+<li><p>Portal tiga sendi: 4 reaksi, statis tertentu karena sendi S
+memberi ΣM_S = 0 untuk satu bagian.</p></li>
+<li><p>Langkah: ΣM_A → V_E; ΣFy → V_A; ΣM_S bagian kiri/kanan → H; ΣFx →
+H lainnya.</p></li>
+<li><p>Simetris dengan beban merata: V = qL/2; H = qL²/(8f); momen sudut
+= H × tinggi kolom.</p></li>
+<li><p>Atap lebih berat atau lebih landai → H dan momen sudut naik →
+periksa profil dan angkur.</p></li>
+<li><p>Keputusan teknis membandingkan beberapa alternatif terhadap
+kapasitas.</p></li>
+</ul><h2 id="latihan-kuis-interaktif-11-soal-1">13. Latihan &amp; Kuis
+Interaktif (11 soal)</h2><div class="kuis" data-kuis="bab-09-1"><div class="kuis__skor"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-kuis"></use></svg> <span>Skor: <b data-skor="">0</b> / <b data-maks="">0</b></span><button class="tombol tombol--kecil" data-ulang="">Ulangi</button></div><div class="soal" data-kunci="(c)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 1</span><span>C1 • pilihan ganda</span></div><p class="soal__teks">Jumlah reaksi tumpuan portal tiga sendi …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) 2</button><button data-opsi="(b)" type="button">(b) 3</button><button data-opsi="(c)" type="button">(c) 4</button><button data-opsi="(d)" type="button">(d) 5</button></div><div class="umpan" hidden=""><b>Kunci:</b> (c)<br/><b>Pembahasan:</b> Dua sendi × 2.</div></div><div class="soal" data-kunci="Salah" data-tipe="bs"><div class="soal__kepala"><span class="soal__label">No. 2</span><span>C2 • benar-salah</span></div><p class="soal__teks">Portal tiga sendi statis tak tentu karena memiliki 4 reaksi.</p><div class="soal__pilihan"><button data-opsi="Benar" type="button">Benar</button><button data-opsi="Salah" type="button">Salah</button></div><div class="umpan" hidden=""><b>Kunci:</b> Salah<br/><b>Pembahasan:</b> Sendi S menambah satu persamaan.</div></div><div class="soal" data-kunci="(b)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 3</span><span>C2 • pilihan ganda</span></div><p class="soal__teks">Persamaan tambahan portal tiga sendi adalah …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) ΣFx seluruh portal</button><button data-opsi="(b)" type="button">(b) ΣM_S untuk satu bagian</button><button data-opsi="(c)" type="button">(c) ΣM_S seluruh portal</button><button data-opsi="(d)" type="button">(d) ΣFy bagian kiri</button></div><div class="umpan" hidden=""><b>Kunci:</b> (b)<br/><b>Pembahasan:</b> Momen di S nol.</div></div><div class="soal" data-kunci="12" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 4</span><span>C3 • isian angka</span></div><p class="soal__teks">Portal simetris L = 8 m, f = 4 m, q = 3 kN/m. V = … kN</p><div class="baris-tombol"><input aria-label="Jawaban soal 4" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 12<br/><b>Pembahasan:</b> 3 × 8 ÷ 2.</div></div><div class="soal" data-kunci="6" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 5</span><span>C3 • isian angka</span></div><p class="soal__teks">Soal no. 4: H = … kN</p><div class="baris-tombol"><input aria-label="Jawaban soal 5" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 6<br/><b>Pembahasan:</b> 3 × 64 ÷ 32.</div></div><div class="soal" data-kunci="18" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 6</span><span>C3 • isian angka</span></div><p class="soal__teks">Soal no. 4 dengan tinggi kolom 3 m: momen sudut = … kN·m</p><div class="baris-tombol"><input aria-label="Jawaban soal 6" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 18<br/><b>Pembahasan:</b> 6 × 3.</div></div><div class="soal" data-kunci="4,5" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 7</span><span>C3 • isian angka</span></div><p class="soal__teks">Beban atap 0,9 kN/m² dan jarak portal 5 m. q per portal = … kN/m</p><div class="baris-tombol"><input aria-label="Jawaban soal 7" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 4,5<br/><b>Pembahasan:</b> 0,9 × 5.</div></div><div class="soal" data-kunci="(b)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 8</span><span>C4 • pilihan ganda</span></div><p class="soal__teks">Jika tinggi sendi puncak f diperkecil (atap lebih landai), H akan …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) turun</button><button data-opsi="(b)" type="button">(b) naik</button><button data-opsi="(c)" type="button">(c) tetap</button><button data-opsi="(d)" type="button">(d) nol</button></div><div class="umpan" hidden=""><b>Kunci:</b> (b)<br/><b>Pembahasan:</b> H berbanding terbalik dengan f.</div></div><div class="soal" data-kunci="67,2" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 9</span><span>C4 • isian angka</span></div><p class="soal__teks">Contoh 9.3 dengan q dua kali lipat: momen sudut = … kN·m</p><div class="baris-tombol"><input aria-label="Jawaban soal 9" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 67,2<br/><b>Pembahasan:</b> Linear terhadap q.</div></div><div class="soal" data-kunci="(b)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 10</span><span>C5 • pilihan ganda (menilai)</span></div><p class="soal__teks">Tukang berkata “rangka baja kuat, ganti saja ke genteng beton”. Tanggapan tim teknis yang tepat …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) setuju</button><button data-opsi="(b)" type="button">(b) tidak disetujui sebelum dihitung; hitungan menunjukkan momen 117% izin</button><button data-opsi="(c)" type="button">(c) setuju bila dicat</button><button data-opsi="(d)" type="button">(d) cukup tambah baut</button></div><div class="umpan" hidden=""><b>Kunci:</b> (b)<br/><b>Pembahasan:</b> Lihat tabel Case Method 3.</div></div><div class="soal" data-kunci="± 3,4 m (pakai 3,0–3,3 m)" data-tipe="uraian"><div class="soal__kepala"><span class="soal__label">No. 11</span><span>C6 • uraian (merancang)</span></div><p class="soal__teks">Rancang jarak antarportal maksimum agar genteng beton (1,10 kN/m² total) aman terhadap momen izin 45 kN·m. Tunjukkan hitungan.</p><textarea aria-label="Jawaban uraian 11" rows="3" style="width:100%"></textarea><div class="baris-tombol"><button class="tombol tombol--kecil" data-lihat="" type="button">Lihat kunci &amp; rubrik</button></div><div class="umpan" hidden=""><b>Kunci:</b> ± 3,4 m (pakai 3,0–3,3 m)<br/><b>Pembahasan:</b> M = H × 4 = q × 144 ÷ 48 × 4 = 12q ≤ 45 → q ≤ 3,75 kN/m → jarak ≤ 3,75 ÷ 1,10 = 3,41 m. Rubrik: rumus 30, hitungan 40, pembulatan aman &amp; alasan 30.</div></div></div><h2 id="refleksi-diri-1">14. Refleksi Diri</h2><ul>
+<li><p>Saya dapat menjelaskan mengapa portal tiga sendi statis tertentu.
+1 2 3 4 5</p></li>
+<li><p>Saya dapat menghitung V dan H. 1 2 3 4 5</p></li>
+<li><p>Saya dapat menggambar BMD portal tiga sendi. 1 2 3 4 5</p></li>
+<li><p>Saya dapat memberi rekomendasi atap berdasarkan hitungan. 1 2 3 4
+5</p></li>
+</ul><p><strong>Apa yang sudah/belum saya pahami?</strong> • <strong>Tindak
+lanjut:</strong> skor ≤ 3 → ulangi Contoh 9.1 dengan Alat Hitung, lalu
+kerjakan soal 11 kuis bersama kelompok.</p><h2 id="glosarium-dan-referensi-bab-1">15. Glosarium dan Referensi
+Bab</h2><div class="gulir"><table class="glosarium">
+<colgroup>
+<col style="width: 26%"/>
+<col style="width: 73%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Istilah</strong></th>
+<th><strong>Arti</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Dorongan horizontal (H)</td>
+<td>Reaksi horizontal di kaki portal tiga sendi yang menahan kaki
+membuka.</td>
+</tr>
+<tr class="even">
+<td>Haunch</td>
+<td>Penebalan/pengaku di sudut portal baja untuk menambah kapasitas
+momen.</td>
+</tr>
+<tr class="odd">
+<td>Jarak antarportal</td>
+<td>Jarak antara dua portal berurutan; menentukan lebar beban atap yang
+dipikul satu portal.</td>
+</tr>
+<tr class="even">
+<td>Portal tiga sendi</td>
+<td>Portal dengan dua sendi kaki dan satu sendi dalam (puncak).</td>
+</tr>
+<tr class="odd">
+<td>Tie rod (batang tarik)</td>
+<td>Batang yang menghubungkan kedua kaki untuk menahan dorongan.</td>
+</tr>
+</tbody>
+</table></div><ul>
+<li><p>Hibbeler, R. C. (2024b). <em>Structural analysis</em> (11th ed.).
+Pearson. (Bab 5: three-hinged frames/arches)</p></li>
+<li><p>Leet, K. M., Uang, C.-M., Lanning, J. T., &amp; Gilbert, A. M.
+(2018). <em>Fundamentals of structural analysis</em> (5th ed.).
+McGraw-Hill. (Bab 6: arches)</p></li>
+<li><p>Badan Standardisasi Nasional. (2020). <em>SNI 1727:2020 Beban
+desain minimum dan kriteria terkait untuk bangunan gedung dan struktur
+lain</em>. BSN.</p></li>
+</ul>
+    <div class="selesai-bab"><button class="tombol tombol--utama" type="button" data-tandai-selesai><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-kuis"/></svg> Tandai bab ini selesai</button></div>
+    <nav class="nav-bab" aria-label="Navigasi bab"><a class="tombol" href="bab-08.html"><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-bab-sebelumnya"/></svg> Portal Statis Tertentu</a><a class="tombol tombol--utama" href="bab-10.html">Rangka Batang: Titik Buhul dan Ritter <svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-bab-berikutnya"/></svg></a></nav>
+  </main>
+</div>
+<button class="fab" type="button" aria-label="Buka AI Tutor" data-buka-ai><svg class="ikon ikon--besar" aria-hidden="true"><use href="../assets/icons/icons.svg#i-ai-tutor"/></svg></button>
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/app.js" defer></script>
+<script src="../assets/js/ai-tutor.js" defer></script>
+<script src="../assets/js/kuis.js" defer></script>
+<script src="../assets/js/kalkulator.js" defer></script>
+<script defer src="../assets/vendor/katex/katex.min.js"></script>
+<script defer src="../assets/vendor/katex/auto-render.min.js" onload="renderMathInElement(document.getElementById('isi'),{delimiters:[{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}],throwOnError:false})"></script>
+<script type="module" src="../assets/vendor/model-viewer/model-viewer.min.js"></script>
+</body>
+</html>

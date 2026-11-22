@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gaya, Vektor, dan Satuan SI – Mekanika Teknik 1</title>
+<meta name="description" content="E-book interaktif Mekanika Teknik 1 (SIP3115) – Gaya, Vektor, dan Satuan SI">
+<meta name="theme-color" content="#0B3C5D">
+<link rel="manifest" href="../manifest.json">
+<link rel="icon" href="../assets/img/ikon-192.png">
+<link rel="stylesheet" href="../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../assets/css/kover.css">
+<link rel="stylesheet" href="../assets/css/ebook.css">
+<link rel="stylesheet" href="../assets/vendor/katex/katex.min.css">
+<script>try{document.documentElement.dataset.tema=localStorage.getItem("mt1-tema")||(matchMedia("(prefers-color-scheme: dark)").matches?"gelap":"terang");document.documentElement.style.setProperty("--font-scale",localStorage.getItem("mt1-huruf")||1)}catch(e){}</script>
+</head>
+<body data-halaman="bab-01" data-root="../">
+<a class="lewati" href="#isi">Lewati ke isi</a>
+<div class="bilah-atas" role="banner">
+  <button class="tbl-ikon tbl-dis" type="button" aria-label="Daftar isi" data-buka-dis><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-peta-konsep"/></svg></button>
+  <a class="tbl-ikon" href="../index.html" aria-label="Beranda"><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-beranda"/></svg></a>
+  <span class="judul-kecil">Gaya, Vektor, dan Satuan SI</span>
+  <button class="tbl-ikon" type="button" aria-label="Cari" data-cari><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-cari"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Penanda halaman" aria-pressed="false" data-penanda><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-penanda"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Catatan pribadi" data-catatan><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-catatan"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Baca suara" aria-pressed="false" data-suara><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-video"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="A− perkecil huruf" data-huruf="-">A−</button>
+  <button class="tbl-ikon" type="button" aria-label="A+ perbesar huruf" data-huruf="+">A+</button>
+  <button class="tbl-ikon" type="button" aria-label="Mode gelap/terang" data-tema-tombol><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-mode-gelap"/></svg></button>
+  <div class="progres-baca" aria-hidden="true"></div>
+</div>
+<div class="tirai" data-tutup-dis></div>
+<div class="tata">
+  <nav class="dis" aria-label="Daftar isi halaman"></nav>
+  <main class="isi" id="isi" tabindex="-1">
+    <header class="banner-bab"><svg class="seni" viewBox="0 0 1600 500" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><g stroke="#00E5FF" stroke-opacity=".07"><path d="M0 100H1600M0 200H1600M0 300H1600M0 400H1600M200 0V500M400 0V500M600 0V500M800 0V500M1000 0V500M1200 0V500M1400 0V500"/></g><g stroke="#00E5FF" stroke-width="5" fill="none" stroke-linecap="round" opacity=".85"><path d="M980 380H1540M1060 250H1460M980 380L1060 250M1540 380L1460 250M1060 250V380M1160 250V380M1260 250V380M1360 250V380M1460 250V380"/><path d="M1060 380L1160 250M1160 380L1260 250M1360 250L1460 380M1260 250L1360 380" stroke="#1DE9B6"/></g><rect x="0" y="470" width="1600" height="6" fill="#F26622"/></svg><div class="banner-bab__isi"><div class="banner-bab__no">BAB 1 • MINGGU 1</div><h1 class="banner-bab__judul">Gaya, Vektor, dan Satuan SI</h1><p class="banner-bab__kutip">“Alam takambang jadi guru.” – pepatah
+Minangkabau. Alam di sekitar kita – pohon yang condong, tiang yang
+ditarik kabel – adalah guru pertama tentang gaya.</p></div></header>
+    <p>Minggu 1 • Sub-CPMK 1.1 • CPMK-1 • CPL 2 / IK 2.1 • Estimasi belajar:
+120 menit mandiri + 220 menit kelas/studio</p><h2 id="capaian-pembelajaran">2. Capaian Pembelajaran</h2><p><strong>Sub-CPMK 1.1:</strong> Mahasiswa mampu menjelaskan konsep
+gaya, vektor, dan satuan SI pada struktur.</p><div class="gulir"><table>
+<colgroup>
+<col style="width: 8%"/>
+<col style="width: 66%"/>
+<col style="width: 25%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Kode</strong></th>
+<th><strong>Indikator</strong></th>
+<th><strong>Level Bloom</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1.1.a</td>
+<td>Menjelaskan perbedaan massa dan berat serta satuannya dalam SI</td>
+<td>C2 – menjelaskan</td>
+</tr>
+<tr class="even">
+<td>1.1.b</td>
+<td>Mengonversi beban sehari-hari (liter air, zak semen, kgf) menjadi
+newton/kilonewton</td>
+<td>C3 – menerapkan</td>
+</tr>
+<tr class="odd">
+<td>1.1.c</td>
+<td>Menguraikan gaya miring menjadi komponen horizontal dan
+vertikal</td>
+<td>C3 – menghitung</td>
+</tr>
+<tr class="even">
+<td>1.1.d</td>
+<td>Menjumlahkan minimal tiga gaya secara grafis dan analitis</td>
+<td>C3 – menghitung</td>
+</tr>
+<tr class="odd">
+<td>1.1.e</td>
+<td>Memeriksa kewajaran arah resultan berdasarkan kuadran</td>
+<td>C4 – menganalisis</td>
+</tr>
+</tbody>
+</table></div><h2 id="peta-konsep-bab">3. Peta Konsep Bab</h2><p>Diagram interaktif (dapat diklik ke subbab):</p><ul>
+<li><p><strong>Gaya</strong> → (1.1) besaran &amp; satuan SI → massa vs
+berat → konversi beban</p></li>
+<li><p><strong>Gaya</strong> → (1.2) vektor: besar, arah, titik tangkap,
+garis kerja</p></li>
+<li><p><strong>Vektor</strong> → (1.3) penguraian komponen Fx,
+Fy</p></li>
+<li><p><strong>Komponen</strong> → (1.4) penjumlahan: grafis (jajar
+genjang, poligon) &amp; analitis (ΣFx, ΣFy → R, θ)</p></li>
+<li><p><strong>Resultan</strong> → dipakai di Bab 2 (momen) dan Bab 3
+(kesetimbangan)</p></li>
+</ul><h2 id="apersepsi">4. Apersepsi</h2><p><strong>Pertanyaan pemantik:</strong> <em>Mengapa kanopi bisa
+roboh?</em> Coba ingat kanopi beton di depan sekolah atau ruko. Apa saja
+yang “menarik” kanopi ke bawah? Apa yang menahannya agar tidak
+jatuh?</p><p><strong>Kasus di sekitar kampus:</strong> Tiang lampu jalan di tepi
+jalan menuju kampus ditahan oleh kabel penegang yang miring. Kabel itu
+menarik tiang ke bawah dan ke samping sekaligus. Bagaimana kita
+menghitung “seberapa besar ke samping” dan “seberapa besar ke bawah”?
+Bab ini menjawabnya.</p><p><strong>Gambar 1.1. Kanopi beton di depan gedung sekolah</strong>
+(ilustrasi baru, sumber: dokumen penulis)</p><p><em>Teks alternatif:</em> Kanopi beton menjorok dari dinding gedung
+sekolah, dengan panah beban hujan dan beban sendiri mengarah ke
+bawah.</p><p>Prompt gambar: Clean educational illustration of a reinforced
+concrete cantilever canopy above a school entrance in Indonesia, glowing
+orange arrows showing self-weight and rain load pointing down, cyan
+outline highlighting the connection to the wall, flat vector style, navy
+background, no text</p><h2 id="uraian-materi">5. Uraian Materi</h2><h3 id="besaran-dan-satuan-si-pada-struktur">1.1 Besaran dan Satuan SI
+pada Struktur</h3><p>Dalam mekanika teknik kita memakai <strong>Sistem Internasional
+(SI)</strong>. Tiga besaran dasar yang paling sering dipakai adalah
+panjang (meter, m), massa (kilogram, kg), dan waktu (detik, s). Gaya
+adalah besaran turunan dengan satuan <strong>newton (N)</strong>.</p><p>Satu newton adalah gaya yang membuat benda bermassa 1 kg mengalami
+percepatan 1 m/s². Di lapangan, newton terlalu kecil, sehingga kita
+memakai <strong>kilonewton (kN)</strong>: 1 kN = 1.000 N.</p><p><strong>Massa dan berat berbeda.</strong> Massa (kg) adalah banyaknya
+materi; nilainya sama di mana pun. Berat (N) adalah gaya tarik bumi pada
+massa itu. Analogi: satu karung beras 50 kg tetap 50 kg di Padang maupun
+di Bukittinggi, tetapi beratnya adalah gaya yang dirasakan bahu kita
+saat memikulnya.</p><div aria-label="W = m · g" class="rumus" role="math">\[W = m\,g\]</div><p><strong>Keterangan:</strong> W = berat (N); m = massa (kg); g =
+percepatan gravitasi = 9,81 m/s². <strong>Batasan:</strong> berlaku di
+permukaan bumi; nilai g = 9,81 m/s² dipakai untuk semua hitungan di buku
+ini. Rujukan: BIPM (2019); Hibbeler (2024a) Bab 1.</p><p>Satuan lama <strong>kilogram-gaya (kgf)</strong> masih sering
+dijumpai di lapangan, misalnya pada label kapasitas. 1 kgf = 9,80665 N ≈
+9,81 N.</p><div class="gulir"><table>
+<colgroup>
+<col style="width: 16%"/>
+<col style="width: 33%"/>
+<col style="width: 50%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Satuan</strong></th>
+<th><strong>Dipakai untuk</strong></th>
+<th><strong>Contoh di lapangan</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>N, kN</td>
+<td>Gaya terpusat (beban titik)</td>
+<td>Berat tandon air di atas balok</td>
+</tr>
+<tr class="even">
+<td>kN/m</td>
+<td>Beban merata sepanjang garis</td>
+<td>Berat dinding bata di atas balok</td>
+</tr>
+<tr class="odd">
+<td>kN/m²</td>
+<td>Beban merata pada luas</td>
+<td>Beban hidup lantai kelas (SNI 1727:2020)</td>
+</tr>
+<tr class="even">
+<td>kN·m</td>
+<td>Momen (Bab 2)</td>
+<td>Momen di tumpuan jepit kanopi</td>
+</tr>
+</tbody>
+</table></div><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 1.1 – Tandon air di lantai ruko</p><p><strong>Soal.</strong> Sebuah tandon berisi 1.000 liter air
+diletakkan di lantai ruko. Berapa beban (berat) air tersebut dalam kN?
+(massa jenis air = 1.000 kg/m³)</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – Ubah volume: 1.000 L = 1 m³.</p><p>Langkah 2 – Massa air: m = 1.000 kg/m³ × 1 m³ = 1.000 kg.</p><p>Langkah 3 – Berat: W = m·g = 1.000 × 9,81 = 9.810 N.</p><p>Langkah 4 – Ubah ke kN: 9.810 N ÷ 1.000 = 9,81 kN.</p><p class="jawab"><strong>Jawab:</strong> W = 9,81 kN (belum termasuk berat tandon
+kosong). Kasus ini dipakai lagi di Case Method 2 (Bab 6).</p></details></aside><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 1.2 – Tumpukan semen di lantai
+kerja</p><p><strong>Soal.</strong> Sebanyak 40 zak semen @ 50 kg ditumpuk di atas
+pelat kerja. Hitung beratnya dalam kN. Jika tumpukan menempati luas 8
+m², berapa beban per luas (kN/m²)?</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – Massa total: m = 40 × 50 = 2.000 kg.</p><p>Langkah 2 – Berat: W = 2.000 × 9,81 = 19.620 N = 19,62 kN.</p><p>Langkah 3 – Beban per luas: q = 19,62 ÷ 8 = 2,45 kN/m².</p><p class="jawab"><strong>Jawab:</strong> W = 19,62 kN; q ≈ 2,45 kN/m². Bandingkan:
+angka ini sudah sebanding dengan beban hidup lantai biasa – tumpukan
+material bisa berbahaya bila diletakkan di satu titik.</p></details></aside><aside class="kotak kotak--info"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-info"></use></svg>Info Penting</p><p>Selalu tulis satuan di setiap langkah. Kesalahan paling sering di
+Mekanika Teknik 1 bukan rumus, melainkan satuan (N tertukar dengan kN,
+cm tertukar dengan m).</p></aside><h3 id="gaya-sebagai-vektor">1.2 Gaya sebagai Vektor</h3><p>Besaran <strong>skalar</strong> hanya punya besar, misalnya massa 50
+kg atau panjang 3 m. Besaran <strong>vektor</strong> punya besar dan
+arah. Gaya adalah vektor, sehingga gaya 5 kN ke bawah berbeda
+pengaruhnya dengan gaya 5 kN ke samping.</p><p>Sebuah gaya ditentukan oleh tiga unsur:</p><ol type="1">
+<li><p><strong>Besar</strong> – berapa kN.</p></li>
+<li><p><strong>Arah</strong> – sudut terhadap sumbu acuan dan ke mana
+panahnya menunjuk.</p></li>
+<li><p><strong>Titik tangkap</strong> – di titik mana gaya bekerja pada
+benda.</p></li>
+</ol><p>Garis lurus yang melalui titik tangkap searah gaya disebut
+<strong>garis kerja</strong>. Pada benda tegar (<em>rigid body</em> –
+benda yang dianggap tidak berubah bentuk), gaya boleh digeser sepanjang
+garis kerjanya tanpa mengubah pengaruhnya. Prinsip ini disebut
+<strong>prinsip transmisibilitas</strong>.</p><p>Analogi: mendorong mobil mogok dari belakang atau menariknya dengan
+tali dari depan pada garis yang sama memberi pengaruh yang sama pada
+gerak mobil.</p><p><strong>Gambar 1.2. Tiga unsur gaya pada tiang lampu
+berkabel</strong> (ilustrasi baru, sumber: dokumen penulis)</p><p><em>Teks alternatif:</em> Tiang lampu vertikal ditarik kabel miring.
+Titik tangkap di ujung kabel pada tiang, panah gaya sepanjang kabel, dan
+garis kerja putus-putus.</p><p>Prompt gambar: Minimal technical illustration of a street light pole
+held by a diagonal guy wire, glowing cyan force vector along the cable,
+dashed line of action, labeled point of application as a small orange
+dot, perspective grid floor, navy background, no text</p><h3 id="menguraikan-gaya-menjadi-komponen">1.3 Menguraikan Gaya menjadi
+Komponen</h3><p>Gaya miring lebih mudah dihitung bila diuraikan menjadi dua komponen
+yang saling tegak lurus: <strong>komponen horizontal (Fx)</strong> dan
+<strong>komponen vertikal (Fy)</strong>. Analogi: bayangan tongkat
+miring di siang hari (ke bawah) dan di sore hari (ke samping).</p><div aria-label="Fx = F cos θ Fy = F sin θ" class="rumus" role="math">\[F_x = F\cos\theta,\qquad F_y = F\sin\theta\]</div><p><strong>Keterangan:</strong> F = besar gaya (kN); θ = sudut gaya
+diukur dari sumbu x positif, berlawanan jarum jam (°); Fx, Fy = komponen
+(kN), bertanda + ke kanan/ke atas dan – ke kiri/ke bawah.
+<strong>Batasan:</strong> sumbu x dan y harus saling tegak lurus.</p><p>Bila arah gaya diberikan sebagai <strong>kemiringan</strong>
+(misalnya 3 : 4), pakai segitiga kemiringan. Sisi miring = √(3² + 4²) =
+5, sehingga cos θ = 4/5 dan sin θ = 3/5.</p><div aria-label="Fx = F · (h/s) Fy = F · (v/s), s = √(h² + v²)" class="rumus" role="math">\[F_x = F\frac{h}{s},\quad F_y = F\frac{v}{s},\quad
+s=\sqrt{h^2+v^2}\]</div><p><strong>Keterangan:</strong> h dan v = angka kemiringan horizontal
+dan vertikal (tanpa satuan); s = sisi miring segitiga kemiringan.</p><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 1.3 – Kabel penegang tiang lampu</p><p><strong>Soal.</strong> Kabel penegang menarik ujung tiang dengan gaya
+5 kN membentuk sudut 60° terhadap horizontal, mengarah ke kanan-bawah (θ
+= 300° dari sumbu x positif). Hitung komponennya.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – Besar komponen horizontal: |Fx| = 5 cos 60° = 5 × 0,5 =
+2,50 kN.</p><p>Langkah 2 – Besar komponen vertikal: |Fy| = 5 sin 60° = 5 × 0,866 =
+4,33 kN.</p><p>Langkah 3 – Beri tanda sesuai arah: ke kanan (+), ke bawah (–).</p><p class="jawab"><strong>Jawab:</strong> Fx = +2,50 kN; Fy = –4,33 kN. Pemeriksaan:
+√(2,50² + 4,33²) = 5,00 kN ✓</p></details></aside><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 1.4 – Gaya pada batang miring
+kuda-kuda</p><p><strong>Soal.</strong> Batang kuda-kuda dengan kemiringan 3 : 4
+(vertikal : horizontal) menyalurkan gaya tekan 12 kN ke arah kiri-bawah.
+Hitung Fx dan Fy.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – Sisi miring: s = √(4² + 3²) = 5.</p><p>Langkah 2 – |Fx| = 12 × 4/5 = 9,60 kN; |Fy| = 12 × 3/5 = 7,20 kN.</p><p>Langkah 3 – Arah kiri (–) dan bawah (–).</p><p class="jawab"><strong>Jawab:</strong> Fx = –9,60 kN; Fy = –7,20 kN.</p></details></aside><h3 id="menjumlahkan-gaya-grafis-dan-analitis">1.4 Menjumlahkan Gaya:
+Grafis dan Analitis</h3><p>Beberapa gaya yang bekerja pada satu titik dapat diganti oleh satu
+gaya pengganti yang disebut <strong>resultan (R)</strong>.</p><p><strong>Cara grafis.</strong> Dua gaya dijumlahkan dengan
+<strong>hukum jajar genjang</strong>: gambar kedua gaya dari titik yang
+sama, lengkapi jajar genjangnya, dan diagonalnya adalah R. Untuk tiga
+gaya atau lebih, pakai <strong>poligon gaya</strong>: susun panah gaya
+ujung ke pangkal; garis dari pangkal pertama ke ujung terakhir adalah R.
+Cara ini cepat untuk memeriksa, tetapi ketelitiannya bergantung pada
+skala gambar.</p><p><strong>Cara analitis (dianjurkan).</strong> Jumlahkan semua
+komponen, lalu susun kembali:</p><div aria-label="ΣFx = F₁ₓ + F₂ₓ + … ΣFy = F₁ᵧ + F₂ᵧ + …" class="rumus" role="math">\[\Sigma F_x=\sum F_{ix},\qquad \Sigma F_y=\sum F_{iy}\]</div><div aria-label="R = √[(ΣFx)² + (ΣFy)²] θ = arctan(ΣFy / ΣFx)" class="rumus" role="math">\[R=\sqrt{(\Sigma F_x)^2+(\Sigma F_y)^2},\qquad
+\theta=\arctan\frac{\Sigma F_y}{\Sigma F_x}\]</div><p><strong>Keterangan:</strong> R = besar resultan (kN); θ = sudut
+resultan dari sumbu x positif (°). <strong>Batasan:</strong> kalkulator
+memberi arctan hanya di rentang –90° s.d. 90°. Tentukan kuadran dari
+tanda ΣFx dan ΣFy: bila ΣFx negatif, tambahkan 180°.</p><p>Untuk <strong>dua gaya</strong> dengan sudut apit α, dapat juga
+dipakai hukum cosinus:</p><div aria-label="R² = F₁² + F₂² + 2·F₁·F₂·cos α" class="rumus" role="math">\[R^2=F_1^2+F_2^2+2F_1F_2\cos\alpha\]</div><p><strong>Keterangan:</strong> α = sudut antara kedua gaya ketika
+keduanya digambar dari titik yang sama (°).</p><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 1.5 – Dua gaya kabel</p><p><strong>Soal.</strong> Dua kabel menarik sebuah cincin angkur dengan
+gaya 4 kN dan 3 kN. Sudut apit kedua kabel 60°. Hitung besar
+resultannya.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – R² = 4² + 3² + 2(4)(3) cos 60° = 16 + 9 + 12 = 37.</p><p>Langkah 2 – R = √37 = 6,08 kN.</p><p class="jawab"><strong>Jawab:</strong> R = 6,08 kN. Pemeriksaan: nilainya di antara
+4 – 3 = 1 kN dan 4 + 3 = 7 kN ✓</p></details></aside><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 1.6 – Tiga gaya pada titik buhul</p><p><strong>Soal.</strong> Tiga gaya bekerja pada satu titik: F₁ = 10 kN
+(θ = 0°), F₂ = 8 kN (θ = 60°), F₃ = 6 kN (θ = 150°). Tentukan besar dan
+arah resultan.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – F₁: Fx = 10,00; Fy = 0,00 kN.</p><p>Langkah 2 – F₂: Fx = 8 cos 60° = 4,00; Fy = 8 sin 60° = 6,93 kN.</p><p>Langkah 3 – F₃: Fx = 6 cos 150° = –5,20; Fy = 6 sin 150° = 3,00
+kN.</p><p>Langkah 4 – ΣFx = 10,00 + 4,00 – 5,20 = 8,80 kN; ΣFy = 0 + 6,93 +
+3,00 = 9,93 kN.</p><p>Langkah 5 – R = √(8,80² + 9,93²) = 13,27 kN.</p><p>Langkah 6 – θ = arctan(9,93/8,80) = 48,4°; ΣFx dan ΣFy positif →
+kuadran I ✓</p><p class="jawab"><strong>Jawab:</strong> R = 13,27 kN, arah 48,4° dari sumbu x
+positif.</p></details></aside><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 1.7 – Tiga gaya dengan arah kuadran
+III</p><p><strong>Soal.</strong> F₁ = 12 kN (0°), F₂ = 15 kN (90°), F₃ = 10 kN
+(225°). Hitung resultannya.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – F₃: Fx = 10 cos 225° = –7,07; Fy = 10 sin 225° = –7,07
+kN.</p><p>Langkah 2 – ΣFx = 12 – 7,07 = 4,93 kN; ΣFy = 15 – 7,07 = 7,93 kN.</p><p>Langkah 3 – R = √(4,93² + 7,93²) = 9,34 kN; θ = arctan(7,93/4,93) =
+58,1°.</p><p class="jawab"><strong>Jawab:</strong> R = 9,34 kN, θ = 58,1° (kuadran I). Contoh
+ini menjadi kasus uji ke-3 alat hitung.</p></details></aside><aside class="kotak kotak--tips"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-tips"></use></svg>Tips Lapangan</p><p>Sebelum menghitung, sketsakan dulu arah gaya dan perkirakan kuadran
+resultan. Jika hasil hitung jatuh di kuadran berbeda dari sketsa,
+periksa tanda komponen.</p></aside><aside class="kotak kotak--k3"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-peringatan"></use></svg>Peringatan K3</p><p>Jangan berdiri atau melintas di garis kerja kabel penegang (sling)
+yang sedang ditarik. Bila kabel putus, ujungnya melesat sepanjang garis
+kerja gaya. Pakai helm, kacamata, dan sarung tangan saat memasang atau
+menyetel kabel penegang.</p></aside><h2 id="contoh-soal-pembahasan">6. Contoh Soal &amp; Pembahasan</h2><p>Tujuh contoh soal sudah tersebar di setiap subbab hitungan (1.1–1.7):
+subbab 1.1 (2 contoh), 1.3 (2 contoh), 1.4 (3 contoh). Semua pembahasan
+diakhiri pemeriksaan kewajaran.</p><h2 id="tanya-ai-tutor">7. Tanya AI Tutor</h2><p>Kartu prompt siap salin (tombol “Salin &amp; Buka Chatbot”) dan
+tombol tanya langsung. Tutor bekerja dengan metode Sokratik: membimbing
+dengan pertanyaan, tidak langsung memberi jawaban tugas.</p><div class="kartu-ai-grid"><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Jelaskan lebih sederhana</h4><p>Saya mahasiswa D3 Teknik Sipil semester 1. Jelaskan beda massa dan berat dengan contoh di lokasi proyek, tanpa rumus rumit. Setelah itu beri saya 1 pertanyaan untuk mengecek pemahaman.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Saya mahasiswa D3 Teknik Sipil semester 1. Jelaskan beda massa dan berat dengan contoh di lokasi proyek, tanpa rumus rumit. Setelah itu beri saya 1 pertanyaan untuk mengecek pemahaman." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Saya mahasiswa D3 Teknik Sipil semester 1. Jelaskan beda massa dan berat dengan contoh di lokasi proyek, tanpa rumus rumit. Setelah itu beri saya 1 pertanyaan untuk mengecek pemahaman." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Saya mahasiswa D3 Teknik Sipil semester 1. Jelaskan beda massa dan berat dengan contoh di lokasi proyek, tanpa rumus rumit. Setelah itu beri saya 1 pertanyaan untuk mengecek pemahaman." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Beri contoh lain</h4><p>Beri saya 2 contoh gaya miring di bangunan sekitar kampus (selain tiang lampu). Minta saya menebak arah komponen Fx dan Fy-nya dulu sebelum kamu menjelaskan.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Beri saya 2 contoh gaya miring di bangunan sekitar kampus (selain tiang lampu). Minta saya menebak arah komponen Fx dan Fy-nya dulu sebelum kamu menjelaskan." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Beri saya 2 contoh gaya miring di bangunan sekitar kampus (selain tiang lampu). Minta saya menebak arah komponen Fx dan Fy-nya dulu sebelum kamu menjelaskan." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Beri saya 2 contoh gaya miring di bangunan sekitar kampus (selain tiang lampu). Minta saya menebak arah komponen Fx dan Fy-nya dulu sebelum kamu menjelaskan." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Buat soal latihan</h4><p>Buat 3 soal penjumlahan tiga gaya (besar dan sudut berbeda) bertingkat dari mudah ke sedang. Jangan tampilkan jawaban sampai saya mengirim jawaban saya.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Buat 3 soal penjumlahan tiga gaya (besar dan sudut berbeda) bertingkat dari mudah ke sedang. Jangan tampilkan jawaban sampai saya mengirim jawaban saya." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Buat 3 soal penjumlahan tiga gaya (besar dan sudut berbeda) bertingkat dari mudah ke sedang. Jangan tampilkan jawaban sampai saya mengirim jawaban saya." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Buat 3 soal penjumlahan tiga gaya (besar dan sudut berbeda) bertingkat dari mudah ke sedang. Jangan tampilkan jawaban sampai saya mengirim jawaban saya." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Periksa jawabanku</h4><p>Ini langkah saya menghitung resultan: [tempel langkah]. Tunjukkan langkah mana yang keliru dengan pertanyaan pancingan, jangan langsung memberi jawaban benar.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Ini langkah saya menghitung resultan: [tempel langkah]. Tunjukkan langkah mana yang keliru dengan pertanyaan pancingan, jangan langsung memberi jawaban benar." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Ini langkah saya menghitung resultan: [tempel langkah]. Tunjukkan langkah mana yang keliru dengan pertanyaan pancingan, jangan langsung memberi jawaban benar." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Ini langkah saya menghitung resultan: [tempel langkah]. Tunjukkan langkah mana yang keliru dengan pertanyaan pancingan, jangan langsung memberi jawaban benar." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Ringkas bab ini</h4><p>Ringkas Bab 1 Gaya, Vektor, dan Satuan SI menjadi 5 poin dan 1 peta konsep teks, sebutkan subbab terkait untuk tiap poin.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Ringkas Bab 1 Gaya, Vektor, dan Satuan SI menjadi 5 poin dan 1 peta konsep teks, sebutkan subbab terkait untuk tiap poin." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Ringkas Bab 1 Gaya, Vektor, dan Satuan SI menjadi 5 poin dan 1 peta konsep teks, sebutkan subbab terkait untuk tiap poin." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Ringkas Bab 1 Gaya, Vektor, dan Satuan SI menjadi 5 poin dan 1 peta konsep teks, sebutkan subbab terkait untuk tiap poin." type="button">Tanya langsung</button></div></div></div><h2 id="zona-ar-tiang-lampu-berkabel-penegang">8. Zona AR – Tiang Lampu
+Berkabel Penegang</h2><div class="gulir"><table>
+<colgroup>
+<col style="width: 19%"/>
+<col style="width: 80%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Aspek</strong></th>
+<th><strong>Spesifikasi</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nama objek</td>
+<td>ar-bab01-tiang-kabel.glb (+ .usdz untuk iOS)</td>
+</tr>
+<tr class="even">
+<td>Tujuan belajar</td>
+<td>Melihat gaya kabel sebagai vektor 3D dan komponennya (Sub-CPMK 1.1,
+indikator 1.1.c)</td>
+</tr>
+<tr class="odd">
+<td>Pembuatan model</td>
+<td>Blender: tiang baja Ø 15 cm tinggi 6 m, kabel baja, angkur beton;
+ekspor GLB terkompresi Draco ≤ 3 MB</td>
+</tr>
+<tr class="even">
+<td>Hotspot &amp; label</td>
+<td>(1) Titik tangkap gaya kabel; (2) Panah F = 5 kN sepanjang kabel;
+(3) Komponen Fx; (4) Komponen Fy; (5) Sudut 60°; (6) Angkur tanah</td>
+</tr>
+<tr class="odd">
+<td>Animasi</td>
+<td>Tombol “Uraikan gaya”: panah F terbelah menjadi Fx dan Fy (2
+detik)</td>
+</tr>
+<tr class="even">
+<td>Kode QR</td>
+<td>Menuju ar/bab-01.html (alamat penuh menyusul setelah URL LMS PNP
+tersedia)</td>
+</tr>
+<tr class="odd">
+<td>Cadangan</td>
+<td>Gambar putar 360° (24 bingkai) untuk perangkat tanpa dukungan
+AR</td>
+</tr>
+<tr class="even">
+<td>Pertanyaan pengamatan</td>
+<td>(a) Jika sudut kabel diperkecil menjadi 45°, komponen mana yang
+bertambah? (b) Mengapa angkur ditanam miring searah kabel? (c) Di mana
+garis kerja gaya kabel memotong tanah?</td>
+</tr>
+</tbody>
+</table></div><p>Petunjuk: pindai kode QR → izinkan kamera → arahkan ke lantai datar →
+ketuk untuk menempatkan model → ketuk hotspot untuk membaca label.</p><div class="ar-kotak">
+<model-viewer alt="Model 3D Gaya, Vektor, dan Satuan SI" ar="" ar-modes="webxr scene-viewer quick-look" auto-rotate="" camera-controls="" exposure="1.1" loading="lazy" shadow-intensity="0.8" src="../assets/model-3d/ar-bab01-tiang-kabel.glb" touch-action="pan-y">
+<button class="hotspot" data-normal="0 1 0" data-position="0 5.8 0" slot="hotspot-0">1<span>Titik tangkap gaya kabel</span></button><button class="hotspot" data-normal="0 1 0" data-position="1.6 3.0 0" slot="hotspot-1">2<span>F = 5 kN sepanjang kabel</span></button><button class="hotspot" data-normal="0 1 0" data-position="3.4 0.1 0" slot="hotspot-2">3<span>Angkur tanah</span></button>
+<button class="tombol tombol--utama" slot="ar-button" style="position:absolute;bottom:12px;right:12px"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-zona-ar"></use></svg> Lihat di ruanganmu (AR)</button>
+<div slot="poster" style="display:grid;place-items:center;height:100%;color:#CBD5E1">Memuat model 3D…</div>
+</model-viewer>
+<div class="ar-bawah"><div aria-label="Kode QR menuju halaman AR bab-01" class="qr" data-qr="../ar/bab-01.html" role="img"></div>
+<div><b>Petunjuk:</b> pindai kode QR atau ketuk tombol AR → izinkan kamera → arahkan ke lantai datar → ketuk untuk menempatkan model. Ketuk angka untuk membaca label.<ol style="margin:6px 0 0;padding-left:18px"><li>Titik tangkap gaya kabel</li><li>F = 5 kN sepanjang kabel</li><li>Angkur tanah</li></ol>
+<p style="margin:6px 0 0"><a href="../ar/bab-01.html">Buka halaman AR penuh</a> • Perangkat tanpa AR tetap dapat memutar model 360° dengan jari/tetikus.</p></div></div></div><h2 id="alat-hitung-penjumlahan-vektor-gaya-konversi-satuan">9. Alat
+Hitung – Penjumlahan Vektor Gaya &amp; Konversi Satuan</h2><div class="gulir"><table>
+<colgroup>
+<col style="width: 19%"/>
+<col style="width: 80%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Aspek</strong></th>
+<th><strong>Spesifikasi</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tujuan</td>
+<td>Menghitung komponen, ΣFx, ΣFy, resultan R, dan sudut θ dari 2–8
+gaya; mengonversi satuan gaya</td>
+</tr>
+<tr class="even">
+<td>Rumus</td>
+<td>\(F_x=F\cos\theta;\ F_y=F\sin\theta;\ R=\sqrt{(\Sigma F_x)^2+(\Sigma
+F_y)^2};\ \theta=\operatorname{atan2}(\Sigma F_y,\Sigma F_x)\)</td>
+</tr>
+<tr class="odd">
+<td>Input</td>
+<td>Fᵢ (kN; 0 &lt; F ≤ 10.000; contoh 10) • θᵢ (°; 0–360; contoh 60) •
+tombol tambah/hapus gaya • konversi: nilai + satuan (N, kN, kgf,
+ton-gaya)</td>
+</tr>
+<tr class="even">
+<td>Output</td>
+<td>Tabel komponen, ΣFx, ΣFy, R (kN, 2 desimal), θ (°, 1 desimal),
+kuadran</td>
+</tr>
+<tr class="odd">
+<td>Validasi</td>
+<td>Kolom kosong/negatif ditolak: “Besar gaya harus angka lebih dari 0
+kN.” Sudut di luar 0–360 diminta dinormalkan.</td>
+</tr>
+<tr class="even">
+<td>Langkah</td>
+<td>Ditampilkan per gaya (seperti Contoh 1.6) + penentuan kuadran</td>
+</tr>
+<tr class="odd">
+<td>Grafik</td>
+<td>Poligon gaya dan panah resultan (Chart.js mode scatter + garis)</td>
+</tr>
+<tr class="even">
+<td>Fitur</td>
+<td>Reset, salin hasil, ekspor CSV/PDF</td>
+</tr>
+</tbody>
+</table></div><div class="gulir"><table>
+<colgroup>
+<col style="width: 11%"/>
+<col style="width: 36%"/>
+<col style="width: 29%"/>
+<col style="width: 21%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Kasus uji</strong></th>
+<th><strong>Input</strong></th>
+<th><strong>Hasil yang diharapkan</strong></th>
+<th><strong>Rujukan</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>10 kN @0°, 8 kN @60°, 6 kN @150°</td>
+<td>R = 13,27 kN; θ = 48,4°</td>
+<td>Contoh 1.6</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>4 kN @0°, 3 kN @60°</td>
+<td>R = 6,08 kN</td>
+<td>Contoh 1.5</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>12 kN @0°, 15 kN @90°, 10 kN @225°</td>
+<td>R = 9,34 kN; θ = 58,1°</td>
+<td>Contoh 1.7</td>
+</tr>
+<tr class="even">
+<td>4 (konversi)</td>
+<td>1.000 kg massa → berat</td>
+<td>9,81 kN</td>
+<td>Contoh 1.1</td>
+</tr>
+</tbody>
+</table></div><div class="kalk" data-bab="bab-01" data-kalk="vektor"></div><h2 id="studi-kasus-mini-tiang-lampu-miring-di-tepi-jalan">10. Studi
+Kasus Mini – Tiang Lampu Miring di Tepi Jalan</h2><p>Sebuah tiang lampu di tepi jalan kampus mulai miring setelah hujan
+deras. Tiang ditahan dua kabel penegang yang dipasang simetris,
+masing-masing membentuk sudut 45° terhadap tiang. Petugas ingin agar
+kedua kabel hanya menghasilkan gaya ke bawah sebesar 10 kN pada tiang
+(tanpa dorongan ke samping).</p><ol type="1">
+<li><p>Berapa gaya tarik tiap kabel? (Petunjuk: komponen horizontal
+saling meniadakan; 2T cos 45° = 10 kN.)</p></li>
+<li><p>Apa yang terjadi pada tiang jika salah satu kabel
+kendur?</p></li>
+<li><p>Usulkan satu tindakan sederhana yang aman untuk menegakkan tiang
+kembali.</p></li>
+</ol><p><em>Kunci dosen:</em> T = 10 ÷ (2 × 0,707) = 7,07 kN per kabel; jika
+satu kabel kendur, komponen horizontal kabel lain tidak terimbangi
+sehingga tiang tertarik ke samping.</p><h2 id="info-penting-tips-lapangan-peringatan-k3">11. Info Penting /
+Tips Lapangan / Peringatan K3</h2><p>Ketiga kotak sudah ditempatkan di dalam subbab: Info Penting (1.1),
+Tips Lapangan dan Peringatan K3 (1.4).</p><h2 id="rangkuman">12. Rangkuman</h2><ul>
+<li><p>Gaya adalah vektor: punya besar, arah, dan titik tangkap; satuan
+SI-nya newton (N), di lapangan kN.</p></li>
+<li><p>Berat = massa × 9,81 m/s². 1.000 liter air ≈ 9,81 kN; 1 kgf ≈
+9,81 N.</p></li>
+<li><p>Gaya miring diuraikan: Fx = F cos θ, Fy = F sin θ, dengan tanda
+sesuai arah.</p></li>
+<li><p>Resultan dihitung dari ΣFx dan ΣFy; selalu periksa
+kuadran.</p></li>
+<li><p>Cara grafis untuk memeriksa, cara analitis untuk hasil
+teliti.</p></li>
+</ul><p><em>Infografik:</em> satu panel “F → (Fx, Fy) → ΣFx, ΣFy → R, θ”
+dengan ikon langkah dan warna sesuai sistem desain.</p><h2 id="latihan-kuis-interaktif-11-soal">13. Latihan &amp; Kuis
+Interaktif (11 soal)</h2><div class="kuis" data-kuis="bab-01-1"><div class="kuis__skor"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-kuis"></use></svg> <span>Skor: <b data-skor="">0</b> / <b data-maks="">0</b></span><button class="tombol tombol--kecil" data-ulang="">Ulangi</button></div><div class="soal" data-kunci="(b)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 1</span><span>C1 • pilihan ganda</span></div><p class="soal__teks">Satuan gaya dalam SI adalah …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) kilogram</button><button data-opsi="(b)" type="button">(b) newton</button><button data-opsi="(c)" type="button">(c) kgf</button><button data-opsi="(d)" type="button">(d) pascal</button></div><div class="umpan" hidden=""><b>Kunci:</b> (b)<br/><b>Pembahasan:</b> Newton = kg·m/s²; kg adalah satuan massa, pascal satuan tegangan.</div></div><div class="soal" data-kunci="Benar" data-tipe="bs"><div class="soal__kepala"><span class="soal__label">No. 2</span><span>C2 • benar-salah</span></div><p class="soal__teks">Massa 1 kg memiliki berat sekitar 9,81 N di permukaan bumi.</p><div class="soal__pilihan"><button data-opsi="Benar" type="button">Benar</button><button data-opsi="Salah" type="button">Salah</button></div><div class="umpan" hidden=""><b>Kunci:</b> Benar<br/><b>Pembahasan:</b> W = m·g = 1 × 9,81 = 9,81 N.</div></div><div class="soal" data-kunci="4,91" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 3</span><span>C3 • isian angka</span></div><p class="soal__teks">Tandon berisi 500 liter air. Beratnya = … kN</p><div class="baris-tombol"><input aria-label="Jawaban soal 3" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 4,91<br/><b>Pembahasan:</b> 500 L = 500 kg; W = 500 × 9,81 = 4.905 N.</div></div><div class="soal" data-kunci="(a)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 4</span><span>C2 • pilihan ganda</span></div><p class="soal__teks">Tiga unsur yang menentukan sebuah gaya adalah …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) besar, arah, titik tangkap</button><button data-opsi="(b)" type="button">(b) massa, volume, arah</button><button data-opsi="(c)" type="button">(c) besar, panjang, waktu</button><button data-opsi="(d)" type="button">(d) arah, tegangan, luas</button></div><div class="umpan" hidden=""><b>Kunci:</b> (a)<br/><b>Pembahasan:</b> Lihat subbab 1.2.</div></div><div class="soal" data-kunci="17,32; 10,00" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 5</span><span>C3 • isian angka</span></div><p class="soal__teks">F = 20 kN, θ = 30°. Fx = … kN; Fy = … kN</p><div class="baris-tombol"><input aria-label="Jawaban soal 5" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 17,32; 10,00<br/><b>Pembahasan:</b> Fx = 20 cos 30°; Fy = 20 sin 30°.</div></div><div class="soal" data-kunci="12; 9" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 6</span><span>C3 • isian angka</span></div><p class="soal__teks">Gaya 15 kN miring 3 : 4 (vertikal : horizontal) ke kanan-atas. Fx dan Fy = …</p><div class="baris-tombol"><input aria-label="Jawaban soal 6" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 12; 9<br/><b>Pembahasan:</b> Sisi miring 5; Fx = 15 × 4/5; Fy = 15 × 3/5.</div></div><div class="soal" data-kunci="1-C, 2-D, 3-B, 4-A" data-tipe="jodoh"><div class="soal__kepala"><span class="soal__label">No. 7</span><span>C1 • menjodohkan</span></div><p class="soal__teks">Jodohkan: (1) kN (2) kN/m (3) kN/m² (4) kN·m dengan (A) momen (B) beban luas (C) gaya terpusat (D) beban garis</p><div class="baris-tombol"><input aria-label="Jawaban soal 7" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 1-C, 2-D, 3-B, 4-A<br/><b>Pembahasan:</b> Lihat tabel satuan subbab 1.1.</div></div><div class="soal" data-kunci="10" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 8</span><span>C3 • isian angka</span></div><p class="soal__teks">Dua gaya 6 kN dan 8 kN saling tegak lurus. R = … kN</p><div class="baris-tombol"><input aria-label="Jawaban soal 8" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 10<br/><b>Pembahasan:</b> R = √(36 + 64).</div></div><div class="soal" data-kunci="(b)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 9</span><span>C4 • pilihan ganda</span></div><p class="soal__teks">ΣFx = –5 kN dan ΣFy = +5 kN. Arah resultan …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) 45°</button><button data-opsi="(b)" type="button">(b) 135°</button><button data-opsi="(c)" type="button">(c) 225°</button><button data-opsi="(d)" type="button">(d) 315°</button></div><div class="umpan" hidden=""><b>Kunci:</b> (b)<br/><b>Pembahasan:</b> ΣFx negatif, ΣFy positif → kuadran II: arctan(–1) = –45° + 180° = 135°.</div></div><div class="soal" data-kunci="(b)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 10</span><span>C5 • pilihan ganda (menilai)</span></div><p class="soal__teks">Andi menjumlahkan gaya 3 kN dan 4 kN yang membentuk sudut 90° dan mendapat 7 kN. Penilaian yang tepat …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) benar</button><button data-opsi="(b)" type="button">(b) salah, R = 5 kN karena gaya adalah vektor</button><button data-opsi="(c)" type="button">(c) salah, R = 1 kN</button><button data-opsi="(d)" type="button">(d) benar bila satuannya N</button></div><div class="umpan" hidden=""><b>Kunci:</b> (b)<br/><b>Pembahasan:</b> Gaya dijumlahkan secara vektor; 7 kN hanya bila kedua gaya segaris searah.</div></div><div class="soal" data-kunci="Contoh: 45° → 7,07 kN" data-tipe="uraian"><div class="soal__kepala"><span class="soal__label">No. 11</span><span>C6 • uraian (merancang)</span></div><p class="soal__teks">Rancang dua kabel simetris agar resultannya tepat 10 kN vertikal ke bawah pada tiang. Tentukan sudut dan gaya tiap kabel.</p><textarea aria-label="Jawaban uraian 11" rows="3" style="width:100%"></textarea><div class="baris-tombol"><button class="tombol tombol--kecil" data-lihat="" type="button">Lihat kunci &amp; rubrik</button></div><div class="umpan" hidden=""><b>Kunci:</b> Contoh: 45° → 7,07 kN<br/><b>Pembahasan:</b> 2T cos β = 10 kN; jawaban lain benar bila komponen horizontal saling meniadakan. Dinilai dengan rubrik: konsep (40), hitungan (40), alasan (20).</div></div></div><h2 id="refleksi-diri">14. Refleksi Diri</h2><p>Beri nilai pemahamanmu (1 = belum paham, 5 = sangat paham):</p><ul>
+<li><p>Saya dapat menjelaskan beda massa dan berat. 1 2 3 4 5</p></li>
+<li><p>Saya dapat menguraikan gaya miring menjadi Fx dan Fy. 1 2 3 4
+5</p></li>
+<li><p>Saya dapat menghitung resultan tiga gaya dan menentukan
+kuadrannya. 1 2 3 4 5</p></li>
+</ul><p><strong>Apa yang sudah saya pahami? Apa yang belum?</strong> (kotak
+isian tersimpan di perangkat) • <strong>Rencana tindak lanjut:</strong>
+jika ada skor ≤ 3, ulangi subbab terkait, pakai Alat Hitung, lalu
+tanyakan ke AI Tutor atau tutor sebaya.</p><h2 id="glosarium-dan-referensi-bab">15. Glosarium dan Referensi
+Bab</h2><div class="gulir"><table class="glosarium">
+<colgroup>
+<col style="width: 24%"/>
+<col style="width: 75%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Istilah</strong></th>
+<th><strong>Arti</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Gaya</td>
+<td>Tarikan atau dorongan yang dapat mengubah gerak atau bentuk benda;
+satuan N.</td>
+</tr>
+<tr class="even">
+<td>Garis kerja</td>
+<td>Garis lurus melalui titik tangkap searah gaya.</td>
+</tr>
+<tr class="odd">
+<td>Komponen gaya</td>
+<td>Bagian gaya searah sumbu x atau y.</td>
+</tr>
+<tr class="even">
+<td>Resultan</td>
+<td>Satu gaya pengganti yang pengaruhnya sama dengan beberapa gaya.</td>
+</tr>
+<tr class="odd">
+<td>Transmisibilitas</td>
+<td>Prinsip bahwa gaya boleh digeser sepanjang garis kerjanya pada benda
+tegar.</td>
+</tr>
+<tr class="even">
+<td>Vektor</td>
+<td>Besaran yang memiliki besar dan arah.</td>
+</tr>
+</tbody>
+</table></div><ul>
+<li><p>BIPM. (2019). <em>The International System of Units (SI)</em>
+(9th ed.). Bureau International des Poids et Mesures.</p></li>
+<li><p>Hibbeler, R. C. (2024a). <em>Engineering mechanics: Statics</em>
+(15th ed., SI units). Pearson. (Bab 1–2)</p></li>
+<li><p>Meriam, J. L., Kraige, L. G., &amp; Bolton, J. N. (2018).
+<em>Engineering mechanics: Statics</em> (9th ed.). Wiley.</p></li>
+<li><p>Badan Standardisasi Nasional. (2020). <em>SNI 1727:2020 Beban
+desain minimum dan kriteria terkait untuk bangunan gedung dan struktur
+lain</em>. BSN.</p></li>
+</ul>
+    <div class="selesai-bab"><button class="tombol tombol--utama" type="button" data-tandai-selesai><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-kuis"/></svg> Tandai bab ini selesai</button></div>
+    <nav class="nav-bab" aria-label="Navigasi bab"><a class="tombol" href="awal.html"><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-bab-sebelumnya"/></svg> Bagian Awal</a><a class="tombol tombol--utama" href="bab-02.html">Resultan, Momen, dan Kopel <svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-bab-berikutnya"/></svg></a></nav>
+  </main>
+</div>
+<button class="fab" type="button" aria-label="Buka AI Tutor" data-buka-ai><svg class="ikon ikon--besar" aria-hidden="true"><use href="../assets/icons/icons.svg#i-ai-tutor"/></svg></button>
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/app.js" defer></script>
+<script src="../assets/js/ai-tutor.js" defer></script>
+<script src="../assets/js/kuis.js" defer></script>
+<script src="../assets/js/kalkulator.js" defer></script>
+<script defer src="../assets/vendor/katex/katex.min.js"></script>
+<script defer src="../assets/vendor/katex/auto-render.min.js" onload="renderMathInElement(document.getElementById('isi'),{delimiters:[{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}],throwOnError:false})"></script>
+<script type="module" src="../assets/vendor/model-viewer/model-viewer.min.js"></script>
+</body>
+</html>

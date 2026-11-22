@@ -1,0 +1,141 @@
+/* =========================================================
+   SERVICE WORKER – e-book "Mekanika Teknik 1"
+   File : service-worker.js (di folder akar e-book)
+   Strategi: semua berkas e-book disimpan saat pemasangan (precache);
+   semua pustaka (KaTeX, model-viewer, qrcode, huruf) sudah lokal di assets/vendor,
+   sehingga e-book dapat dibaca penuh tanpa internet (kecuali AI Tutor). Ubah VERSI setiap rilis agar cache diperbarui.
+   ========================================================= */
+const VERSI = "mt1-v1.0.1";
+const BERKAS = [
+ "ar/bab-01.html",
+ "ar/bab-02.html",
+ "ar/bab-03.html",
+ "ar/bab-04.html",
+ "ar/bab-05.html",
+ "ar/bab-06.html",
+ "ar/bab-07.html",
+ "ar/bab-08.html",
+ "ar/bab-09.html",
+ "ar/bab-10.html",
+ "ar/bab-11.html",
+ "ar/index.html",
+ "assets/css/design-tokens.css",
+ "assets/css/ebook.css",
+ "assets/css/kover.css",
+ "assets/icons/icons.svg",
+ "assets/img/bab/awal-9bb99ce1068ab6a087f26b56d789a87eb243f200.png",
+ "assets/img/bab/bab-05-1cb91a054d6f322b51f3118f25a533503408587f.png",
+ "assets/img/bab/bab-06-16a5e9bb2fa31c48c66da864e703ea52f90e4417.png",
+ "assets/img/bab/bab-06-4b10215f30365216bd06b47fde90f48294ba2d58.png",
+ "assets/img/bab/bab-06-8ff75ecb14c80e7564912f20866e9466a1fbf046.png",
+ "assets/img/bab/bab-06-c43d519cacef709f08bd1ca3a3f69232ecfad2ca.png",
+ "assets/img/bab/bab-06-d1415835bb3d1cfd58ce38602f70ffde5b89703f.png",
+ "assets/img/bab/bab-07-6299327458c476d6d40ffa737cb454b060f9feae.png",
+ "assets/img/bab/bab-07-7e38c5fb6e835380a7744f9ce0ce1be053c57870.png",
+ "assets/img/bab/bab-08-f64c502004cd10c10bd2821b876865ad26da888d.png",
+ "assets/img/bab/bab-08-f692d1bfd065e17fd25574ec89ab6d1865945f26.png",
+ "assets/img/bab/bab-09-176859b90e7b56d5cda17cfcb5a03d4e03f53b84.png",
+ "assets/img/bab/bab-09-1d40e4910eba397bb22e1dccf52cc73a9de1ffd1.png",
+ "assets/img/bab/bab-09-1eae73388832fe1dc03092f346b8e9198c51e3e6.png",
+ "assets/img/bab/bab-09-f3a40510a70d7899194774c2a7a1fc4245dd7949.png",
+ "assets/img/bab/bab-10-1f92fb9c3f053cac8c1698b58b97b87c2d758618.png",
+ "assets/img/bab/bab-10-64591f4111bf5a52cfd45b0a2d6302c5f81737d1.png",
+ "assets/img/bab/bab-10-b99febd8d228cd04890945121833a97dc9d86f68.png",
+ "assets/img/bab/bab-11-5a71a93e0ea27028c66b52d5f75ab164b87b30d9.png",
+ "assets/img/bab/bab-11-b5d4bb5865918b7a5d538fc7def00f49c3fd2633.png",
+ "assets/img/bab/uas-1664bf9a975e811eed2a5d9983037dd6e35592ba.png",
+ "assets/img/bab/uas-a63042704d05e5a6d439ea243814d0c2b83b969f.png",
+ "assets/img/ikon-192.png",
+ "assets/img/ikon-512.png",
+ "assets/img/logo-pnp.png",
+ "assets/img/qr-spada.png",
+ "assets/js/ai-tutor.js",
+ "assets/js/app.js",
+ "assets/js/config.js",
+ "assets/js/halaman.json",
+ "assets/js/kalkulator.js",
+ "assets/js/kuis.js",
+ "assets/model-3d/ar-bab01-tiang-kabel.glb",
+ "assets/model-3d/ar-bab02-lengan-momen.glb",
+ "assets/model-3d/ar-bab03-tumpuan.glb",
+ "assets/model-3d/ar-bab04-kanopi.glb",
+ "assets/model-3d/ar-bab05-retak.glb",
+ "assets/model-3d/ar-bab06-ruko-tandon.glb",
+ "assets/model-3d/ar-bab07-gerber.glb",
+ "assets/model-3d/ar-bab08-carport.glb",
+ "assets/model-3d/ar-bab09-gudang.glb",
+ "assets/model-3d/ar-bab10-rangka.glb",
+ "assets/model-3d/ar-bab11-jembatan-stik.glb",
+ "assets/vendor/fonts/jetbrains-mono-latin-400-normal.woff2",
+ "assets/vendor/fonts/jetbrains-mono-latin-600-normal.woff2",
+ "assets/vendor/fonts/plus-jakarta-sans-latin-400-italic.woff2",
+ "assets/vendor/fonts/plus-jakarta-sans-latin-400-normal.woff2",
+ "assets/vendor/fonts/plus-jakarta-sans-latin-500-normal.woff2",
+ "assets/vendor/fonts/plus-jakarta-sans-latin-600-normal.woff2",
+ "assets/vendor/fonts/plus-jakarta-sans-latin-700-normal.woff2",
+ "assets/vendor/fonts/space-grotesk-latin-500-normal.woff2",
+ "assets/vendor/fonts/space-grotesk-latin-600-normal.woff2",
+ "assets/vendor/fonts/space-grotesk-latin-700-normal.woff2",
+ "assets/vendor/katex/auto-render.min.js",
+ "assets/vendor/katex/fonts/KaTeX_AMS-Regular.woff2",
+ "assets/vendor/katex/fonts/KaTeX_Caligraphic-Bold.woff2",
+ "assets/vendor/katex/fonts/KaTeX_Caligraphic-Regular.woff2",
+ "assets/vendor/katex/fonts/KaTeX_Fraktur-Bold.woff2",
+ "assets/vendor/katex/fonts/KaTeX_Fraktur-Regular.woff2",
+ "assets/vendor/katex/fonts/KaTeX_Main-Bold.woff2",
+ "assets/vendor/katex/fonts/KaTeX_Main-BoldItalic.woff2",
+ "assets/vendor/katex/fonts/KaTeX_Main-Italic.woff2",
+ "assets/vendor/katex/fonts/KaTeX_Main-Regular.woff2",
+ "assets/vendor/katex/fonts/KaTeX_Math-BoldItalic.woff2",
+ "assets/vendor/katex/fonts/KaTeX_Math-Italic.woff2",
+ "assets/vendor/katex/fonts/KaTeX_SansSerif-Bold.woff2",
+ "assets/vendor/katex/fonts/KaTeX_SansSerif-Italic.woff2",
+ "assets/vendor/katex/fonts/KaTeX_SansSerif-Regular.woff2",
+ "assets/vendor/katex/fonts/KaTeX_Script-Regular.woff2",
+ "assets/vendor/katex/fonts/KaTeX_Size1-Regular.woff2",
+ "assets/vendor/katex/fonts/KaTeX_Size2-Regular.woff2",
+ "assets/vendor/katex/fonts/KaTeX_Size3-Regular.woff2",
+ "assets/vendor/katex/fonts/KaTeX_Size4-Regular.woff2",
+ "assets/vendor/katex/fonts/KaTeX_Typewriter-Regular.woff2",
+ "assets/vendor/katex/katex.min.css",
+ "assets/vendor/katex/katex.min.js",
+ "assets/vendor/model-viewer/model-viewer.min.js",
+ "assets/vendor/qrcode/qrcode.min.js",
+ "bab/akhir.html",
+ "bab/awal.html",
+ "bab/bab-01.html",
+ "bab/bab-02.html",
+ "bab/bab-03.html",
+ "bab/bab-04.html",
+ "bab/bab-05.html",
+ "bab/bab-06.html",
+ "bab/bab-07.html",
+ "bab/bab-08.html",
+ "bab/bab-09.html",
+ "bab/bab-10.html",
+ "bab/bab-11.html",
+ "bab/uas.html",
+ "bab/uts.html",
+ "index.html",
+ "kalkulator/index.html",
+ "kover.html",
+ "kuis/index.html",
+ "manifest.json"
+];
+self.addEventListener("install", e => {
+  e.waitUntil(caches.open(VERSI).then(c => c.addAll(BERKAS.map(f => "./" + f))).then(() => self.skipWaiting()));
+});
+self.addEventListener("activate", e => {
+  e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== VERSI).map(k => caches.delete(k)))).then(() => self.clients.claim()));
+});
+self.addEventListener("fetch", e => {
+  const req = e.request;
+  if (req.method !== "GET") return;               // permintaan AI (POST) tidak disimpan
+  const url = new URL(req.url);
+  const cdn = /cdn\.jsdelivr\.net|fonts\.(googleapis|gstatic)\.com/.test(url.host);
+  if (url.origin !== location.origin && !cdn) return;
+  e.respondWith(caches.match(req, { ignoreSearch: url.origin === location.origin }).then(hit => hit || fetch(req).then(res => {
+    if (res && (res.ok || res.type === "opaque")) { const salinan = res.clone(); caches.open(VERSI).then(c => c.put(req, salinan)); }
+    return res;
+  }).catch(() => caches.match("./index.html"))));
+});

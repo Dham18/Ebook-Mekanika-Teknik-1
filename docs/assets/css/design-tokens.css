@@ -1,0 +1,144 @@
+/* =========================================================
+   SISTEM DESAIN – E-Book "Mekanika Teknik 1" (Dham)
+   File  : assets/css/design-tokens.css
+   Isi   : variabel warna, huruf, jarak, sudut, bayangan, animasi,
+           mode terang/gelap, dan gaya dasar ikon.
+   Warna institusi diambil dari logo resmi PNP: oranye #F26622 dan hijau #079948.
+           Biru tua #0B3C5D dipakai sebagai latar gelap kover/banner (gaya hologram).
+   ========================================================= */
+
+/* Huruf disimpan lokal (assets/vendor/fonts, lisensi SIL OFL) agar e-book tetap rapi saat luring. */
+@font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 500; font-display: swap; src: url("../vendor/fonts/space-grotesk-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 600; font-display: swap; src: url("../vendor/fonts/space-grotesk-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 700; font-display: swap; src: url("../vendor/fonts/space-grotesk-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Plus Jakarta Sans"; font-style: normal; font-weight: 400; font-display: swap; src: url("../vendor/fonts/plus-jakarta-sans-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Plus Jakarta Sans"; font-style: normal; font-weight: 500; font-display: swap; src: url("../vendor/fonts/plus-jakarta-sans-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Plus Jakarta Sans"; font-style: normal; font-weight: 600; font-display: swap; src: url("../vendor/fonts/plus-jakarta-sans-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Plus Jakarta Sans"; font-style: normal; font-weight: 700; font-display: swap; src: url("../vendor/fonts/plus-jakarta-sans-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Plus Jakarta Sans"; font-style: italic; font-weight: 400; font-display: swap; src: url("../vendor/fonts/plus-jakarta-sans-latin-400-italic.woff2") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("../vendor/fonts/jetbrains-mono-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 600; font-display: swap; src: url("../vendor/fonts/jetbrains-mono-latin-600-normal.woff2") format("woff2"); }
+
+:root {
+  /* --- Warna inti (fungsi tercantum di Tahap 2 A) --- */
+  --c-hijau: #079948;        /* hijau resmi PNP (logo, isian, ikon besar) */
+  --c-primary: #05652F;      /* hijau PNP versi teks: judul, tautan, tombol (6,9 : 1) */
+  --c-oranye: #F26622;       /* oranye resmi PNP: aksen, garis judul, penanda, fokus */
+  --c-navy: #0B3C5D;         /* latar gelap kover, banner, panel hologram */
+  --c-cyan: #00E5FF;         /* neon: gaya/vektor, alat hitung (hanya di latar gelap) */
+  --c-violet: #7C4DFF;       /* neon: AI tutor, peta konsep */
+  --c-teal: #1DE9B6;         /* neon: AR, tips (hanya di latar gelap) */
+  --c-ink: #0F172A;          /* netral gelap: teks utama mode terang, latar mode gelap */
+  --c-paper: #F8FAFC;        /* netral terang: latar mode terang */
+  --c-danger: #B91C1C;       /* peringatan & K3 */
+
+  /* --- Varian teks aman WCAG AA di latar terang (rasio ≥ 4,5:1) --- */
+  --c-cyan-ink: #006A7A;     /* 6,0 : 1 */
+  --c-teal-ink: #00796B;     /* 5,1 : 1 */
+  --c-oranye-ink: #B3470F;   /* 5,3 : 1 – oranye untuk teks di latar terang */
+  --c-violet-ink: #5B2FD6;   /* 7,1 : 1 */
+  --c-muted: #475569;        /* 7,2 : 1 – keterangan, takarir */
+
+  /* --- Peran warna (dipakai komponen) --- */
+  --bg: var(--c-paper);
+  --surface: rgba(255, 255, 255, 0.72);
+  --surface-border: rgba(5, 101, 47, 0.14);
+  --text: var(--c-ink);
+  --text-muted: var(--c-muted);
+  --heading: var(--c-primary);
+  --accent-cyan: var(--c-cyan-ink);
+  --accent-teal: var(--c-teal-ink);
+  --accent-violet: var(--c-violet-ink);
+  --accent-oranye: var(--c-oranye-ink);
+  --danger: var(--c-danger);
+  --grid-line: rgba(5, 101, 47, 0.06);
+
+  /* --- Tipografi --- */
+  --font-head: "Space Grotesk", "Poppins", system-ui, sans-serif;
+  --font-body: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+  --font-code: "JetBrains Mono", ui-monospace, monospace;
+  --fs-h1: clamp(1.9rem, 1.4rem + 2.2vw, 2.75rem);   /* 30–44 px */
+  --fs-h2: clamp(1.5rem, 1.2rem + 1.3vw, 2rem);      /* 24–32 px */
+  --fs-h3: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);   /* 20–24 px */
+  --fs-h4: 1.125rem;                                 /* 18 px */
+  --fs-body: 1rem;                                   /* 16 px, dapat diperbesar */
+  --fs-small: 0.875rem;                              /* 14 px – keterangan */
+  --lh-body: 1.7;
+  --font-scale: 1;                                   /* diubah oleh pengatur ukuran huruf */
+
+  /* --- Bentuk, jarak, bayangan, animasi --- */
+  --radius: 16px;
+  --radius-sm: 10px;
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-6: 24px; --space-8: 32px; --space-12: 48px;
+  --shadow: 0 8px 24px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(15, 23, 42, 0.05);
+  --glow-cyan: 0 0 24px rgba(0, 229, 255, 0.35);
+  --blur: blur(14px);
+  --dur: 240ms;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+/* --- Mode gelap: aktif dengan atribut data-tema="gelap" pada <html>.
+       Skrip tema (Tahap 4) membaca preferensi sistem saat pertama dibuka
+       dan menyimpan pilihan pembaca di localStorage. --- */
+:root[data-tema="gelap"] {
+  --bg: #0B1222;
+  --surface: rgba(15, 23, 42, 0.68);
+  --surface-border: rgba(0, 229, 255, 0.16);
+  --text: #E2E8F0;          /* 14,9 : 1 di #0B1222 */
+  --text-muted: #CBD5E1;
+  --heading: #F8FAFC;
+  --accent-cyan: var(--c-cyan);
+  --accent-teal: var(--c-teal);
+  --accent-violet: #9F7AFF; /* 5,7 : 1 */
+  --accent-oranye: var(--c-oranye);
+  --danger: #F87171;        /* 6,5 : 1 */
+  --grid-line: rgba(0, 229, 255, 0.07);
+  --shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+}
+
+/* --- Gaya dasar --- */
+html { font-size: calc(100% * var(--font-scale)); }
+body {
+  margin: 0;
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 32px 32px;
+  color: var(--text);
+  font: var(--fs-body)/var(--lh-body) var(--font-body);
+  transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+h1, h2, h3, h4 { font-family: var(--font-head); color: var(--heading); line-height: 1.25; margin: 0 0 0.5em; }
+h1 { font-size: var(--fs-h1); } h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); } h4 { font-size: var(--fs-h4); }
+code, pre { font-family: var(--font-code); font-size: 0.92em; }
+small, figcaption { font-size: var(--fs-small); color: var(--text-muted); }
+:focus-visible { outline: 3px solid var(--c-oranye); outline-offset: 2px; border-radius: 6px; }
+
+/* Panel kaca (glassmorphism lembut) */
+.kaca {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+}
+
+/* Ikon line-duotone: garis 2 px, isi 20 % */
+.ikon {
+  width: 24px; height: 24px; flex: none;
+  fill: none; stroke: currentColor; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.ikon .duo { fill: currentColor; opacity: 0.2; stroke: none; }
+.ikon--besar { width: 40px; height: 40px; }
+
+/* Hormati pengguna yang mengurangi animasi */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* Titik henti responsif: HP ≥ 360 px, tablet ≥ 768 px, laptop ≥ 1200 px */

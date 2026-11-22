@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reaksi Tumpuan dan Balok Kantilever – Mekanika Teknik 1</title>
+<meta name="description" content="E-book interaktif Mekanika Teknik 1 (SIP3115) – Reaksi Tumpuan dan Balok Kantilever">
+<meta name="theme-color" content="#0B3C5D">
+<link rel="manifest" href="../manifest.json">
+<link rel="icon" href="../assets/img/ikon-192.png">
+<link rel="stylesheet" href="../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../assets/css/kover.css">
+<link rel="stylesheet" href="../assets/css/ebook.css">
+<link rel="stylesheet" href="../assets/vendor/katex/katex.min.css">
+<script>try{document.documentElement.dataset.tema=localStorage.getItem("mt1-tema")||(matchMedia("(prefers-color-scheme: dark)").matches?"gelap":"terang");document.documentElement.style.setProperty("--font-scale",localStorage.getItem("mt1-huruf")||1)}catch(e){}</script>
+</head>
+<body data-halaman="bab-04" data-root="../">
+<a class="lewati" href="#isi">Lewati ke isi</a>
+<div class="bilah-atas" role="banner">
+  <button class="tbl-ikon tbl-dis" type="button" aria-label="Daftar isi" data-buka-dis><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-peta-konsep"/></svg></button>
+  <a class="tbl-ikon" href="../index.html" aria-label="Beranda"><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-beranda"/></svg></a>
+  <span class="judul-kecil">Reaksi Tumpuan dan Balok Kantilever</span>
+  <button class="tbl-ikon" type="button" aria-label="Cari" data-cari><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-cari"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Penanda halaman" aria-pressed="false" data-penanda><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-penanda"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Catatan pribadi" data-catatan><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-catatan"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Baca suara" aria-pressed="false" data-suara><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-video"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="A− perkecil huruf" data-huruf="-">A−</button>
+  <button class="tbl-ikon" type="button" aria-label="A+ perbesar huruf" data-huruf="+">A+</button>
+  <button class="tbl-ikon" type="button" aria-label="Mode gelap/terang" data-tema-tombol><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-mode-gelap"/></svg></button>
+  <div class="progres-baca" aria-hidden="true"></div>
+</div>
+<div class="tirai" data-tutup-dis></div>
+<div class="tata">
+  <nav class="dis" aria-label="Daftar isi halaman"></nav>
+  <main class="isi" id="isi" tabindex="-1">
+    <header class="banner-bab"><svg class="seni" viewBox="0 0 1600 500" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><g stroke="#00E5FF" stroke-opacity=".07"><path d="M0 100H1600M0 200H1600M0 300H1600M0 400H1600M200 0V500M400 0V500M600 0V500M800 0V500M1000 0V500M1200 0V500M1400 0V500"/></g><g stroke="#00E5FF" stroke-width="5" fill="none" stroke-linecap="round" opacity=".85"><path d="M980 380H1540M1060 250H1460M980 380L1060 250M1540 380L1460 250M1060 250V380M1160 250V380M1260 250V380M1360 250V380M1460 250V380"/><path d="M1060 380L1160 250M1160 380L1260 250M1360 250L1460 380M1260 250L1360 380" stroke="#1DE9B6"/></g><rect x="0" y="470" width="1600" height="6" fill="#F26622"/></svg><div class="banner-bab__isi"><div class="banner-bab__no">BAB 4 • MINGGU 4</div><h1 class="banner-bab__judul">Reaksi Tumpuan dan Balok Kantilever</h1><p class="banner-bab__kutip">“Rekayasa struktur adalah seni membentuk
+bahan yang tidak sepenuhnya kita pahami…” – A. R. Dykes, pidato Ketua
+IStructE Cabang Skotlandia (dimuat di  The Structural Engineer ,
+Mei 1978).</p></div></header>
+    <p>Minggu 4 • Sub-CPMK 2.1 • CPMK-2 • CPL 2 / IK 2.2 • Case Method 1
+(bobot 8%) • Estimasi belajar: 120 menit mandiri + 220 menit
+kelas/studio</p><h2 id="capaian-pembelajaran-1">2. Capaian Pembelajaran</h2><p><strong>Sub-CPMK 2.1:</strong> Mahasiswa mampu menghitung reaksi
+tumpuan dan momen pada balok kantilever kanopi.</p><div class="gulir"><table>
+<colgroup>
+<col style="width: 8%"/>
+<col style="width: 66%"/>
+<col style="width: 25%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Kode</strong></th>
+<th><strong>Indikator</strong></th>
+<th><strong>Level Bloom</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2.1.a</td>
+<td>Menghitung beban mati dan beban hidup sederhana per meter lari
+balok</td>
+<td>C3 – menghitung</td>
+</tr>
+<tr class="even">
+<td>2.1.b</td>
+<td>Menghitung reaksi balok sederhana akibat beban titik, merata, dan
+segitiga</td>
+<td>C3 – menghitung</td>
+</tr>
+<tr class="odd">
+<td>2.1.c</td>
+<td>Menghitung reaksi vertikal dan momen jepit balok kantilever</td>
+<td>C3 – menghitung</td>
+</tr>
+<tr class="even">
+<td>2.1.d</td>
+<td>Memeriksa kewajaran hasil (ΣV = 0, ΣM = 0, perkiraan besar)</td>
+<td>C4 – memeriksa</td>
+</tr>
+<tr class="odd">
+<td>2.1.e</td>
+<td>Menjelaskan penyebab retak kanopi berdasarkan hasil hitungan (Case
+Method 1)</td>
+<td>C4–C5 – menganalisis, menilai</td>
+</tr>
+</tbody>
+</table></div><p>Kriteria (RPS): reaksi &amp; momen jepit dihitung benar (selisih ≤ 5%
+terhadap kunci); asumsi beban jelas.</p><h2 id="peta-konsep-bab-1">3. Peta Konsep Bab</h2><ul>
+<li><p><strong>Beban</strong> → (4.1) beban mati (berat sendiri,
+finishing) + beban hidup (SNI 1727:2020) → kN/m</p></li>
+<li><p><strong>DBB (Bab 3)</strong> → (4.2) reaksi balok sederhana: ΣMA
+→ RB, ΣMB → RA, periksa ΣV</p></li>
+<li><p><strong>Jepit</strong> → (4.3) kantilever: RV = ΣP, MA =
+Σ(P·jarak)</p></li>
+<li><p><strong>Hasil</strong> → (4.4) pemeriksaan kewajaran</p></li>
+<li><p><strong>Semua</strong> → (4.5) Case Method 1: kanopi sekolah
+retak → Bab 5 (gaya dalam)</p></li>
+</ul><h2 id="apersepsi-1">4. Apersepsi</h2><p><strong>Kasus nyata (pemantik Case Method 1):</strong> Kanopi beton
+di depan sebuah SMK retak memanjang di bagian atas dekat dinding.
+Setelah hujan deras, air menggenang karena talang tersumbat. Kepala
+sekolah bertanya: “Apakah kanopi ini masih aman dipakai siswa
+berteduh?”</p><p><strong>Pertanyaan pemantik:</strong> Di bagian mana kanopi
+kantilever paling “menderita”: di ujung bebas atau di dekat dinding?
+Mengapa retaknya di sisi atas, bukan di bawah?</p><p><strong>Gambar 4.1. Kanopi kantilever dan retak di tumpuan</strong>
+(ilustrasi baru, sumber: dokumen penulis)</p><p><em>Teks alternatif:</em> Potongan kanopi beton menjorok 1,5 m dari
+balok gedung; garis retak di permukaan atas dekat tumpuan; genangan air
+di atas pelat; panah beban merata.</p><p>Prompt gambar: Cross-section illustration of a reinforced concrete
+cantilever canopy 1.5 m long attached to a school building beam,
+hairline crack on the top surface near the support glowing orange,
+shallow water ponding on top, uniform load arrows, technical educational
+style, navy background, no text</p><h2 id="uraian-materi-1">5. Uraian Materi</h2><h3 id="beban-pada-balok">4.1 Beban pada Balok</h3><p>Sebelum menghitung reaksi, kita harus tahu beban yang dipikul. Dua
+jenis beban utama:</p><ul>
+<li><p><strong>Beban mati (D)</strong> – berat yang selalu ada: berat
+sendiri elemen, lapisan finishing, plafon, dinding. Dihitung dari volume
+× berat jenis.</p></li>
+<li><p><strong>Beban hidup (L)</strong> – beban yang dapat berpindah
+atau berubah: orang, perabot, air hujan, pekerja saat perawatan. Nilai
+minimumnya diatur dalam SNI 1727:2020.</p></li>
+</ul><div aria-label="q_D = γ · t · b q_L = w_L · b" class="rumus" role="math">\[q_D=\gamma\,t\,b,\qquad q_L = w_L\,b\]</div><p><strong>Keterangan:</strong> q = beban merata per meter lari
+balok/pelat (kN/m); γ = berat jenis bahan (kN/m³), beton bertulang ≈ 24
+kN/m³ (PPIUG 1983: 2.400 kg/m³); t = tebal (m); b = lebar jalur yang
+ditinjau (m), umumnya 1 m untuk pelat; w_L = beban hidup merata (kN/m²).
+<strong>Batasan:</strong> pada bab ini beban D dan L dijumlahkan
+langsung (beban layan). Kombinasi beban terfaktor dipelajari di Struktur
+Beton I.</p><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 4.1 – Beban pelat kanopi per meter
+lebar</p><p><strong>Soal.</strong> Pelat kanopi beton tebal 12 cm. Finishing
+(plester + lapisan kedap air) 0,50 kN/m². Beban hidup atap 0,96 kN/m²
+(20 psf, atap datar biasa; SNI 1727:2020 Tabel 4.3-1). Hitung beban
+merata untuk jalur selebar 1 m.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – Berat sendiri: 24 × 0,12 × 1 = 2,88 kN/m.</p><p>Langkah 2 – Finishing: 0,50 × 1 = 0,50 kN/m → q_D = 3,38 kN/m.</p><p>Langkah 3 – Beban hidup: q_L = 0,96 × 1 = 0,96 kN/m.</p><p>Langkah 4 – Total beban layan: q = 3,38 + 0,96 = 4,34 kN/m.</p><p class="jawab"><strong>Jawab:</strong> q = 4,34 kN/m per meter lebar
+kanopi.</p></details></aside><h3 id="reaksi-balok-sederhana">4.2 Reaksi Balok Sederhana</h3><p><strong>Balok sederhana</strong> adalah balok di atas sendi dan rol.
+Prosedur baku:</p><ol type="1">
+<li><p>Gambar DBB; ganti beban terdistribusi dengan resultannya (Bab
+2).</p></li>
+<li><p>ΣMA = 0 → dapatkan RB.</p></li>
+<li><p>ΣMB = 0 → dapatkan RA.</p></li>
+<li><p>Periksa dengan ΣFy = 0. Jika tidak nol, ada kesalahan.</p></li>
+</ol><div aria-label="RB = Σ(Pᵢ · aᵢ) / L RA = Σ(Pᵢ · bᵢ) / L" class="rumus" role="math">\[R_B=\frac{\sum P_i a_i}{L},\qquad R_A=\frac{\sum P_i
+b_i}{L}\]</div><p><strong>Keterangan:</strong> Pᵢ = beban (atau resultan beban) ke-i
+(kN); aᵢ = jarak beban dari A (m); bᵢ = jarak beban dari B = L – aᵢ (m);
+L = bentang (m). <strong>Batasan:</strong> hanya untuk beban vertikal
+pada balok sendi–rol.</p><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 4.2 – Dua beban titik</p><p><strong>Soal.</strong> Balok sederhana bentang 6 m memikul 10 kN di 2
+m dari A dan 6 kN di 4,5 m dari A. Hitung RA dan RB.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – ΣMA = 0: RB × 6 = 10 × 2 + 6 × 4,5 = 20 + 27 = 47 → RB =
+7,83 kN.</p><p>Langkah 2 – ΣMB = 0: RA × 6 = 10 × 4 + 6 × 1,5 = 40 + 9 = 49 → RA =
+8,17 kN.</p><p>Langkah 3 – Periksa: 8,17 + 7,83 = 16,00 = 10 + 6 ✓</p><p class="jawab"><strong>Jawab:</strong> RA = 8,17 kN; RB = 7,83 kN.</p></details></aside><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 4.3 – Beban merata penuh + beban
+titik</p><p><strong>Soal.</strong> Balok sederhana bentang 5 m memikul beban
+merata 4 kN/m sepanjang bentang dan beban titik 8 kN di 3 m dari A.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – Resultan merata: 4 × 5 = 20 kN di 2,5 m.</p><p>Langkah 2 – ΣMA: RB × 5 = 20 × 2,5 + 8 × 3 = 50 + 24 = 74 → RB =
+14,80 kN.</p><p>Langkah 3 – ΣMB: RA × 5 = 20 × 2,5 + 8 × 2 = 50 + 16 = 66 → RA =
+13,20 kN.</p><p>Langkah 4 – Periksa: 13,20 + 14,80 = 28,00 = 20 + 8 ✓</p><p class="jawab"><strong>Jawab:</strong> RA = 13,20 kN; RB = 14,80 kN.</p></details></aside><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 4.4 – Beban segitiga</p><p><strong>Soal.</strong> Balok sederhana 6 m dengan beban segitiga dari
+0 di A hingga 6 kN/m di B.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – Resultan: ½ × 6 × 6 = 18 kN, letaknya 2/3 × 6 = 4 m dari
+A.</p><p>Langkah 2 – ΣMA: RB × 6 = 18 × 4 → RB = 12,00 kN.</p><p>Langkah 3 – ΣFy: RA = 18 – 12 = 6,00 kN.</p><p class="jawab"><strong>Jawab:</strong> RA = 6,00 kN; RB = 12,00 kN – tumpuan di sisi
+beban besar memikul dua kali lipat ✓</p></details></aside><h3 id="balok-kantilever">4.3 Balok Kantilever</h3><p><strong>Kantilever</strong> adalah balok yang dijepit di satu ujung
+dan bebas di ujung lain – seperti kanopi, balkon, atau papan loncat
+kolam renang. Semua beban dialirkan ke tumpuan jepit.</p><div aria-label="RV = ΣPᵢ MA = Σ(Pᵢ · xᵢ) (beban merata: MA = q·L²/2)" class="rumus" role="math">\[R_V=\sum P_i,\qquad M_A=\sum P_i x_i,\qquad
+M_A^{(q)}=\frac{qL^2}{2}\]</div><p><strong>Keterangan:</strong> RV = reaksi vertikal di jepit (kN); MA =
+momen jepit (kN·m); xᵢ = jarak beban dari jepit (m); q = beban merata
+(kN/m); L = panjang kantilever (m). <strong>Arah:</strong> beban ke
+bawah pada kantilever yang menjorok ke kanan menimbulkan momen jepit
+berlawanan jarum jam untuk menahannya.</p><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 4.5 – Kantilever beban titik di
+ujung</p><p><strong>Soal.</strong> Papan reklame menempel di ujung balok
+kantilever sepanjang 2 m dengan berat 5 kN. Hitung reaksi di jepit
+(berat balok diabaikan).</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – DBB: jepit A dengan HA, RV, MA; beban 5 kN di x = 2
+m.</p><p>Langkah 2 – ΣFx = 0 → HA = 0; ΣFy = 0 → RV = 5 kN (↑).</p><p>Langkah 3 – ΣMA = 0: MA – 5 × 2 = 0 → MA = 10 kN·m (↺).</p><p class="jawab"><strong>Jawab:</strong> RV = 5 kN; MA = 10 kN·m. Jika panjang dua
+kali (4 m), momen juga dua kali (20 kN·m).</p></details></aside><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 4.6 – Kanopi kantilever (dasar Case Method
+1)</p><p><strong>Soal.</strong> Kanopi menjorok 1,5 m dengan beban merata 4,34
+kN/m (Contoh 4.1) dan beban list plank di ujung 1,0 kN per meter lebar.
+Hitung reaksi per meter lebar.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – RV = 4,34 × 1,5 + 1,0 = 6,51 + 1,0 = 7,51 kN.</p><p>Langkah 2 – MA = 4,34 × 1,5² / 2 + 1,0 × 1,5 = 4,88 + 1,50 = 6,38
+kN·m.</p><p class="jawab"><strong>Jawab:</strong> RV = 7,51 kN/m; MA = 6,38 kN·m/m. Beban di
+ujung (list plank) menyumbang hampir ¼ momen walau beratnya kecil –
+karena lengannya paling panjang.</p></details></aside><h3 id="memeriksa-kewajaran-hasil">4.4 Memeriksa Kewajaran Hasil</h3><ul>
+<li><p><strong>ΣFy = 0</strong> dengan reaksi yang sudah didapat (wajib
+di setiap tugas, sesuai RPS).</p></li>
+<li><p><strong>Perkiraan cepat:</strong> pada balok sederhana, reaksi
+terbesar ada di tumpuan yang paling dekat dengan beban.</p></li>
+<li><p><strong>Batas atas:</strong> momen jepit kantilever tidak mungkin
+lebih besar dari total beban × panjang kantilever.</p></li>
+<li><p><strong>Satuan:</strong> reaksi dalam kN, momen dalam kN·m; untuk
+pelat per meter lebar ditulis kN/m dan kN·m/m.</p></li>
+</ul><aside class="kotak kotak--info"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-info"></use></svg>Info Penting</p><p>Pada kantilever, sisi <strong>atas</strong> balok tertarik di dekat
+tumpuan. Karena beton lemah terhadap tarik, tulangan utama kanopi harus
+dipasang di <strong>atas</strong>. Kesalahan memasang tulangan di bawah
+adalah salah satu penyebab kanopi runtuh.</p></aside><aside class="kotak kotak--k3"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-peringatan"></use></svg>Peringatan K3</p><p>Jangan membongkar perancah kanopi sebelum umur beton cukup dan tanpa
+persetujuan pengawas. Jangan izinkan orang berdiri atau menaruh material
+di atas kanopi yang retak; pasang garis batas aman di bawahnya sampai
+kanopi diperiksa.</p></aside><h3 id="case-method-1-kanopi-beton-sekolah-retak-di-tumpuan">4.5 Case
+Method 1 – Kanopi Beton Sekolah Retak di Tumpuan</h3><p><strong>Peran:</strong> kelompok (4 orang) berperan sebagai tim
+teknis yang diminta kepala sekolah menilai keamanan kanopi.
+<strong>Waktu:</strong> 60 menit analisis + presentasi 5 menit.
+<strong>Bobot:</strong> 8% (CPMK-2), dinilai dengan rubrik Case Method
+RPS (identifikasi 25%, analisis 35%, keputusan 25%, komunikasi 15%).</p><p><strong>Data kasus:</strong> kanopi pelat beton tebal 12 cm, menjorok
+1,5 m, lebar 6 m; list plank di ujung 1,0 kN/m; talang sering tersumbat
+sehingga air menggenang hingga 10 cm; retak rambut memanjang di sisi
+atas dekat dinding; foto lama menunjukkan tulangan terlihat di sisi
+bawah pada bagian yang terkelupas.</p><p><strong>Tugas kelompok:</strong></p><ol type="1">
+<li><p>Identifikasi masalah: sebutkan dugaan penyebab retak (beban,
+detail tulangan, pemeliharaan).</p></li>
+<li><p>Hitung RV dan MA per meter lebar untuk (a) kondisi normal dan (b)
+kondisi genangan air 10 cm (berat air 9,81 kN/m³ × 0,10 m = 0,98
+kN/m²).</p></li>
+<li><p>Bandingkan kedua kondisi (berapa % kenaikan momen?).</p></li>
+<li><p>Putuskan rekomendasi: boleh dipakai, dibatasi, atau ditutup
+sementara? Sertakan tindakan perbaikan yang aman dan ekonomis.</p></li>
+<li><p>Presentasikan dalam 5 menit; semua anggota harus dapat
+menjelaskan hitungan.</p></li>
+</ol><p><em>Kunci dosen:</em> normal RV = 7,51 kN/m, MA = 6,38 kN·m/m;
+genangan q = 5,32 kN/m → RV = 8,98 kN/m, MA = 7,49 kN·m/m (naik ±17%).
+Tulangan tampak di sisi bawah mengindikasikan detail tulangan perlu
+diperiksa (tarik di sisi atas). Rekomendasi wajar: tutup sementara area
+di bawah kanopi, bersihkan talang, minta pemeriksaan tulangan (pemindai
+tulangan/bongkar lokal), lalu perkuatan bila perlu.</p><h2 id="contoh-soal-pembahasan-1">6. Contoh Soal &amp; Pembahasan</h2><p>Enam contoh: 4.1 (beban), 4.2–4.4 (balok sederhana), 4.5–4.6
+(kantilever). Semua diakhiri pemeriksaan ΣFy.</p><h2 id="tanya-ai-tutor-1">7. Tanya AI Tutor</h2><div class="kartu-ai-grid"><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Jelaskan lebih sederhana</h4><p>Mengapa kanopi kantilever retak di atas dekat dinding? Jelaskan dengan analogi penggaris yang dijepit di meja, lalu tanyakan saya di mana tulangan harus dipasang.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Mengapa kanopi kantilever retak di atas dekat dinding? Jelaskan dengan analogi penggaris yang dijepit di meja, lalu tanyakan saya di mana tulangan harus dipasang." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Mengapa kanopi kantilever retak di atas dekat dinding? Jelaskan dengan analogi penggaris yang dijepit di meja, lalu tanyakan saya di mana tulangan harus dipasang." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Mengapa kanopi kantilever retak di atas dekat dinding? Jelaskan dengan analogi penggaris yang dijepit di meja, lalu tanyakan saya di mana tulangan harus dipasang." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Pendamping Case Method</h4><p>Saya tim teknis yang menilai kanopi sekolah retak. Jangan beri jawaban akhir. Ajukan 4 pertanyaan bertahap yang membantu kami menyusun rekomendasi yang aman.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Saya tim teknis yang menilai kanopi sekolah retak. Jangan beri jawaban akhir. Ajukan 4 pertanyaan bertahap yang membantu kami menyusun rekomendasi yang aman." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Saya tim teknis yang menilai kanopi sekolah retak. Jangan beri jawaban akhir. Ajukan 4 pertanyaan bertahap yang membantu kami menyusun rekomendasi yang aman." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Saya tim teknis yang menilai kanopi sekolah retak. Jangan beri jawaban akhir. Ajukan 4 pertanyaan bertahap yang membantu kami menyusun rekomendasi yang aman." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Periksa jawabanku</h4><p>Ini hitungan RA dan RB saya: [tempel]. Periksa dengan meminta saya melakukan ΣFy dan ΣM kedua.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Ini hitungan RA dan RB saya: [tempel]. Periksa dengan meminta saya melakukan ΣFy dan ΣM kedua." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Ini hitungan RA dan RB saya: [tempel]. Periksa dengan meminta saya melakukan ΣFy dan ΣM kedua." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Ini hitungan RA dan RB saya: [tempel]. Periksa dengan meminta saya melakukan ΣFy dan ΣM kedua." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Buat soal latihan</h4><p>Buat 3 soal reaksi balok sederhana dengan kombinasi beban merata parsial dan beban titik. Sembunyikan jawaban.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Buat 3 soal reaksi balok sederhana dengan kombinasi beban merata parsial dan beban titik. Sembunyikan jawaban." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Buat 3 soal reaksi balok sederhana dengan kombinasi beban merata parsial dan beban titik. Sembunyikan jawaban." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Buat 3 soal reaksi balok sederhana dengan kombinasi beban merata parsial dan beban titik. Sembunyikan jawaban." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Ringkas bab ini</h4><p>Ringkas Bab 4 dalam 5 poin dan satu diagram alir prosedur menghitung reaksi.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Ringkas Bab 4 dalam 5 poin dan satu diagram alir prosedur menghitung reaksi." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Ringkas Bab 4 dalam 5 poin dan satu diagram alir prosedur menghitung reaksi." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Ringkas Bab 4 dalam 5 poin dan satu diagram alir prosedur menghitung reaksi." type="button">Tanya langsung</button></div></div></div><h2 id="zona-ar-kanopi-kantilever-sekolah">8. Zona AR – Kanopi
+Kantilever Sekolah</h2><div class="gulir"><table>
+<colgroup>
+<col style="width: 19%"/>
+<col style="width: 80%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Aspek</strong></th>
+<th><strong>Spesifikasi</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nama objek</td>
+<td>ar-bab04-kanopi.glb (+ .usdz)</td>
+</tr>
+<tr class="even">
+<td>Tujuan belajar</td>
+<td>Melihat aliran beban ke tumpuan jepit, letak tarik/tekan, dan posisi
+tulangan (indikator 2.1.c dan 2.1.e)</td>
+</tr>
+<tr class="odd">
+<td>Pembuatan model</td>
+<td>Revit/SketchUp: balok gedung, kanopi 1,5 m × 6 m, tulangan atas;
+ekspor ke Blender → GLB ≤ 8 MB</td>
+</tr>
+<tr class="even">
+<td>Hotspot &amp; label</td>
+<td>(1) Tumpuan jepit; (2) Beban merata; (3) List plank; (4) Zona tarik
+atas (merah) dan tekan bawah (biru); (5) Tulangan utama atas; (6) Lokasi
+retak</td>
+</tr>
+<tr class="odd">
+<td>Animasi</td>
+<td>Penggeser “tinggi genangan 0–10 cm”: lendutan ujung dibesarkan
+secara visual dan label MA berubah</td>
+</tr>
+<tr class="even">
+<td>Kode QR</td>
+<td>Menuju ar/bab-04.html</td>
+</tr>
+<tr class="odd">
+<td>Cadangan</td>
+<td>Gambar putar 360° dan potongan 2D</td>
+</tr>
+<tr class="even">
+<td>Pertanyaan pengamatan</td>
+<td>(a) Di mana zona tarik? (b) Bagaimana jika tulangan dipasang di
+bawah? (c) Bagaimana genangan air mengubah momen jepit?</td>
+</tr>
+</tbody>
+</table></div><div class="ar-kotak">
+<model-viewer alt="Model 3D Reaksi Tumpuan dan Balok Kantilever" ar="" ar-modes="webxr scene-viewer quick-look" auto-rotate="" camera-controls="" exposure="1.1" loading="lazy" shadow-intensity="0.8" src="../assets/model-3d/ar-bab04-kanopi.glb" touch-action="pan-y">
+<button class="hotspot" data-normal="0 1 0" data-position="0 3.0 0" slot="hotspot-0">1<span>Tumpuan jepit</span></button><button class="hotspot" data-normal="0 1 0" data-position="0.3 3.08 0" slot="hotspot-1">2<span>Zona tarik atas</span></button><button class="hotspot" data-normal="0 1 0" data-position="1.5 2.9 0" slot="hotspot-2">3<span>List plank (ujung)</span></button>
+<button class="tombol tombol--utama" slot="ar-button" style="position:absolute;bottom:12px;right:12px"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-zona-ar"></use></svg> Lihat di ruanganmu (AR)</button>
+<div slot="poster" style="display:grid;place-items:center;height:100%;color:#CBD5E1">Memuat model 3D…</div>
+</model-viewer>
+<div class="ar-bawah"><div aria-label="Kode QR menuju halaman AR bab-04" class="qr" data-qr="../ar/bab-04.html" role="img"></div>
+<div><b>Petunjuk:</b> pindai kode QR atau ketuk tombol AR → izinkan kamera → arahkan ke lantai datar → ketuk untuk menempatkan model. Ketuk angka untuk membaca label.<ol style="margin:6px 0 0;padding-left:18px"><li>Tumpuan jepit</li><li>Zona tarik atas</li><li>List plank (ujung)</li></ol>
+<p style="margin:6px 0 0"><a href="../ar/bab-04.html">Buka halaman AR penuh</a> • Perangkat tanpa AR tetap dapat memutar model 360° dengan jari/tetikus.</p></div></div></div><h2 id="alat-hitung-reaksi-tumpuan-balok-sederhana-kantilever">9. Alat
+Hitung – Reaksi Tumpuan Balok Sederhana &amp; Kantilever</h2><div class="gulir"><table>
+<colgroup>
+<col style="width: 19%"/>
+<col style="width: 80%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Aspek</strong></th>
+<th><strong>Spesifikasi</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tujuan</td>
+<td>Menghitung reaksi balok sendi–rol dan kantilever akibat beban titik,
+merata (penuh/parsial), segitiga, dan trapesium</td>
+</tr>
+<tr class="even">
+<td>Rumus</td>
+<td>\(R_B=\frac{\sum P_i a_i}{L};\ R_A=\sum P_i-R_B;\ R_V=\sum P_i;\
+M_A=\sum P_i x_i\)</td>
+</tr>
+<tr class="odd">
+<td>Input</td>
+<td>Jenis balok; bentang L (m; 0,5–30); beban: jenis, besar (kN atau
+kN/m; 0–10.000), posisi awal &amp; panjang (m); pilihan generator beban
+pelat (γ, t, finishing, w_L)</td>
+</tr>
+<tr class="even">
+<td>Output</td>
+<td>RA, RB, HA (balok sederhana) atau RV, MA (kantilever), dengan 2
+desimal; status ΣFy</td>
+</tr>
+<tr class="odd">
+<td>Validasi</td>
+<td>Beban di luar bentang ditolak; L ≤ 0 ditolak; pesan ramah dalam
+bahasa Indonesia</td>
+</tr>
+<tr class="even">
+<td>Langkah</td>
+<td>Tabel resultan beban, persamaan ΣMA dan ΣMB yang terisi angka,
+pemeriksaan ΣFy</td>
+</tr>
+<tr class="odd">
+<td>Grafik</td>
+<td>DBB otomatis dengan panah reaksi (Chart.js / SVG)</td>
+</tr>
+<tr class="even">
+<td>Fitur</td>
+<td>Konversi kN ↔︎ kgf; reset; salin; ekspor CSV/PDF</td>
+</tr>
+</tbody>
+</table></div><div class="gulir"><table>
+<colgroup>
+<col style="width: 11%"/>
+<col style="width: 38%"/>
+<col style="width: 29%"/>
+<col style="width: 20%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Kasus uji</strong></th>
+<th><strong>Input</strong></th>
+<th><strong>Hasil yang diharapkan</strong></th>
+<th><strong>Rujukan</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>L = 6; 10 kN @2; 6 kN @4,5</td>
+<td>RA = 8,17; RB = 7,83 kN</td>
+<td>Contoh 4.2</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>L = 5; q = 4 penuh; 8 kN @3</td>
+<td>RA = 13,20; RB = 14,80 kN</td>
+<td>Contoh 4.3</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>L = 6; segitiga 0 → 6 kN/m</td>
+<td>RA = 6,00; RB = 12,00 kN</td>
+<td>Contoh 4.4</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Kantilever L = 1,5; q = 4,34; P = 1,0 @1,5</td>
+<td>RV = 7,51 kN; MA = 6,38 kN·m</td>
+<td>Contoh 4.6</td>
+</tr>
+</tbody>
+</table></div><div class="kalk" data-bab="bab-04" data-kalk="balok"></div><h2 id="studi-kasus-proyek">10. Studi Kasus / Proyek</h2><p>Case Method 1 disajikan lengkap di subbab 4.5.</p><h2 id="info-penting-tips-lapangan-peringatan-k3-1">11. Info Penting /
+Tips Lapangan / Peringatan K3</h2><aside class="kotak kotak--tips"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-tips"></use></svg>Tips Lapangan</p><p>Saat pengecoran kanopi, pastikan beton deking tulangan atas
+(<em>spacer</em>/kursi tulangan) cukup kuat agar tulangan tidak terinjak
+turun oleh pekerja. Tulangan atas yang turun ke tengah pelat mengurangi
+kekuatan kanopi secara drastis.</p></aside><h2 id="rangkuman-1">12. Rangkuman</h2><ul>
+<li><p>Beban mati dari volume × berat jenis; beban hidup dari SNI
+1727:2020; pada bab ini dijumlahkan sebagai beban layan.</p></li>
+<li><p>Balok sederhana: ΣMA → RB, ΣMB → RA, periksa ΣFy.</p></li>
+<li><p>Kantilever: RV = jumlah beban; MA = jumlah (beban × jarak); beban
+merata MA = qL²/2.</p></li>
+<li><p>Beban di ujung kantilever sangat berpengaruh karena lengannya
+terpanjang.</p></li>
+<li><p>Kanopi kantilever tertarik di sisi atas dekat tumpuan: tulangan
+utama di atas.</p></li>
+</ul><h2 id="latihan-kuis-interaktif-12-soal">13. Latihan &amp; Kuis
+Interaktif (12 soal)</h2><div class="kuis" data-kuis="bab-04-1"><div class="kuis__skor"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-kuis"></use></svg> <span>Skor: <b data-skor="">0</b> / <b data-maks="">0</b></span><button class="tombol tombol--kecil" data-ulang="">Ulangi</button></div><div class="soal" data-kunci="(c)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 1</span><span>C1 • pilihan ganda</span></div><p class="soal__teks">Beban berikut termasuk beban hidup …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) berat pelat</button><button data-opsi="(b)" type="button">(b) plester</button><button data-opsi="(c)" type="button">(c) orang dan air hujan</button><button data-opsi="(d)" type="button">(d) dinding bata</button></div><div class="umpan" hidden=""><b>Kunci:</b> (c)<br/><b>Pembahasan:</b> Beban yang dapat berpindah/berubah.</div></div><div class="soal" data-kunci="Salah" data-tipe="bs"><div class="soal__kepala"><span class="soal__label">No. 2</span><span>C2 • benar-salah</span></div><p class="soal__teks">Pada kantilever, momen terbesar terjadi di ujung bebas.</p><div class="soal__pilihan"><button data-opsi="Benar" type="button">Benar</button><button data-opsi="Salah" type="button">Salah</button></div><div class="umpan" hidden=""><b>Kunci:</b> Salah<br/><b>Pembahasan:</b> Terbesar di jepit.</div></div><div class="soal" data-kunci="2,4" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 3</span><span>C3 • isian angka</span></div><p class="soal__teks">Pelat beton tebal 10 cm, γ = 24 kN/m³, jalur 1 m. q_D (tanpa finishing) = … kN/m</p><div class="baris-tombol"><input aria-label="Jawaban soal 3" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 2,4<br/><b>Pembahasan:</b> 24 × 0,10 × 1.</div></div><div class="soal" data-kunci="8" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 4</span><span>C3 • isian angka</span></div><p class="soal__teks">Balok sederhana 8 m, beban 16 kN di tengah. RA = … kN</p><div class="baris-tombol"><input aria-label="Jawaban soal 4" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 8<br/><b>Pembahasan:</b> Simetris.</div></div><div class="soal" data-kunci="2; 8" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 5</span><span>C3 • isian angka</span></div><p class="soal__teks">Balok sederhana 5 m, beban 10 kN di 1 m dari A. RB = … kN; RA = … kN</p><div class="baris-tombol"><input aria-label="Jawaban soal 5" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 2; 8<br/><b>Pembahasan:</b> RB = 10 × 1 ÷ 5.</div></div><div class="soal" data-kunci="12" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 6</span><span>C3 • isian angka</span></div><p class="soal__teks">Balok sederhana 4 m, beban merata 6 kN/m penuh. RA = … kN</p><div class="baris-tombol"><input aria-label="Jawaban soal 6" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 12<br/><b>Pembahasan:</b> 6 × 4 ÷ 2.</div></div><div class="soal" data-kunci="12" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 7</span><span>C3 • isian angka</span></div><p class="soal__teks">Kantilever 3 m, beban titik 4 kN di ujung. MA = … kN·m</p><div class="baris-tombol"><input aria-label="Jawaban soal 7" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 12<br/><b>Pembahasan:</b> 4 × 3.</div></div><div class="soal" data-kunci="10; 10" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 8</span><span>C3 • isian angka</span></div><p class="soal__teks">Kantilever 2 m, beban merata 5 kN/m. RV = … kN; MA = … kN·m</p><div class="baris-tombol"><input aria-label="Jawaban soal 8" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 10; 10<br/><b>Pembahasan:</b> 5 × 2; 5 × 2² ÷ 2.</div></div><div class="soal" data-kunci="(b)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 9</span><span>C4 • pilihan ganda</span></div><p class="soal__teks">Hasil RA = 9 kN dan RB = 8 kN untuk total beban 16 kN. Kesimpulan …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) benar</button><button data-opsi="(b)" type="button">(b) ada kesalahan karena ΣFy ≠ 0</button><button data-opsi="(c)" type="button">(c) benar bila ada rol</button><button data-opsi="(d)" type="button">(d) tidak dapat diperiksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> (b)<br/><b>Pembahasan:</b> 9 + 8 = 17 ≠ 16.</div></div><div class="soal" data-kunci="7,88" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 10</span><span>C4 • isian angka</span></div><p class="soal__teks">Kanopi soal Contoh 4.6 dengan list plank dipindah lebih berat 2 kN/m. MA = … kN·m/m</p><div class="baris-tombol"><input aria-label="Jawaban soal 10" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 7,88<br/><b>Pembahasan:</b> 4,88 + 2 × 1,5.</div></div><div class="soal" data-kunci="(b)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 11</span><span>C5 • pilihan ganda (menilai)</span></div><p class="soal__teks">Tukang mengusulkan menambah lapisan keramik di atas kanopi yang retak agar “air tidak meresap”. Penilaian terbaik …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) setuju</button><button data-opsi="(b)" type="button">(b) tidak tepat: menambah beban mati dan momen jepit tanpa mengatasi penyebab retak</button><button data-opsi="(c)" type="button">(c) setuju bila keramik tipis</button><button data-opsi="(d)" type="button">(d) tidak relevan</button></div><div class="umpan" hidden=""><b>Kunci:</b> (b)<br/><b>Pembahasan:</b> Perbaikan harus mengatasi penyebab (detail tulangan, genangan) dan tidak menambah beban.</div></div><div class="soal" data-kunci="Contoh: kurangi panjang menjadi 1,2 m (MA turun ±35%); beri kemiringan dan talang terbuka" data-tipe="uraian"><div class="soal__kepala"><span class="soal__label">No. 12</span><span>C6 • uraian (merancang)</span></div><p class="soal__teks">Usulkan dua perubahan desain kanopi baru di sekolah lain agar momen jepit lebih kecil dan risiko genangan berkurang. Hitung pengaruh salah satunya.</p><textarea aria-label="Jawaban uraian 12" rows="3" style="width:100%"></textarea><div class="baris-tombol"><button class="tombol tombol--kecil" data-lihat="" type="button">Lihat kunci &amp; rubrik</button></div><div class="umpan" hidden=""><b>Kunci:</b> Contoh: kurangi panjang menjadi 1,2 m (MA turun ±35%); beri kemiringan dan talang terbuka<br/><b>Pembahasan:</b> Rubrik: ide aman &amp; dapat dilaksanakan 40, hitungan 40, alasan 20.</div></div></div><h2 id="refleksi-diri-1">14. Refleksi Diri</h2><ul>
+<li><p>Saya dapat menghitung beban pelat per meter lebar. 1 2 3 4
+5</p></li>
+<li><p>Saya dapat menghitung reaksi balok sederhana dan memeriksanya. 1
+2 3 4 5</p></li>
+<li><p>Saya dapat menghitung RV dan MA kantilever. 1 2 3 4 5</p></li>
+<li><p>Saya dapat menjelaskan penyebab retak kanopi dan memberi
+rekomendasi aman. 1 2 3 4 5</p></li>
+</ul><p><strong>Apa yang sudah/belum saya pahami?</strong> • <strong>Tindak
+lanjut:</strong> skor ≤ 3 → kerjakan ulang Contoh 4.2–4.6 dengan Alat
+Hitung; diskusikan rubrik Case Method dengan kelompok.</p><h2 id="glosarium-dan-referensi-bab-1">15. Glosarium dan Referensi
+Bab</h2><div class="gulir"><table class="glosarium">
+<colgroup>
+<col style="width: 24%"/>
+<col style="width: 75%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Istilah</strong></th>
+<th><strong>Arti</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Balok sederhana</td>
+<td>Balok di atas tumpuan sendi dan rol.</td>
+</tr>
+<tr class="even">
+<td>Beban hidup</td>
+<td>Beban yang dapat berpindah/berubah, misalnya orang dan air
+hujan.</td>
+</tr>
+<tr class="odd">
+<td>Beban mati</td>
+<td>Berat tetap: berat sendiri elemen, finishing, dinding.</td>
+</tr>
+<tr class="even">
+<td>Kantilever</td>
+<td>Balok yang dijepit di satu ujung dan bebas di ujung lain.</td>
+</tr>
+<tr class="odd">
+<td>List plank</td>
+<td>Papan/balok tepi di ujung kanopi atau atap.</td>
+</tr>
+<tr class="even">
+<td>Momen jepit</td>
+<td>Momen reaksi di tumpuan jepit.</td>
+</tr>
+</tbody>
+</table></div><ul>
+<li><p>Badan Standardisasi Nasional. (2020). <em>SNI 1727:2020 Beban
+desain minimum dan kriteria terkait untuk bangunan gedung dan struktur
+lain</em>. BSN.</p></li>
+<li><p>Hibbeler, R. C. (2024a). <em>Engineering mechanics: Statics</em>
+(15th ed., SI units). Pearson. (Bab 5)</p></li>
+<li><p>Hibbeler, R. C. (2024b). <em>Structural analysis</em> (11th ed.).
+Pearson.</p></li>
+<li><p>Tim Dosen PSD3TS PNP. (2026). <em>Rubrik Case Method Mekanika
+Teknik I</em> (RPS SIP3115 Bagian 9).</p></li>
+</ul>
+    <div class="selesai-bab"><button class="tombol tombol--utama" type="button" data-tandai-selesai><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-kuis"/></svg> Tandai bab ini selesai</button></div>
+    <nav class="nav-bab" aria-label="Navigasi bab"><a class="tombol" href="bab-03.html"><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-bab-sebelumnya"/></svg> Kesetimbangan, Tumpuan, dan DBB</a><a class="tombol tombol--utama" href="bab-05.html">Gaya Dalam Balok: NFD, SFD, BMD <svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-bab-berikutnya"/></svg></a></nav>
+  </main>
+</div>
+<button class="fab" type="button" aria-label="Buka AI Tutor" data-buka-ai><svg class="ikon ikon--besar" aria-hidden="true"><use href="../assets/icons/icons.svg#i-ai-tutor"/></svg></button>
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/app.js" defer></script>
+<script src="../assets/js/ai-tutor.js" defer></script>
+<script src="../assets/js/kuis.js" defer></script>
+<script src="../assets/js/kalkulator.js" defer></script>
+<script defer src="../assets/vendor/katex/katex.min.js"></script>
+<script defer src="../assets/vendor/katex/auto-render.min.js" onload="renderMathInElement(document.getElementById('isi'),{delimiters:[{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}],throwOnError:false})"></script>
+<script type="module" src="../assets/vendor/model-viewer/model-viewer.min.js"></script>
+</body>
+</html>

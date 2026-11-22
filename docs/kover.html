@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kover – Mekanika Teknik 1 (Dham)</title>
+<!-- Letak file di proyek: /ebook/kover.html; gaya di /ebook/assets/css/ -->
+<link rel="icon" href="assets/img/ikon-192.png">
+<link rel="stylesheet" href="assets/css/design-tokens.css">
+<link rel="stylesheet" href="assets/css/kover.css">
+<style>
+  /* Tata letak halaman pratinjau kover saja */
+  body { padding: 24px; }
+  .galeri { display: grid; gap: 32px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); justify-items: center; align-items: start; }
+  .galeri figure { margin: 0; width: 100%; display: grid; justify-items: center; gap: 10px; }
+</style>
+</head>
+<body>
+<main>
+<h1>Kover E-Book “Mekanika Teknik 1” – Varian Terpilih: Hologram Kesetimbangan</h1>
+
+<section class="galeri" aria-label="Kover depan dan kover belakang">
+
+<!-- ===================== VARIAN 1: HOLOGRAM KESETIMBANGAN ===================== -->
+<figure>
+<article class="kover kover--hologram" aria-label="Kover varian 1: Hologram Kesetimbangan">
+  <svg class="seni" viewBox="0 0 400 600" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <filter id="g1" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      <linearGradient id="lantai1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#00E5FF" stop-opacity="0"/><stop offset="1" stop-color="#00E5FF" stop-opacity=".35"/></linearGradient>
+      <marker id="panah1" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#F26622"/></marker>
+    </defs>
+    <!-- grid perspektif -->
+    <g stroke="url(#lantai1)" stroke-width="1">
+      <path d="M200 330L-200 600M200 330L-60 600M200 330L80 600M200 330L200 600M200 330L320 600M200 330L460 600M200 330L600 600"/>
+      <path d="M0 470H400M0 505H400M0 548H400M0 600H400" />
+    </g>
+    <g transform="translate(0 -25)">
+    <!-- garis sirkuit tipis -->
+    <g stroke="#00E5FF" stroke-opacity=".18" fill="none" stroke-width="1">
+      <path d="M400 280h-70l-15 15h-40"/><circle cx="275" cy="295" r="2.5" fill="#00E5FF"/>
+    </g>
+    <!-- jembatan rangka Pratt (hologram) -->
+    <g filter="url(#g1)" stroke="#00E5FF" stroke-width="2.4" stroke-linecap="round" fill="none">
+      <path d="M50 450H350"/><path d="M100 380H300"/>
+      <path d="M50 450L100 380M350 450L300 380"/>
+      <path d="M100 380V450M150 380V450M200 380V450M250 380V450M300 380V450"/>
+      <path d="M100 450L150 380M150 450L200 380M250 380L300 450M200 380L250 450" stroke="#1DE9B6"/>
+    </g>
+    <!-- titik buhul -->
+    <g fill="#F8FAFC"><circle cx="50" cy="450" r="3.5"/><circle cx="100" cy="450" r="3"/><circle cx="150" cy="450" r="3"/><circle cx="200" cy="450" r="3"/><circle cx="250" cy="450" r="3"/><circle cx="300" cy="450" r="3"/><circle cx="350" cy="450" r="3.5"/><circle cx="100" cy="380" r="3"/><circle cx="150" cy="380" r="3"/><circle cx="200" cy="380" r="3"/><circle cx="250" cy="380" r="3"/><circle cx="300" cy="380" r="3"/></g>
+    <!-- tumpuan sendi & rol -->
+    <g stroke="#F8FAFC" stroke-width="2" fill="none"><path d="M50 453l-12 20h24z"/><path d="M32 478h36"/><circle cx="350" cy="463" r="9"/><path d="M332 478h36"/></g>
+    <!-- gaya: beban dan reaksi -->
+    <g stroke="#F26622" stroke-width="2.6" marker-end="url(#panah1)"><path d="M200 318V368"/><path d="M50 520V486"/><path d="M350 520V486"/></g>
+    <g font-family="JetBrains Mono, monospace" font-size="11" fill="#F26622"><text x="208" y="334">P = 10 kN</text><text x="58" y="522">R<tspan font-size="8" dy="3">A</tspan><tspan dy="-3"> = 5 kN</tspan></text><text x="232" y="522">R<tspan font-size="8" dy="3">B</tspan><tspan dy="-3"> = 5 kN</tspan></text></g>
+    <!-- lapisan HUD -->
+    <g stroke="#00E5FF" stroke-opacity=".6" fill="none" stroke-width="1.5"><path d="M24 300v-14h14M376 300v-14h-14M24 500v14h14M376 500v14h-14"/></g>
+    <g font-family="JetBrains Mono, monospace" font-size="9" fill="#00E5FF" fill-opacity=".75"><text x="30" y="312">&#931;Fy = 0</text><text x="318" y="312">&#931;M = 0</text></g>
+    <!-- partikel cahaya -->
+    <g fill="#00E5FF" class="nyala"><circle cx="72" cy="345" r="1.6"/><circle cx="330" cy="352" r="1.3"/><circle cx="260" cy="330" r="1.1"/><circle cx="120" cy="320" r="1.2"/><circle cx="180" cy="300" r="1"/></g>
+  </g>
+  </svg>
+  <div class="kover__atas">
+    <span class="kover__label">E-Book Interaktif • AI • AR</span>
+    <p class="kover__kode">SIP3115 • D3 TEKNIK SIPIL</p>
+    <h2 class="kover__judul"><span>Mekanika</span><span>Teknik 1</span></h2>
+    <p class="kover__sub">Statika struktur statis tertentu dengan AI Tutor, AR, dan Alat Hitung</p>
+    <div class="kover__garis"></div>
+  </div>
+  <div class="kover__bawah">
+    <div class="kover__kiri">
+      <img class="kover__logo" src="assets/img/logo-pnp.png" alt="Logo Politeknik Negeri Padang">
+      <div><p class="kover__penulis">Dham</p><p class="kover__inst">Politeknik Negeri Padang<br>Jurusan Teknik Sipil</p></div>
+    </div>
+    <!-- Kode QR ke SPADA PNP (LMS). Bila tautan kursus SIP3115 sudah ada, ganti data-url; qrcode.js (Tahap 4) membuat ulang gambarnya. -->
+    <div class="kover__qr" data-url="https://spadasp.pnp.ac.id"><img src="assets/img/qr-spada.png" alt="Kode QR menuju SPADA PNP (spadasp.pnp.ac.id)"></div>
+  </div>
+</article>
+<figcaption>Kover depan – Hologram Kesetimbangan</figcaption>
+</figure>
+
+</section>
+
+<h2 style="margin-top:48px">Turunan kover</h2>
+<section class="galeri" aria-label="Kover belakang, thumbnail, dan banner bab">
+
+<!-- ===================== KOVER BELAKANG ===================== -->
+<figure>
+<article class="kover kover-belakang" aria-label="Kover belakang">
+  <h2>Tentang buku ini</h2>
+  <p>Mengapa kanopi bisa retak di tumpuan? Bolehkah tandon 1.000 liter diletakkan di lantai ruko? Buku ini mengajak mahasiswa menjawab pertanyaan nyata dengan statika: gaya, kesetimbangan, reaksi tumpuan, gaya dalam balok, balok Gerber, portal, portal tiga sendi, dan rangka batang.</p>
+  <div class="kotak">
+    <p><b>Capaian (CPL 2):</b> menguasai konsep dasar matematika terapan, fisika, dan sains rekayasa untuk merumuskan masalah teknis sederhana pada struktur gedung maksimal 3 lantai.</p>
+  </div>
+  <ul>
+    <li>AI Tutor yang membimbing dengan pertanyaan</li>
+    <li>Objek 3D dan Augmented Reality</li>
+    <li>Alat hitung dengan langkah penyelesaian</li>
+    <li>Case Method dan proyek jembatan rangka</li>
+  </ul>
+  <p style="font-size:2.6cqw;color:#CBD5E1">© 2026 Dham • Politeknik Negeri Padang</p>
+  <div class="isbn" aria-label="Ruang kode batang ISBN, nomor belum tersedia">
+    <svg viewBox="0 0 120 44" aria-hidden="true"><g fill="#0F172A">
+      <rect x="2" y="0" width="2" height="44"/><rect x="6" y="0" width="1" height="44"/><rect x="9" y="0" width="3" height="40"/><rect x="14" y="0" width="1" height="40"/><rect x="17" y="0" width="2" height="40"/><rect x="21" y="0" width="1" height="40"/><rect x="24" y="0" width="3" height="40"/><rect x="29" y="0" width="1" height="40"/><rect x="32" y="0" width="2" height="40"/><rect x="36" y="0" width="1" height="40"/><rect x="39" y="0" width="3" height="40"/><rect x="44" y="0" width="1" height="40"/><rect x="47" y="0" width="2" height="40"/><rect x="51" y="0" width="1" height="40"/><rect x="58" y="0" width="1" height="44"/><rect x="61" y="0" width="1" height="44"/><rect x="65" y="0" width="2" height="40"/><rect x="69" y="0" width="1" height="40"/><rect x="72" y="0" width="3" height="40"/><rect x="77" y="0" width="1" height="40"/><rect x="80" y="0" width="2" height="40"/><rect x="85" y="0" width="1" height="40"/><rect x="88" y="0" width="3" height="40"/><rect x="93" y="0" width="1" height="40"/><rect x="96" y="0" width="2" height="40"/><rect x="100" y="0" width="1" height="40"/><rect x="103" y="0" width="3" height="40"/><rect x="108" y="0" width="1" height="40"/><rect x="114" y="0" width="1" height="44"/><rect x="117" y="0" width="2" height="44"/>
+    </g></svg>
+    ISBN: [menunggu nomor]
+  </div>
+</article>
+<figcaption>Kover belakang (kode batang = contoh; ganti dengan kode ISBN resmi)</figcaption>
+</figure>
+
+<!-- ===================== THUMBNAIL 1:1 LMS ===================== -->
+<figure>
+<article class="kover kover--hologram thumb" aria-label="Thumbnail kursus Mekanika Teknik 1">
+  <svg class="seni" viewBox="0 120 400 400" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+    <g stroke="#00E5FF" stroke-opacity=".25"><path d="M200 330L-200 600M200 330L80 600M200 330L320 600M200 330L600 600M0 470H400M0 520H400"/></g>
+    <g stroke="#00E5FF" stroke-width="2.6" fill="none" stroke-linecap="round"><path d="M50 450H350M100 380H300M50 450L100 380M350 450L300 380M100 380V450M150 380V450M200 380V450M250 380V450M300 380V450"/><path d="M100 450L150 380M150 450L200 380M250 380L300 450M200 380L250 450" stroke="#1DE9B6"/></g>
+  </svg>
+  <div class="kover__atas">
+    <span class="kover__label">SIP3115 • AI • AR</span>
+    <h2 class="kover__judul" style="margin-top:5cqw"><span>Mekanika</span><span>Teknik 1</span></h2>
+  </div>
+</article>
+<figcaption>Thumbnail 1:1 untuk LMS</figcaption>
+</figure>
+</section>
+
+<!-- ===================== BANNER PEMBUKA BAB ===================== -->
+<figure style="margin:32px 0 0">
+<header class="banner-bab" aria-label="Banner pembuka Bab 10">
+  <svg class="seni" viewBox="0 0 1600 500" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+    <g stroke="#00E5FF" stroke-opacity=".07"><path d="M0 100H1600M0 200H1600M0 300H1600M0 400H1600M200 0V500M400 0V500M600 0V500M800 0V500M1000 0V500M1200 0V500M1400 0V500"/></g>
+    <g stroke="#00E5FF" stroke-width="5" fill="none" stroke-linecap="round" opacity=".9">
+      <path d="M980 380H1540M1060 250H1460M980 380L1060 250M1540 380L1460 250M1060 250V380M1160 250V380M1260 250V380M1360 250V380M1460 250V380"/>
+      <path d="M1060 380L1160 250M1160 380L1260 250M1360 250L1460 380M1260 250L1360 380" stroke="#1DE9B6"/>
+    </g>
+    <rect x="0" y="470" width="1600" height="6" fill="#F26622"/>
+  </svg>
+  <div class="banner-bab__isi">
+    <div class="banner-bab__no">BAB 10 • MINGGU 11</div>
+    <h1 class="banner-bab__judul">Rangka Batang: Titik Buhul dan Ritter</h1>
+    <p class="banner-bab__kutip">“Alam takambang jadi guru.” – pepatah Minangkabau</p>
+  </div>
+</header>
+<figcaption>Banner pembuka bab (contoh Bab 10); gambar rangka diganti sesuai topik tiap bab</figcaption>
+</figure>
+</main>
+</body>
+</html>

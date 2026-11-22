@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proyek Tim: Model Jembatan Rangka – Mekanika Teknik 1</title>
+<meta name="description" content="E-book interaktif Mekanika Teknik 1 (SIP3115) – Proyek Tim: Model Jembatan Rangka">
+<meta name="theme-color" content="#0B3C5D">
+<link rel="manifest" href="../manifest.json">
+<link rel="icon" href="../assets/img/ikon-192.png">
+<link rel="stylesheet" href="../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../assets/css/kover.css">
+<link rel="stylesheet" href="../assets/css/ebook.css">
+<link rel="stylesheet" href="../assets/vendor/katex/katex.min.css">
+<script>try{document.documentElement.dataset.tema=localStorage.getItem("mt1-tema")||(matchMedia("(prefers-color-scheme: dark)").matches?"gelap":"terang");document.documentElement.style.setProperty("--font-scale",localStorage.getItem("mt1-huruf")||1)}catch(e){}</script>
+</head>
+<body data-halaman="bab-11" data-root="../">
+<a class="lewati" href="#isi">Lewati ke isi</a>
+<div class="bilah-atas" role="banner">
+  <button class="tbl-ikon tbl-dis" type="button" aria-label="Daftar isi" data-buka-dis><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-peta-konsep"/></svg></button>
+  <a class="tbl-ikon" href="../index.html" aria-label="Beranda"><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-beranda"/></svg></a>
+  <span class="judul-kecil">Proyek Tim: Model Jembatan Rangka</span>
+  <button class="tbl-ikon" type="button" aria-label="Cari" data-cari><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-cari"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Penanda halaman" aria-pressed="false" data-penanda><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-penanda"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Catatan pribadi" data-catatan><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-catatan"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Baca suara" aria-pressed="false" data-suara><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-video"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="A− perkecil huruf" data-huruf="-">A−</button>
+  <button class="tbl-ikon" type="button" aria-label="A+ perbesar huruf" data-huruf="+">A+</button>
+  <button class="tbl-ikon" type="button" aria-label="Mode gelap/terang" data-tema-tombol><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-mode-gelap"/></svg></button>
+  <div class="progres-baca" aria-hidden="true"></div>
+</div>
+<div class="tirai" data-tutup-dis></div>
+<div class="tata">
+  <nav class="dis" aria-label="Daftar isi halaman"></nav>
+  <main class="isi" id="isi" tabindex="-1">
+    <header class="banner-bab"><svg class="seni" viewBox="0 0 1600 500" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><g stroke="#00E5FF" stroke-opacity=".07"><path d="M0 100H1600M0 200H1600M0 300H1600M0 400H1600M200 0V500M400 0V500M600 0V500M800 0V500M1000 0V500M1200 0V500M1400 0V500"/></g><g stroke="#00E5FF" stroke-width="5" fill="none" stroke-linecap="round" opacity=".85"><path d="M980 380H1540M1060 250H1460M980 380L1060 250M1540 380L1460 250M1060 250V380M1160 250V380M1260 250V380M1360 250V380M1460 250V380"/><path d="M1060 380L1160 250M1160 380L1260 250M1360 250L1460 380M1260 250L1360 380" stroke="#1DE9B6"/></g><rect x="0" y="470" width="1600" height="6" fill="#F26622"/></svg><div class="banner-bab__isi"><div class="banner-bab__no">BAB 11 • MINGGU 12–15</div><h1 class="banner-bab__judul">Proyek Tim: Model Jembatan Rangka</h1><p class="banner-bab__kutip">“Barek samo dipikua, ringan samo
+dijinjiang.” – pepatah Minangkabau: proyek ini dikerjakan bersama, dan
+setiap anggota memikul bagiannya (dicatat dalam log
+kontribusi).</p></div></header>
+    <p>Minggu 12–15 • Sub-CPMK 4.2, 4.3, 5.1, 5.2 • CPMK-4 dan CPMK-5 •
+Team-Based Project RT-01 (30% nilai akhir) • Estimasi: 4 × (120 menit
+mandiri + 220 menit studio)</p><h2 id="capaian-pembelajaran-1">2. Capaian Pembelajaran</h2><div class="gulir"><table>
+<colgroup>
+<col style="width: 8%"/>
+<col style="width: 29%"/>
+<col style="width: 41%"/>
+<col style="width: 20%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Minggu</strong></th>
+<th><strong>Sub-CPMK (RPS)</strong></th>
+<th><strong>Indikator</strong></th>
+<th><strong>Bobot</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>12</td>
+<td>4.2 Merencanakan model jembatan rangka</td>
+<td>Sketsa rangka, beban rencana, dan tabel gaya batang lengkap</td>
+<td>5% (CPMK-4)</td>
+</tr>
+<tr class="even">
+<td>13</td>
+<td>4.3 Membuat model dan memprediksi batang kritis</td>
+<td>Model sesuai gambar; batang kritis diprediksi dari hitungan</td>
+<td>5% (CPMK-4)</td>
+</tr>
+<tr class="odd">
+<td>14</td>
+<td>5.1 Memverifikasi hasil hitung dengan perangkat lunak</td>
+<td>Selisih manual vs perangkat lunak ≤ 5% dan dijelaskan</td>
+<td>5% TBP + 2% Partisipatif (CPMK-5)</td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td>5.2 Menguji model dan mempresentasikan hasil tim</td>
+<td>Prediksi vs hasil uji dibandingkan; laporan &amp; presentasi
+memenuhi rubrik</td>
+<td>15% (CPMK-5)</td>
+</tr>
+</tbody>
+</table></div><h2 id="peta-konsep-proyek">3. Peta Konsep Proyek</h2><ul>
+<li><p><strong>Bab 10</strong> (gaya batang) → Mg 12: desain &amp; tabel
+gaya batang</p></li>
+<li><p><strong>Data uji bahan</strong> (kapasitas tarik/tekan stik) → Mg
+13: prediksi batang kritis &amp; beban runtuh</p></li>
+<li><p><strong>Ftool/SAP2000/Alat Hitung</strong> → Mg 14: verifikasi ≤
+5%</p></li>
+<li><p><strong>Uji beban</strong> → Mg 15: prediksi vs kenyataan →
+refleksi &amp; laporan</p></li>
+</ul><h2 id="apersepsi-1">4. Apersepsi</h2><p><strong>Pertanyaan pemantik:</strong> Mengapa jembatan rangka yang
+beratnya hanya beberapa ton dapat memikul truk puluhan ton? Bagaimana
+insinyur tahu batang mana yang akan gagal lebih dulu – sebelum jembatan
+dibangun?</p><p><strong>Tantangan tim:</strong> buat jembatan rangka bentang 60 cm
+dari stik es krim/balsa yang memikul beban titik di tengah dengan
+<strong>rasio beban runtuh / berat model</strong> sebesar mungkin – dan
+<strong>prediksikan</strong> beban runtuhnya sebelum diuji.</p><h2 id="uraian-brief-proyek-rt-01">5. Uraian: Brief Proyek RT-01</h2><div class="gulir"><table>
+<colgroup>
+<col style="width: 19%"/>
+<col style="width: 80%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Butir</strong></th>
+<th><strong>Ketentuan (RPS Bagian 8)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tim</td>
+<td>4 orang; peran bergilir: koordinator, penghitung, perakit,
+pendokumentasi (dicatat di log)</td>
+</tr>
+<tr class="even">
+<td>Bentang &amp; beban</td>
+<td>Bentang bersih 60 cm di atas dua tumpuan meja; beban titik di tengah
+bentang (di titik buhul bawah)</td>
+</tr>
+<tr class="odd">
+<td>Bahan</td>
+<td>Stik es krim/balsa, lem kayu/lem tembak; dilarang memakai paku,
+kawat, atau bahan lain</td>
+</tr>
+<tr class="even">
+<td>Luaran</td>
+<td>(1) Gambar rangka &amp; tabel gaya batang; (2) lembar verifikasi
+perangkat lunak; (3) model fisik; (4) video uji beban; (5) laporan 8–10
+halaman; (6) presentasi 7 menit + log kontribusi</td>
+</tr>
+<tr class="odd">
+<td>Penilaian</td>
+<td>Rubrik TBP (RPS Bagian 9). Nilai individu = nilai kelompok × faktor
+kontribusi (0,8–1,1) dari log aktivitas dan asesmen sejawat</td>
+</tr>
+<tr class="even">
+<td>Integritas &amp; K3</td>
+<td>Pelindung mata dan area aman saat uji; data uji dicatat apa
+adanya</td>
+</tr>
+</tbody>
+</table></div><h3 id="minggu-12-desain-dan-tabel-gaya-batang">11.1 Minggu 12 – Desain
+dan Tabel Gaya Batang</h3><p>Tim memilih tipe rangka (Pratt, Warren, atau Howe), membuat sketsa
+berskala, lalu menghitung gaya batang <strong>per satuan beban
+P</strong> (P = 1). Contoh desain acuan:</p><p><img alt="Gambar 11.1. Desain acuan Pratt 4 panel (panel 15 cm, tinggi 12
+cm): gaya batang per P." loading="lazy" src="../assets/img/bab/bab-11-5a71a93e0ea27028c66b52d5f75ab164b87b30d9.png"/></p><p><em>Gambar 11.1. Desain acuan Pratt 4 panel (panel 15 cm, tinggi 12
+cm): gaya batang per P.</em></p><p><img alt="Gambar 11.2. Alternatif Warren 4 panel: gaya batang per
+P." loading="lazy" src="../assets/img/bab/bab-11-b5d4bb5865918b7a5d538fc7def00f49c3fd2633.png"/></p><p><em>Gambar 11.2. Alternatif Warren 4 panel: gaya batang per
+P.</em></p><div class="gulir"><table>
+<colgroup>
+<col style="width: 33%"/>
+<col style="width: 16%"/>
+<col style="width: 16%"/>
+<col style="width: 33%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Batang (Pratt)</strong></th>
+<th><strong>Panjang (cm)</strong></th>
+<th><strong>Gaya per P</strong></th>
+<th><strong>Sifat</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Batang atas U1U2, U2U3</td>
+<td>15,0</td>
+<td>–1,250</td>
+<td>Tekan terbesar</td>
+</tr>
+<tr class="even">
+<td>Batang ujung L0U1, L4U3</td>
+<td>19,2</td>
+<td>–0,800</td>
+<td>Tekan</td>
+</tr>
+<tr class="odd">
+<td>Diagonal U1L2, U3L2</td>
+<td>19,2</td>
+<td>+0,800</td>
+<td>Tarik</td>
+</tr>
+<tr class="even">
+<td>Batang bawah L0L1 … L3L4</td>
+<td>15,0</td>
+<td>+0,625</td>
+<td>Tarik</td>
+</tr>
+<tr class="odd">
+<td>Vertikal U1L1, U2L2, U3L3</td>
+<td>12,0</td>
+<td>0</td>
+<td>Batang nol (beban tunggal di tengah)</td>
+</tr>
+</tbody>
+</table></div><p>Perbandingan: Warren acuan memiliki tekan terbesar sama (–1,25 P di
+batang atas tengah) tetapi tarik bawah lebih besar (+0,94 P) dan lebih
+banyak batang tekan diagonal. Tim boleh memilih dengan alasan.</p><div aria-label="F_i = f_i × P" class="rumus" role="math">\[F_i = f_i\,P\]</div><p><strong>Keterangan:</strong> F_i = gaya batang ke-i (N); f_i =
+koefisien gaya per satuan beban (dari tabel); P = beban di tengah (N).
+<strong>Batasan:</strong> berlaku selama rangka berperilaku linear dan
+sambungan tidak gagal lebih dulu.</p><h3 id="minggu-13-perakitan-dan-prediksi-batang-kritis">11.2 Minggu 13 –
+Perakitan dan Prediksi Batang Kritis</h3><p><strong>Uji bahan sederhana (studio):</strong> tiap tim menguji
+minimal 3 benda uji untuk (a) kapasitas tarik satu stik dengan sambungan
+lem, dan (b) kapasitas tekan stik pada panjang yang dipakai (mis. 15 cm
+dan 19 cm). Catat semua hasil, pakai <strong>nilai terkecil</strong>
+sebagai kapasitas rencana.</p><div aria-label="P_runtuh,prediksi = min( C_i / |f_i| )" class="rumus" role="math">\[P_{runtuh}=\min_i \frac{C_i}{|f_i|}\]</div><p><strong>Keterangan:</strong> C_i = kapasitas batang ke-i dari uji
+(N), kapasitas tarik untuk f_i &gt; 0 dan kapasitas tekan untuk f_i &lt;
+0; f_i = koefisien gaya batang. Batang dengan nilai terkecil adalah
+<strong>batang kritis</strong>. <strong>Batasan:</strong> belum
+memperhitungkan kegagalan sambungan dan cacat perakitan.</p><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 11.1 – Prediksi beban runtuh (data uji
+contoh)</p><p><strong>Soal.</strong> Data uji contoh (bukan nilai baku): kapasitas
+tarik 600 N; kapasitas tekan batang 15 cm = 150 N; batang 19,2 cm = 110
+N. Prediksikan beban runtuh desain Pratt.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – Batang atas (tekan, 15 cm): 150 ÷ 1,25 = 120 N.</p><p>Langkah 2 – Batang ujung (tekan, 19,2 cm): 110 ÷ 0,80 = 137 N.</p><p>Langkah 3 – Diagonal (tarik): 600 ÷ 0,80 = 750 N; batang bawah
+(tarik): 600 ÷ 0,625 = 960 N.</p><p>Langkah 4 – Nilai terkecil: 120 N pada batang atas U1U2/U2U3.</p><p class="jawab"><strong>Jawab:</strong> Prediksi P_runtuh ≈ 120 N (±12 kg beban);
+batang kritis = batang atas tengah (tekan). Saran desain: perkuat batang
+atas dengan dua lapis stik atau pendekkan panel.</p></details></aside><aside class="kotak kotak--tips"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-tips"></use></svg>Tips Lapangan</p><p>Sambungan sering menjadi titik lemah. Buat pelat buhul dari potongan
+stik, lem pada permukaan yang luas, dan tunggu lem kering sesuai
+petunjuk sebelum merakit tahap berikutnya. Periksa kelurusan batang
+tekan.</p></aside><h3 id="minggu-14-verifikasi-dengan-perangkat-lunak">11.3 Minggu 14 –
+Verifikasi dengan Perangkat Lunak</h3><ol type="1">
+<li><p>Modelkan rangka di Ftool (atau SAP2000 versi pendidikan / Alat
+Hitung Rangka e-book) dengan koordinat yang sama.</p></li>
+<li><p>Atur sambungan batang sebagai sendi (release momen) dan tumpuan
+sendi–rol.</p></li>
+<li><p>Beri beban P = 100 N di titik tengah bawah.</p></li>
+<li><p>Isi tabel verifikasi dan hitung selisih.</p></li>
+</ol><div class="gulir"><table>
+<colgroup>
+<col style="width: 16%"/>
+<col style="width: 16%"/>
+<col style="width: 21%"/>
+<col style="width: 14%"/>
+<col style="width: 30%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Batang</strong></th>
+<th><strong>Manual (N)</strong></th>
+<th><strong>Perangkat lunak (N)</strong></th>
+<th><strong>Selisih (%)</strong></th>
+<th><strong>Penjelasan bila &gt; 5%</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>U1U2</td>
+<td>–125,0</td>
+<td>[isi]</td>
+<td>[isi]</td>
+<td>[isi]</td>
+</tr>
+<tr class="even">
+<td>L0U1</td>
+<td>–80,0</td>
+<td>[isi]</td>
+<td>[isi]</td>
+<td>[isi]</td>
+</tr>
+<tr class="odd">
+<td>U1L2</td>
+<td>+80,0</td>
+<td>[isi]</td>
+<td>[isi]</td>
+<td>[isi]</td>
+</tr>
+<tr class="even">
+<td>L1L2</td>
+<td>+62,5</td>
+<td>[isi]</td>
+<td>[isi]</td>
+<td>[isi]</td>
+</tr>
+</tbody>
+</table></div><div aria-label="Selisih = |F_manual – F_software| / |F_software| × 100%" class="rumus" role="math">\[\text{Selisih}=\frac{|F_{manual}-F_{software}|}{|F_{software}|}\times100\%\]</div><p><strong>Kriteria (RPS):</strong> ≤ 5%. Penyebab umum selisih:
+koordinat berbeda, sambungan tidak diatur sebagai sendi, pembulatan.</p><h3 id="minggu-15-uji-beban-laporan-presentasi-refleksi">11.4 Minggu 15
+– Uji Beban, Laporan, Presentasi, Refleksi</h3><p><strong>Prosedur uji beban:</strong></p><ol type="1">
+<li><p>Timbang model (gram) dan ukur bentang.</p></li>
+<li><p>Pasang model di atas dua tumpuan; gantungkan wadah beban di titik
+tengah bawah.</p></li>
+<li><p>Tambahkan beban bertahap (mis. 5 N per langkah, tunggu 10 detik),
+catat lendutan visual dan bunyi.</p></li>
+<li><p>Rekam video; catat beban saat runtuh dan batang/sambungan yang
+gagal pertama.</p></li>
+<li><p>Hitung rasio beban runtuh / berat model; bandingkan dengan
+prediksi.</p></li>
+</ol><div class="gulir"><table>
+<colgroup>
+<col style="width: 41%"/>
+<col style="width: 58%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Data uji</strong></th>
+<th><strong>Isian tim</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Berat model (g → N)</td>
+<td>[isi]</td>
+</tr>
+<tr class="even">
+<td>Beban runtuh hasil uji (N)</td>
+<td>[isi]</td>
+</tr>
+<tr class="odd">
+<td>Beban runtuh prediksi (N)</td>
+<td>[isi]</td>
+</tr>
+<tr class="even">
+<td>Selisih prediksi vs uji (%)</td>
+<td>[isi]</td>
+</tr>
+<tr class="odd">
+<td>Batang/sambungan yang gagal pertama</td>
+<td>[isi] – sama dengan prediksi? Ya/Tidak</td>
+</tr>
+<tr class="even">
+<td>Rasio beban/berat</td>
+<td>[isi] → peringkat kompetisi</td>
+</tr>
+</tbody>
+</table></div><aside class="kotak kotak--k3"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-peringatan"></use></svg>Peringatan K3</p><p>Gunakan kacamata pelindung; jarak penonton minimal 1,5 m; beban
+diletakkan dalam wadah dengan alas empuk di bawahnya; jangan menempatkan
+tangan di bawah beban saat penambahan. Hentikan uji bila wadah beban
+miring.</p></aside><aside class="kotak kotak--info"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-info"></use></svg>Integritas Data</p><p>Catat hasil apa adanya, termasuk kegagalan dini. Prediksi yang
+meleset bukan nilai buruk – yang dinilai adalah penjelasan jujur mengapa
+meleset (mis. sambungan lemah, batang bengkok).</p></aside><p><strong>Laporan teknis (8–10 halaman, EYD V):</strong> 1) Pendahuluan
+&amp; tujuan; 2) Desain &amp; asumsi; 3) Hitungan gaya batang &amp;
+tabel; 4) Data uji bahan &amp; prediksi; 5) Verifikasi perangkat lunak;
+6) Hasil uji beban &amp; pembahasan; 7) Kesimpulan &amp; saran; 8)
+Lampiran (gambar kerja, log kontribusi, foto/video).</p><p><strong>Presentasi 7 menit:</strong> semua anggota berbicara; 1 menit
+desain, 2 menit hitungan &amp; prediksi, 2 menit uji &amp; perbandingan,
+1 menit refleksi, 1 menit pelajaran untuk proyek nyata.</p><h3 id="rubrik-team-based-project-dan-log-kontribusi">11.5 Rubrik
+Team-Based Project dan Log Kontribusi</h3><div class="gulir"><table>
+<colgroup>
+<col style="width: 23%"/>
+<col style="width: 21%"/>
+<col style="width: 19%"/>
+<col style="width: 17%"/>
+<col style="width: 18%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Kriteria (bobot)</strong></th>
+<th><strong>Sangat baik (86–100)</strong></th>
+<th><strong>Baik (71–85)</strong></th>
+<th><strong>Cukup (56–70)</strong></th>
+<th><strong>Kurang (≤ 55)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ketepatan teknis (35%)</td>
+<td>Semua hasil memenuhi prinsip statika, efisien</td>
+<td>Memenuhi, inefisiensi kecil</td>
+<td>Ada bagian tidak memenuhi</td>
+<td>Banyak kesalahan teknis</td>
+</tr>
+<tr class="even">
+<td>Gambar / model / luaran (20%)</td>
+<td>Lengkap, konsisten dengan hitungan</td>
+<td>Lengkap, sedikit tidak konsisten</td>
+<td>Kurang lengkap</td>
+<td>Tidak sesuai</td>
+</tr>
+<tr class="odd">
+<td>Laporan teknis (20%)</td>
+<td>Runtut, asumsi &amp; rujukan jelas, EYD V</td>
+<td>Runtut, rujukan kurang</td>
+<td>Kurang runtut</td>
+<td>Tidak memadai</td>
+</tr>
+<tr class="even">
+<td>Presentasi &amp; tanya jawab (15%)</td>
+<td>Jelas, semua menguasai</td>
+<td>Jelas, sebagian menguasai</td>
+<td>Kurang jelas</td>
+<td>Tidak menguasai</td>
+</tr>
+<tr class="odd">
+<td>Kolaborasi &amp; integritas (10%)</td>
+<td>Peran jelas, log lengkap, data jujur</td>
+<td>Peran jelas, log kurang</td>
+<td>Kontribusi timpang</td>
+<td>Pelanggaran integritas</td>
+</tr>
+</tbody>
+</table></div><p><em>Sumber: RPS SIP3115 Bagian 9 (rubrik TBP). Rubrik ini disesuaikan
+dengan konteks proyek model jembatan; kata “SNI 1727:2020” pada rubrik
+asli tidak relevan untuk model stik sehingga cukup “prinsip
+statika”.</em></p><div class="gulir"><table>
+<colgroup>
+<col style="width: 13%"/>
+<col style="width: 16%"/>
+<col style="width: 33%"/>
+<col style="width: 9%"/>
+<col style="width: 14%"/>
+<col style="width: 11%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Tanggal</strong></th>
+<th><strong>Anggota</strong></th>
+<th><strong>Kegiatan</strong></th>
+<th><strong>Durasi</strong></th>
+<th><strong>Bukti</strong></th>
+<th><strong>Paraf sejawat</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[isi]</td>
+<td>[isi]</td>
+<td>[mis. menghitung gaya batang panel 1–2]</td>
+<td>[jam]</td>
+<td>[foto/berkas]</td>
+<td>[ ]</td>
+</tr>
+</tbody>
+</table></div><p>Faktor kontribusi individu 0,8–1,1 ditetapkan dari log dan asesmen
+sejawat; nilai individu = nilai kelompok × faktor.</p><h2 id="contoh-soal-pembahasan-1">6. Contoh Soal &amp; Pembahasan</h2><p>Contoh 11.1 (prediksi beban runtuh) serta tabel gaya per P desain
+acuan Pratt dan Warren.</p><h2 id="tanya-ai-tutor-pendamping-proyek">7. Tanya AI Tutor (pendamping
+proyek)</h2><div class="kartu-ai-grid"><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Pilih tipe rangka</h4><p>Kami memilih antara Pratt dan Warren untuk model stik 60 cm. Ajukan pertanyaan agar kami membandingkan batang tekan terbesar dan jumlah sambungan.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Kami memilih antara Pratt dan Warren untuk model stik 60 cm. Ajukan pertanyaan agar kami membandingkan batang tekan terbesar dan jumlah sambungan." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Kami memilih antara Pratt dan Warren untuk model stik 60 cm. Ajukan pertanyaan agar kami membandingkan batang tekan terbesar dan jumlah sambungan." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Kami memilih antara Pratt dan Warren untuk model stik 60 cm. Ajukan pertanyaan agar kami membandingkan batang tekan terbesar dan jumlah sambungan." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Periksa prediksi</h4><p>Ini tabel f_i dan kapasitas uji kami: [tempel]. Bimbing kami menemukan batang kritis tanpa memberi jawaban langsung.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Ini tabel f_i dan kapasitas uji kami: [tempel]. Bimbing kami menemukan batang kritis tanpa memberi jawaban langsung." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Ini tabel f_i dan kapasitas uji kami: [tempel]. Bimbing kami menemukan batang kritis tanpa memberi jawaban langsung." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Ini tabel f_i dan kapasitas uji kami: [tempel]. Bimbing kami menemukan batang kritis tanpa memberi jawaban langsung." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Jelaskan selisih</h4><p>Hasil Ftool berbeda 8% dari manual pada batang U1U2. Tanyakan hal-hal yang perlu kami periksa.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Hasil Ftool berbeda 8% dari manual pada batang U1U2. Tanyakan hal-hal yang perlu kami periksa." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Hasil Ftool berbeda 8% dari manual pada batang U1U2. Tanyakan hal-hal yang perlu kami periksa." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Hasil Ftool berbeda 8% dari manual pada batang U1U2. Tanyakan hal-hal yang perlu kami periksa." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Cek laporan</h4><p>Periksa struktur laporan kami terhadap 8 bagian di Bab 11 dan EYD V; beri saran, jangan menulis ulang.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Periksa struktur laporan kami terhadap 8 bagian di Bab 11 dan EYD V; beri saran, jangan menulis ulang." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Periksa struktur laporan kami terhadap 8 bagian di Bab 11 dan EYD V; beri saran, jangan menulis ulang." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Periksa struktur laporan kami terhadap 8 bagian di Bab 11 dan EYD V; beri saran, jangan menulis ulang." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Refleksi</h4><p>Bantu saya menulis refleksi pribadi dengan 3 pertanyaan: apa yang saya pelajari, apa yang meleset, apa yang akan saya lakukan berbeda.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Bantu saya menulis refleksi pribadi dengan 3 pertanyaan: apa yang saya pelajari, apa yang meleset, apa yang akan saya lakukan berbeda." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Bantu saya menulis refleksi pribadi dengan 3 pertanyaan: apa yang saya pelajari, apa yang meleset, apa yang akan saya lakukan berbeda." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Bantu saya menulis refleksi pribadi dengan 3 pertanyaan: apa yang saya pelajari, apa yang meleset, apa yang akan saya lakukan berbeda." type="button">Tanya langsung</button></div></div></div><h2 id="zona-ar-model-jembatan-stik-dan-uji-beban">8. Zona AR – Model
+Jembatan Stik dan Uji Beban</h2><div class="gulir"><table>
+<colgroup>
+<col style="width: 19%"/>
+<col style="width: 80%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Aspek</strong></th>
+<th><strong>Spesifikasi</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nama objek</td>
+<td>ar-bab11-jembatan-stik.glb (+ .usdz)</td>
+</tr>
+<tr class="even">
+<td>Tujuan belajar</td>
+<td>Melihat desain acuan dalam ukuran nyata, letak batang kritis, dan
+detail pelat buhul (Sub-CPMK 4.2–4.3)</td>
+</tr>
+<tr class="odd">
+<td>Pembuatan model</td>
+<td>Blender: model stik skala 1:1 (60 cm), tekstur kayu; animasi uji
+beban sampai batang atas menekuk; GLB ≤ 8 MB</td>
+</tr>
+<tr class="even">
+<td>Hotspot &amp; label</td>
+<td>(1) Batang atas kritis; (2) Batang ujung; (3) Diagonal tarik; (4)
+Pelat buhul; (5) Titik beban</td>
+</tr>
+<tr class="odd">
+<td>Animasi</td>
+<td>Penggeser beban 0–150 N: warna batang berubah dari hijau → kuning →
+merah sesuai rasio F/C</td>
+</tr>
+<tr class="even">
+<td>Kode QR</td>
+<td>Menuju ar/bab-11.html</td>
+</tr>
+<tr class="odd">
+<td>Cadangan</td>
+<td>Gambar 11.1–11.2 dan video uji</td>
+</tr>
+<tr class="even">
+<td>Pertanyaan pengamatan</td>
+<td>(a) Batang mana yang berubah merah lebih dulu? (b) Bagaimana pelat
+buhul membantu? (c) Apa yang terjadi jika batang atas dibuat dua
+lapis?</td>
+</tr>
+</tbody>
+</table></div><div class="ar-kotak">
+<model-viewer alt="Model 3D Proyek Tim: Model Jembatan Rangka" ar="" ar-modes="webxr scene-viewer quick-look" auto-rotate="" camera-controls="" exposure="1.1" loading="lazy" shadow-intensity="0.8" src="../assets/model-3d/ar-bab11-jembatan-stik.glb" touch-action="pan-y">
+<button class="hotspot" data-normal="0 1 0" data-position="0.22 0.12 0" slot="hotspot-0">1<span>Batang kritis (tekan)</span></button><button class="hotspot" data-normal="0 1 0" data-position="0.22 0.06 0" slot="hotspot-1">2<span>Diagonal tarik</span></button><button class="hotspot" data-normal="0 1 0" data-position="0.3 0 0" slot="hotspot-2">3<span>Titik beban</span></button>
+<button class="tombol tombol--utama" slot="ar-button" style="position:absolute;bottom:12px;right:12px"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-zona-ar"></use></svg> Lihat di ruanganmu (AR)</button>
+<div slot="poster" style="display:grid;place-items:center;height:100%;color:#CBD5E1">Memuat model 3D…</div>
+</model-viewer>
+<div class="ar-bawah"><div aria-label="Kode QR menuju halaman AR bab-11" class="qr" data-qr="../ar/bab-11.html" role="img"></div>
+<div><b>Petunjuk:</b> pindai kode QR atau ketuk tombol AR → izinkan kamera → arahkan ke lantai datar → ketuk untuk menempatkan model. Ketuk angka untuk membaca label.<ol style="margin:6px 0 0;padding-left:18px"><li>Batang kritis (tekan)</li><li>Diagonal tarik</li><li>Titik beban</li></ol>
+<p style="margin:6px 0 0"><a href="../ar/bab-11.html">Buka halaman AR penuh</a> • Perangkat tanpa AR tetap dapat memutar model 360° dengan jari/tetikus.</p></div></div></div><h2 id="alat-hitung-perencana-model-jembatan">9. Alat Hitung – Perencana
+Model Jembatan</h2><div class="gulir"><table>
+<colgroup>
+<col style="width: 19%"/>
+<col style="width: 80%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Aspek</strong></th>
+<th><strong>Spesifikasi</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tujuan</td>
+<td>Gaya batang per P, prediksi beban runtuh dari data uji tim, batang
+kritis, rasio beban/berat, tabel verifikasi</td>
+</tr>
+<tr class="even">
+<td>Rumus</td>
+<td>\(F_i=f_iP;\ P_{runtuh}=\min_i C_i/
+f_i
+;\ \text{selisih}=
+F_m-F_s
+/
+F_s\)</td>
+</tr>
+<tr class="odd">
+<td>Input</td>
+<td>Templat rangka (Pratt/Warren/Howe; panel; tinggi); data uji
+kapasitas tarik &amp; tekan per panjang batang; berat model; hasil
+perangkat lunak (untuk verifikasi)</td>
+</tr>
+<tr class="even">
+<td>Output</td>
+<td>Tabel f_i; batang kritis &amp; P_runtuh prediksi; tabel selisih
+manual vs perangkat lunak (warna ≤ 5% hijau); grafik prediksi vs hasil
+uji</td>
+</tr>
+<tr class="odd">
+<td>Fitur</td>
+<td>Ekspor CSV untuk lampiran laporan; templat log kontribusi; reset;
+salin; PDF</td>
+</tr>
+</tbody>
+</table></div><div class="gulir"><table>
+<colgroup>
+<col style="width: 11%"/>
+<col style="width: 34%"/>
+<col style="width: 38%"/>
+<col style="width: 15%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Kasus uji</strong></th>
+<th><strong>Input</strong></th>
+<th><strong>Hasil yang diharapkan</strong></th>
+<th><strong>Rujukan</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Pratt 4 × 15 cm, tinggi 12 cm, P = 1</td>
+<td>Atas –1,250; ujung –0,800; diagonal +0,800; bawah +0,625; vertikal
+0</td>
+<td>Gambar 11.1</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Data uji contoh (600/150/110 N)</td>
+<td>P_runtuh = 120 N; batang kritis U1U2</td>
+<td>Contoh 11.1</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Warren 4 × 15 cm, tinggi 12 cm, P = 1</td>
+<td>Atas tengah –1,250; bawah tengah +0,938; diagonal ±0,590</td>
+<td>Gambar 11.2</td>
+</tr>
+</tbody>
+</table></div><div class="kalk" data-bab="bab-11" data-kalk="jembatan"></div><h2 id="studi-kasus-proyek">10. Studi Kasus / Proyek</h2><p>Seluruh bab ini adalah proyek tim RT-01 (subbab 11.1–11.5).</p><h2 id="info-penting-tips-lapangan-peringatan-k3-1">11. Info Penting /
+Tips Lapangan / Peringatan K3</h2><p>Tips Lapangan di 11.2; Peringatan K3 dan Integritas Data di 11.4.</p><h2 id="rangkuman-1">12. Rangkuman</h2><ul>
+<li><p>Proyek menghubungkan seluruh CPMK-4 dan CPMK-5: desain → prediksi
+→ verifikasi → uji → refleksi.</p></li>
+<li><p>Gaya batang ditulis sebagai koefisien per P agar mudah dipakai
+untuk berbagai beban.</p></li>
+<li><p>Beban runtuh prediksi = kapasitas terkecil dibagi koefisien gaya;
+batang tekan dan sambungan sering menjadi batang kritis.</p></li>
+<li><p>Verifikasi perangkat lunak: selisih ≤ 5% dan dijelaskan.</p></li>
+<li><p>Kejujuran data dan pembagian peran sama penting dengan hasil
+uji.</p></li>
+</ul><h2 id="kuis-pemahaman-proyek-10-soal">13. Kuis Pemahaman Proyek (10
+soal)</h2><div class="kuis" data-kuis="bab-11-1"><div class="kuis__skor"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-kuis"></use></svg> <span>Skor: <b data-skor="">0</b> / <b data-maks="">0</b></span><button class="tombol tombol--kecil" data-ulang="">Ulangi</button></div><div class="soal" data-kunci="(c)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 1</span><span>C1 • pilihan ganda</span></div><p class="soal__teks">Bentang model jembatan RT-01 adalah …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) 30 cm</button><button data-opsi="(b)" type="button">(b) 50 cm</button><button data-opsi="(c)" type="button">(c) 60 cm</button><button data-opsi="(d)" type="button">(d) 100 cm</button></div><div class="umpan" hidden=""><b>Kunci:</b> (c)<br/><b>Pembahasan:</b> RPS Bagian 8.</div></div><div class="soal" data-kunci="(c)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 2</span><span>C1 • pilihan ganda</span></div><p class="soal__teks">Bobot TBP dalam nilai akhir …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) 10%</button><button data-opsi="(b)" type="button">(b) 25%</button><button data-opsi="(c)" type="button">(c) 30%</button><button data-opsi="(d)" type="button">(d) 55%</button></div><div class="umpan" hidden=""><b>Kunci:</b> (c)<br/><b>Pembahasan:</b> RPS Bagian 7.</div></div><div class="soal" data-kunci="Benar" data-tipe="bs"><div class="soal__kepala"><span class="soal__label">No. 3</span><span>C2 • benar-salah</span></div><p class="soal__teks">Batang vertikal desain acuan Pratt bergaya nol untuk beban tunggal di tengah.</p><div class="soal__pilihan"><button data-opsi="Benar" type="button">Benar</button><button data-opsi="Salah" type="button">Salah</button></div><div class="umpan" hidden=""><b>Kunci:</b> Benar<br/><b>Pembahasan:</b> Aturan batang nol.</div></div><div class="soal" data-kunci="–100" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 4</span><span>C3 • isian angka</span></div><p class="soal__teks">P = 80 N pada desain Pratt acuan. Gaya batang atas = … N</p><div class="baris-tombol"><input aria-label="Jawaban soal 4" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> –100<br/><b>Pembahasan:</b> –1,25 × 80.</div></div><div class="soal" data-kunci="160" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 5</span><span>C3 • isian angka</span></div><p class="soal__teks">Kapasitas tekan batang atas 200 N. P_runtuh berdasarkan batang atas = … N</p><div class="baris-tombol"><input aria-label="Jawaban soal 5" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 160<br/><b>Pembahasan:</b> 200 ÷ 1,25.</div></div><div class="soal" data-kunci="3,3" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 6</span><span>C3 • isian angka</span></div><p class="soal__teks">Manual –125 N; Ftool –121 N. Selisih = … %</p><div class="baris-tombol"><input aria-label="Jawaban soal 6" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 3,3<br/><b>Pembahasan:</b> 4 ÷ 121 × 100.</div></div><div class="soal" data-kunci="(b)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 7</span><span>C4 • pilihan ganda</span></div><p class="soal__teks">Prediksi 120 N, hasil uji 85 N dengan sambungan lepas. Penjelasan paling tepat …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) hitungan salah</button><button data-opsi="(b)" type="button">(b) kegagalan sambungan tidak diperhitungkan dalam prediksi</button><button data-opsi="(c)" type="button">(c) beban terlalu berat</button><button data-opsi="(d)" type="button">(d) kebetulan</button></div><div class="umpan" hidden=""><b>Kunci:</b> (b)<br/><b>Pembahasan:</b> Prediksi hanya mempertimbangkan batang.</div></div><div class="soal" data-kunci="81,5" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 8</span><span>C4 • isian angka</span></div><p class="soal__teks">Model 120 g memikul 96 N. Rasio beban/berat = … (g = 9,81 m/s²)</p><div class="baris-tombol"><input aria-label="Jawaban soal 8" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 81,5<br/><b>Pembahasan:</b> Berat 1,18 N; 96 ÷ 1,18.</div></div><div class="soal" data-kunci="(b)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 9</span><span>C5 • pilihan ganda (menilai)</span></div><p class="soal__teks">Satu anggota mengusulkan mengganti angka hasil uji agar mendekati prediksi. Sikap tim yang benar …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) setuju demi nilai</button><button data-opsi="(b)" type="button">(b) menolak; data dicatat apa adanya dan selisih dijelaskan</button><button data-opsi="(c)" type="button">(c) membagi dua selisih</button><button data-opsi="(d)" type="button">(d) mengulang uji diam-diam</button></div><div class="umpan" hidden=""><b>Kunci:</b> (b)<br/><b>Pembahasan:</b> Integritas (rubrik kolaborasi &amp; integritas).</div></div><div class="soal" data-kunci="Contoh: batang atas dua lapis (kapasitas ×2 → P_runtuh naik hingga batas batang ujung 137 N); tinggi rangka 15 cm (f atas turun ±20%)" data-tipe="uraian"><div class="soal__kepala"><span class="soal__label">No. 10</span><span>C6 • uraian (merancang)</span></div><p class="soal__teks">Usulkan dua perubahan desain untuk menaikkan rasio beban/berat dan perkirakan pengaruhnya dengan koefisien gaya.</p><textarea aria-label="Jawaban uraian 10" rows="3" style="width:100%"></textarea><div class="baris-tombol"><button class="tombol tombol--kecil" data-lihat="" type="button">Lihat kunci &amp; rubrik</button></div><div class="umpan" hidden=""><b>Kunci:</b> Contoh: batang atas dua lapis (kapasitas ×2 → P_runtuh naik hingga batas batang ujung 137 N); tinggi rangka 15 cm (f atas turun ±20%)<br/><b>Pembahasan:</b> Rubrik: ide 30, analisis koefisien 50, komunikasi 20.</div></div></div><h2 id="refleksi-pribadi-jurnal-minggu-15">14. Refleksi Pribadi (jurnal
+minggu 15)</h2><ul>
+<li><p>Apa peran saya dalam tim dan apa bukti kontribusinya?</p></li>
+<li><p>Seberapa dekat prediksi tim dengan hasil uji? Mengapa?</p></li>
+<li><p>Konsep Mekanika Teknik 1 mana yang paling terasa manfaatnya di
+proyek ini?</p></li>
+<li><p>Apa yang akan saya lakukan berbeda jika mengerjakan jembatan
+nyata? Skala pemahaman: 1 2 3 4 5</p></li>
+</ul><h2 id="glosarium-dan-referensi-bab-1">15. Glosarium dan Referensi
+Bab</h2><div class="gulir"><table class="glosarium">
+<colgroup>
+<col style="width: 26%"/>
+<col style="width: 73%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Istilah</strong></th>
+<th><strong>Arti</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Batang kritis</td>
+<td>Batang yang diperkirakan gagal paling dulu.</td>
+</tr>
+<tr class="even">
+<td>Faktor kontribusi</td>
+<td>Pengali nilai individu (0,8–1,1) berdasarkan log dan penilaian
+sejawat.</td>
+</tr>
+<tr class="odd">
+<td>Koefisien gaya (f_i)</td>
+<td>Gaya batang akibat beban satuan P = 1.</td>
+</tr>
+<tr class="even">
+<td>Pelat buhul</td>
+<td>Pelat penyambung di titik buhul.</td>
+</tr>
+<tr class="odd">
+<td>Rasio beban/berat</td>
+<td>Beban runtuh dibagi berat model; ukuran efisiensi.</td>
+</tr>
+</tbody>
+</table></div><ul>
+<li><p>Tim Dosen PSD3TS PNP. (2026). <em>RPS Mekanika Teknik I
+(SIP3115), Bagian 8–9: Rencana Tugas RT-01 dan rubrik</em>.</p></li>
+<li><p>Hibbeler, R. C. (2024a). <em>Engineering mechanics: Statics</em>
+(15th ed., SI units). Pearson. (Bab 6)</p></li>
+<li><p>Leet, K. M., Uang, C.-M., Lanning, J. T., &amp; Gilbert, A. M.
+(2018). <em>Fundamentals of structural analysis</em> (5th ed.).
+McGraw-Hill. (Bab 4)</p></li>
+</ul>
+    <div class="selesai-bab"><button class="tombol tombol--utama" type="button" data-tandai-selesai><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-kuis"/></svg> Tandai bab ini selesai</button></div>
+    <nav class="nav-bab" aria-label="Navigasi bab"><a class="tombol" href="bab-10.html"><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-bab-sebelumnya"/></svg> Rangka Batang: Titik Buhul dan Ritter</a><a class="tombol tombol--utama" href="uas.html">Evaluasi Akhir Semester <svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-bab-berikutnya"/></svg></a></nav>
+  </main>
+</div>
+<button class="fab" type="button" aria-label="Buka AI Tutor" data-buka-ai><svg class="ikon ikon--besar" aria-hidden="true"><use href="../assets/icons/icons.svg#i-ai-tutor"/></svg></button>
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/app.js" defer></script>
+<script src="../assets/js/ai-tutor.js" defer></script>
+<script src="../assets/js/kuis.js" defer></script>
+<script src="../assets/js/kalkulator.js" defer></script>
+<script defer src="../assets/vendor/katex/katex.min.js"></script>
+<script defer src="../assets/vendor/katex/auto-render.min.js" onload="renderMathInElement(document.getElementById('isi'),{delimiters:[{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}],throwOnError:false})"></script>
+<script type="module" src="../assets/vendor/model-viewer/model-viewer.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kuis & Evaluasi – Mekanika Teknik 1</title>
+<meta name="description" content="E-book interaktif Mekanika Teknik 1 (SIP3115) – D3 Teknik Sipil Politeknik Negeri Padang. Penulis: Dham.">
+<meta name="theme-color" content="#0B3C5D">
+<link rel="manifest" href="../manifest.json">
+<link rel="icon" href="../assets/img/ikon-192.png">
+<link rel="apple-touch-icon" href="../assets/img/ikon-192.png">
+<link rel="stylesheet" href="../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../assets/css/kover.css">
+<link rel="stylesheet" href="../assets/css/ebook.css">
+<link rel="stylesheet" href="../assets/vendor/katex/katex.min.css">
+<script>try{document.documentElement.dataset.tema=localStorage.getItem("mt1-tema")||(matchMedia("(prefers-color-scheme: dark)").matches?"gelap":"terang");document.documentElement.style.setProperty("--font-scale",localStorage.getItem("mt1-huruf")||1)}catch(e){}</script>
+</head>
+<body data-halaman="kuis" data-root="../">
+<div class="bilah-atas" role="banner">
+  <a class="tbl-ikon" href="../index.html" aria-label="Beranda"><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-beranda"/></svg></a>
+  <span class="judul-kecil">Kuis & Evaluasi</span>
+  <button class="tbl-ikon" type="button" aria-label="Cari" data-cari><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-cari"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="A− perkecil huruf" data-huruf="-">A−</button>
+  <button class="tbl-ikon" type="button" aria-label="A+ perbesar huruf" data-huruf="+">A+</button>
+  <button class="tbl-ikon" type="button" aria-label="Mode gelap/terang" data-tema-tombol><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-mode-gelap"/></svg></button>
+  <div class="progres-baca" aria-hidden="true"></div>
+</div>
+<div class="tata" style="grid-template-columns:minmax(0,1fr)"><main class="isi" id="isi" tabindex="-1"><h1>Kuis & Evaluasi</h1>
+<p>Setiap bab memiliki kuis (≥ 10 soal, C1–C6) di komponen 13. Evaluasi Tengah Semester, Evaluasi Akhir Semester, dan Evaluasi Akhir Buku (30 soal) berisi simulasi dengan skor otomatis. Skor terbaik tersimpan di perangkat.</p>
+<ul class="daftar-skor"><li><a href="../bab/awal.html#s1">Bagian Awal</a> <span class="lencana" data-skor-bab="awal"></span></li><li><a href="../bab/bab-01.html#s1">Gaya, Vektor, dan Satuan SI</a> <span class="lencana" data-skor-bab="bab-01"></span></li><li><a href="../bab/bab-02.html#s1">Resultan, Momen, dan Kopel</a> <span class="lencana" data-skor-bab="bab-02"></span></li><li><a href="../bab/bab-03.html#s1">Kesetimbangan, Tumpuan, dan DBB</a> <span class="lencana" data-skor-bab="bab-03"></span></li><li><a href="../bab/bab-04.html#s1">Reaksi Tumpuan dan Balok Kantilever</a> <span class="lencana" data-skor-bab="bab-04"></span></li><li><a href="../bab/bab-05.html#s1">Gaya Dalam Balok: NFD, SFD, BMD</a> <span class="lencana" data-skor-bab="bab-05"></span></li><li><a href="../bab/bab-06.html#s1">Balok Overhang, Beban Segitiga &amp; Trapesium</a> <span class="lencana" data-skor-bab="bab-06"></span></li><li><a href="../bab/bab-07.html#s1">Balok Gerber</a> <span class="lencana" data-skor-bab="bab-07"></span></li><li><a href="../bab/uts.html#s1">Evaluasi Tengah Semester</a> <span class="lencana" data-skor-bab="uts"></span></li><li><a href="../bab/bab-08.html#s1">Portal Statis Tertentu</a> <span class="lencana" data-skor-bab="bab-08"></span></li><li><a href="../bab/bab-09.html#s1">Portal Tiga Sendi</a> <span class="lencana" data-skor-bab="bab-09"></span></li><li><a href="../bab/bab-10.html#s1">Rangka Batang: Titik Buhul dan Ritter</a> <span class="lencana" data-skor-bab="bab-10"></span></li><li><a href="../bab/bab-11.html#s1">Proyek Tim: Model Jembatan Rangka</a> <span class="lencana" data-skor-bab="bab-11"></span></li><li><a href="../bab/uas.html#s1">Evaluasi Akhir Semester</a> <span class="lencana" data-skor-bab="uas"></span></li><li><a href="../bab/akhir.html#s1">Bagian Akhir</a> <span class="lencana" data-skor-bab="akhir"></span></li></ul>
+<div class="kotak kotak--info"><p class="kotak__judul">Ambang tuntas</p><p>CPMK dinyatakan tuntas bila skor ≥ 70 (Kurikulum PSD3TS Bab V.D). Sertifikat penyelesaian e-book terbit bila semua bab selesai dan skor Evaluasi Akhir Buku ≥ 70.</p></div>
+</main></div>
+<script>
+document.addEventListener("DOMContentLoaded",function(){var S=window.MT1&&window.MT1.simpan;if(!S)return;
+document.querySelectorAll("[data-skor-bab]").forEach(function(el){var id=el.dataset.skorBab,best=null;for(var i=1;i<6;i++){var s=S.ambil("mt1-skor-"+id+"-"+i,null);if(s&&(best===null||s.terbaik>best))best=s.terbaik;}el.textContent=best===null?"belum dikerjakan":"skor terbaik "+best+"%";if(best!==null&&best>=70)el.classList.add("lencana--ok");});});
+</script>
+<button class="fab" type="button" aria-label="Buka AI Tutor" data-buka-ai><svg class="ikon ikon--besar" aria-hidden="true"><use href="../assets/icons/icons.svg#i-ai-tutor"/></svg></button>
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/app.js" defer></script>
+<script src="../assets/js/ai-tutor.js" defer></script>
+
+</body>
+</html>

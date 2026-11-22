@@ -1,0 +1,122 @@
+[
+ {
+  "id": "awal",
+  "url": "bab/awal.html",
+  "judul": "Bagian Awal",
+  "minggu": "–",
+  "kalk": null,
+  "model": null
+ },
+ {
+  "id": "bab-01",
+  "url": "bab/bab-01.html",
+  "judul": "Gaya, Vektor, dan Satuan SI",
+  "minggu": "1",
+  "kalk": "vektor",
+  "model": "ar-bab01-tiang-kabel"
+ },
+ {
+  "id": "bab-02",
+  "url": "bab/bab-02.html",
+  "judul": "Resultan, Momen, dan Kopel",
+  "minggu": "2",
+  "kalk": "momen",
+  "model": "ar-bab02-lengan-momen"
+ },
+ {
+  "id": "bab-03",
+  "url": "bab/bab-03.html",
+  "judul": "Kesetimbangan, Tumpuan, dan DBB",
+  "minggu": "3",
+  "kalk": "setimbang",
+  "model": "ar-bab03-tumpuan"
+ },
+ {
+  "id": "bab-04",
+  "url": "bab/bab-04.html",
+  "judul": "Reaksi Tumpuan dan Balok Kantilever",
+  "minggu": "4",
+  "kalk": "balok",
+  "model": "ar-bab04-kanopi"
+ },
+ {
+  "id": "bab-05",
+  "url": "bab/bab-05.html",
+  "judul": "Gaya Dalam Balok: NFD, SFD, BMD",
+  "minggu": "5",
+  "kalk": "balok",
+  "model": "ar-bab05-retak"
+ },
+ {
+  "id": "bab-06",
+  "url": "bab/bab-06.html",
+  "judul": "Balok Overhang, Beban Segitiga & Trapesium",
+  "minggu": "6",
+  "kalk": "balok",
+  "model": "ar-bab06-ruko-tandon"
+ },
+ {
+  "id": "bab-07",
+  "url": "bab/bab-07.html",
+  "judul": "Balok Gerber",
+  "minggu": "7",
+  "kalk": "gerber",
+  "model": "ar-bab07-gerber"
+ },
+ {
+  "id": "uts",
+  "url": "bab/uts.html",
+  "judul": "Evaluasi Tengah Semester",
+  "minggu": "8",
+  "kalk": null,
+  "model": null
+ },
+ {
+  "id": "bab-08",
+  "url": "bab/bab-08.html",
+  "judul": "Portal Statis Tertentu",
+  "minggu": "9",
+  "kalk": "portal",
+  "model": "ar-bab08-carport"
+ },
+ {
+  "id": "bab-09",
+  "url": "bab/bab-09.html",
+  "judul": "Portal Tiga Sendi",
+  "minggu": "10",
+  "kalk": "portal3",
+  "model": "ar-bab09-gudang"
+ },
+ {
+  "id": "bab-10",
+  "url": "bab/bab-10.html",
+  "judul": "Rangka Batang: Titik Buhul dan Ritter",
+  "minggu": "11",
+  "kalk": "rangka",
+  "model": "ar-bab10-rangka"
+ },
+ {
+  "id": "bab-11",
+  "url": "bab/bab-11.html",
+  "judul": "Proyek Tim: Model Jembatan Rangka",
+  "minggu": "12–15",
+  "kalk": "jembatan",
+  "model": "ar-bab11-jembatan-stik"
+ },
+ {
+  "id": "uas",
+  "url": "bab/uas.html",
+  "judul": "Evaluasi Akhir Semester",
+  "minggu": "16",
+  "kalk": null,
+  "model": null
+ },
+ {
+  "id": "akhir",
+  "url": "bab/akhir.html",
+  "judul": "Bagian Akhir",
+  "minggu": "–",
+  "kalk": null,
+  "model": null
+ }
+]

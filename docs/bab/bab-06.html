@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Balok Overhang, Beban Segitiga &amp; Trapesium – Mekanika Teknik 1</title>
+<meta name="description" content="E-book interaktif Mekanika Teknik 1 (SIP3115) – Balok Overhang, Beban Segitiga &amp; Trapesium">
+<meta name="theme-color" content="#0B3C5D">
+<link rel="manifest" href="../manifest.json">
+<link rel="icon" href="../assets/img/ikon-192.png">
+<link rel="stylesheet" href="../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../assets/css/kover.css">
+<link rel="stylesheet" href="../assets/css/ebook.css">
+<link rel="stylesheet" href="../assets/vendor/katex/katex.min.css">
+<script>try{document.documentElement.dataset.tema=localStorage.getItem("mt1-tema")||(matchMedia("(prefers-color-scheme: dark)").matches?"gelap":"terang");document.documentElement.style.setProperty("--font-scale",localStorage.getItem("mt1-huruf")||1)}catch(e){}</script>
+</head>
+<body data-halaman="bab-06" data-root="../">
+<a class="lewati" href="#isi">Lewati ke isi</a>
+<div class="bilah-atas" role="banner">
+  <button class="tbl-ikon tbl-dis" type="button" aria-label="Daftar isi" data-buka-dis><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-peta-konsep"/></svg></button>
+  <a class="tbl-ikon" href="../index.html" aria-label="Beranda"><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-beranda"/></svg></a>
+  <span class="judul-kecil">Balok Overhang, Beban Segitiga &amp; Trapesium</span>
+  <button class="tbl-ikon" type="button" aria-label="Cari" data-cari><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-cari"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Penanda halaman" aria-pressed="false" data-penanda><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-penanda"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Catatan pribadi" data-catatan><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-catatan"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Baca suara" aria-pressed="false" data-suara><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-video"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="A− perkecil huruf" data-huruf="-">A−</button>
+  <button class="tbl-ikon" type="button" aria-label="A+ perbesar huruf" data-huruf="+">A+</button>
+  <button class="tbl-ikon" type="button" aria-label="Mode gelap/terang" data-tema-tombol><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-mode-gelap"/></svg></button>
+  <div class="progres-baca" aria-hidden="true"></div>
+</div>
+<div class="tirai" data-tutup-dis></div>
+<div class="tata">
+  <nav class="dis" aria-label="Daftar isi halaman"></nav>
+  <main class="isi" id="isi" tabindex="-1">
+    <header class="banner-bab"><svg class="seni" viewBox="0 0 1600 500" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><g stroke="#00E5FF" stroke-opacity=".07"><path d="M0 100H1600M0 200H1600M0 300H1600M0 400H1600M200 0V500M400 0V500M600 0V500M800 0V500M1000 0V500M1200 0V500M1400 0V500"/></g><g stroke="#00E5FF" stroke-width="5" fill="none" stroke-linecap="round" opacity=".85"><path d="M980 380H1540M1060 250H1460M980 380L1060 250M1540 380L1460 250M1060 250V380M1160 250V380M1260 250V380M1360 250V380M1460 250V380"/><path d="M1060 380L1160 250M1160 380L1260 250M1360 250L1460 380M1260 250L1360 380" stroke="#1DE9B6"/></g><rect x="0" y="470" width="1600" height="6" fill="#F26622"/></svg><div class="banner-bab__isi"><div class="banner-bab__no">BAB 6 • MINGGU 6</div><h1 class="banner-bab__judul">Balok Overhang, Beban Segitiga &amp; Trapesium</h1><p class="banner-bab__kutip">“Alun takilek alah takalam.” – pepatah
+Minangkabau (belum berkilat sudah terpahami): insinyur yang baik membaca
+bahaya sebelum terjadi.</p></div></header>
+    <p>Minggu 6 • Sub-CPMK 2.3 • CPMK-2 • CPL 2 / IK 2.2 • Case Method 2
+(bobot 9%) • Estimasi belajar: 120 menit mandiri + 220 menit
+kelas/studio</p><h2 id="capaian-pembelajaran-1">2. Capaian Pembelajaran</h2><p><strong>Sub-CPMK 2.3:</strong> Mahasiswa mampu mengevaluasi balok
+overhang dengan beban tambahan.</p><div class="gulir"><table>
+<colgroup>
+<col style="width: 8%"/>
+<col style="width: 66%"/>
+<col style="width: 25%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Kode</strong></th>
+<th><strong>Indikator</strong></th>
+<th><strong>Level Bloom</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2.3.a</td>
+<td>Menghitung reaksi dan gaya dalam balok overhang</td>
+<td>C3 – menghitung</td>
+</tr>
+<tr class="even">
+<td>2.3.b</td>
+<td>Menghitung gaya dalam akibat beban segitiga dan trapesium</td>
+<td>C3 – menghitung</td>
+</tr>
+<tr class="odd">
+<td>2.3.c</td>
+<td>Menentukan momen maksimum positif, momen negatif di tumpuan, dan
+titik momen nol</td>
+<td>C4 – menganalisis</td>
+</tr>
+<tr class="even">
+<td>2.3.d</td>
+<td>Membandingkan beberapa opsi penempatan beban berdasarkan diagram
+momen</td>
+<td>C4 – membandingkan</td>
+</tr>
+<tr class="odd">
+<td>2.3.e</td>
+<td>Memutuskan dan mempertahankan rekomendasi teknis (Case Method
+2)</td>
+<td>C5 – mengevaluasi</td>
+</tr>
+</tbody>
+</table></div><p>Kriteria (RPS): keputusan didukung perhitungan momen maksimum dan
+lokasi titik balik (titik momen nol).</p><h2 id="peta-konsep-bab-1">3. Peta Konsep Bab</h2><ul>
+<li><p><strong>SFD/BMD (Bab 5)</strong> → (6.1) balok overhang: momen
+negatif di tumpuan + positif di bentang</p></li>
+<li><p><strong>Beban terdistribusi (Bab 2)</strong> → (6.2) beban
+segitiga dan trapesium: V parabola, M kubik</p></li>
+<li><p><strong>BMD</strong> → (6.3) Mmaks, momen tumpuan, titik momen
+nol</p></li>
+<li><p><strong>Semua</strong> → (6.4) Case Method 2: tandon 1.000 L di
+balok ruko → Bab 7 (balok Gerber)</p></li>
+</ul><h2 id="apersepsi-1">4. Apersepsi</h2><p><strong>Kasus nyata:</strong> Pemilik ruko dua lantai di Padang ingin
+menambah tandon air 1.000 liter di lantai 2 karena tekanan air PDAM
+lemah. Ia bertanya kepada tukang: “Tandon ditaruh di mana saja boleh,
+kan? Toh lantainya beton.”</p><p><strong>Pertanyaan pemantik:</strong> Apakah letak tandon (di tengah
+ruangan, di teras yang menjorok, atau di dekat kolom) berpengaruh?
+Mengapa?</p><p><strong>Gambar 6.1. Ruko dengan teras menjorok dan rencana letak
+tandon</strong> (ilustrasi baru, sumber: dokumen penulis)</p><p><em>Teks alternatif:</em> Potongan ruko dua lantai: balok lantai 2 di
+atas dua kolom dengan teras menjorok 1,5 m ke depan; tiga posisi tandon
+alternatif ditandai A, B, C.</p><p>Prompt gambar: Cross-section illustration of a two-storey Indonesian
+shophouse (ruko) with a second-floor beam on two columns and a 1.5 m
+cantilevered front balcony, three alternative water tank positions
+highlighted with glowing orange markers, technical educational style,
+navy background, no text</p><h2 id="uraian-materi-1">5. Uraian Materi</h2><h3 id="balok-overhang">6.1 Balok Overhang</h3><p><strong>Balok overhang</strong> (balok dengan ujung menggantung)
+adalah balok sendi–rol yang salah satu atau kedua ujungnya menjorok
+melewati tumpuan – misalnya balok teras ruko atau balok kanopi yang
+ditumpu kolom. Ciri utamanya: <strong>momen negatif</strong> di tumpuan
+dekat bagian menjorok dan <strong>momen positif</strong> di bentang.</p><p>Di antara kedua daerah itu terdapat <strong>titik momen nol</strong>
+(sering disebut titik balik). Titik ini penting di lapangan karena
+menjadi acuan sambungan/penghentian tulangan.</p><div aria-label="M_B = –q·a²/2 – P_ujung·a" class="rumus" role="math">\[M_B=-\frac{q a^2}{2}-P_{ujung}\,a\]</div><p><strong>Keterangan:</strong> M_B = momen di tumpuan dekat overhang
+(kN·m); a = panjang overhang (m); q = beban merata pada overhang (kN/m);
+P_ujung = beban titik di ujung overhang (kN). <strong>Batasan:</strong>
+hanya bagian overhang yang dihitung (dari kanan potongan).</p><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 6.1 – Overhang dengan beban merata
+penuh</p><p><strong>Soal.</strong> Balok AC panjang 8 m: sendi A (x = 0), rol B
+(x = 6 m), overhang BC = 2 m. Beban merata 5 kN/m sepanjang 8 m. Hitung
+reaksi, Mmaks, M_B, dan titik momen nol.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – Resultan 5 × 8 = 40 kN di x = 4 m. ΣMA: RB × 6 = 40 × 4 →
+RB = 26,67 kN; RA = 40 – 26,67 = 13,33 kN.</p><p>Langkah 2 – Bentang AB: V = 13,33 – 5x → V = 0 di x = 2,67 m; Mmaks =
+13,33 × 2,67 – 2,5 × 2,67² = 17,78 kN·m.</p><p>Langkah 3 – M_B = –5 × 2² ÷ 2 = –10,00 kN·m.</p><p>Langkah 4 – Titik momen nol: 13,33x – 2,5x² = 0 → x = 5,33 m (0,67 m
+sebelum B).</p><p class="jawab"><strong>Jawab:</strong> RA = 13,33; RB = 26,67 kN; Mmaks = +17,78
+kN·m @2,67 m; M_B = –10,00 kN·m; momen nol di x = 5,33 m (Gambar
+6.2).</p></details></aside><p><img alt="Gambar 6.2. SFD dan BMD balok overhang Contoh 6.1." loading="lazy" src="../assets/img/bab/bab-06-d1415835bb3d1cfd58ce38602f70ffde5b89703f.png"/></p><p><em>Gambar 6.2. SFD dan BMD balok overhang Contoh 6.1.</em></p><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 6.2 – Overhang dengan beban titik di
+ujung</p><p><strong>Soal.</strong> Balok A–B–C: AB = 4 m (sendi A, rol B),
+overhang BC = 1,5 m. Beban merata 3 kN/m hanya pada AB, beban titik 6 kN
+di C.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – ΣMA: RB × 4 = 3 × 4 × 2 + 6 × 5,5 = 24 + 33 = 57 → RB =
+14,25 kN; RA = 12 + 6 – 14,25 = 3,75 kN.</p><p>Langkah 2 – M_B = –6 × 1,5 = –9,00 kN·m.</p><p>Langkah 3 – Bentang AB: V = 3,75 – 3x = 0 → x = 1,25 m; Mmaks = 3,75
+× 1,25 – 1,5 × 1,25² = 2,34 kN·m.</p><p>Langkah 4 – Momen nol: 3,75x – 1,5x² = 0 → x = 2,50 m.</p><p class="jawab"><strong>Jawab:</strong> Momen negatif di B (–9,00) jauh lebih besar
+dari momen positif (+2,34): beban di ujung overhang “mengangkat”
+bentang. Jika beban 6 kN lebih besar lagi, RA dapat menjadi negatif –
+tumpuan A tertarik ke atas!</p></details></aside><h3 id="beban-segitiga-dan-trapesium">6.2 Beban Segitiga dan
+Trapesium</h3><p>Beban segitiga muncul dari tekanan tanah/air atau pembagian beban
+pelat ke balok (metode amplop). Beban trapesium adalah gabungan beban
+merata dan segitiga.</p><div aria-label="Segitiga 0 → q pada balok sederhana: RA = qL/6, RB = qL/3, Mmaks =
+qL²/(9√3) di x = L/√3" class="rumus" role="math">\[R_A=\frac{qL}{6},\ R_B=\frac{qL}{3},\
+M_{maks}=\frac{qL^2}{9\sqrt3}\ \text{di}\ x=\frac{L}{\sqrt3}\]</div><p><strong>Keterangan:</strong> q = intensitas maksimum di ujung B
+(kN/m); x diukur dari ujung beban nol (A). <strong>Batasan:</strong>
+khusus beban segitiga penuh pada balok sederhana.</p><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 6.3 – Beban segitiga (lanjutan Contoh
+4.4)</p><p><strong>Soal.</strong> Balok sederhana 6 m, beban segitiga 0 di A
+hingga 6 kN/m di B; RA = 6 kN, RB = 12 kN. Tentukan Mmaks.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – Beban di jarak x: q(x) = 6x/6 = x kN/m.</p><p>Langkah 2 – V(x) = 6 – x²/2 → V = 0 di x = √12 = 3,46 m.</p><p>Langkah 3 – M(x) = 6x – x³/6 → M(3,46) = 20,78 – 6,93 = 13,86
+kN·m.</p><p>Langkah 4 – Periksa rumus: 6 × 36 ÷ (9√3) = 216 ÷ 15,59 = 13,86 ✓</p><p class="jawab"><strong>Jawab:</strong> Mmaks = 13,86 kN·m di x = 3,46 m – bergeser
+ke arah beban besar, bukan di tengah.</p></details></aside><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 6.4 – Beban trapesium</p><p><strong>Soal.</strong> Balok sederhana 6 m, beban trapesium dari 2
+kN/m (A) hingga 5 kN/m (B).</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – Pisahkan: persegi panjang 2 × 6 = 12 kN @3 m; segitiga ½
+× 3 × 6 = 9 kN @4 m.</p><p>Langkah 2 – ΣMA: RB × 6 = 12 × 3 + 9 × 4 = 72 → RB = 12,00 kN; RA =
+21 – 12 = 9,00 kN.</p><p>Langkah 3 – V(x) = 9 – 2x – 0,25x² = 0 → x = 3,21 m.</p><p>Langkah 4 – M(x) = 9x – x² – x³/12 → M(3,21) = 28,90 – 10,31 – 2,76 =
+15,83 kN·m.</p><p class="jawab"><strong>Jawab:</strong> RA = 9,00; RB = 12,00 kN; Mmaks = 15,83 kN·m
+@3,21 m (Gambar 6.3).</p></details></aside><p><img alt="Gambar 6.3. SFD dan BMD beban trapesium Contoh 6.4." loading="lazy" src="../assets/img/bab/bab-06-8ff75ecb14c80e7564912f20866e9466a1fbf046.png"/></p><p><em>Gambar 6.3. SFD dan BMD beban trapesium Contoh 6.4.</em></p><h3 id="momen-maksimum-dan-titik-momen-nol">6.3 Momen Maksimum dan Titik
+Momen Nol</h3><ol type="1">
+<li><p>Mmaks positif: cari x saat V = 0 di bentang, atau titik saat V
+berganti tanda karena beban titik.</p></li>
+<li><p>Momen negatif: hitung di tumpuan dekat overhang dari sisi
+overhang.</p></li>
+<li><p>Titik momen nol: selesaikan M(x) = 0 di bentang.</p></li>
+<li><p>Bandingkan |Mmaks positif| dan |M negatif|: yang lebih besar
+menentukan kebutuhan tulangan bawah/atas.</p></li>
+</ol><aside class="kotak kotak--info"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-info"></use></svg>Info Penting</p><p>Pada balok overhang, beban di ujung menjorok
+<strong>mengurangi</strong> momen positif di bentang tetapi
+<strong>menambah</strong> momen negatif di tumpuan. Jadi beban tambahan
+tidak selalu “membuat semua makin besar” – yang penting adalah di bagian
+mana.</p></aside><aside class="kotak kotak--tips"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-tips"></use></svg>Tips Lapangan</p><p>Air 1.000 liter ≈ 9,81 kN; tandon plastik kosong ±0,3–0,5 kN [PERLU
+VERIFIKASI data pabrik]. Letakkan tandon sedekat mungkin dengan kolom
+atau balok induk, di atas alas yang menyebarkan beban.</p></aside><aside class="kotak kotak--k3"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-peringatan"></use></svg>Peringatan K3</p><p>Mengangkat tandon berisi air ke lantai atas sangat berbahaya. Angkat
+dalam keadaan kosong, isi setelah terpasang, dan jangan menempatkan
+tandon di teras menjorok tanpa pemeriksaan teknis.</p></aside><h3 id="case-method-2-tandon-1.000-l-di-balok-lantai-ruko">6.4 Case
+Method 2 – Tandon 1.000 L di Balok Lantai Ruko</h3><p><strong>Peran:</strong> kelompok sebagai konsultan yang harus memberi
+keputusan kepada pemilik ruko. <strong>Waktu:</strong> 70 menit +
+presentasi 5 menit. <strong>Bobot:</strong> 9% (CPMK-2), rubrik Case
+Method RPS.</p><p><strong>Data kasus (disederhanakan untuk pembelajaran):</strong>
+balok lantai 2: sendi A (x = 0), rol B di kolom depan (x = 5 m), teras
+menjorok BC = 1,5 m. Beban merata eksisting q = 12 kN/m (pelat,
+finishing, dinding ringan, beban hidup). Tandon 1.000 L + tandon kosong
+= 10,2 kN (beban titik). Dari dokumen perencanaan lama, kapasitas momen
+izin balok: <strong>lapangan 40 kN·m</strong> dan <strong>tumpuan B 30
+kN·m</strong> (angka data kasus, bukan nilai standar).</p><p><strong>Tugas kelompok:</strong></p><ol type="1">
+<li><p>Hitung reaksi, Mmaks lapangan, dan M_B untuk kondisi tanpa
+tandon.</p></li>
+<li><p>Hitung kembali untuk tiga opsi: A – tandon di tengah bentang (x =
+2,5 m); B – di ujung teras (x = 6,5 m); C – tepat di atas kolom B (x = 5
+m).</p></li>
+<li><p>Gambarkan SFD dan BMD tiap opsi (boleh dengan Alat Hitung) dan
+bandingkan dengan kapasitas izin.</p></li>
+<li><p>Putuskan opsi terbaik dan tuliskan alasan (keamanan, biaya,
+kemudahan pelaksanaan).</p></li>
+<li><p>Presentasikan; jawab pertanyaan “Bagaimana jika pemilik tetap
+ingin di teras?”</p></li>
+</ol><div class="gulir"><table>
+<colgroup>
+<col style="width: 24%"/>
+<col style="width: 11%"/>
+<col style="width: 11%"/>
+<col style="width: 19%"/>
+<col style="width: 13%"/>
+<col style="width: 18%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Kondisi</strong></th>
+<th><strong>RA (kN)</strong></th>
+<th><strong>RB (kN)</strong></th>
+<th><strong>Mmaks lapangan (kN·m)</strong></th>
+<th><strong>M_B (kN·m)</strong></th>
+<th><strong>Terhadap izin 40 / 30</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tanpa tandon</td>
+<td>27,30</td>
+<td>50,70</td>
+<td>31,05 @2,28 m</td>
+<td>–13,50</td>
+<td>Aman / aman</td>
+</tr>
+<tr class="even">
+<td>Opsi A – tengah bentang</td>
+<td>32,40</td>
+<td>55,80</td>
+<td>43,50 @2,50 m</td>
+<td>–13,50</td>
+<td>**Melebihi** lapangan / aman</td>
+</tr>
+<tr class="odd">
+<td>Opsi B – ujung teras</td>
+<td>24,24</td>
+<td>63,96</td>
+<td>24,48 @2,02 m</td>
+<td>–28,80</td>
+<td>Aman / **hampir batas** (96%)</td>
+</tr>
+<tr class="even">
+<td>Opsi C – di atas kolom B</td>
+<td>27,30</td>
+<td>60,90</td>
+<td>31,05 @2,28 m</td>
+<td>–13,50</td>
+<td>Aman / aman</td>
+</tr>
+</tbody>
+</table></div><p><em>Tabel di atas adalah kunci dosen (dihitung ulang secara numerik);
+pada versi mahasiswa tabel ini kosong.</em></p><p><img alt="Gambar 6.4. Opsi A – tandon di tengah bentang: momen lapangan
+naik menjadi 43,5 kN·m." loading="lazy" src="../assets/img/bab/bab-06-4b10215f30365216bd06b47fde90f48294ba2d58.png"/></p><p><em>Gambar 6.4. Opsi A – tandon di tengah bentang: momen lapangan
+naik menjadi 43,5 kN·m.</em></p><p><img alt="Gambar 6.5. Opsi B – tandon di ujung teras: momen tumpuan B naik
+menjadi –28,8 kN·m." loading="lazy" src="../assets/img/bab/bab-06-16a5e9bb2fa31c48c66da864e703ea52f90e4417.png"/></p><p><em>Gambar 6.5. Opsi B – tandon di ujung teras: momen tumpuan B naik
+menjadi –28,8 kN·m.</em></p><p><img alt="Gambar 6.6. Opsi C – tandon di atas kolom B: momen tidak berubah,
+beban langsung ke kolom." loading="lazy" src="../assets/img/bab/bab-06-c43d519cacef709f08bd1ca3a3f69232ecfad2ca.png"/></p><p><em>Gambar 6.6. Opsi C – tandon di atas kolom B: momen tidak berubah,
+beban langsung ke kolom.</em></p><p><em>Kunci keputusan:</em> Opsi C terbaik – beban langsung diterima
+kolom, momen balok tidak bertambah (RB naik 10,2 kN; kolom dan fondasi
+perlu dicek di mata kuliah lanjut). Opsi A ditolak karena melampaui
+kapasitas lapangan (43,5 &gt; 40). Opsi B tidak dianjurkan karena margin
+tipis (28,8/30 = 96%) dan teras menjorok rawan beban tambahan (orang,
+pot bunga).</p><h2 id="contoh-soal-pembahasan-1">6. Contoh Soal &amp; Pembahasan</h2><p>Empat contoh (6.1–6.4) ditambah tabel perbandingan Case Method 2.
+Semua nilai diperiksa dengan perhitungan numerik.</p><h2 id="tanya-ai-tutor-1">7. Tanya AI Tutor</h2><div class="kartu-ai-grid"><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Jelaskan lebih sederhana</h4><p>Jelaskan mengapa beban di ujung teras ruko mengurangi momen di tengah balok tetapi menambah momen di kolom, dengan analogi jungkat-jungkit.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Jelaskan mengapa beban di ujung teras ruko mengurangi momen di tengah balok tetapi menambah momen di kolom, dengan analogi jungkat-jungkit." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Jelaskan mengapa beban di ujung teras ruko mengurangi momen di tengah balok tetapi menambah momen di kolom, dengan analogi jungkat-jungkit." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Jelaskan mengapa beban di ujung teras ruko mengurangi momen di tengah balok tetapi menambah momen di kolom, dengan analogi jungkat-jungkit." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Pendamping Case Method 2</h4><p>Kami konsultan untuk tandon ruko. Jangan beri jawaban. Tanyakan 4 hal yang harus kami pertimbangkan sebelum memilih letak tandon.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Kami konsultan untuk tandon ruko. Jangan beri jawaban. Tanyakan 4 hal yang harus kami pertimbangkan sebelum memilih letak tandon." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Kami konsultan untuk tandon ruko. Jangan beri jawaban. Tanyakan 4 hal yang harus kami pertimbangkan sebelum memilih letak tandon." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Kami konsultan untuk tandon ruko. Jangan beri jawaban. Tanyakan 4 hal yang harus kami pertimbangkan sebelum memilih letak tandon." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Periksa jawabanku</h4><p>Ini hitungan titik momen nol saya: [tempel]. Apakah persamaan M(x) saya benar? Bimbing saya.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Ini hitungan titik momen nol saya: [tempel]. Apakah persamaan M(x) saya benar? Bimbing saya." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Ini hitungan titik momen nol saya: [tempel]. Apakah persamaan M(x) saya benar? Bimbing saya." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Ini hitungan titik momen nol saya: [tempel]. Apakah persamaan M(x) saya benar? Bimbing saya." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Buat soal latihan</h4><p>Buat 3 soal balok overhang dengan beban trapesium. Sembunyikan jawaban.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Buat 3 soal balok overhang dengan beban trapesium. Sembunyikan jawaban." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Buat 3 soal balok overhang dengan beban trapesium. Sembunyikan jawaban." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Buat 3 soal balok overhang dengan beban trapesium. Sembunyikan jawaban." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Ringkas bab ini</h4><p>Ringkas Bab 6: langkah mencari Mmaks, M tumpuan, dan titik momen nol.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Ringkas Bab 6: langkah mencari Mmaks, M tumpuan, dan titik momen nol." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Ringkas Bab 6: langkah mencari Mmaks, M tumpuan, dan titik momen nol." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Ringkas Bab 6: langkah mencari Mmaks, M tumpuan, dan titik momen nol." type="button">Tanya langsung</button></div></div></div><h2 id="zona-ar-balok-ruko-dengan-tandon">8. Zona AR – Balok Ruko dengan
+Tandon</h2><div class="gulir"><table>
+<colgroup>
+<col style="width: 19%"/>
+<col style="width: 80%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Aspek</strong></th>
+<th><strong>Spesifikasi</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nama objek</td>
+<td>ar-bab06-ruko-tandon.glb (+ .usdz)</td>
+</tr>
+<tr class="even">
+<td>Tujuan belajar</td>
+<td>Melihat pengaruh letak tandon terhadap lendutan dan momen balok
+overhang (indikator 2.3.d)</td>
+</tr>
+<tr class="odd">
+<td>Pembuatan model</td>
+<td>Revit: potongan ruko 2 lantai (balok, kolom, teras 1,5 m, tandon);
+Blender: animasi tandon pindah posisi; GLB ≤ 9 MB</td>
+</tr>
+<tr class="even">
+<td>Hotspot &amp; label</td>
+<td>(1) Kolom A dan B; (2) Teras overhang; (3) Posisi tandon A/B/C; (4)
+Zona momen positif (tarik bawah) dan negatif (tarik atas); (5) Titik
+momen nol</td>
+</tr>
+<tr class="odd">
+<td>Animasi</td>
+<td>Tombol A/B/C memindahkan tandon; lendutan dibesarkan visual dan
+label Mmaks/M_B berubah</td>
+</tr>
+<tr class="even">
+<td>Kode QR</td>
+<td>Menuju ar/bab-06.html</td>
+</tr>
+<tr class="odd">
+<td>Cadangan</td>
+<td>Gambar 6.4–6.6 dan video rotasi</td>
+</tr>
+<tr class="even">
+<td>Pertanyaan pengamatan</td>
+<td>(a) Opsi mana yang membuat teras melendut paling besar? (b) Di mana
+titik momen nol berpindah saat tandon di teras? (c) Mengapa opsi C
+“tidak mengubah” diagram momen?</td>
+</tr>
+</tbody>
+</table></div><div class="ar-kotak">
+<model-viewer alt="Model 3D Balok Overhang, Beban Segitiga &amp; Trapesium" ar="" ar-modes="webxr scene-viewer quick-look" auto-rotate="" camera-controls="" exposure="1.1" loading="lazy" shadow-intensity="0.8" src="../assets/model-3d/ar-bab06-ruko-tandon.glb" touch-action="pan-y">
+<button class="hotspot" data-normal="0 1 0" data-position="5 4.5 0" slot="hotspot-0">1<span>Opsi C: tandon di atas kolom</span></button><button class="hotspot" data-normal="0 1 0" data-position="6 3.3 0" slot="hotspot-1">2<span>Teras menjorok 1,5 m</span></button><button class="hotspot" data-normal="0 1 0" data-position="5 1.5 0" slot="hotspot-2">3<span>Kolom B</span></button>
+<button class="tombol tombol--utama" slot="ar-button" style="position:absolute;bottom:12px;right:12px"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-zona-ar"></use></svg> Lihat di ruanganmu (AR)</button>
+<div slot="poster" style="display:grid;place-items:center;height:100%;color:#CBD5E1">Memuat model 3D…</div>
+</model-viewer>
+<div class="ar-bawah"><div aria-label="Kode QR menuju halaman AR bab-06" class="qr" data-qr="../ar/bab-06.html" role="img"></div>
+<div><b>Petunjuk:</b> pindai kode QR atau ketuk tombol AR → izinkan kamera → arahkan ke lantai datar → ketuk untuk menempatkan model. Ketuk angka untuk membaca label.<ol style="margin:6px 0 0;padding-left:18px"><li>Opsi C: tandon di atas kolom</li><li>Teras menjorok 1,5 m</li><li>Kolom B</li></ol>
+<p style="margin:6px 0 0"><a href="../ar/bab-06.html">Buka halaman AR penuh</a> • Perangkat tanpa AR tetap dapat memutar model 360° dengan jari/tetikus.</p></div></div></div><h2 id="alat-hitung-balok-overhang-beban-kombinasi">9. Alat Hitung –
+Balok Overhang &amp; Beban Kombinasi</h2><div class="gulir"><table>
+<colgroup>
+<col style="width: 19%"/>
+<col style="width: 80%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Aspek</strong></th>
+<th><strong>Spesifikasi</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tujuan</td>
+<td>Reaksi, SFD, BMD, Mmaks, M tumpuan, titik momen nol untuk balok
+overhang satu/dua sisi dengan beban titik, merata parsial, segitiga,
+trapesium</td>
+</tr>
+<tr class="even">
+<td>Rumus</td>
+<td>\(\frac{dV}{dx}=-q;\ \frac{dM}{dx}=V;\ M(x_0)=0\ \text{(akar dicari
+numerik)}\)</td>
+</tr>
+<tr class="odd">
+<td>Input</td>
+<td>Posisi tumpuan A dan B (m), panjang total (m; ≤ 30); beban seperti
+Bab 5; kapasitas izin (opsional) untuk perbandingan</td>
+</tr>
+<tr class="even">
+<td>Output</td>
+<td>RA, RB; Mmaks+ dan lokasinya; M di tiap tumpuan; titik momen nol;
+rasio terhadap kapasitas izin dengan warna hijau/kuning/merah</td>
+</tr>
+<tr class="odd">
+<td>Mode Case Method</td>
+<td>Tombol “Bandingkan opsi”: hingga 4 skenario berdampingan (tabel +
+grafik)</td>
+</tr>
+<tr class="even">
+<td>Validasi &amp; fitur</td>
+<td>Tumpuan harus di dalam panjang balok; peringatan bila RA &lt; 0
+(“Tumpuan A terangkat – periksa angkur”); reset; salin; ekspor
+CSV/PDF</td>
+</tr>
+</tbody>
+</table></div><div class="gulir"><table>
+<colgroup>
+<col style="width: 11%"/>
+<col style="width: 36%"/>
+<col style="width: 34%"/>
+<col style="width: 16%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Kasus uji</strong></th>
+<th><strong>Input</strong></th>
+<th><strong>Hasil yang diharapkan</strong></th>
+<th><strong>Rujukan</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>L = 8; A = 0; B = 6; q = 5 penuh</td>
+<td>RA = 13,33; RB = 26,67; M+ = 17,78 @2,67; M_B = –10,00; nol
+@5,33</td>
+<td>Contoh 6.1</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>L = 5,5; A = 0; B = 4; q = 3 (0–4); P = 6 @5,5</td>
+<td>RA = 3,75; RB = 14,25; M+ = 2,34; M_B = –9,00</td>
+<td>Contoh 6.2</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>L = 6; trapesium 2 → 5</td>
+<td>RA = 9,00; RB = 12,00; Mmaks = 15,83 @3,21</td>
+<td>Contoh 6.4</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Ruko opsi B: L = 6,5; B = 5; q = 12; P = 10,2 @6,5</td>
+<td>RA = 24,24; M+ = 24,48; M_B = –28,80</td>
+<td>Case Method 2</td>
+</tr>
+</tbody>
+</table></div><div class="kalk" data-bab="bab-06" data-kalk="balok"></div><h2 id="studi-kasus-proyek">10. Studi Kasus / Proyek</h2><p>Case Method 2 disajikan lengkap di subbab 6.4.</p><h2 id="info-penting-tips-lapangan-peringatan-k3-1">11. Info Penting /
+Tips Lapangan / Peringatan K3</h2><p>Ketiga kotak ada di subbab 6.3.</p><h2 id="rangkuman-1">12. Rangkuman</h2><ul>
+<li><p>Balok overhang: momen negatif di tumpuan dekat overhang, positif
+di bentang, dipisah titik momen nol.</p></li>
+<li><p>Beban di ujung overhang menurunkan momen lapangan tetapi
+menaikkan momen tumpuan; RA bisa menjadi negatif.</p></li>
+<li><p>Beban segitiga penuh: RA = qL/6, RB = qL/3, Mmaks = qL²/(9√3) di
+x = L/√3; trapesium = persegi panjang + segitiga.</p></li>
+<li><p>Mmaks dicari di V = 0; titik momen nol dari M(x) = 0.</p></li>
+<li><p>Keputusan teknis harus membandingkan beberapa opsi terhadap
+kapasitas, bukan hanya satu angka.</p></li>
+</ul><h2 id="latihan-kuis-interaktif-11-soal">13. Latihan &amp; Kuis
+Interaktif (11 soal)</h2><div class="kuis" data-kuis="bab-06-1"><div class="kuis__skor"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-kuis"></use></svg> <span>Skor: <b data-skor="">0</b> / <b data-maks="">0</b></span><button class="tombol tombol--kecil" data-ulang="">Ulangi</button></div><div class="soal" data-kunci="(b)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 1</span><span>C1 • pilihan ganda</span></div><p class="soal__teks">Balok overhang adalah …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) balok jepit dua ujung</button><button data-opsi="(b)" type="button">(b) balok sendi–rol dengan ujung menjorok melewati tumpuan</button><button data-opsi="(c)" type="button">(c) balok tanpa tumpuan</button><button data-opsi="(d)" type="button">(d) balok tiga sendi</button></div><div class="umpan" hidden=""><b>Kunci:</b> (b)<br/><b>Pembahasan:</b> Lihat 6.1.</div></div><div class="soal" data-kunci="Benar" data-tipe="bs"><div class="soal__kepala"><span class="soal__label">No. 2</span><span>C2 • benar-salah</span></div><p class="soal__teks">Pada balok overhang, momen di tumpuan dekat overhang bernilai negatif.</p><div class="soal__pilihan"><button data-opsi="Benar" type="button">Benar</button><button data-opsi="Salah" type="button">Salah</button></div><div class="umpan" hidden=""><b>Kunci:</b> Benar<br/><b>Pembahasan:</b> Tarik di sisi atas.</div></div><div class="soal" data-kunci="–12" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 3</span><span>C3 • isian angka</span></div><p class="soal__teks">Overhang 2 m dengan q = 6 kN/m (tanpa beban titik). M_B = … kN·m</p><div class="baris-tombol"><input aria-label="Jawaban soal 3" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> –12<br/><b>Pembahasan:</b> –6 × 4 ÷ 2.</div></div><div class="soal" data-kunci="–12" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 4</span><span>C3 • isian angka</span></div><p class="soal__teks">Overhang 1,5 m dengan beban titik 8 kN di ujung. M_B = … kN·m</p><div class="baris-tombol"><input aria-label="Jawaban soal 4" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> –12<br/><b>Pembahasan:</b> –8 × 1,5.</div></div><div class="soal" data-kunci="9; 18" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 5</span><span>C3 • isian angka</span></div><p class="soal__teks">Balok sederhana 9 m, beban segitiga 0 → 6 kN/m. RA = … kN; RB = … kN</p><div class="baris-tombol"><input aria-label="Jawaban soal 5" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 9; 18<br/><b>Pembahasan:</b> qL/6 dan qL/3.</div></div><div class="soal" data-kunci="5,20" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 6</span><span>C3 • isian angka</span></div><p class="soal__teks">Soal no. 5: lokasi Mmaks dari A = … m</p><div class="baris-tombol"><input aria-label="Jawaban soal 6" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 5,20<br/><b>Pembahasan:</b> L/√3 = 9/1,732.</div></div><div class="soal" data-kunci="18" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 7</span><span>C3 • isian angka</span></div><p class="soal__teks">Trapesium 3 → 6 kN/m pada balok 4 m: resultan total = … kN</p><div class="baris-tombol"><input aria-label="Jawaban soal 7" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 18<br/><b>Pembahasan:</b> 3 × 4 + ½ × 3 × 4.</div></div><div class="soal" data-kunci="–22,5" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 8</span><span>C4 • isian angka</span></div><p class="soal__teks">Contoh 6.1: jika overhang diperpanjang menjadi 3 m (beban tetap 5 kN/m), M_B = … kN·m</p><div class="baris-tombol"><input aria-label="Jawaban soal 8" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> –22,5<br/><b>Pembahasan:</b> –5 × 9 ÷ 2.</div></div><div class="soal" data-kunci="(b)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 9</span><span>C4 • pilihan ganda</span></div><p class="soal__teks">Menambah beban di ujung overhang menyebabkan …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) Mmaks lapangan naik dan M_B turun</button><button data-opsi="(b)" type="button">(b) Mmaks lapangan turun dan M_B naik</button><button data-opsi="(c)" type="button">(c) keduanya naik</button><button data-opsi="(d)" type="button">(d) tidak berpengaruh</button></div><div class="umpan" hidden=""><b>Kunci:</b> (b)<br/><b>Pembahasan:</b> Lihat Info Penting 6.3.</div></div><div class="soal" data-kunci="(b)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 10</span><span>C5 • pilihan ganda (menilai)</span></div><p class="soal__teks">Pemilik ruko ingin tandon di tengah ruangan (Opsi A). Tanggapan konsultan yang tepat …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) setuju karena lantai beton</button><button data-opsi="(b)" type="button">(b) tidak disarankan: momen lapangan 43,5 kN·m melampaui izin 40 kN·m; usulkan di atas kolom</button><button data-opsi="(c)" type="button">(c) setuju bila tandon dicat</button><button data-opsi="(d)" type="button">(d) tidak relevan</button></div><div class="umpan" hidden=""><b>Kunci:</b> (b)<br/><b>Pembahasan:</b> Lihat tabel Case Method 2.</div></div><div class="soal" data-kunci="Contoh: tambah kolom/penopang di ujung teras sehingga teras menjadi bentang bertumpuan" data-tipe="uraian"><div class="soal__kepala"><span class="soal__label">No. 11</span><span>C6 • uraian (merancang)</span></div><p class="soal__teks">Pemilik tetap ingin tandon di teras. Rancang satu solusi struktural sederhana dan jelaskan pengaruhnya pada diagram momen.</p><textarea aria-label="Jawaban uraian 11" rows="3" style="width:100%"></textarea><div class="baris-tombol"><button class="tombol tombol--kecil" data-lihat="" type="button">Lihat kunci &amp; rubrik</button></div><div class="umpan" hidden=""><b>Kunci:</b> Contoh: tambah kolom/penopang di ujung teras sehingga teras menjadi bentang bertumpuan<br/><b>Pembahasan:</b> Solusi membuat beban tandon langsung ke tumpuan baru, momen negatif di B berkurang drastis. Rubrik: ide aman 40, analisis diagram 40, komunikasi 20.</div></div></div><h2 id="refleksi-diri-1">14. Refleksi Diri</h2><ul>
+<li><p>Saya dapat menghitung reaksi balok overhang. 1 2 3 4 5</p></li>
+<li><p>Saya dapat mencari Mmaks, M tumpuan, dan titik momen nol. 1 2 3 4
+5</p></li>
+<li><p>Saya dapat menghitung beban segitiga dan trapesium. 1 2 3 4
+5</p></li>
+<li><p>Saya dapat mempertahankan keputusan teknis dengan data. 1 2 3 4
+5</p></li>
+</ul><p><strong>Apa yang sudah/belum saya pahami?</strong> • <strong>Tindak
+lanjut:</strong> skor ≤ 3 → ulangi Contoh 6.1 dan 6.2 dengan Alat Hitung
+mode “Bandingkan opsi”.</p><h2 id="glosarium-dan-referensi-bab-1">15. Glosarium dan Referensi
+Bab</h2><div class="gulir"><table class="glosarium">
+<colgroup>
+<col style="width: 24%"/>
+<col style="width: 75%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Istilah</strong></th>
+<th><strong>Arti</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Balok overhang</td>
+<td>Balok sendi–rol dengan ujung menjorok melewati tumpuan.</td>
+</tr>
+<tr class="even">
+<td>Beban trapesium</td>
+<td>Beban terdistribusi yang intensitasnya berubah linear tetapi tidak
+dimulai dari nol.</td>
+</tr>
+<tr class="odd">
+<td>Kapasitas momen izin</td>
+<td>Momen terbesar yang boleh dipikul penampang (dibahas rinci di
+Struktur Beton I).</td>
+</tr>
+<tr class="even">
+<td>Momen negatif</td>
+<td>Momen yang membuat tarik di sisi atas balok.</td>
+</tr>
+<tr class="odd">
+<td>Titik momen nol</td>
+<td>Titik di mana momen lentur berganti tanda (titik balik).</td>
+</tr>
+</tbody>
+</table></div><ul>
+<li><p>Hibbeler, R. C. (2024b). <em>Structural analysis</em> (11th ed.).
+Pearson. (Bab 4)</p></li>
+<li><p>Hibbeler, R. C. (2024a). <em>Engineering mechanics: Statics</em>
+(15th ed., SI units). Pearson. (Bab 7)</p></li>
+<li><p>Badan Standardisasi Nasional. (2020). <em>SNI 1727:2020 Beban
+desain minimum dan kriteria terkait untuk bangunan gedung dan struktur
+lain</em>. BSN.</p></li>
+</ul>
+    <div class="selesai-bab"><button class="tombol tombol--utama" type="button" data-tandai-selesai><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-kuis"/></svg> Tandai bab ini selesai</button></div>
+    <nav class="nav-bab" aria-label="Navigasi bab"><a class="tombol" href="bab-05.html"><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-bab-sebelumnya"/></svg> Gaya Dalam Balok: NFD, SFD, BMD</a><a class="tombol tombol--utama" href="bab-07.html">Balok Gerber <svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-bab-berikutnya"/></svg></a></nav>
+  </main>
+</div>
+<button class="fab" type="button" aria-label="Buka AI Tutor" data-buka-ai><svg class="ikon ikon--besar" aria-hidden="true"><use href="../assets/icons/icons.svg#i-ai-tutor"/></svg></button>
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/app.js" defer></script>
+<script src="../assets/js/ai-tutor.js" defer></script>
+<script src="../assets/js/kuis.js" defer></script>
+<script src="../assets/js/kalkulator.js" defer></script>
+<script defer src="../assets/vendor/katex/katex.min.js"></script>
+<script defer src="../assets/vendor/katex/auto-render.min.js" onload="renderMathInElement(document.getElementById('isi'),{delimiters:[{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}],throwOnError:false})"></script>
+<script type="module" src="../assets/vendor/model-viewer/model-viewer.min.js"></script>
+</body>
+</html>

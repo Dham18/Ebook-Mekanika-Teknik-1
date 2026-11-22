@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Balok Gerber – Mekanika Teknik 1</title>
+<meta name="description" content="E-book interaktif Mekanika Teknik 1 (SIP3115) – Balok Gerber">
+<meta name="theme-color" content="#0B3C5D">
+<link rel="manifest" href="../manifest.json">
+<link rel="icon" href="../assets/img/ikon-192.png">
+<link rel="stylesheet" href="../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../assets/css/kover.css">
+<link rel="stylesheet" href="../assets/css/ebook.css">
+<link rel="stylesheet" href="../assets/vendor/katex/katex.min.css">
+<script>try{document.documentElement.dataset.tema=localStorage.getItem("mt1-tema")||(matchMedia("(prefers-color-scheme: dark)").matches?"gelap":"terang");document.documentElement.style.setProperty("--font-scale",localStorage.getItem("mt1-huruf")||1)}catch(e){}</script>
+</head>
+<body data-halaman="bab-07" data-root="../">
+<a class="lewati" href="#isi">Lewati ke isi</a>
+<div class="bilah-atas" role="banner">
+  <button class="tbl-ikon tbl-dis" type="button" aria-label="Daftar isi" data-buka-dis><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-peta-konsep"/></svg></button>
+  <a class="tbl-ikon" href="../index.html" aria-label="Beranda"><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-beranda"/></svg></a>
+  <span class="judul-kecil">Balok Gerber</span>
+  <button class="tbl-ikon" type="button" aria-label="Cari" data-cari><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-cari"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Penanda halaman" aria-pressed="false" data-penanda><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-penanda"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Catatan pribadi" data-catatan><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-catatan"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Baca suara" aria-pressed="false" data-suara><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-video"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="A− perkecil huruf" data-huruf="-">A−</button>
+  <button class="tbl-ikon" type="button" aria-label="A+ perbesar huruf" data-huruf="+">A+</button>
+  <button class="tbl-ikon" type="button" aria-label="Mode gelap/terang" data-tema-tombol><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-mode-gelap"/></svg></button>
+  <div class="progres-baca" aria-hidden="true"></div>
+</div>
+<div class="tirai" data-tutup-dis></div>
+<div class="tata">
+  <nav class="dis" aria-label="Daftar isi halaman"></nav>
+  <main class="isi" id="isi" tabindex="-1">
+    <header class="banner-bab"><svg class="seni" viewBox="0 0 1600 500" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><g stroke="#00E5FF" stroke-opacity=".07"><path d="M0 100H1600M0 200H1600M0 300H1600M0 400H1600M200 0V500M400 0V500M600 0V500M800 0V500M1000 0V500M1200 0V500M1400 0V500"/></g><g stroke="#00E5FF" stroke-width="5" fill="none" stroke-linecap="round" opacity=".85"><path d="M980 380H1540M1060 250H1460M980 380L1060 250M1540 380L1460 250M1060 250V380M1160 250V380M1260 250V380M1360 250V380M1460 250V380"/><path d="M1060 380L1160 250M1160 380L1260 250M1360 250L1460 380M1260 250L1360 380" stroke="#1DE9B6"/></g><rect x="0" y="470" width="1600" height="6" fill="#F26622"/></svg><div class="banner-bab__isi"><div class="banner-bab__no">BAB 7 • MINGGU 7</div><h1 class="banner-bab__judul">Balok Gerber</h1><p class="banner-bab__kutip">“Basilang kayu dalam tungku, di sinan api
+mangko hiduik.” – pepatah Minangkabau (kayu bersilang di tungku, di situ
+api hidup): bagian-bagian yang tersambung dengan tepat membuat sistem
+bekerja.</p></div></header>
+    <p>Minggu 7 • Sub-CPMK 3.1 • CPMK-3 • CPL 2 / IK 2.2 • Estimasi belajar:
+120 menit mandiri + 220 menit kelas/studio (studio: verifikasi dengan
+spreadsheet; tutor sebaya)</p><h2 id="capaian-pembelajaran">2. Capaian Pembelajaran</h2><p><strong>Sub-CPMK 3.1:</strong> Mahasiswa mampu menganalisis balok
+Gerber.</p><div class="gulir"><table>
+<colgroup>
+<col style="width: 8%"/>
+<col style="width: 66%"/>
+<col style="width: 25%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Kode</strong></th>
+<th><strong>Indikator</strong></th>
+<th><strong>Level Bloom</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>3.1.a</td>
+<td>Menjelaskan fungsi sendi dalam dan syarat balok Gerber statis
+tertentu</td>
+<td>C2 – menjelaskan</td>
+</tr>
+<tr class="even">
+<td>3.1.b</td>
+<td>Memisahkan balok Gerber menjadi balok induk dan balok anak</td>
+<td>C4 – menguraikan</td>
+</tr>
+<tr class="odd">
+<td>3.1.c</td>
+<td>Menghitung reaksi dan gaya yang diteruskan di sendi dalam</td>
+<td>C3 – menghitung</td>
+</tr>
+<tr class="even">
+<td>3.1.d</td>
+<td>Menggambar SFD dan BMD balok Gerber dengan M = 0 di sendi</td>
+<td>C3–C4</td>
+</tr>
+<tr class="odd">
+<td>3.1.e</td>
+<td>Memverifikasi hasil hitung manual dengan lembar hitung
+(spreadsheet)</td>
+<td>C3/P3 – memverifikasi</td>
+</tr>
+</tbody>
+</table></div><p>Kriteria (RPS): pemisahan balok induk–anak dan diagram gaya dalam
+benar.</p><h2 id="peta-konsep-bab">3. Peta Konsep Bab</h2><ul>
+<li><p><strong>Statis tertentu (Bab 3)</strong> → (7.1) sendi dalam
+memberi persamaan tambahan M = 0</p></li>
+<li><p><strong>Sendi dalam</strong> → (7.2) balok anak (bertumpu) dan
+balok induk (menumpu)</p></li>
+<li><p><strong>Urutan hitung</strong> → anak dulu → reaksinya menjadi
+beban induk</p></li>
+<li><p><strong>Diagram</strong> → (7.3) SFD/BMD gabungan, M = 0 di
+sendi</p></li>
+<li><p><strong>Verifikasi</strong> → (7.4) spreadsheet → Bab 8
+(portal)</p></li>
+</ul><h2 id="apersepsi">4. Apersepsi</h2><p><strong>Pertanyaan pemantik:</strong> Jembatan panjang di atas sungai
+sering terdiri atas beberapa bentang. Jika satu pilar sedikit turun
+karena tanah lunak, mengapa jembatan balok menerus bisa retak, sedangkan
+jembatan dengan sendi di beberapa titik lebih “tenang”?</p><p><strong>Sejarah singkat:</strong> Balok dengan sendi dalam dikenal
+sebagai <strong>balok Gerber</strong>, dinamai menurut insinyur Jerman
+Heinrich Gerber (abad ke-19). Prinsip yang sama dipakai jembatan
+kantilever terkenal, seperti Jembatan Forth di Skotlandia.</p><p><strong>Gambar 7.1. Jembatan dengan sendi dalam</strong> (ilustrasi
+baru, sumber: dokumen penulis)</p><p><em>Teks alternatif:</em> Jembatan tiga bentang: dua bentang tepi
+menjorok sebagai kantilever, bentang tengah pendek digantung di antara
+ujung kantilever pada dua sendi.</p><p>Prompt gambar: Educational illustration of a three-span Gerber
+(cantilever) bridge over a river in West Sumatra, two anchor spans with
+cantilever arms supporting a short suspended span on two internal hinges
+highlighted with glowing orange circles, technical style, navy
+background, no text</p><h2 id="uraian-materi">5. Uraian Materi</h2><h3 id="sendi-dalam-dan-syarat-statis-tertentu">7.1 Sendi Dalam dan
+Syarat Statis Tertentu</h3><p><strong>Sendi dalam</strong> adalah sambungan di tengah balok yang
+dapat meneruskan gaya (vertikal dan horizontal) tetapi <strong>tidak
+dapat meneruskan momen</strong>. Karena itu, momen di sendi dalam selalu
+nol, dan setiap sendi dalam memberi <strong>satu persamaan
+tambahan</strong>: ΣM = 0 terhadap sendi untuk salah satu bagian
+balok.</p><div aria-label="Statis tertentu bila r = 3 + h" class="rumus" role="math">\[r = 3 + h\]</div><p><strong>Keterangan:</strong> r = jumlah reaksi tumpuan; h = jumlah
+sendi dalam. <strong>Batasan:</strong> struktur juga harus stabil –
+susunan sendi dan tumpuan tidak boleh membentuk mekanisme (lihat
+7.2).</p><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 7.1 – Klasifikasi balok dengan sendi
+dalam</p><p><strong>Soal.</strong> (a) Sendi A, rol B, rol C, satu sendi dalam S
+di antara B dan C. (b) Sendi A, rol B, rol C, rol D, dua sendi dalam.
+(c) Sendi A, rol B, dua sendi dalam di bentang AB.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – (a) r = 2 + 1 + 1 = 4; h = 1 → 3 + 1 = 4 = r → statis
+tertentu (bila stabil).</p><p>Langkah 2 – (b) r = 2 + 1 + 1 + 1 = 5; h = 2 → 5 = r → statis
+tertentu (bila stabil).</p><p>Langkah 3 – (c) r = 3; h = 2 → 3 + 2 = 5 &gt; r →
+<strong>labil</strong> (balok di antara dua sendi dalam dapat
+jatuh).</p><p class="jawab"><strong>Jawab:</strong> (a) dan (b) statis tertentu; (c)
+labil.</p></details></aside><h3 id="memisahkan-balok-induk-dan-balok-anak">7.2 Memisahkan Balok
+Induk dan Balok Anak</h3><p>Kunci analisis balok Gerber adalah melihat <strong>siapa menumpu
+siapa</strong>:</p><ul>
+<li><p><strong>Balok anak</strong> (<em>suspended span</em>) – bagian
+yang tidak stabil sendiri; ia “menumpang” pada ujung balok lain melalui
+sendi dalam. Dihitung <strong>lebih dulu</strong> sebagai balok
+sederhana.</p></li>
+<li><p><strong>Balok induk</strong> – bagian yang stabil sendiri (punya
+cukup tumpuan, sering dengan overhang). Reaksi balok anak di sendi
+diberikan kepadanya sebagai <strong>beban titik berlawanan
+arah</strong>.</p></li>
+</ul><p>Analogi: papan jembatan kecil (anak) yang diletakkan di ujung dua
+papan kantilever (induk) – papan kecil hanya “menitipkan” bebannya
+kepada induk.</p><ol type="1">
+<li><p>Tentukan bagian yang stabil sendiri (induk) dan yang tidak
+(anak).</p></li>
+<li><p>Hitung reaksi balok anak sebagai balok sederhana di atas sendi
+dalam.</p></li>
+<li><p>Pindahkan reaksi anak sebagai beban titik ke balok induk (arah
+berlawanan).</p></li>
+<li><p>Hitung reaksi balok induk (Bab 4) dan gaya dalamnya (Bab
+5–6).</p></li>
+<li><p>Gabungkan diagram; periksa M = 0 di setiap sendi dalam dan ΣFy
+seluruh balok.</p></li>
+</ol><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 7.2 – Balok Gerber dua bentang</p><p><strong>Soal.</strong> Sendi A (x = 0), rol B (x = 6 m), sendi dalam
+S (x = 8 m), rol C (x = 12 m). Beban merata q = 4 kN/m sepanjang 12 m.
+Hitung reaksi, M_B, dan Mmaks tiap bentang.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – Anak S–C (4 m) sebagai balok sederhana: RS = RC = 4 × 4 ÷
+2 = 8,00 kN.</p><p>Langkah 2 – Induk A–B–S (8 m, overhang 2 m) memikul q = 4 kN/m dan
+beban titik 8 kN di S.</p><p>Langkah 3 – ΣMA: RB × 6 = 4 × 8 × 4 + 8 × 8 = 128 + 64 = 192 → RB =
+32,00 kN; RA = 32 + 8 – 32 = 8,00 kN.</p><p>Langkah 4 – M_B = –(4 × 2² ÷ 2 + 8 × 2) = –(8 + 16) = –24,00
+kN·m.</p><p>Langkah 5 – Bentang AB: V = 8 – 4x = 0 → x = 2 m; Mmaks = 8 × 2 – 2 ×
+2² = 8,00 kN·m.</p><p>Langkah 6 – Anak: Mmaks = qL²/8 = 4 × 16 ÷ 8 = 8,00 kN·m di x = 10
+m.</p><p>Langkah 7 – Periksa ΣFy seluruh balok: 8 + 32 + 8 = 48 = 4 × 12 ✓; M
+di S = 0 ✓</p><p class="jawab"><strong>Jawab:</strong> RA = 8,00; RB = 32,00; RC = 8,00 kN; M_B =
+–24,00 kN·m; Mmaks AB = 8,00 kN·m; Mmaks SC = 8,00 kN·m (Gambar
+7.2).</p></details></aside><p><img alt="Gambar 7.2. SFD dan BMD balok Gerber Contoh 7.2 (garis putus
+oranye = sendi dalam, M = 0)." loading="lazy" src="../assets/img/bab/bab-07-7e38c5fb6e835380a7744f9ce0ce1be053c57870.png"/></p><p><em>Gambar 7.2. SFD dan BMD balok Gerber Contoh 7.2 (garis putus
+oranye = sendi dalam, M = 0).</em></p><h3 id="diagram-gaya-dalam-balok-gerber">7.3 Diagram Gaya Dalam Balok
+Gerber</h3><p>Ciri diagram balok Gerber: BMD selalu melewati nol di sendi dalam;
+SFD menerus (tidak meloncat) di sendi kecuali ada beban titik tepat di
+sendi; momen negatif muncul di tumpuan yang memikul ujung kantilever
+balok induk.</p><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 7.3 – Balok Gerber tiga bentang
+(simetris)</p><p><strong>Soal.</strong> Sendi A (0), rol B (5 m), sendi dalam S₁ (6,5
+m), sendi dalam S₂ (9,5 m), rol C (11 m), rol D (16 m). Beban titik: 12
+kN di x = 2,5 m; 10 kN di x = 8 m; 12 kN di x = 13,5 m.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – Klasifikasi: r = 5; h = 2 → statis tertentu ✓.</p><p>Langkah 2 – Anak S₁–S₂ (3 m), beban 10 kN di tengah: RS₁ = RS₂ = 5,00
+kN; Mmaks anak = 5 × 1,5 = 7,50 kN·m.</p><p>Langkah 3 – Induk kiri A–B–S₁: beban 12 kN @2,5 m dan 5 kN @6,5 m.
+ΣMA: RB × 5 = 30 + 32,5 = 62,5 → RB = 12,50 kN; RA = 17 – 12,5 = 4,50
+kN.</p><p>Langkah 4 – M di bawah beban 12 kN: 4,5 × 2,5 = 11,25 kN·m; M_B = –5
+× 1,5 = –7,50 kN·m.</p><p>Langkah 5 – Induk kanan simetris: RC = 12,50 kN; RD = 4,50 kN.</p><p>Langkah 6 – Periksa: 4,5 + 12,5 + 12,5 + 4,5 = 34 = 12 + 10 + 12
+✓</p><p class="jawab"><strong>Jawab:</strong> Reaksi 4,50 / 12,50 / 12,50 / 4,50 kN; momen
+lapangan 11,25 dan 7,50 kN·m; momen tumpuan B dan C –7,50 kN·m (Gambar
+7.3).</p></details></aside><p><img alt="Gambar 7.3. SFD dan BMD balok Gerber tiga bentang Contoh
+7.3." loading="lazy" src="../assets/img/bab/bab-07-6299327458c476d6d40ffa737cb454b060f9feae.png"/></p><p><em>Gambar 7.3. SFD dan BMD balok Gerber tiga bentang Contoh
+7.3.</em></p><aside class="kotak kotak--info"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-info"></use></svg>Info Penting</p><p>Jangan menghitung balok induk lebih dulu. Balok induk “tidak tahu”
+berapa beban yang dititipkan balok anak sebelum balok anak
+dihitung.</p></aside><h3 id="verifikasi-dengan-lembar-hitung-spreadsheet">7.4 Verifikasi
+dengan Lembar Hitung (Spreadsheet)</h3><p>Di studio, hasil manual diverifikasi dengan lembar hitung sederhana.
+Susunan kolom yang dianjurkan:</p><div class="gulir"><table>
+<colgroup>
+<col style="width: 9%"/>
+<col style="width: 29%"/>
+<col style="width: 60%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Kolom</strong></th>
+<th><strong>Isi</strong></th>
+<th><strong>Contoh rumus (Excel/Google Sheets)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>x (m), langkah 0,25 m</td>
+<td>=A2+0,25</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>Bagian (induk/anak)</td>
+<td>=IF(A3&lt;=8;"induk";"anak")</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>V(x) per segmen</td>
+<td>induk: =8-4*A3+IF(A3&gt;=6;32;0)</td>
+</tr>
+<tr class="even">
+<td>D</td>
+<td>M(x) per segmen</td>
+<td>induk: =8*A3-2*A3^2+IF(A3&gt;=6;32*(A3-6);0)</td>
+</tr>
+<tr class="odd">
+<td>E</td>
+<td>Cek M di sendi</td>
+<td>=ABS(D(x=8))&lt;0,01 → “OK”</td>
+</tr>
+</tbody>
+</table></div><p><strong>Kriteria lulus verifikasi:</strong> selisih nilai ekstrem
+manual vs lembar hitung ≤ 1% dan M di sendi dalam = 0. Hasil lembar
+hitung juga dapat dibandingkan dengan Alat Hitung Gerber e-book atau
+Ftool.</p><aside class="kotak kotak--tips"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-tips"></use></svg>Tips Lapangan</p><p>Di gambar kerja, sendi dalam ditunjukkan dengan detail sambungan
+khusus (misalnya dudukan bantalan atau sambungan baut berlubang).
+Pastikan pekerja tidak “mengunci” sambungan itu dengan cor tambahan:
+sendi yang terkunci mengubah perilaku struktur.</p></aside><aside class="kotak kotak--k3"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-peringatan"></use></svg>Peringatan K3</p><p>Pada pemasangan balok anak (bentang gantung), pastikan kedua ujung
+kantilever induk sudah stabil dan terkunci sementara. Balok anak yang
+dipasang di atas induk yang belum stabil dapat menggulingkan seluruh
+rangkaian.</p></aside><h2 id="contoh-soal-pembahasan">6. Contoh Soal &amp; Pembahasan</h2><p>Tiga contoh (7.1 klasifikasi, 7.2 dua bentang, 7.3 tiga bentang)
+dengan diagram dari hasil hitungan, ditambah contoh susunan lembar
+hitung di 7.4.</p><h2 id="tanya-ai-tutor">7. Tanya AI Tutor</h2><div class="kartu-ai-grid"><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Jelaskan lebih sederhana</h4><p>Jelaskan balok induk dan balok anak dengan analogi papan di atas dua papan lain. Tanyakan saya mana yang dihitung lebih dulu dan mengapa.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Jelaskan balok induk dan balok anak dengan analogi papan di atas dua papan lain. Tanyakan saya mana yang dihitung lebih dulu dan mengapa." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Jelaskan balok induk dan balok anak dengan analogi papan di atas dua papan lain. Tanyakan saya mana yang dihitung lebih dulu dan mengapa." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Jelaskan balok induk dan balok anak dengan analogi papan di atas dua papan lain. Tanyakan saya mana yang dihitung lebih dulu dan mengapa." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Periksa pemisahan saya</h4><p>Ini cara saya memisahkan balok Gerber: [jelaskan]. Apakah bagian anak sudah benar? Bimbing dengan pertanyaan.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Ini cara saya memisahkan balok Gerber: [jelaskan]. Apakah bagian anak sudah benar? Bimbing dengan pertanyaan." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Ini cara saya memisahkan balok Gerber: [jelaskan]. Apakah bagian anak sudah benar? Bimbing dengan pertanyaan." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Ini cara saya memisahkan balok Gerber: [jelaskan]. Apakah bagian anak sudah benar? Bimbing dengan pertanyaan." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Beri contoh lain</h4><p>Beri 2 contoh sendi dalam di bangunan nyata (jembatan, kanopi, rangka atap) dan minta saya menggambar DBB-nya.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Beri 2 contoh sendi dalam di bangunan nyata (jembatan, kanopi, rangka atap) dan minta saya menggambar DBB-nya." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Beri 2 contoh sendi dalam di bangunan nyata (jembatan, kanopi, rangka atap) dan minta saya menggambar DBB-nya." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Beri 2 contoh sendi dalam di bangunan nyata (jembatan, kanopi, rangka atap) dan minta saya menggambar DBB-nya." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Buat soal latihan</h4><p>Buat 2 soal balok Gerber dua bentang dengan beban titik dan merata. Sembunyikan jawaban.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Buat 2 soal balok Gerber dua bentang dengan beban titik dan merata. Sembunyikan jawaban." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Buat 2 soal balok Gerber dua bentang dengan beban titik dan merata. Sembunyikan jawaban." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Buat 2 soal balok Gerber dua bentang dengan beban titik dan merata. Sembunyikan jawaban." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Ringkas bab ini</h4><p>Ringkas Bab 7 menjadi 5 langkah analisis balok Gerber.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Ringkas Bab 7 menjadi 5 langkah analisis balok Gerber." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Ringkas Bab 7 menjadi 5 langkah analisis balok Gerber." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Ringkas Bab 7 menjadi 5 langkah analisis balok Gerber." type="button">Tanya langsung</button></div></div></div><h2 id="zona-ar-sambungan-sendi-dalam-balok-gerber">8. Zona AR –
+Sambungan Sendi Dalam Balok Gerber</h2><div class="gulir"><table>
+<colgroup>
+<col style="width: 19%"/>
+<col style="width: 80%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Aspek</strong></th>
+<th><strong>Spesifikasi</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nama objek</td>
+<td>ar-bab07-gerber.glb (+ .usdz)</td>
+</tr>
+<tr class="even">
+<td>Tujuan belajar</td>
+<td>Melihat bagaimana balok anak menumpang pada kantilever balok induk
+dan mengapa momen di sendi nol (indikator 3.1.a–b)</td>
+</tr>
+<tr class="odd">
+<td>Pembuatan model</td>
+<td>Blender: balok Gerber 3 bentang skala kecil (mirip Contoh 7.3)
+dengan detail sendi berupa pin dan pelat; GLB ≤ 7 MB</td>
+</tr>
+<tr class="even">
+<td>Hotspot &amp; label</td>
+<td>(1) Balok induk kiri/kanan; (2) Balok anak; (3) Sendi dalam S₁, S₂
+(zoom detail pin); (4) Reaksi tumpuan; (5) Zona momen negatif di B dan
+C</td>
+</tr>
+<tr class="odd">
+<td>Animasi</td>
+<td>Tombol “Pisahkan”: balok anak terangkat, panah RS muncul sebagai
+beban pada induk; tombol “Gabungkan”</td>
+</tr>
+<tr class="even">
+<td>Kode QR</td>
+<td>Menuju ar/bab-07.html</td>
+</tr>
+<tr class="odd">
+<td>Cadangan</td>
+<td>Gambar 7.2–7.3 dan animasi 2D</td>
+</tr>
+<tr class="even">
+<td>Pertanyaan pengamatan</td>
+<td>(a) Bagian mana yang tetap berdiri jika balok anak diangkat? (b)
+Mengapa sendi tidak menahan momen? (c) Di mana momen negatif
+terbesar?</td>
+</tr>
+</tbody>
+</table></div><div class="ar-kotak">
+<model-viewer alt="Model 3D Balok Gerber" ar="" ar-modes="webxr scene-viewer quick-look" auto-rotate="" camera-controls="" exposure="1.1" loading="lazy" shadow-intensity="0.8" src="../assets/model-3d/ar-bab07-gerber.glb" touch-action="pan-y">
+<button class="hotspot" data-normal="0 1 0" data-position="6.5 0.5 0" slot="hotspot-0">1<span>Sendi dalam S1</span></button><button class="hotspot" data-normal="0 1 0" data-position="9.5 0.5 0" slot="hotspot-1">2<span>Sendi dalam S2</span></button><button class="hotspot" data-normal="0 1 0" data-position="8 0.5 0" slot="hotspot-2">3<span>Balok anak</span></button>
+<button class="tombol tombol--utama" slot="ar-button" style="position:absolute;bottom:12px;right:12px"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-zona-ar"></use></svg> Lihat di ruanganmu (AR)</button>
+<div slot="poster" style="display:grid;place-items:center;height:100%;color:#CBD5E1">Memuat model 3D…</div>
+</model-viewer>
+<div class="ar-bawah"><div aria-label="Kode QR menuju halaman AR bab-07" class="qr" data-qr="../ar/bab-07.html" role="img"></div>
+<div><b>Petunjuk:</b> pindai kode QR atau ketuk tombol AR → izinkan kamera → arahkan ke lantai datar → ketuk untuk menempatkan model. Ketuk angka untuk membaca label.<ol style="margin:6px 0 0;padding-left:18px"><li>Sendi dalam S1</li><li>Sendi dalam S2</li><li>Balok anak</li></ol>
+<p style="margin:6px 0 0"><a href="../ar/bab-07.html">Buka halaman AR penuh</a> • Perangkat tanpa AR tetap dapat memutar model 360° dengan jari/tetikus.</p></div></div></div><h2 id="alat-hitung-balok-gerber">9. Alat Hitung – Balok Gerber</h2><div class="gulir"><table>
+<colgroup>
+<col style="width: 19%"/>
+<col style="width: 80%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Aspek</strong></th>
+<th><strong>Spesifikasi</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tujuan</td>
+<td>Analisis balok Gerber 2–3 bentang: klasifikasi (r = 3 + h),
+pemisahan induk–anak otomatis, reaksi, gaya di sendi, SFD, BMD</td>
+</tr>
+<tr class="even">
+<td>Rumus</td>
+<td>\(r=3+h;\ M_{sendi}=0;\ \text{anak} \rightarrow \text{induk (beban }
+R_S)\)</td>
+</tr>
+<tr class="odd">
+<td>Input</td>
+<td>Posisi tumpuan (jenis + x), posisi sendi dalam (x), beban
+(titik/merata/segitiga); panjang total ≤ 40 m</td>
+</tr>
+<tr class="even">
+<td>Output</td>
+<td>Status stabil/labil/statis tertentu; urutan hitung (anak → induk);
+RA…RD; RS; Mmaks per bentang; M tumpuan; diagram dengan tanda sendi</td>
+</tr>
+<tr class="odd">
+<td>Validasi</td>
+<td>Peringatan “Struktur labil: bagian antara dua sendi tanpa tumpuan”
+bila mekanisme terdeteksi</td>
+</tr>
+<tr class="even">
+<td>Langkah &amp; fitur</td>
+<td>Diagram pemisahan (animasi), tabel langkah, ekspor CSV untuk
+dibandingkan dengan spreadsheet; reset; salin; PDF</td>
+</tr>
+</tbody>
+</table></div><div class="gulir"><table>
+<colgroup>
+<col style="width: 11%"/>
+<col style="width: 39%"/>
+<col style="width: 33%"/>
+<col style="width: 15%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Kasus uji</strong></th>
+<th><strong>Input</strong></th>
+<th><strong>Hasil yang diharapkan</strong></th>
+<th><strong>Rujukan</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>A0 sendi, B6 rol, S8, C12 rol; q = 4 penuh</td>
+<td>RA = 8; RB = 32; RC = 8 kN; M_B = –24; Mmaks = 8 kN·m</td>
+<td>Contoh 7.2</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>A0, B5, S6,5, S9,5, C11, D16; P 12@2,5; 10@8; 12@13,5</td>
+<td>RA = RD = 4,5; RB = RC = 12,5 kN; M = 11,25 / 7,50 / –7,50</td>
+<td>Contoh 7.3</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Sendi A, rol B, dua sendi dalam di AB</td>
+<td>Status: labil</td>
+<td>Contoh 7.1(c)</td>
+</tr>
+</tbody>
+</table></div><div class="kalk" data-bab="bab-07" data-kalk="gerber"></div><h2 id="studi-kasus-mini-jembatan-desa-tiga-bentang">10. Studi Kasus
+Mini – Jembatan Desa Tiga Bentang</h2><p>Jembatan kayu–baja desa di atas irigasi direncanakan tiga bentang
+seperti Contoh 7.3. Warga ingin truk kecil (beban titik 30 kN) dapat
+lewat. Kelompok diminta menentukan posisi truk yang menghasilkan momen
+lapangan terbesar pada balok anak dan pada balok induk.</p><ol type="1">
+<li><p>Hitung momen balok anak jika truk tepat di tengah bentang
+anak.</p></li>
+<li><p>Hitung momen lapangan balok induk jika truk di tengah bentang
+AB.</p></li>
+<li><p>Mana yang lebih kritis? Usulkan satu langkah pengamanan (rambu
+batas beban, perkuatan).</p></li>
+</ol><p><em>Kunci dosen (hanya beban truk):</em> anak: 30 × 3 ÷ 4 = 22,50
+kN·m; induk AB (bentang 5 m, P di tengah): 30 × 5 ÷ 4 = 37,50 kN·m →
+bentang induk lebih kritis. Rambu batas beban dan pemeriksaan sambungan
+sendi wajib.</p><h2 id="info-penting-tips-lapangan-peringatan-k3">11. Info Penting /
+Tips Lapangan / Peringatan K3</h2><p>Info Penting di 7.3; Tips Lapangan dan Peringatan K3 di 7.4.</p><h2 id="rangkuman">12. Rangkuman</h2><ul>
+<li><p>Sendi dalam meneruskan gaya tetapi tidak momen: M = 0 di
+sendi.</p></li>
+<li><p>Statis tertentu bila r = 3 + h dan stabil.</p></li>
+<li><p>Hitung balok anak dulu, lalu beri reaksinya sebagai beban pada
+balok induk.</p></li>
+<li><p>BMD melewati nol di sendi; momen negatif muncul di tumpuan yang
+memikul kantilever induk.</p></li>
+<li><p>Verifikasi dengan spreadsheet/Alat Hitung: selisih ≤ 1%, M sendi
+= 0.</p></li>
+</ul><h2 id="latihan-kuis-interaktif-11-soal">13. Latihan &amp; Kuis
+Interaktif (11 soal)</h2><div class="kuis" data-kuis="bab-07-1"><div class="kuis__skor"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-kuis"></use></svg> <span>Skor: <b data-skor="">0</b> / <b data-maks="">0</b></span><button class="tombol tombol--kecil" data-ulang="">Ulangi</button></div><div class="soal" data-kunci="(c)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 1</span><span>C1 • pilihan ganda</span></div><p class="soal__teks">Sendi dalam tidak dapat meneruskan …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) gaya vertikal</button><button data-opsi="(b)" type="button">(b) gaya horizontal</button><button data-opsi="(c)" type="button">(c) momen</button><button data-opsi="(d)" type="button">(d) semua gaya</button></div><div class="umpan" hidden=""><b>Kunci:</b> (c)<br/><b>Pembahasan:</b> M = 0 di sendi.</div></div><div class="soal" data-kunci="Salah" data-tipe="bs"><div class="soal__kepala"><span class="soal__label">No. 2</span><span>C2 • benar-salah</span></div><p class="soal__teks">Balok anak dihitung setelah balok induk.</p><div class="soal__pilihan"><button data-opsi="Benar" type="button">Benar</button><button data-opsi="Salah" type="button">Salah</button></div><div class="umpan" hidden=""><b>Kunci:</b> Salah<br/><b>Pembahasan:</b> Anak dihitung lebih dulu.</div></div><div class="soal" data-kunci="(b)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 3</span><span>C2 • pilihan ganda</span></div><p class="soal__teks">Syarat statis tertentu balok dengan h sendi dalam …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) r = 3</button><button data-opsi="(b)" type="button">(b) r = 3 + h</button><button data-opsi="(c)" type="button">(c) r = 3 – h</button><button data-opsi="(d)" type="button">(d) r = 2h</button></div><div class="umpan" hidden=""><b>Kunci:</b> (b)<br/><b>Pembahasan:</b> Tiap sendi menambah satu persamaan.</div></div><div class="soal" data-kunci="5" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 4</span><span>C3 • isian angka</span></div><p class="soal__teks">Balok dengan 2 sendi dalam perlu … reaksi agar statis tertentu</p><div class="baris-tombol"><input aria-label="Jawaban soal 4" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 5<br/><b>Pembahasan:</b> 3 + 2.</div></div><div class="soal" data-kunci="6" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 5</span><span>C3 • isian angka</span></div><p class="soal__teks">Balok anak 4 m, beban titik 12 kN di tengah. Gaya di tiap sendi = … kN</p><div class="baris-tombol"><input aria-label="Jawaban soal 5" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 6<br/><b>Pembahasan:</b> Simetris.</div></div><div class="soal" data-kunci="–12" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 6</span><span>C3 • isian angka</span></div><p class="soal__teks">Induk A–B dengan overhang 2 m menerima beban 6 kN dari anak di ujung overhang (tanpa beban lain di overhang). M_B = … kN·m</p><div class="baris-tombol"><input aria-label="Jawaban soal 6" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> –12<br/><b>Pembahasan:</b> –6 × 2.</div></div><div class="soal" data-kunci="10" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 7</span><span>C3 • isian angka</span></div><p class="soal__teks">Contoh 7.2 dengan q = 5 kN/m: RC = … kN</p><div class="baris-tombol"><input aria-label="Jawaban soal 7" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 10<br/><b>Pembahasan:</b> 5 × 4 ÷ 2.</div></div><div class="soal" data-kunci="(b)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 8</span><span>C4 • pilihan ganda</span></div><p class="soal__teks">Struktur: sendi A, rol B, sendi dalam S di bentang AB. Struktur ini …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) statis tertentu</button><button data-opsi="(b)" type="button">(b) labil</button><button data-opsi="(c)" type="button">(c) statis tak tentu</button><button data-opsi="(d)" type="button">(d) stabil karena ada sendi</button></div><div class="umpan" hidden=""><b>Kunci:</b> (b)<br/><b>Pembahasan:</b> r = 3 &lt; 3 + 1.</div></div><div class="soal" data-kunci="4" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 9</span><span>C4 • isian angka</span></div><p class="soal__teks">Contoh 7.2: lokasi momen nol pada bentang AB (selain di A) = … m</p><div class="baris-tombol"><input aria-label="Jawaban soal 9" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 4<br/><b>Pembahasan:</b> 8x – 2x² = 0 → x = 4.</div></div><div class="soal" data-kunci="(b)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 10</span><span>C5 • pilihan ganda (menilai)</span></div><p class="soal__teks">Lembar hitung Fajar menunjukkan M di sendi = 3,2 kN·m. Kesimpulan terbaik …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) wajar karena pembulatan</button><button data-opsi="(b)" type="button">(b) ada kesalahan rumus segmen; M di sendi harus 0</button><button data-opsi="(c)" type="button">(c) sendi menahan momen kecil</button><button data-opsi="(d)" type="button">(d) abaikan</button></div><div class="umpan" hidden=""><b>Kunci:</b> (b)<br/><b>Pembahasan:</b> Selisih sebesar itu bukan pembulatan.</div></div><div class="soal" data-kunci="Contoh: sendi di bentang BC dekat B (±1,5 m dari B)" data-tipe="uraian"><div class="soal__kepala"><span class="soal__label">No. 11</span><span>C6 • uraian (merancang)</span></div><p class="soal__teks">Rancang letak satu sendi dalam pada balok menerus di atas 3 tumpuan (A sendi, B rol, C rol; AB = BC = 6 m) agar struktur menjadi statis tertentu dan momen di B kecil. Jelaskan dengan DBB.</p><textarea aria-label="Jawaban uraian 11" rows="3" style="width:100%"></textarea><div class="baris-tombol"><button class="tombol tombol--kecil" data-lihat="" type="button">Lihat kunci &amp; rubrik</button></div><div class="umpan" hidden=""><b>Kunci:</b> Contoh: sendi di bentang BC dekat B (±1,5 m dari B)<br/><b>Pembahasan:</b> r = 4 → h = 1. Sendi dekat B membuat overhang induk pendek sehingga M_B kecil. Rubrik: klasifikasi 30, DBB 40, alasan 30.</div></div></div><h2 id="refleksi-diri">14. Refleksi Diri</h2><ul>
+<li><p>Saya dapat menjelaskan sendi dalam dan r = 3 + h. 1 2 3 4
+5</p></li>
+<li><p>Saya dapat memisahkan balok induk dan anak. 1 2 3 4 5</p></li>
+<li><p>Saya dapat menggambar SFD/BMD balok Gerber. 1 2 3 4 5</p></li>
+<li><p>Saya dapat memverifikasi dengan spreadsheet. 1 2 3 4 5</p></li>
+</ul><p><strong>Apa yang sudah/belum saya pahami?</strong> • <strong>Tindak
+lanjut:</strong> skor ≤ 3 → minta tutor sebaya menjelaskan pemisahan
+Contoh 7.3, lalu ulangi dengan Alat Hitung Gerber.</p><h2 id="glosarium-dan-referensi-bab">15. Glosarium dan Referensi
+Bab</h2><div class="gulir"><table class="glosarium">
+<colgroup>
+<col style="width: 24%"/>
+<col style="width: 75%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Istilah</strong></th>
+<th><strong>Arti</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Balok anak</td>
+<td>Bagian balok Gerber yang menumpang pada balok lain melalui sendi
+dalam.</td>
+</tr>
+<tr class="even">
+<td>Balok Gerber</td>
+<td>Balok menerus yang dibuat statis tertentu dengan sendi dalam.</td>
+</tr>
+<tr class="odd">
+<td>Balok induk</td>
+<td>Bagian yang stabil sendiri dan menumpu balok anak.</td>
+</tr>
+<tr class="even">
+<td>Mekanisme</td>
+<td>Susunan yang dapat bergerak (labil).</td>
+</tr>
+<tr class="odd">
+<td>Sendi dalam</td>
+<td>Sambungan di dalam balok dengan momen nol.</td>
+</tr>
+</tbody>
+</table></div><ul>
+<li><p>Hibbeler, R. C. (2024b). <em>Structural analysis</em> (11th ed.).
+Pearson. (Bab 2 dan 4)</p></li>
+<li><p>Leet, K. M., Uang, C.-M., Lanning, J. T., &amp; Gilbert, A. M.
+(2018). <em>Fundamentals of structural analysis</em> (5th ed.).
+McGraw-Hill. (Bab 3 dan 5)</p></li>
+</ul>
+    <div class="selesai-bab"><button class="tombol tombol--utama" type="button" data-tandai-selesai><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-kuis"/></svg> Tandai bab ini selesai</button></div>
+    <nav class="nav-bab" aria-label="Navigasi bab"><a class="tombol" href="bab-06.html"><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-bab-sebelumnya"/></svg> Balok Overhang, Beban Segitiga &amp; Trapesium</a><a class="tombol tombol--utama" href="uts.html">Evaluasi Tengah Semester <svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-bab-berikutnya"/></svg></a></nav>
+  </main>
+</div>
+<button class="fab" type="button" aria-label="Buka AI Tutor" data-buka-ai><svg class="ikon ikon--besar" aria-hidden="true"><use href="../assets/icons/icons.svg#i-ai-tutor"/></svg></button>
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/app.js" defer></script>
+<script src="../assets/js/ai-tutor.js" defer></script>
+<script src="../assets/js/kuis.js" defer></script>
+<script src="../assets/js/kalkulator.js" defer></script>
+<script defer src="../assets/vendor/katex/katex.min.js"></script>
+<script defer src="../assets/vendor/katex/auto-render.min.js" onload="renderMathInElement(document.getElementById('isi'),{delimiters:[{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}],throwOnError:false})"></script>
+<script type="module" src="../assets/vendor/model-viewer/model-viewer.min.js"></script>
+</body>
+</html>

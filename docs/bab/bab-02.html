@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resultan, Momen, dan Kopel – Mekanika Teknik 1</title>
+<meta name="description" content="E-book interaktif Mekanika Teknik 1 (SIP3115) – Resultan, Momen, dan Kopel">
+<meta name="theme-color" content="#0B3C5D">
+<link rel="manifest" href="../manifest.json">
+<link rel="icon" href="../assets/img/ikon-192.png">
+<link rel="stylesheet" href="../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../assets/css/kover.css">
+<link rel="stylesheet" href="../assets/css/ebook.css">
+<link rel="stylesheet" href="../assets/vendor/katex/katex.min.css">
+<script>try{document.documentElement.dataset.tema=localStorage.getItem("mt1-tema")||(matchMedia("(prefers-color-scheme: dark)").matches?"gelap":"terang");document.documentElement.style.setProperty("--font-scale",localStorage.getItem("mt1-huruf")||1)}catch(e){}</script>
+</head>
+<body data-halaman="bab-02" data-root="../">
+<a class="lewati" href="#isi">Lewati ke isi</a>
+<div class="bilah-atas" role="banner">
+  <button class="tbl-ikon tbl-dis" type="button" aria-label="Daftar isi" data-buka-dis><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-peta-konsep"/></svg></button>
+  <a class="tbl-ikon" href="../index.html" aria-label="Beranda"><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-beranda"/></svg></a>
+  <span class="judul-kecil">Resultan, Momen, dan Kopel</span>
+  <button class="tbl-ikon" type="button" aria-label="Cari" data-cari><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-cari"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Penanda halaman" aria-pressed="false" data-penanda><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-penanda"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Catatan pribadi" data-catatan><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-catatan"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="Baca suara" aria-pressed="false" data-suara><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-video"/></svg></button>
+  <button class="tbl-ikon" type="button" aria-label="A− perkecil huruf" data-huruf="-">A−</button>
+  <button class="tbl-ikon" type="button" aria-label="A+ perbesar huruf" data-huruf="+">A+</button>
+  <button class="tbl-ikon" type="button" aria-label="Mode gelap/terang" data-tema-tombol><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-mode-gelap"/></svg></button>
+  <div class="progres-baca" aria-hidden="true"></div>
+</div>
+<div class="tirai" data-tutup-dis></div>
+<div class="tata">
+  <nav class="dis" aria-label="Daftar isi halaman"></nav>
+  <main class="isi" id="isi" tabindex="-1">
+    <header class="banner-bab"><svg class="seni" viewBox="0 0 1600 500" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><g stroke="#00E5FF" stroke-opacity=".07"><path d="M0 100H1600M0 200H1600M0 300H1600M0 400H1600M200 0V500M400 0V500M600 0V500M800 0V500M1000 0V500M1200 0V500M1400 0V500"/></g><g stroke="#00E5FF" stroke-width="5" fill="none" stroke-linecap="round" opacity=".85"><path d="M980 380H1540M1060 250H1460M980 380L1060 250M1540 380L1460 250M1060 250V380M1160 250V380M1260 250V380M1360 250V380M1460 250V380"/><path d="M1060 380L1160 250M1160 380L1260 250M1360 250L1460 380M1260 250L1360 380" stroke="#1DE9B6"/></g><rect x="0" y="470" width="1600" height="6" fill="#F26622"/></svg><div class="banner-bab__isi"><div class="banner-bab__no">BAB 2 • MINGGU 2</div><h1 class="banner-bab__judul">Resultan, Momen, dan Kopel</h1><p class="banner-bab__kutip">“Berikan aku tempat berpijak, akan kuangkat
+bumi.” – Archimedes, tentang kekuatan tuas.</p></div></header>
+    <p>Minggu 2 • Sub-CPMK 1.2 • CPMK-1 • CPL 2 / IK 2.1 • Estimasi belajar:
+120 menit mandiri + 220 menit kelas/studio</p><h2 id="capaian-pembelajaran-1">2. Capaian Pembelajaran</h2><p><strong>Sub-CPMK 1.2:</strong> Mahasiswa mampu menghitung resultan
+gaya, momen, dan kopel.</p><div class="gulir"><table>
+<colgroup>
+<col style="width: 8%"/>
+<col style="width: 66%"/>
+<col style="width: 25%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Kode</strong></th>
+<th><strong>Indikator</strong></th>
+<th><strong>Level Bloom</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1.2.a</td>
+<td>Menghitung momen gaya terhadap suatu titik dengan tanda yang
+benar</td>
+<td>C3 – menghitung</td>
+</tr>
+<tr class="even">
+<td>1.2.b</td>
+<td>Menerapkan teorema Varignon untuk gaya miring</td>
+<td>C3 – menerapkan</td>
+</tr>
+<tr class="odd">
+<td>1.2.c</td>
+<td>Menjelaskan sifat kopel dan menghitung momen kopel</td>
+<td>C2–C3</td>
+</tr>
+<tr class="even">
+<td>1.2.d</td>
+<td>Menentukan besar dan letak resultan gaya sejajar serta beban
+terdistribusi</td>
+<td>C3 – menghitung</td>
+</tr>
+<tr class="odd">
+<td>1.2.e</td>
+<td>Memindahkan gaya ke titik lain menjadi gaya + kopel (beban
+eksentris)</td>
+<td>C4 – menganalisis</td>
+</tr>
+</tbody>
+</table></div><p>Kriteria keberhasilan (RPS): resultan dan momen dihitung benar pada ≥
+80% soal.</p><h2 id="peta-konsep-bab-1">3. Peta Konsep Bab</h2><ul>
+<li><p><strong>Gaya (Bab 1)</strong> → (2.1) momen terhadap titik: M =
+F·d</p></li>
+<li><p><strong>Momen</strong> → (2.2) Varignon: jumlah momen
+komponen</p></li>
+<li><p><strong>Momen</strong> → (2.3) kopel: dua gaya sejajar
+berlawanan</p></li>
+<li><p><strong>Resultan</strong> → (2.4) gaya sejajar dan beban
+terdistribusi (merata, segitiga)</p></li>
+<li><p><strong>Gaya + kopel</strong> → (2.5) memindahkan gaya / beban
+eksentris → Bab 3 (kesetimbangan)</p></li>
+</ul><h2 id="apersepsi-1">4. Apersepsi</h2><p><strong>Pertanyaan pemantik:</strong> Saat ban mobil bocor, mengapa
+mur roda lebih mudah dibuka bila kunci roda dipegang di ujung, bahkan
+sambil diinjak? Mengapa gagang pintu dipasang jauh dari engsel?</p><p><strong>Kasus nyata:</strong> Petugas irigasi membuka pintu air
+dengan memutar roda besar. Roda yang lebih besar terasa lebih ringan
+diputar. Apa yang “diperbesar” oleh roda itu?</p><p><strong>Gambar 2.1. Kunci roda dan lengan momen</strong> (ilustrasi
+baru, sumber: dokumen penulis)</p><p><em>Teks alternatif:</em> Kunci roda pada mur ban mobil; tangan
+menekan ujung kunci; jarak tegak lurus dari mur ke garis kerja gaya
+ditandai sebagai lengan momen d.</p><p>Prompt gambar: Minimal technical illustration of a lug wrench on a
+car wheel nut, orange force arrow at the end of the handle, glowing cyan
+dimension line showing the perpendicular moment arm, curved arrow
+showing rotation, navy background, flat vector, no text</p><h2 id="uraian-materi-1">5. Uraian Materi</h2><h3 id="momen-gaya-terhadap-suatu-titik">2.1 Momen Gaya terhadap Suatu
+Titik</h3><p>Gaya tidak hanya menggeser benda, tetapi juga dapat
+<strong>memutar</strong> benda. Kecenderungan memutar ini disebut
+<strong>momen</strong>. Besarnya bergantung pada besar gaya dan
+<strong>lengan momen (d)</strong> – jarak <strong>tegak lurus</strong>
+dari titik putar ke garis kerja gaya.</p><div aria-label="M_O = F · d" class="rumus" role="math">\[M_O = F\,d\]</div><p><strong>Keterangan:</strong> M_O = momen terhadap titik O (kN·m); F =
+besar gaya (kN); d = jarak tegak lurus O ke garis kerja F (m).
+<strong>Konvensi tanda buku ini:</strong> berlawanan arah jarum jam (↺)
+positif, searah jarum jam (↻) negatif. <strong>Batasan:</strong> d harus
+tegak lurus; jika garis kerja melalui O, d = 0 sehingga M = 0. Rujukan:
+Hibbeler (2024a) Bab 4.</p><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 2.1 – Kunci roda</p><p><strong>Soal.</strong> Gaya tangan 200 N tegak lurus gagang kunci
+roda, 0,40 m dari mur. Berapa momen pada mur? Bagaimana jika tangan
+memegang 0,20 m dari mur?</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – M = F·d = 200 × 0,40 = 80 N·m.</p><p>Langkah 2 – Pegangan 0,20 m: M = 200 × 0,20 = 40 N·m.</p><p class="jawab"><strong>Jawab:</strong> 80 N·m; jika lengan dipendekkan setengahnya,
+momen juga tinggal setengahnya (40 N·m).</p></details></aside><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 2.2 – Gaya miring di ujung batang
+kantilever</p><p><strong>Soal.</strong> Batang horizontal sepanjang 2 m dijepit di O.
+Di ujung bebasnya bekerja gaya 5 kN miring 30° terhadap horizontal,
+mengarah ke kanan-bawah. Hitung momen terhadap O.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – Uraikan gaya: Fx = 5 cos 30° = 4,33 kN (ke kanan); Fy = 5
+sin 30° = 2,50 kN (ke bawah).</p><p>Langkah 2 – Fx segaris dengan batang → garis kerjanya melalui O →
+momennya 0.</p><p>Langkah 3 – Fy: lengan 2 m; arah ke bawah di kanan O memutar searah
+jarum jam → M = –2,50 × 2 = –5,00 kN·m.</p><p class="jawab"><strong>Jawab:</strong> M_O = –5,00 kN·m (searah jarum jam).</p></details></aside><h3 id="teorema-varignon">2.2 Teorema Varignon</h3><p>Mencari jarak tegak lurus gaya miring sering merepotkan.
+<strong>Teorema Varignon</strong> memudahkannya: momen sebuah gaya
+terhadap suatu titik sama dengan jumlah momen komponen-komponennya
+terhadap titik yang sama.</p><div aria-label="M_O = x · Fy – y · Fx" class="rumus" role="math">\[M_O = x\,F_y - y\,F_x\]</div><p><strong>Keterangan:</strong> (x, y) = koordinat titik tangkap gaya
+terhadap O (m); Fx, Fy = komponen gaya dengan tanda (kN). Hasil positif
+berarti berlawanan jarum jam.</p><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 2.3 – Gaya pada pelat buhul</p><p><strong>Soal.</strong> Gaya dengan komponen Fx = 6 kN (ke kanan) dan
+Fy = 8 kN (ke atas) bekerja di titik (3 m; 2 m) dari O. Hitung momen
+terhadap O.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – Momen oleh Fy: x·Fy = 3 × 8 = 24 kN·m (↺).</p><p>Langkah 2 – Momen oleh Fx: y·Fx = 2 × 6 = 12 kN·m (↻), jadi
+dikurangkan.</p><p>Langkah 3 – M_O = 24 – 12 = 12 kN·m.</p><p class="jawab"><strong>Jawab:</strong> M_O = +12 kN·m (berlawanan jarum jam).
+Pemeriksaan cara langsung: F = 10 kN, d = |M|/F = 1,2 m – jarak ini
+memang lebih kecil dari jarak O ke titik tangkap (3,61 m) ✓</p></details></aside><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 2.4 – Kembali ke Contoh 2.2 dengan
+Varignon</p><p><strong>Soal.</strong> Gunakan koordinat: titik tangkap (2; 0) m, Fx
+= +4,33 kN, Fy = –2,50 kN.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – M_O = x·Fy – y·Fx = 2 × (–2,50) – 0 × 4,33.</p><p>Langkah 2 – M_O = –5,00 kN·m.</p><p class="jawab"><strong>Jawab:</strong> Sama dengan Contoh 2.2 ✓ – dua cara memberi
+hasil yang sama.</p></details></aside><h3 id="kopel-dan-momen-kopel">2.3 Kopel dan Momen Kopel</h3><p><strong>Kopel</strong> adalah pasangan dua gaya yang sama besar,
+sejajar, berlawanan arah, dan garis kerjanya berjarak d. Resultan
+gayanya nol, sehingga kopel tidak menggeser benda – hanya
+memutarnya.</p><div aria-label="M = F · d" class="rumus" role="math">\[M = F\,d\]</div><p><strong>Keterangan:</strong> F = besar salah satu gaya (kN); d =
+jarak tegak lurus antara kedua garis kerja (m). <strong>Sifat
+penting:</strong> momen kopel sama terhadap titik mana pun (<em>free
+vector</em> – vektor bebas).</p><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 2.5 – Roda pembuka pintu air
+irigasi</p><p><strong>Soal.</strong> Petugas memutar roda pintu air berdiameter
+0,50 m dengan dua tangan; masing-masing memberi gaya 150 N berlawanan
+arah di tepi roda. Berapa momen kopelnya?</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – Jarak antara kedua gaya = diameter = 0,50 m.</p><p>Langkah 2 – M = 150 × 0,50 = 75 N·m.</p><p class="jawab"><strong>Jawab:</strong> M = 75 N·m. Jika roda diganti berdiameter
+0,80 m, gaya tiap tangan cukup 75 ÷ 0,80 = 93,75 N untuk momen yang
+sama.</p></details></aside><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 2.6 – Kunci T untuk baut angkur</p><p><strong>Soal.</strong> Kunci T dengan jarak kedua pegangan 0,30 m.
+Momen yang dibutuhkan untuk mengencangkan baut 15 N·m. Berapa gaya tiap
+tangan?</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – M = F·d → F = M ÷ d.</p><p>Langkah 2 – F = 15 ÷ 0,30 = 50 N.</p><p class="jawab"><strong>Jawab:</strong> F = 50 N tiap tangan.</p></details></aside><h3 id="resultan-gaya-sejajar-dan-beban-terdistribusi">2.4 Resultan Gaya
+Sejajar dan Beban Terdistribusi</h3><p>Pada balok, beban umumnya sejajar (vertikal). Resultannya adalah
+jumlah aljabar gaya, dan <strong>letaknya</strong> ditentukan dengan
+syarat: momen resultan = jumlah momen gaya-gaya terhadap titik
+acuan.</p><div aria-label="R = ΣFᵢ x̄ = Σ(Fᵢ · xᵢ) / R" class="rumus" role="math">\[R=\sum F_i,\qquad \bar{x}=\frac{\sum F_i\,x_i}{R}\]</div><p><strong>Keterangan:</strong> Fᵢ = gaya ke-i (kN); xᵢ = jarak gaya
+ke-i dari titik acuan (m); x̄ = letak resultan dari titik acuan (m).</p><p><strong>Beban terdistribusi</strong> (misalnya berat dinding di atas
+balok) diganti dengan satu gaya pengganti yang besarnya sama dengan
+<strong>luas diagram beban</strong> dan bekerja di <strong>titik
+berat</strong> diagram tersebut:</p><div class="gulir"><table>
+<colgroup>
+<col style="width: 23%"/>
+<col style="width: 26%"/>
+<col style="width: 26%"/>
+<col style="width: 23%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Bentuk beban</strong></th>
+<th><strong>Besar resultan</strong></th>
+<th><strong>Letak resultan</strong></th>
+<th><strong>LaTeX</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Merata q sepanjang L</td>
+<td>R = q · L</td>
+<td>L/2 dari ujung</td>
+<td>R=qL,\ \bar{x}=L/2</td>
+</tr>
+<tr class="even">
+<td>Segitiga 0 → q sepanjang L</td>
+<td>R = ½ · q · L</td>
+<td>2L/3 dari ujung nol (L/3 dari ujung q)</td>
+<td>R=\tfrac12 qL,\ \bar{x}=\tfrac23 L</td>
+</tr>
+<tr class="odd">
+<td>Trapesium q₁ → q₂</td>
+<td>Pisahkan menjadi persegi panjang (q₁·L) + segitiga (½(q₂ –
+q₁)·L)</td>
+<td>Masing-masing di titik beratnya</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div><p><strong>Keterangan:</strong> q = intensitas beban (kN/m); L = panjang
+beban (m). Beban trapesium dipakai lagi di Bab 6.</p><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 2.7 – Tiga beban titik pada
+balok</p><p><strong>Soal.</strong> Balok 6 m memikul beban ke bawah: 10 kN di x =
+1 m, 20 kN di x = 3 m, 15 kN di x = 5 m (x dari ujung kiri). Tentukan
+resultannya.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – R = 10 + 20 + 15 = 45 kN (ke bawah).</p><p>Langkah 2 – ΣFᵢxᵢ = 10(1) + 20(3) + 15(5) = 10 + 60 + 75 = 145
+kN·m.</p><p>Langkah 3 – x̄ = 145 ÷ 45 = 3,22 m.</p><p class="jawab"><strong>Jawab:</strong> R = 45 kN ke bawah, bekerja 3,22 m dari ujung
+kiri.</p></details></aside><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 2.8 – Beban merata dan segitiga</p><p><strong>Soal.</strong> (a) Dinding bata memberi beban merata 4 kN/m
+sepanjang 5 m. (b) Tekanan tanah pada dinding penahan berbentuk segitiga
+dari 0 hingga 6 kN/m sepanjang 3 m. Tentukan resultan masing-masing.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – (a) R = 4 × 5 = 20 kN, di 2,5 m dari ujung.</p><p>Langkah 2 – (b) R = ½ × 6 × 3 = 9 kN, di 2/3 × 3 = 2,0 m dari ujung
+nol (1,0 m dari ujung 6 kN/m).</p><p class="jawab"><strong>Jawab:</strong> (a) 20 kN di 2,5 m; (b) 9 kN di 2,0 m dari
+ujung nol.</p></details></aside><h3 id="memindahkan-gaya-gaya-kopel">2.5 Memindahkan Gaya: Gaya +
+Kopel</h3><p>Sebuah gaya F di titik A boleh dipindahkan ke titik B (di luar garis
+kerjanya) asalkan ditambah <strong>kopel</strong> M = F·e, dengan e =
+jarak tegak lurus garis kerja ke B. Inilah dasar <strong>beban
+eksentris</strong> pada kolom: beban yang tidak tepat di as kolom
+menimbulkan momen.</p><div aria-label="F di A ≡ F di B + M, M = F · e" class="rumus" role="math">\[\vec F_A \equiv \vec F_B + M,\quad M = F\,e\]</div><p><strong>Keterangan:</strong> e = eksentrisitas, jarak tegak lurus
+garis kerja F ke titik B (m).</p><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 2.9 – Beban eksentris pada kolom
+kanopi</p><p><strong>Soal.</strong> Balok kanopi menumpu di konsol kolom dengan
+beban 8 kN yang garis kerjanya 0,15 m dari as kolom. Ganti dengan gaya
+di as kolom + kopel.</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – Gaya di as kolom: 8 kN ke bawah (besar &amp; arah
+tetap).</p><p>Langkah 2 – Kopel: M = 8 × 0,15 = 1,20 kN·m, arahnya sama dengan
+putaran yang ditimbulkan beban asli terhadap as kolom.</p><p class="jawab"><strong>Jawab:</strong> 8 kN di as kolom + kopel 1,20 kN·m. Kopel
+inilah yang membuat kolom ikut melentur.</p></details></aside><aside class="kotak kotak--contoh"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-contoh-soal"></use></svg>Contoh Soal 2.10 – Letak tandon agar resultan di tengah
+platform</p><p><strong>Soal.</strong> Platform 4 m sudah memikul pompa 6 kN di x = 1
+m. Tandon 12 kN akan diletakkan agar resultan tepat di tengah (x = 2 m).
+Di mana tandon diletakkan?</p><details><summary>Lihat langkah penyelesaian</summary><p>Langkah 1 – R = 6 + 12 = 18 kN.</p><p>Langkah 2 – Syarat: 18 × 2 = 6 × 1 + 12 × x.</p><p>Langkah 3 – 36 = 6 + 12x → x = 2,50 m.</p><p class="jawab"><strong>Jawab:</strong> Tandon diletakkan 2,50 m dari ujung
+kiri.</p></details></aside><aside class="kotak kotak--info"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-info"></use></svg>Info Penting</p><p>Momen selalu “terhadap titik tertentu”. Tuliskan titiknya (M_A, M_O,
+…) dan konvensi tandanya sebelum menghitung. Kebiasaan ini akan sangat
+menolong di Bab 3 dan Bab 4.</p></aside><aside class="kotak kotak--tips"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-tips"></use></svg>Tips Lapangan</p><p>Kunci torsi (<em>torque wrench</em>) membaca momen langsung dalam
+N·m. Pakai kunci torsi untuk baut angkur dan sambungan baja sesuai nilai
+torsi yang tertulis di spesifikasi, jangan sekadar “sekuat
+tangan”.</p></aside><aside class="kotak kotak--k3"><p class="kotak__judul"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-peringatan"></use></svg>Peringatan K3</p><p>Jangan memperpanjang gagang kunci dengan pipa untuk membuka baut yang
+macet. Momen menjadi berlipat, baut bisa patah tiba-tiba, dan pekerja
+terjatuh. Gunakan alat yang sesuai kapasitasnya.</p></aside><h2 id="contoh-soal-pembahasan-1">6. Contoh Soal &amp; Pembahasan</h2><p>Sepuluh contoh soal tersebar di setiap subbab (2.1–2.5),
+masing-masing 2 contoh, termasuk pemeriksaan dengan dua cara (Contoh 2.2
+dan 2.4).</p><h2 id="tanya-ai-tutor-1">7. Tanya AI Tutor</h2><div class="kartu-ai-grid"><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Jelaskan lebih sederhana</h4><p>Jelaskan apa itu lengan momen dengan contoh pintu dan kunci roda. Tanyakan dulu kepada saya: mengapa gagang pintu dipasang jauh dari engsel?</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Jelaskan apa itu lengan momen dengan contoh pintu dan kunci roda. Tanyakan dulu kepada saya: mengapa gagang pintu dipasang jauh dari engsel?" type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Jelaskan apa itu lengan momen dengan contoh pintu dan kunci roda. Tanyakan dulu kepada saya: mengapa gagang pintu dipasang jauh dari engsel?" type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Jelaskan apa itu lengan momen dengan contoh pintu dan kunci roda. Tanyakan dulu kepada saya: mengapa gagang pintu dipasang jauh dari engsel?" type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Beri contoh lain</h4><p>Beri 2 contoh kopel di proyek konstruksi dan 1 contoh beban eksentris pada kolom. Minta saya menentukan arah putarnya.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Beri 2 contoh kopel di proyek konstruksi dan 1 contoh beban eksentris pada kolom. Minta saya menentukan arah putarnya." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Beri 2 contoh kopel di proyek konstruksi dan 1 contoh beban eksentris pada kolom. Minta saya menentukan arah putarnya." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Beri 2 contoh kopel di proyek konstruksi dan 1 contoh beban eksentris pada kolom. Minta saya menentukan arah putarnya." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Buat soal latihan</h4><p>Buat 3 soal letak resultan gaya sejajar dan beban segitiga untuk mahasiswa D3 semester 1. Sembunyikan jawaban sampai saya menjawab.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Buat 3 soal letak resultan gaya sejajar dan beban segitiga untuk mahasiswa D3 semester 1. Sembunyikan jawaban sampai saya menjawab." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Buat 3 soal letak resultan gaya sejajar dan beban segitiga untuk mahasiswa D3 semester 1. Sembunyikan jawaban sampai saya menjawab." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Buat 3 soal letak resultan gaya sejajar dan beban segitiga untuk mahasiswa D3 semester 1. Sembunyikan jawaban sampai saya menjawab." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Periksa jawabanku</h4><p>Ini perhitungan momen saya terhadap titik A: [tempel]. Apakah tanda dan lengan momennya benar? Bimbing saya dengan pertanyaan.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Ini perhitungan momen saya terhadap titik A: [tempel]. Apakah tanda dan lengan momennya benar? Bimbing saya dengan pertanyaan." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Ini perhitungan momen saya terhadap titik A: [tempel]. Apakah tanda dan lengan momennya benar? Bimbing saya dengan pertanyaan." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Ini perhitungan momen saya terhadap titik A: [tempel]. Apakah tanda dan lengan momennya benar? Bimbing saya dengan pertanyaan." type="button">Tanya langsung</button></div></div><div class="kartu-ai"><h4><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-ai-tutor"></use></svg>Ringkas bab ini</h4><p>Ringkas Bab 2 Resultan, Momen, dan Kopel dalam 5 poin, sebutkan rumus utama dan subbabnya.</p><div class="baris-tombol"><button class="tombol tombol--kecil" data-salin="Ringkas Bab 2 Resultan, Momen, dan Kopel dalam 5 poin, sebutkan rumus utama dan subbabnya." type="button">Salin</button><button class="tombol tombol--kecil tombol--ungu" data-buka-chatbot="Ringkas Bab 2 Resultan, Momen, dan Kopel dalam 5 poin, sebutkan rumus utama dan subbabnya." type="button">Salin &amp; Buka Chatbot</button><button class="tombol tombol--kecil" data-tanya="Ringkas Bab 2 Resultan, Momen, dan Kopel dalam 5 poin, sebutkan rumus utama dan subbabnya." type="button">Tanya langsung</button></div></div></div><h2 id="zona-ar-kunci-roda-dan-daun-pintu">8. Zona AR – Kunci Roda dan
+Daun Pintu</h2><div class="gulir"><table>
+<colgroup>
+<col style="width: 19%"/>
+<col style="width: 80%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Aspek</strong></th>
+<th><strong>Spesifikasi</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nama objek</td>
+<td>ar-bab02-lengan-momen.glb (+ .usdz)</td>
+</tr>
+<tr class="even">
+<td>Tujuan belajar</td>
+<td>Melihat pengaruh lengan momen dan arah gaya terhadap momen
+(indikator 1.2.a dan 1.2.c)</td>
+</tr>
+<tr class="odd">
+<td>Pembuatan model</td>
+<td>Blender: roda mobil + kunci roda 0,4 m; daun pintu 0,9 m dengan
+engsel dan gagang; GLB ≤ 4 MB</td>
+</tr>
+<tr class="even">
+<td>Hotspot &amp; label</td>
+<td>(1) Titik putar (mur/engsel); (2) Gaya F; (3) Lengan momen d; (4)
+Arah putar ↺/↻; (5) Pasangan gaya kopel pada kunci T</td>
+</tr>
+<tr class="odd">
+<td>Animasi</td>
+<td>Penggeser posisi tangan 0,1–0,4 m: label M = F·d berubah
+langsung</td>
+</tr>
+<tr class="even">
+<td>Kode QR</td>
+<td>Menuju ar/bab-02.html</td>
+</tr>
+<tr class="odd">
+<td>Cadangan</td>
+<td>Gambar putar 360° dan animasi 2D</td>
+</tr>
+<tr class="even">
+<td>Pertanyaan pengamatan</td>
+<td>(a) Di posisi mana tangan menghasilkan momen terbesar? (b) Jika gaya
+diarahkan sejajar gagang, berapa momennya? (c) Mengapa kunci T tidak
+menggeser mur ke samping?</td>
+</tr>
+</tbody>
+</table></div><div class="ar-kotak">
+<model-viewer alt="Model 3D Resultan, Momen, dan Kopel" ar="" ar-modes="webxr scene-viewer quick-look" auto-rotate="" camera-controls="" exposure="1.1" loading="lazy" shadow-intensity="0.8" src="../assets/model-3d/ar-bab02-lengan-momen.glb" touch-action="pan-y">
+<button class="hotspot" data-normal="0 1 0" data-position="0 0.45 0.12" slot="hotspot-0">1<span>Mur (titik putar)</span></button><button class="hotspot" data-normal="0 1 0" data-position="0.4 0.45 0.12" slot="hotspot-1">2<span>Gaya tangan F</span></button><button class="hotspot" data-normal="0 1 0" data-position="0.2 0.5 0.12" slot="hotspot-2">3<span>Lengan momen d = 0,4 m</span></button>
+<button class="tombol tombol--utama" slot="ar-button" style="position:absolute;bottom:12px;right:12px"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-zona-ar"></use></svg> Lihat di ruanganmu (AR)</button>
+<div slot="poster" style="display:grid;place-items:center;height:100%;color:#CBD5E1">Memuat model 3D…</div>
+</model-viewer>
+<div class="ar-bawah"><div aria-label="Kode QR menuju halaman AR bab-02" class="qr" data-qr="../ar/bab-02.html" role="img"></div>
+<div><b>Petunjuk:</b> pindai kode QR atau ketuk tombol AR → izinkan kamera → arahkan ke lantai datar → ketuk untuk menempatkan model. Ketuk angka untuk membaca label.<ol style="margin:6px 0 0;padding-left:18px"><li>Mur (titik putar)</li><li>Gaya tangan F</li><li>Lengan momen d = 0,4 m</li></ol>
+<p style="margin:6px 0 0"><a href="../ar/bab-02.html">Buka halaman AR penuh</a> • Perangkat tanpa AR tetap dapat memutar model 360° dengan jari/tetikus.</p></div></div></div><h2 id="alat-hitung-momen-dan-resultan-gaya-sejajar">9. Alat Hitung –
+Momen dan Resultan Gaya Sejajar</h2><div class="gulir"><table>
+<colgroup>
+<col style="width: 19%"/>
+<col style="width: 80%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Aspek</strong></th>
+<th><strong>Spesifikasi</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tujuan</td>
+<td>(A) momen gaya terhadap titik (cara langsung &amp; Varignon); (B)
+resultan dan letak gaya sejajar + beban merata/segitiga/trapesium</td>
+</tr>
+<tr class="even">
+<td>Rumus</td>
+<td>\(M_O=xF_y-yF_x;\ R=\sum F_i;\ \bar x=\frac{\sum F_i x_i}{R};\
+R_{seg}=\tfrac12 qL\)</td>
+</tr>
+<tr class="odd">
+<td>Input (A)</td>
+<td>F (kN; &gt;0), θ (°; 0–360), koordinat titik tangkap x, y (m; –100
+s.d. 100)</td>
+</tr>
+<tr class="even">
+<td>Input (B)</td>
+<td>Daftar beban: jenis (titik/merata/segitiga/trapesium), besar (kN
+atau kN/m), posisi awal &amp; panjang (m); panjang balok L (m;
+0,5–50)</td>
+</tr>
+<tr class="odd">
+<td>Output</td>
+<td>M_O (kN·m) dan arah ↺/↻; R (kN) dan x̄ (m); diagram balok dengan
+panah resultan</td>
+</tr>
+<tr class="even">
+<td>Validasi</td>
+<td>Posisi beban di luar balok ditolak: “Beban harus berada di antara 0
+dan L m.”</td>
+</tr>
+<tr class="odd">
+<td>Langkah &amp; fitur</td>
+<td>Tabel Fᵢ, xᵢ, Fᵢxᵢ; reset; salin; ekspor CSV/PDF</td>
+</tr>
+</tbody>
+</table></div><div class="gulir"><table>
+<colgroup>
+<col style="width: 11%"/>
+<col style="width: 36%"/>
+<col style="width: 29%"/>
+<col style="width: 21%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Kasus uji</strong></th>
+<th><strong>Input</strong></th>
+<th><strong>Hasil yang diharapkan</strong></th>
+<th><strong>Rujukan</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>10 kN @1 m; 20 kN @3 m; 15 kN @5 m</td>
+<td>R = 45 kN; x̄ = 3,22 m</td>
+<td>Contoh 2.7</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Fx = 6, Fy = 8 kN di (3; 2) m</td>
+<td>M_O = +12 kN·m</td>
+<td>Contoh 2.3</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Segitiga 0 → 6 kN/m, L = 3 m</td>
+<td>R = 9 kN; x̄ = 2,0 m dari ujung nol</td>
+<td>Contoh 2.8b</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>F = 5 kN, θ = 330°, di (2; 0) m</td>
+<td>M_O = –5,00 kN·m</td>
+<td>Contoh 2.2/2.4</td>
+</tr>
+</tbody>
+</table></div><div class="kalk" data-bab="bab-02" data-kalk="momen"></div><h2 id="studi-kasus-mini-papan-reklame-di-atap-ruko">10. Studi Kasus
+Mini – Papan Reklame di Atap Ruko</h2><p>Pemilik ruko ingin memasang papan reklame. Rangka papan menumpu pada
+satu kolom pipa; berat papan 3 kN bekerja 0,6 m dari as kolom, dan angin
+memberi gaya horizontal 2 kN setinggi 2,5 m dari dasar kolom.</p><ol type="1">
+<li><p>Pindahkan berat papan ke as kolom: berapa gaya dan
+kopelnya?</p></li>
+<li><p>Hitung momen total terhadap dasar kolom akibat berat dan
+angin.</p></li>
+<li><p>Dengan 3–4 kalimat, beri saran kepada pemilik ruko agar papan
+lebih aman.</p></li>
+</ol><p><em>Kunci dosen:</em> 3 kN + kopel 1,8 kN·m; momen angin 2 × 2,5 =
+5,0 kN·m; bila keduanya memutar searah, total 6,8 kN·m. Saran: kurangi
+eksentrisitas, tambah kolom/pengaku, periksa angkur.</p><h2 id="info-penting-tips-lapangan-peringatan-k3-1">11. Info Penting /
+Tips Lapangan / Peringatan K3</h2><p>Ditempatkan di akhir subbab 2.5.</p><h2 id="rangkuman-1">12. Rangkuman</h2><ul>
+<li><p>Momen = gaya × jarak tegak lurus (kN·m); tetapkan titik dan
+konvensi tanda (↺ positif).</p></li>
+<li><p>Varignon: M_O = x·Fy – y·Fx – cara praktis untuk gaya
+miring.</p></li>
+<li><p>Kopel: dua gaya sejajar berlawanan; resultan gaya nol, momen sama
+terhadap titik mana pun.</p></li>
+<li><p>Resultan gaya sejajar: R = ΣF, letak x̄ = ΣFx/R; beban merata qL
+di L/2, segitiga ½qL di 2L/3 dari ujung nol.</p></li>
+<li><p>Gaya boleh dipindah ke titik lain dengan menambah kopel F·e
+(beban eksentris).</p></li>
+</ul><h2 id="latihan-kuis-interaktif-11-soal-1">13. Latihan &amp; Kuis
+Interaktif (11 soal)</h2><div class="kuis" data-kuis="bab-02-1"><div class="kuis__skor"><svg aria-hidden="true" class="ikon"><use href="../assets/icons/icons.svg#i-kuis"></use></svg> <span>Skor: <b data-skor="">0</b> / <b data-maks="">0</b></span><button class="tombol tombol--kecil" data-ulang="">Ulangi</button></div><div class="soal" data-kunci="(c)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 1</span><span>C1 • pilihan ganda</span></div><p class="soal__teks">Satuan momen dalam SI …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) kN</button><button data-opsi="(b)" type="button">(b) kN/m</button><button data-opsi="(c)" type="button">(c) kN·m</button><button data-opsi="(d)" type="button">(d) kN/m²</button></div><div class="umpan" hidden=""><b>Kunci:</b> (c)<br/><b>Pembahasan:</b> Momen = gaya × jarak.</div></div><div class="soal" data-kunci="Benar" data-tipe="bs"><div class="soal__kepala"><span class="soal__label">No. 2</span><span>C2 • benar-salah</span></div><p class="soal__teks">Resultan gaya sebuah kopel sama dengan nol.</p><div class="soal__pilihan"><button data-opsi="Benar" type="button">Benar</button><button data-opsi="Salah" type="button">Salah</button></div><div class="umpan" hidden=""><b>Kunci:</b> Benar<br/><b>Pembahasan:</b> Dua gaya sama besar dan berlawanan arah.</div></div><div class="soal" data-kunci="75" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 3</span><span>C3 • isian angka</span></div><p class="soal__teks">Gaya 300 N tegak lurus gagang pada jarak 0,25 m. M = … N·m</p><div class="baris-tombol"><input aria-label="Jawaban soal 3" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 75<br/><b>Pembahasan:</b> 300 × 0,25.</div></div><div class="soal" data-kunci="12" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 4</span><span>C3 • isian angka</span></div><p class="soal__teks">Gaya vertikal 4 kN bekerja 3 m (horizontal) dari titik A. M_A = … kN·m</p><div class="baris-tombol"><input aria-label="Jawaban soal 4" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 12<br/><b>Pembahasan:</b> 4 × 3.</div></div><div class="soal" data-kunci="5" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 5</span><span>C3 • isian angka</span></div><p class="soal__teks">Fx = 3 kN, Fy = 4 kN bekerja di (2; 1) m. M_O = … kN·m</p><div class="baris-tombol"><input aria-label="Jawaban soal 5" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 5<br/><b>Pembahasan:</b> 2 × 4 – 1 × 3.</div></div><div class="soal" data-kunci="(b)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 6</span><span>C2 • pilihan ganda</span></div><p class="soal__teks">Momen sebuah gaya terhadap titik O bernilai nol bila …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) gaya sangat kecil</button><button data-opsi="(b)" type="button">(b) garis kerja melalui O</button><button data-opsi="(c)" type="button">(c) gaya vertikal</button><button data-opsi="(d)" type="button">(d) O di tengah balok</button></div><div class="umpan" hidden=""><b>Kunci:</b> (b)<br/><b>Pembahasan:</b> d = 0.</div></div><div class="soal" data-kunci="20; 2" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 7</span><span>C3 • isian angka</span></div><p class="soal__teks">Beban merata 5 kN/m sepanjang 4 m. R = … kN di … m dari ujung</p><div class="baris-tombol"><input aria-label="Jawaban soal 7" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 20; 2<br/><b>Pembahasan:</b> qL di L/2.</div></div><div class="soal" data-kunci="27; 4" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 8</span><span>C3 • isian angka</span></div><p class="soal__teks">Beban segitiga 0 → 9 kN/m sepanjang 6 m. R = … kN, letak … m dari ujung nol</p><div class="baris-tombol"><input aria-label="Jawaban soal 8" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 27; 4<br/><b>Pembahasan:</b> ½ × 9 × 6; 2/3 × 6.</div></div><div class="soal" data-kunci="2,5" data-tipe="isian"><div class="soal__kepala"><span class="soal__label">No. 9</span><span>C4 • isian angka</span></div><p class="soal__teks">Beban 5 kN @0 m, 10 kN @2 m, 5 kN @6 m. Letak resultan x̄ = … m</p><div class="baris-tombol"><input aria-label="Jawaban soal 9" placeholder="Jawaban (pisahkan dengan ; bila lebih dari satu)" type="text"/><button class="tombol tombol--kecil tombol--utama" data-periksa="" type="button">Periksa</button></div><div class="umpan" hidden=""><b>Kunci:</b> 2,5<br/><b>Pembahasan:</b> (0 + 20 + 30) ÷ 20.</div></div><div class="soal" data-kunci="(b)" data-tipe="pg"><div class="soal__kepala"><span class="soal__label">No. 10</span><span>C5 • pilihan ganda (menilai)</span></div><p class="soal__teks">Budi memindahkan beban 10 kN dari konsol (e = 0,2 m) ke as kolom tanpa menambah apa pun. Penilaian …</p><div class="soal__pilihan"><button data-opsi="(a)" type="button">(a) benar</button><button data-opsi="(b)" type="button">(b) kurang: harus ditambah kopel 2 kN·m</button><button data-opsi="(c)" type="button">(c) kurang: gaya menjadi 2 kN</button><button data-opsi="(d)" type="button">(d) benar bila kolom pendek</button></div><div class="umpan" hidden=""><b>Kunci:</b> (b)<br/><b>Pembahasan:</b> Memindahkan gaya keluar garis kerja wajib menambah kopel F·e.</div></div><div class="soal" data-kunci="x = 2,5 m" data-tipe="uraian"><div class="soal__kepala"><span class="soal__label">No. 11</span><span>C6 • uraian (merancang)</span></div><p class="soal__teks">Platform 4 m memikul pompa 6 kN di x = 1 m. Rancang letak tandon 12 kN agar resultan tepat di tengah platform, lalu jelaskan mengapa letak ini menguntungkan tumpuan.</p><textarea aria-label="Jawaban uraian 11" rows="3" style="width:100%"></textarea><div class="baris-tombol"><button class="tombol tombol--kecil" data-lihat="" type="button">Lihat kunci &amp; rubrik</button></div><div class="umpan" hidden=""><b>Kunci:</b> x = 2,5 m<br/><b>Pembahasan:</b> 18 × 2 = 6 + 12x. Resultan di tengah → reaksi kedua tumpuan sama besar (dibahas di Bab 4). Rubrik: konsep 40, hitungan 40, alasan 20.</div></div></div><h2 id="refleksi-diri-1">14. Refleksi Diri</h2><ul>
+<li><p>Saya dapat menentukan lengan momen dan tanda momen. 1 2 3 4
+5</p></li>
+<li><p>Saya dapat memakai teorema Varignon. 1 2 3 4 5</p></li>
+<li><p>Saya dapat menentukan besar dan letak resultan beban merata dan
+segitiga. 1 2 3 4 5</p></li>
+<li><p>Saya dapat menjelaskan beban eksentris sebagai gaya + kopel. 1 2
+3 4 5</p></li>
+</ul><p><strong>Apa yang sudah/belum saya pahami?</strong> • <strong>Tindak
+lanjut:</strong> skor ≤ 3 → ulangi subbab, kerjakan ulang contoh dengan
+Alat Hitung, diskusikan dengan tutor sebaya.</p><h2 id="glosarium-dan-referensi-bab-1">15. Glosarium dan Referensi
+Bab</h2><div class="gulir"><table class="glosarium">
+<colgroup>
+<col style="width: 24%"/>
+<col style="width: 75%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Istilah</strong></th>
+<th><strong>Arti</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Momen</td>
+<td>Kecenderungan gaya memutar benda terhadap suatu titik; satuan
+kN·m.</td>
+</tr>
+<tr class="even">
+<td>Lengan momen</td>
+<td>Jarak tegak lurus dari titik putar ke garis kerja gaya.</td>
+</tr>
+<tr class="odd">
+<td>Kopel</td>
+<td>Dua gaya sejajar, sama besar, berlawanan arah, tidak segaris.</td>
+</tr>
+<tr class="even">
+<td>Beban terdistribusi</td>
+<td>Beban yang tersebar sepanjang garis atau luas (kN/m, kN/m²).</td>
+</tr>
+<tr class="odd">
+<td>Eksentrisitas</td>
+<td>Jarak garis kerja beban dari as elemen (mis. as kolom).</td>
+</tr>
+<tr class="even">
+<td>Teorema Varignon</td>
+<td>Momen gaya = jumlah momen komponen-komponennya.</td>
+</tr>
+</tbody>
+</table></div><ul>
+<li><p>Hibbeler, R. C. (2024a). <em>Engineering mechanics: Statics</em>
+(15th ed., SI units). Pearson. (Bab 4)</p></li>
+<li><p>Meriam, J. L., Kraige, L. G., &amp; Bolton, J. N. (2018).
+<em>Engineering mechanics: Statics</em> (9th ed.). Wiley.</p></li>
+<li><p>Hibbeler, R. C. (2024b). <em>Structural analysis</em> (11th ed.).
+Pearson.</p></li>
+</ul>
+    <div class="selesai-bab"><button class="tombol tombol--utama" type="button" data-tandai-selesai><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-kuis"/></svg> Tandai bab ini selesai</button></div>
+    <nav class="nav-bab" aria-label="Navigasi bab"><a class="tombol" href="bab-01.html"><svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-bab-sebelumnya"/></svg> Gaya, Vektor, dan Satuan SI</a><a class="tombol tombol--utama" href="bab-03.html">Kesetimbangan, Tumpuan, dan DBB <svg class="ikon" aria-hidden="true"><use href="../assets/icons/icons.svg#i-bab-berikutnya"/></svg></a></nav>
+  </main>
+</div>
+<button class="fab" type="button" aria-label="Buka AI Tutor" data-buka-ai><svg class="ikon ikon--besar" aria-hidden="true"><use href="../assets/icons/icons.svg#i-ai-tutor"/></svg></button>
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/app.js" defer></script>
+<script src="../assets/js/ai-tutor.js" defer></script>
+<script src="../assets/js/kuis.js" defer></script>
+<script src="../assets/js/kalkulator.js" defer></script>
+<script defer src="../assets/vendor/katex/katex.min.js"></script>
+<script defer src="../assets/vendor/katex/auto-render.min.js" onload="renderMathInElement(document.getElementById('isi'),{delimiters:[{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}],throwOnError:false})"></script>
+<script type="module" src="../assets/vendor/model-viewer/model-viewer.min.js"></script>
+</body>
+</html>
